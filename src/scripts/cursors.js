@@ -19,6 +19,8 @@ export class Cursors {
     window.addEventListener('resize', (e) => this.init());
   }
 
+
+
   mousemoveCursor() {
     window.addEventListener(
       isTouchDevices ? 'touchmove' : 'mousemove',

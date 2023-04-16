@@ -21,6 +21,10 @@ export class Cursor4 extends Cursors {
     this.loop();
   }
 
+  removeCursor() {
+    this.container.innerHTML = '';
+  }
+
   setParamsCursor() {
     this.radiusCursorBack = 32;
     this.radiusCursor = 16;
@@ -107,6 +111,7 @@ export class Cursor4 extends Cursors {
   // }
 
   // sets the color for the cursor
+
   filterImageCursor() {
     return `
   <filter id=${this.filterCursorId} filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

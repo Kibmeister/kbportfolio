@@ -89,30 +89,37 @@ const getRandomPosition = () => {
   return { x, y };
 };
 
-const Hero = React.forwardRef(({ setBackgroundStyle }, ref) => {
+const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   useSplittingAnimation();
 
   const [tags, setTags] = useState([]);
-  const [tagsVisible, setTagsVisible] = useState(false);
+  const [lampToggle, setLampToggle] = useState(false);
   const cursor4Ref = useRef(null);
 
   useEffect(() => {
     disseminateTags();
-    if (tagsVisible) {
+
+    if (lampToggle) {
       // Disable scroll when tags are visible
       document.body.style.overflow = 'hidden';
       window.addEventListener('scroll', handleScroll);
-      cursor4Ref.current = new Cursor4(4);
+       cursor4Ref.current = new Cursor4(4);
+       cursor4Ref.current.cursor = true; 
     } else {
       // Enable scroll when tags are not visible
       document.body.style.overflow = '';
       window.removeEventListener('scroll', handleScroll);
+       if (cursor4Ref.current) {
+         console.log('this is cursor current');
+          console.log(cursor4Ref.current);
+        cursor4Ref.current.removeCursor();
+       }
     }
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [tagsVisible]);
+  }, [lampToggle]);
 
   const handleScroll = () => {
     // Prevent scrolling when tags are visible
@@ -171,25 +178,19 @@ const Hero = React.forwardRef(({ setBackgroundStyle }, ref) => {
 
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
-  const lampToggle = () => {
-    setTagsVisible(!tagsVisible); // Toggle tags visibility
-    backgroundStyle();
+  const lampPress = () => {
+    setLampToggle(!lampToggle); // Toggle tags visibility
+    setLampToggleApp(); // propagate the toggle to parent component
   };
 
-  const backgroundStyle = () => {
-    if (!tagsVisible) {
-      setBackgroundStyle('off');
-    } else {
-      setBackgroundStyle('on');
-    }
-  };
-
+ 
   //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
   return (
     <section ref={ref} className='relative w-full h-screen mx:auto'>
+      <div id='id_cursorcontainer'></div>
       {/* div for the heroTag dissemination */}
       <div className='absolute inset-0'>
-        {tagsVisible &&
+        {lampToggle &&
           tags.map((tag, index) => (
             <p
               key={index}
@@ -204,8 +205,7 @@ const Hero = React.forwardRef(({ setBackgroundStyle }, ref) => {
             </p>
           ))}
       </div>
-      {/* sets the cursor contianer for the div */}
-      <div id='id_cursorcontainer'></div>
+
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -236,12 +236,12 @@ const Hero = React.forwardRef(({ setBackgroundStyle }, ref) => {
         </div>
 
         {/* interactive lamp object  */}
-        <LampCanvas lampToggle={() => lampToggle()} />
+        <LampCanvas lampToggle={() => lampPress()} />
       </div>
       {/* interactive desktop computer */}
       {/* <ComputersCanvas /> */}
       {/* The little know that transitions the website down to the about section */}
-      {!tagsVisible ? (
+      {!lampToggle ? (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
           <a href='#about'>
             <div
