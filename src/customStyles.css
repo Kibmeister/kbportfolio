@@ -1,0 +1,30 @@
+
+.space {
+  display: inline-block;
+  width: 0.25em;
+}
+
+/* hoverEffect.css */
+.hover-underline a {
+  position: relative;
+  text-decoration: none;
+}
+.hover-underline a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: black; 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-underline a:hover::after {
+  transform: scaleX(1);
+}
+.active-underline a::after {
+  transform: scaleX(1);
+}
