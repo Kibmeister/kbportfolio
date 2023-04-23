@@ -1,23 +1,73 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
-const LampCanvas = ({lampToggle}) => {
+import CanvasLoader from '../Loader';
+
+const Lamp = ({ lamptoggle, isMobile }) => {
+  const lamp = useGLTF('./lamp/lamp.gltf');
 
   return (
-    <>
-      <div className='w-[600px] h-[400px] bg-[#efefef] relative flex items-center justify-center'>
-        <p>
-          This is soon transforming into a 3D lamp object that can toggle the
-          view of the site
-        </p>
-        <button
-          id="id_lamp"
-          className='bg-secondary py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
-          onClick={lampToggle}
-        >
-          This is the lamp toggle
-        </button>
-      </div>
-    </>
+    <mesh>
+      <hemisphereLight intensity={0.15} groundColor='black' />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <pointLight intensity={1} />
+      <primitive
+        object={lamp.scene}
+        onClick={lamptoggle}
+        scale={ 2}
+        position={ [0, -3.25, -1.5]}
+        rotation={[-0.01, -5, -0.1]}
+      />
+    </mesh>
+  );
+};
+
+const LampCanvas = ({ lampToggle }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max- width: 500px)');
+
+    setIsMobile(mediaQuery.matches);
+
+    const handleMedaQuryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener('change', handleMedaQuryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMedaQuryChange);
+    };
+  }, []);
+
+  return (
+    <Canvas
+      frameloop='demand'
+      shadows
+      dpr={[1, 2]}
+      camera={{ position: [20, 3, 5], fov: 25 }}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        {/* This will enable the 360 degree rotation of the model */}
+        {/* <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        /> */}
+        <Lamp lamptoggle={lampToggle} isMobile={isMobile} />
+      </Suspense>
+
+      <Preload all />
+    </Canvas>
   );
 };
 

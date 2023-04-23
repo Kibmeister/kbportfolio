@@ -4,7 +4,7 @@ import { isTouchDevices } from './utils';
 export class Cursors {
   constructor(index) {
     this.container = document.querySelector(`#id_cursorcontainer`);
-    this.origin = document.querySelector(`#id_lamp`);
+    this.origin = document.querySelector(`#id_disseminate`);
     this.boundsLinks = this.origin.getBoundingClientRect();
     this.xStart = this.boundsLinks.left + this.boundsLinks.width / 2;
     this.yStart = this.boundsLinks.top + this.boundsLinks.height / 2;

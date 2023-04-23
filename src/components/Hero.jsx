@@ -103,17 +103,17 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       // Disable scroll when tags are visible
       document.body.style.overflow = 'hidden';
       window.addEventListener('scroll', handleScroll);
-       cursor4Ref.current = new Cursor4(4);
-       cursor4Ref.current.cursor = true; 
+      cursor4Ref.current = new Cursor4(4);
+      cursor4Ref.current.cursor = true;
     } else {
       // Enable scroll when tags are not visible
       document.body.style.overflow = '';
       window.removeEventListener('scroll', handleScroll);
-       if (cursor4Ref.current) {
-         console.log('this is cursor current');
-          console.log(cursor4Ref.current);
+      if (cursor4Ref.current) {
+        console.log('this is cursor current');
+        console.log(cursor4Ref.current);
         cursor4Ref.current.removeCursor();
-       }
+      }
     }
 
     return () => {
@@ -179,17 +179,17 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
   const lampPress = () => {
+    console.log(' Hero.jsx lampPress called ');
     setLampToggle(!lampToggle); // Toggle tags visibility
     setLampToggleApp(); // propagate the toggle to parent component
   };
 
- 
   //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
   return (
     <section ref={ref} className='relative w-full h-screen mx:auto'>
-      <div id='id_cursorcontainer'></div>
+      <div id='id_cursorcontainer' className='z-100'></div>
       {/* div for the heroTag dissemination */}
-      <div className='absolute inset-0'>
+      <div id={'id_disseminate'} className='absolute inset-0'>
         {lampToggle &&
           tags.map((tag, index) => (
             <p
@@ -210,36 +210,43 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center'>
-          <div className='content__title' data-splitting data-effect1>
-            <h1 className={`${styles.heroHeadText}  text-black`}>
-              Hello, I'm Kasper
-            </h1>
-            <div className='content_title' data-splitting data-effect1>
-              <p className={`${styles.heroSubText} text-black`}>
-                I'm<span className='space'></span>an
-                <span className='space'></span>interaction
-                <span className='space'></span>designer
-                <span className='space'></span>specialized
-                <span className='space'></span>in<span className='space'></span>
-                UI<span className='space'></span>and
-                <span className='space'></span>UX<span className='space'></span>
-                design. <br className='sm:block hidden' /> My
-                <span className='space'></span>works
-                <span className='space'></span>are
-                <span className='space'></span>interdisciplinary
-                <span className='space'></span>in<span className='space'></span>
-                form<span className='space'></span>and
-                <span className='space'></span>expression
-              </p>
+          {!lampToggle && (
+            <div className='content__title' data-splitting data-effect1>
+              <h1
+                className={`${styles.heroHeadText}  text-black`}
+              >
+                Hello, I'm Kasper
+              </h1>
+              <div className='content_title' data-splitting data-effect1>
+                <p className={`${styles.heroSubText} text-black`}>
+                  I'm<span className='space'></span>an
+                  <span className='space'></span>interaction
+                  <span className='space'></span>designer
+                  <span className='space'></span>specialized
+                  <span className='space'></span>in
+                  <span className='space'></span>
+                  UI<span className='space'></span>and
+                  <span className='space'></span>UX
+                  <span className='space'></span>
+                  design. <br className='sm:block hidden' /> My
+                  <span className='space'></span>works
+                  <span className='space'></span>are
+                  <span className='space'></span>interdisciplinary
+                  <span className='space'></span>in
+                  <span className='space'></span>
+                  form<span className='space'></span>and
+                  <span className='space'></span>expression
+                </p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* interactive lamp object  */}
-        <LampCanvas lampToggle={() => lampPress()} />
+        {/* <LampCanvas lampToggle={() => lampPress()} /> */}
       </div>
       {/* interactive desktop computer */}
-      {/* <ComputersCanvas /> */}
+      <LampCanvas lampToggle={() => lampPress()} />
       {/* The little know that transitions the website down to the about section */}
       {!lampToggle ? (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>

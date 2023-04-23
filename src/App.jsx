@@ -39,11 +39,9 @@ const App = () => {
     const body = document.querySelector('body');
 
     if (lampToggle) {
-       body.style.backgroundColor = 'rgba(20, 20, 20, 0.7)';
-
+      body.style.backgroundColor = 'rgba(20, 20, 20, 0.9)';
     } else {
       body.style.backgroundColor = '';
-  
     }
   }, [lampToggle]);
 

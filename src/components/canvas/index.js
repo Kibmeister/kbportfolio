@@ -1,6 +1,6 @@
 import EarthCanvas from './Earth';
 import BallCanvas from './Ball';
-import ComputersCanvas from './Computers';
+import ComputersCanvas from './Lamp';
 import StarsCanvas from './Stars';
 import LampCanvas from './Lamp';
 

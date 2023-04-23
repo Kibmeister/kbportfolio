@@ -64,8 +64,8 @@ const Navbar = ({ heroRef }) => {
             className='w-9 h-9 object-container'
           />
           <p className='text-black text-[18px] font-bold cursor-pointer flex'>
-            KB &nbsp;
-            <span className='sm:block hidden'> | Interaction design </span>
+             &nbsp;
+            <span className='sm:block hidden'> Interaction design </span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
