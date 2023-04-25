@@ -18,11 +18,9 @@ import {
 
 const App = () => {
   const heroRef = useRef(null);
-  const cursor4Ref = useRef(null);
   const [showModal, setShowModal] = useState(false);
   const [modalProject, setModalProject] = useState('');
   const [lampToggle, setLampToggle] = useState(false);
-  
 
   // check the id of the pressed projectcard
   // set the project from {projects} corresponding to that id as the modalProject
@@ -38,18 +36,13 @@ const App = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
-    const root = document.querySelector('#root')
-    
     if (lampToggle) {
-      cursor4Ref.current = new Cursor4(root);
       body.style.backgroundColor = 'rgba(20, 20, 20, 0.9)';
       body.style.overflow = 'hidden';
     } else {
       body.style.backgroundColor = '';
       body.style.overflow = '';
-      if (cursor4Ref.current) {
-        cursor4Ref.current.removeCursor();
-      }
+     
     }
   }, [lampToggle]);
 
@@ -57,11 +50,15 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0'>
         {/* sets the cursor contianer for the div */}
-        <Navbar heroRef={heroRef} />
-        <Hero
-          setLampToggleApp={() => setLampToggle(!lampToggle)}
-          ref={heroRef}
-        />
+
+       
+          <Navbar heroRef={heroRef} />
+          <Hero
+            setLampToggleApp={() => setLampToggle(!lampToggle)}
+            ref={heroRef}
+          />
+      
+
         <About />
         <Experience />
         <Tech />

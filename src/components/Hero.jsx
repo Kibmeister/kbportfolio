@@ -101,18 +101,14 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
     if (lampToggle) {
       // Disable scroll when tags are visible
-      //document.body.style.overflow = 'hidden';
       window.addEventListener('scroll', handleScroll);
-      // cursor4Ref.current = new Cursor4(4);
-      // cursor4Ref.current.cursor = true;
+      cursor4Ref.current = new Cursor4(4);
+      cursor4Ref.current.cursor = true;
     } else {
       // Enable scroll when tags are not visible
-      //document.body.style.overflow = '';
       window.removeEventListener('scroll', handleScroll);
       if (cursor4Ref.current) {
-        console.log('this is cursor current');
-        console.log(cursor4Ref.current);
-        // cursor4Ref.current.removeCursor();
+        cursor4Ref.current.removeCursor();
       }
     }
 
@@ -189,7 +185,8 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   return (
     <>
       <section ref={ref} className='w-full h-screen mx:auto relative'>
-       
+        <div id='id_cursorcontainer'></div>
+
         {/* div for the heroTag dissemination */}
         <div id={'id_disseminate'} className='absolute inset-0'>
           {lampToggle &&
@@ -243,10 +240,9 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           </div>
 
           {/* interactive lamp object  */}
-          {/* <LampCanvas lampToggle={() => lampPress()} /> */}
         </div>
         {/* interactive desktop computer */}
-        <div className='lamp-container'>
+        <div className='lampContainer'>
           <LampCanvas lampToggle={() => lampPress()} />
         </div>
 
