@@ -354,46 +354,6 @@ const heroTags = [
     id: 20,
     term: 'React',
   },
-  {
-    id: 21,
-    term: 'Vue.js',
-  },
-  {
-    id: 22,
-    term: 'Angular',
-  },
-  {
-    id: 23,
-    term: 'Front-end Development',
-  },
-  {
-    id: 24,
-    term: 'Back-end Development',
-  },
-  {
-    id: 25,
-    term: 'Full-stack Development',
-  },
-  {
-    id: 26,
-    term: 'API',
-  },
-  {
-    id: 27,
-    term: 'Responsive Images',
-  },
-  {
-    id: 28,
-    term: 'Lazy Loading',
-  },
-  {
-    id: 29,
-    term: 'Web Performance Optimization',
-  },
-  {
-    id: 30,
-    term: 'Progressive Web Apps (PWA)',
-  },
 
 ];
 

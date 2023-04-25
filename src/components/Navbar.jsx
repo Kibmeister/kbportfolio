@@ -65,7 +65,7 @@ const Navbar = ({ heroRef }) => {
           />
           <p className='text-black text-[18px] font-bold cursor-pointer flex'>
              &nbsp;
-            <span className='sm:block hidden'> Interaction design </span>
+            <span className='sm:block hidden'> | Interaction design </span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>

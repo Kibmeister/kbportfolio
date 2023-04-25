@@ -2,8 +2,11 @@ import * as d3 from 'd3';
 import { isTouchDevices } from './utils';
 
 export class Cursors {
-  constructor(index) {
-    this.container = document.querySelector(`#id_cursorcontainer`);
+  constructor(parentElement) {
+    this.container = parentElement;
+    this.cursor = document.createElement('div');
+    this.cursor.className = 'cursor4';
+    //this.container = document.querySelector(`#id_cursorcontainer`);
     this.origin = document.querySelector(`#id_disseminate`);
     this.boundsLinks = this.origin.getBoundingClientRect();
     this.xStart = this.boundsLinks.left + this.boundsLinks.width / 2;
@@ -13,13 +16,12 @@ export class Cursors {
     this.diff = { x: null, y: null };
     this.tinyCursor = true;
     this.transitionParticles = false;
-    this.cursor = false;
+    
+    // this.cursor = false;
     // this.activeLinks();
     this.mousemoveCursor();
     window.addEventListener('resize', (e) => this.init());
   }
-
-
 
   mousemoveCursor() {
     window.addEventListener(
@@ -61,10 +63,16 @@ export class Cursors {
     requestAnimationFrame(() => this.loop());
   }
 
+  removeC() {
+    this.container.removeChild(this.cursor);
+    console.log('Remove cursor called');
+  }
+
   drawCursor() {
+    
     this.widthContainer = window.innerWidth;
     this.heightContainer = window.innerHeight;
-    this.container.innerHTML = `<svg
+    this.cursor.innerHTML = `<svg
         width="${this.widthContainer}"
         height="${this.heightContainer}"
         viewbox="0 0 ${this.widthContainer} ${this.heightContainer}"
@@ -76,14 +84,12 @@ export class Cursors {
         ${this.maskCursor ? this.drawMaskCursor() : this.drawParticles()}
         ${this.drawTinyCursor()}
     </svg>`;
-    this.svg = this.container.querySelector('svg');
+    this.svg = this.cursor.querySelector('svg');
     this.tinyCursor
-      ? (this.nodeCursors = this.container.querySelectorAll(
-          '.tiny-cursor circle'
-        ))
+      ? (this.nodeCursors = this.cursor.querySelectorAll('.tiny-cursor circle'))
       : null;
     this.particles = Array.from(
-      this.container.querySelectorAll('.particles circle')
+      this.cursor.querySelectorAll('.particles circle')
     );
     this.sorting === 'desc' ? this.sortParticles() : null;
     this.points = Array(this.nbrParticles)
@@ -95,6 +101,7 @@ export class Cursors {
           y: this.pos.y,
         };
       });
+    this.container.appendChild(this.cursor);
   }
 
   drawTinyCursor() {

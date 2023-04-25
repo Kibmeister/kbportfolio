@@ -1,8 +1,8 @@
 import { Cursors } from './../cursors';
 import { isTouchDevices, isSafari } from './../utils';
 export class Cursor4 extends Cursors {
-  constructor(index) {
-    super(index);
+  constructor(parentElement) {
+    super(parentElement);
     this.speed = !isTouchDevices ? (!isSafari ? 0.4 : 0.9) : 1;
     this.delta = !isTouchDevices ? (!isSafari ? 0.15 : 0.05) : 0.2;
     this.videoUrlDesktop = new URL(
@@ -17,12 +17,13 @@ export class Cursor4 extends Cursors {
       '../../images/cover.jpg?as=webp&width=1920',
       import.meta.url
     );
+    this.cursor.style.zIndex = 30; // Add this line to change the z-index
     this.init();
     this.loop();
   }
 
   removeCursor() {
-    this.container.innerHTML = '';
+    this.removeC();
   }
 
   setParamsCursor() {

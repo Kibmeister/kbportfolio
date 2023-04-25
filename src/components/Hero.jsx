@@ -81,7 +81,7 @@ const useSplittingAnimation = () => {
 };
 
 const getRandomRotation = () => {
-  return Math.random() * 60 - 30; // Generates a random number between -30 and 30
+  return Math.random() * 40 - 30; // Generates a random number between -30 and 30
 };
 const getRandomPosition = () => {
   const x = Math.random() * 100;
@@ -101,18 +101,18 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
     if (lampToggle) {
       // Disable scroll when tags are visible
-      document.body.style.overflow = 'hidden';
+      //document.body.style.overflow = 'hidden';
       window.addEventListener('scroll', handleScroll);
-      cursor4Ref.current = new Cursor4(4);
-      cursor4Ref.current.cursor = true;
+      // cursor4Ref.current = new Cursor4(4);
+      // cursor4Ref.current.cursor = true;
     } else {
       // Enable scroll when tags are not visible
-      document.body.style.overflow = '';
+      //document.body.style.overflow = '';
       window.removeEventListener('scroll', handleScroll);
       if (cursor4Ref.current) {
         console.log('this is cursor current');
         console.log(cursor4Ref.current);
-        cursor4Ref.current.removeCursor();
+        // cursor4Ref.current.removeCursor();
       }
     }
 
@@ -181,98 +181,102 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const lampPress = () => {
     console.log(' Hero.jsx lampPress called ');
     setLampToggle(!lampToggle); // Toggle tags visibility
+   
     setLampToggleApp(); // propagate the toggle to parent component
   };
 
   //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
   return (
-    <section ref={ref} className='relative w-full h-screen mx:auto'>
-      <div id='id_cursorcontainer' className='z-100'></div>
-      {/* div for the heroTag dissemination */}
-      <div id={'id_disseminate'} className='absolute inset-0'>
-        {lampToggle &&
-          tags.map((tag, index) => (
-            <p
-              key={index}
-              style={{
-                position: 'absolute',
-                left: `${tag.x}%`,
-                top: `${tag.y}%`,
-                transform: `rotate(${tag.rotation}deg)`,
-              }}
-            >
-              {tag.term}
-            </p>
-          ))}
-      </div>
-
-      <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center'>
-          {!lampToggle && (
-            <div className='content__title' data-splitting data-effect1>
-              <h1
-                className={`${styles.heroHeadText}  text-black`}
+    <>
+      <section ref={ref} className='w-full h-screen mx:auto relative'>
+       
+        {/* div for the heroTag dissemination */}
+        <div id={'id_disseminate'} className='absolute inset-0'>
+          {lampToggle &&
+            tags.map((tag, index) => (
+              <p
+                key={index}
+                style={{
+                  position: 'absolute',
+                  left: `${tag.x}%`,
+                  top: `${tag.y}%`,
+                  transform: `rotate(${tag.rotation}deg)`,
+                }}
               >
-                Hello, I'm Kasper
-              </h1>
-              <div className='content_title' data-splitting data-effect1>
-                <p className={`${styles.heroSubText} text-black`}>
-                  I'm<span className='space'></span>an
-                  <span className='space'></span>interaction
-                  <span className='space'></span>designer
-                  <span className='space'></span>specialized
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  UI<span className='space'></span>and
-                  <span className='space'></span>UX
-                  <span className='space'></span>
-                  design. <br className='sm:block hidden' /> My
-                  <span className='space'></span>works
-                  <span className='space'></span>are
-                  <span className='space'></span>interdisciplinary
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  form<span className='space'></span>and
-                  <span className='space'></span>expression
-                </p>
-              </div>
-            </div>
-          )}
+                {tag.term}
+              </p>
+            ))}
         </div>
 
-        {/* interactive lamp object  */}
-        {/* <LampCanvas lampToggle={() => lampPress()} /> */}
-      </div>
-      {/* interactive desktop computer */}
-      <LampCanvas lampToggle={() => lampPress()} />
-      {/* The little know that transitions the website down to the about section */}
-      {!lampToggle ? (
-        <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-          <a href='#about'>
-            <div
-              className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary
-          flex justify-center items-start p-2'
-            >
-              <motion.dev
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-                className='w-3 h-3 rounded-full bg-secondary mb-1'
-              />
-            </div>
-          </a>
+        <div
+          className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        >
+          <div className='flex flex-col justify-center items-center'>
+            {!lampToggle && (
+              <div className='content__title' data-splitting data-effect1>
+                <h1 className={`${styles.heroHeadText}  text-black`}>
+                  Hello, I'm Kasper
+                </h1>
+                <div className='content_title' data-splitting data-effect1>
+                  <p className={`${styles.heroSubText} text-black`}>
+                    I'm<span className='space'></span>an
+                    <span className='space'></span>interaction
+                    <span className='space'></span>designer
+                    <span className='space'></span>specialized
+                    <span className='space'></span>in
+                    <span className='space'></span>
+                    UI<span className='space'></span>and
+                    <span className='space'></span>UX
+                    <span className='space'></span>
+                    design. <br className='sm:block hidden' /> My
+                    <span className='space'></span>works
+                    <span className='space'></span>are
+                    <span className='space'></span>interdisciplinary
+                    <span className='space'></span>in
+                    <span className='space'></span>
+                    form<span className='space'></span>and
+                    <span className='space'></span>expression
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* interactive lamp object  */}
+          {/* <LampCanvas lampToggle={() => lampPress()} /> */}
         </div>
-      ) : (
-        ''
-      )}
-    </section>
+        {/* interactive desktop computer */}
+        <div className='lamp-container'>
+          <LampCanvas lampToggle={() => lampPress()} />
+        </div>
+
+        {/* The little know that transitions the website down to the about section */}
+        {!lampToggle ? (
+          <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+            <a href='#about'>
+              <div
+                className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary
+          flex justify-center items-start p-2'
+              >
+                <motion.dev
+                  animate={{
+                    y: [0, 24, 0],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                  }}
+                  className='w-3 h-3 rounded-full bg-secondary mb-1'
+                />
+              </div>
+            </a>
+          </div>
+        ) : (
+          ''
+        )}
+      </section>
+    </>
   );
 });
 

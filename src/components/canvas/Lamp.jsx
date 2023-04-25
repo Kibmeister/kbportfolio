@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Lamp = ({ lamptoggle, isMobile }) => {
-  const lamp = useGLTF('./lamp/lamp.gltf');
+  const lamp = useGLTF('./ink_bottle_quill/scene.gltf');
 
   return (
     <mesh>
@@ -22,7 +22,7 @@ const Lamp = ({ lamptoggle, isMobile }) => {
       <primitive
         object={lamp.scene}
         onClick={lamptoggle}
-        scale={ 2}
+        scale={ 20} //lamp 2
         position={ [0, -3.25, -1.5]}
         rotation={[-0.01, -5, -0.1]}
       />
