@@ -9,7 +9,7 @@ const Earth = () => {
   const earth = useGLTF('./lamp/lamp.gltf');
 
   return (
-    <primitive object={earth.scene} scale={7.0} position-y={-0.4} rotation-y={0} />
+    <primitive object={earth.scene} scale={7.0} position-y={-0.4} rotation-y={0} onClick={() => alert('Earth: saying YOLO') } />
   );
 };
 

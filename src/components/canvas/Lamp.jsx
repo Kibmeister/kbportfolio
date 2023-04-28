@@ -20,10 +20,10 @@ const Lamp = ({ lamptoggle, isMobile }) => {
       />
       <pointLight intensity={1} />
       <primitive
+        onClick={ lamptoggle }
         object={lamp.scene}
-        onClick={lamptoggle}
-        scale={ 20} //lamp 2
-        position={ [0, -3.25, -1.5]}
+        scale={20}
+        position={[0, -3.25, -1.5]}
         rotation={[-0.01, -5, -0.1]}
       />
     </mesh>

@@ -50,14 +50,14 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0'>
         {/* sets the cursor contianer for the div */}
+        <Navbar heroRef={heroRef} />
 
-       
-          <Navbar heroRef={heroRef} />
+        <div className='relative z-0'>
           <Hero
             setLampToggleApp={() => setLampToggle(!lampToggle)}
             ref={heroRef}
           />
-      
+        </div>
 
         <About />
         <Experience />
