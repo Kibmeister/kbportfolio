@@ -2,14 +2,13 @@ import { Cursors } from './../cursors';
 import { isTouchDevices, isSafari } from './../utils';
 
 export class Cursor4 extends Cursors {
-  constructor(index) {
-    super(index);
+  constructor() {
+    super();
     this.speed = !isTouchDevices ? (!isSafari ? 0.4 : 0.9) : 1;
     this.delta = !isTouchDevices ? (!isSafari ? 0.15 : 0.05) : 0.2;
-    this.posterVideo = new URL(
-      '../../images/cover.jpg?as=webp&width=1920',
-      import.meta.url
-    );
+    this.state = {
+      isHovering: false,
+    };
     this.init();
     this.loop();
   }
@@ -18,9 +17,27 @@ export class Cursor4 extends Cursors {
     this.container.innerHTML = '';
   }
 
+  // Modify the setHovering method in the Cursor4 class
+  setHovering() {
+    this.state.isHovering = !this.state.isHovering;
+    if (this.state.isHovering) {
+       this.notifyRadiusUpdate(200); // Change the value to the desired radius when hovering
+    } else {
+       this.notifyRadiusUpdate(100); // Change the value back to the initial radius when not hovering
+    }
+  }
+
+  notifyRadiusUpdate(newRadius) {
+    const updateRadiusEvent = new CustomEvent('updateRadius', {
+      detail: newRadius,
+    });
+    window.dispatchEvent(updateRadiusEvent);
+  }
+
   setParamsCursor() {
-    this.radiusCursorBack = 40; // Increase this value to make the cursor wider
-    this.radiusCursor = 60; // Increase this value to make the cursor wider
+    this.radiusCursorBack = 40; // Increase this value of the outside border stroke
+    this.radiusCursor = 100;
+    // Increase this value to make the cursor wider
     this.strokeColorCursorBack = 'yellow'; // Change the color of the cursor's stroke
     this.fillCursor = 'yellow'; // Change the color of the cursor's fill
     this.maxSqueeze = 0.1;
@@ -61,9 +78,9 @@ export class Cursor4 extends Cursors {
 
   drawBackgroundImage() {
     return `
-      <image x="0" y="0" height="100%" width="100%" filter=url(#${this.filterBackId}) style="opacity:${this.opacityGrayScale}" xlink:href=${this.posterVideo.href} preserveAspectRatio="xMidYMid slice" />
+      <image x="0" y="0" height="100%" width="100%" filter=url(#${this.filterBackId}) style="opacity:${this.opacityGrayScale}" preserveAspectRatio="xMidYMid slice" />
       <g id="maskReveal" mask="url(#${this.particlesMaskId})">
-        <image x="0" y="0" height="100%" width="100%" filter=url(#${this.filterCursorId})  xlink:href=${this.posterVideo.href} preserveAspectRatio="xMidYMid slice" />
+        <image x="0" y="0" height="100%" width="100%" filter=url(#${this.filterCursorId})  preserveAspectRatio="xMidYMid slice" />
       </g>`;
   }
 

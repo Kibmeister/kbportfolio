@@ -9,7 +9,7 @@ const Lamp = ({ lamptoggle, isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      {/* <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -17,14 +17,14 @@ const Lamp = ({ lamptoggle, isMobile }) => {
         intensity={1}
         castShadow
         shadow-mapSize={1024}
-      />
+      />*/}
       <pointLight intensity={1} />
       <primitive
-        onClick={ lamptoggle }
+        onClick={lamptoggle}
         object={lamp.scene}
-        scale={20}
-        position={[0, -3.25, -1.5]}
-        rotation={[-0.01, -5, -0.1]}
+        scale={isMobile ? 16 : 20}
+        position={isMobile ? [0, -3, -2.2] : [0, -2, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );

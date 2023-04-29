@@ -37,7 +37,7 @@ const App = () => {
   useEffect(() => {
     const body = document.querySelector('body');
     if (lampToggle) {
-      body.style.backgroundColor = 'rgba(20, 20, 20, 0.9)';
+      body.style.backgroundColor = 'rgba(10, 10, 10, 1)';
       body.style.overflow = 'hidden';
     } else {
       body.style.backgroundColor = '';
@@ -50,7 +50,8 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0'>
         {/* sets the cursor contianer for the div */}
-        <Navbar heroRef={heroRef} />
+
+        {!lampToggle && <Navbar heroRef={heroRef} />}
 
         <div className='relative z-0'>
           <Hero

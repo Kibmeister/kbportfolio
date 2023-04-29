@@ -41,7 +41,7 @@ const Navbar = ({ heroRef }) => {
   return (
     <nav
       id='navbar'
-      className={`${styles.paddingX} w-full flew items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flew items-center py-5 fixed top-0 z-20  bg-primary`}
     >
       <div
         className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}
