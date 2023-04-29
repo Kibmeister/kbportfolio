@@ -6,9 +6,10 @@ export class Cursor4 extends Cursors {
     super();
     this.speed = !isTouchDevices ? (!isSafari ? 0.4 : 0.9) : 1;
     this.delta = !isTouchDevices ? (!isSafari ? 0.15 : 0.05) : 0.2;
-    this.state = {
-      isHovering: true,
-    };
+    // this.state = {
+    //   isHovering: true,
+    //   lampHovering: false,
+    // };
     this.init();
     this.loop();
   }
@@ -18,12 +19,15 @@ export class Cursor4 extends Cursors {
   }
 
   // Modify the setHovering method in the Cursor4 class
-  setHovering() {
-    this.state.isHovering = !this.state.isHovering;
-    if (this.state.isHovering) {
-       this.notifyRadiusUpdate(100); // Change the value to the desired radius when hovering
+  setHovering(isHovering, lampHovering) {
+    //this.state.isHovering = !this.state.isHovering;
+
+    if (lampHovering) {
+      this.notifyRadiusUpdate(400);
+    } else if (isHovering) {
+      this.notifyRadiusUpdate(150); // Change the value to the desired radius when hovering
     } else {
-       this.notifyRadiusUpdate(150); // Change the value back to the initial radius when not hovering
+      this.notifyRadiusUpdate(100); // Change the value back to the initial radius when not hovering
     }
   }
 

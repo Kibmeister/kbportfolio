@@ -1,7 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import React, { useRef, useState, useEffect } from 'react';
 import { projects } from './constants';
-import { Cursor4 } from './scripts/cursors/cursor4';
 
 import {
   About,

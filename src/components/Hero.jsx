@@ -95,7 +95,10 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [tags, setTags] = useState([]);
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [lampHovering, setLampHovering] = useState(false);
   const cursor4Ref = useRef(null);
+
+
 
   useEffect(() => {
     disseminateTags();
@@ -119,10 +122,12 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
 
   useEffect(() => {
+    console.log('The lamp is hovering : ');
+    console.log(lampHovering);
     if (cursor4Ref.current) {
-      cursor4Ref.current.setHovering(isHovering);
+      cursor4Ref.current.setHovering(isHovering, lampHovering);
     }
-  }, [isHovering]);
+  }, [isHovering, lampHovering]);
 
 
   const handleScroll = () => {
@@ -228,7 +233,10 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className='lampContainer xl:flex-1 xl:h-auto md:h-[550px] h-[350px] '>
-          <LampCanvas lampToggle={() => lampPress()} />
+          <LampCanvas
+            setLamptoggle={(press) => lampPress(press)}
+            setMouseHover={(hovering) => setLampHovering(hovering)}
+          />
         </div>
 
         <div className='flex flex-col justify-center items-center'>

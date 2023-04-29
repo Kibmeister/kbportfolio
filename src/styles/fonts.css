@@ -1,0 +1,9 @@
+
+@font-face {
+  font-family: 'Neue Haas Grotesk';
+   src: url('./fonts/NeueHaasDisplay-Bold.ttf') ,
+}
+/* font.css */
+.hero-head-text {
+  font-family: 'Neue Haas Grotesk', sans-serif;
+}
