@@ -33,15 +33,20 @@ export class Cursors {
   // Add this method to the Cursors class
   updateRadius(newRadius) {
     console.log('update radius is called');
-    this.radiusStart = newRadius;
-    this.radiusDiff = newRadius / this.nbrParticles;
 
-    // Query all particles with the class "particle"
-    const particles = this.container.querySelectorAll('.particle');
+    // Update the radius of the tiny cursor elements
+    this.radiusCursor = newRadius;
+    this.radiusCursorBack = 5;
 
-    particles.forEach((particle, i) => {
-      const updatedRadius = this.setRadiusParticles(i);
-      particle.setAttribute('r', updatedRadius);
+    // Query all tiny cursor elements with the class "tiny-cursor"
+    const tinyCursors = this.container.querySelectorAll('.tiny-cursor circle');
+
+    tinyCursors.forEach((tinyCursor) => {
+      if (tinyCursor.getAttribute('class') === 'tiny-cursor') {
+        tinyCursor.setAttribute('r', this.radiusCursorBack);
+      } else {
+        tinyCursor.setAttribute('r', this.radiusCursor);
+      }
     });
   }
 
@@ -115,29 +120,41 @@ export class Cursors {
     return `${
       this.tinyCursor
         ? `<g class="tiny-cursor">
-        <circle
-          r=${this.radiusCursorBack || 10}
-          cx=${this.pos.x}
-          cy=${this.pos.y}
-          fill="${this.fillCursorBack || 'none'}"
-          fill-opacity="${this.fillOpacityCursorBack || 1}"
-          stroke="${this.strokeColorCursorBack || 'none'}"
-          stroke-width="${this.strokeWidthCursorBack || 1}"
-          stroke-opacity="${this.strokeOpacityCursorBack || 1}"
-          style="transform-origin: ${this.pos.x}px ${this.pos.y}px">
-        </circle>
-        <circle
-          r=${this.radiusCursor || 10}
-          cx=${this.pos.x}
-          cy=${this.pos.y}
-          fill="${this.fillCursor || 'white'}"
-          fill-opacity="${this.fillOpacityCursor || 1}"
-          stroke="${this.strokeColorCursor || 'none'}"
-          stroke-width="${this.strokeWidthCursor || 0}"
-          stroke-opacity="${this.strokeOpacityCursor || 1}"
-          style="transform-origin: ${this.pos.x}px ${this.pos.y}px">
-        </circle>
-     </g>`
+      <defs>
+        <radialGradient id="cursorGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="31%" stop-color="#fffbba" />
+          <stop offset="65%" stop-color="#a1a1a1" />
+          <stop offset="85%" stop-color="#240000" />
+          <stop offset="100%" stop-color="rgba(10, 10, 10, 1)" />
+        </radialGradient>
+      </defs>
+      <circle
+        r=${this.radiusCursorBack || 10}
+        cx=${this.pos.x}
+        cy=${this.pos.y}
+        fill="url(#cursorGradient)"
+        fill-opacity="${this.fillOpacityCursorBack || 1}"
+        stroke="${this.strokeColorCursorBack || 'none'}"
+        stroke-width="${this.strokeWidthCursorBack || 1}"
+        stroke-opacity="${this.strokeOpacityCursorBack || 1}"
+        style="transform-origin: ${this.pos.x}px ${
+            this.pos.y
+          }px; transition: r 0.5s ease-in-out;">
+      </circle>
+      <circle
+        r=${this.radiusCursor || 10}
+        cx=${this.pos.x}
+        cy=${this.pos.y}
+        fill="url(#cursorGradient)"
+        fill-opacity="${this.fillOpacityCursor || 1}"
+        stroke="${this.strokeColorCursor || 'none'}"
+        stroke-width="${this.strokeWidthCursor || 0}"
+        stroke-opacity="${this.strokeOpacityCursor || 1}"
+        style="transform-origin: ${this.pos.x}px ${
+            this.pos.y
+          }px; transition: r 0.5s ease-in-out;">
+      </circle>
+   </g>`
         : ''
     }`;
   }

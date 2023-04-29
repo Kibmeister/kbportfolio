@@ -7,7 +7,7 @@ export class Cursor4 extends Cursors {
     this.speed = !isTouchDevices ? (!isSafari ? 0.4 : 0.9) : 1;
     this.delta = !isTouchDevices ? (!isSafari ? 0.15 : 0.05) : 0.2;
     this.state = {
-      isHovering: false,
+      isHovering: true,
     };
     this.init();
     this.loop();
@@ -21,9 +21,9 @@ export class Cursor4 extends Cursors {
   setHovering() {
     this.state.isHovering = !this.state.isHovering;
     if (this.state.isHovering) {
-       this.notifyRadiusUpdate(200); // Change the value to the desired radius when hovering
+       this.notifyRadiusUpdate(100); // Change the value to the desired radius when hovering
     } else {
-       this.notifyRadiusUpdate(100); // Change the value back to the initial radius when not hovering
+       this.notifyRadiusUpdate(150); // Change the value back to the initial radius when not hovering
     }
   }
 
@@ -38,7 +38,7 @@ export class Cursor4 extends Cursors {
     this.radiusCursorBack = 40; // Increase this value of the outside border stroke
     this.radiusCursor = 100;
     // Increase this value to make the cursor wider
-    this.strokeColorCursorBack = 'yellow'; // Change the color of the cursor's stroke
+    this.strokeColorCursorBack = 'black'; // Change the color of the cursor's stroke
     this.fillCursor = 'yellow'; // Change the color of the cursor's fill
     this.maxSqueeze = 0.1;
     this.accelerator = 1000;
