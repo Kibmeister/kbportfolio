@@ -36,12 +36,9 @@ const App = () => {
   useEffect(() => {
     const body = document.querySelector('body');
     if (lampToggle) {
-      body.style.backgroundColor = 'rgba(10, 10, 10, 1)';
-      body.style.overflow = 'hidden';
+      body.classList.add('lamp-off');
     } else {
-      body.style.backgroundColor = '';
-      body.style.overflow = '';
-     
+      body.classList.remove('lamp-off');
     }
   }, [lampToggle]);
 

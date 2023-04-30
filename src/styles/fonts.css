@@ -1,9 +1,25 @@
+@font-face {
+    font-family: 'cooper_hewittheavy';
+    src: url('./fonts/cooperhewitt-heavy-webfont.woff2') format('woff2'),
+         url('./fonts/cooperhewitt-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 @font-face {
-  font-family: 'Neue Haas Grotesk';
-   src: url('./fonts/NeueHaasDisplay-Bold.ttf') ,
+    font-family: 'cooper_hewittbold';
+    src: url('./fonts/cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('./fonts/cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
 }
 /* font.css */
 .hero-head-text {
-  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-family: 'cooper_hewittheavy', sans-serif;
+}
+
+.section-head-text {
+  font-family: 'cooper_hewittbold', sans-serif;
 }

@@ -5,18 +5,21 @@ import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
 import Splitting from 'splitting';
 import { gsap } from 'gsap';
-import { ComputersCanvas } from './canvas';
 import { LampCanvas } from './canvas';
 import { heroTags } from '../constants';
 import { Cursor4 } from '../scripts/cursors/cursor4';
 
 // Custom Hook
-const useSplittingAnimation = () => {
+const useSplittingAnimation = (lampToggle) => {
   useEffect(() => {
     const animateTitles = (fx1Titles) => {
       fx1Titles.forEach((title) => {
         const h1Chars = title.querySelectorAll('h1 .char');
         const pChars = title.querySelectorAll('p .char');
+
+        // Set visibility to visible when the animation starts
+        title.querySelector('h1').style.visibility = 'visible';
+        title.querySelector('p').style.visibility = 'visible';
 
         // Animate h1 chars
         gsap.fromTo(
@@ -63,6 +66,19 @@ const useSplittingAnimation = () => {
         ),
       ];
       Splitting({ target: '[data-splitting]', by: 'chars' });
+
+      // Apply the custom font classes and set the initial opacity to 0
+      fx1Titles.forEach((title) => {
+        const h1Chars = title.querySelectorAll('h1 .char');
+        const fontClasses = styles.heroHeadText.split(' ');
+        h1Chars.forEach((char) => {
+          fontClasses.forEach((fontClass) => {
+            char.classList.add(fontClass);
+          });
+          char.style.opacity = 0; // Set the initial opacity to 0
+        });
+      });
+
       requestAnimationFrame(() => {
         animateTitles(fx1Titles);
       });
@@ -77,7 +93,7 @@ const useSplittingAnimation = () => {
     return () => {
       window.removeEventListener('load', handleSplittingAnimation);
     };
-  }, []);
+  }, [lampToggle]);
 };
 
 const getRandomRotation = () => {
@@ -90,16 +106,15 @@ const getRandomPosition = () => {
 };
 
 const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
-  useSplittingAnimation();
-
   const [tags, setTags] = useState([]);
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
   const cursor4Ref = useRef(null);
 
+  useSplittingAnimation(lampToggle);
 
-
+  // listener for lampToggle
   useEffect(() => {
     disseminateTags();
 
@@ -120,7 +135,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     };
   }, [lampToggle]);
 
-
+  // listener for lampHover
   useEffect(() => {
     console.log('The lamp is hovering : ');
     console.log(lampHovering);
@@ -129,62 +144,67 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     }
   }, [isHovering, lampHovering]);
 
-
   const handleScroll = () => {
     // Prevent scrolling when tags are visible
     window.scrollTo(0, 0);
   };
 
- const disseminateTags = () => {
-   const nonOverlappingPositions = () => {
-     const positions = [];
-     const minDistance = 300; // Increased minimum distance between tags in pixels
-     const numTries = 100; // Number of attempts to find a non-overlapping position
+  const disseminateTags = () => {
+    const nonOverlappingPositions = () => {
+      const positions = [];
+      const minDistance = 300; // Increased minimum distance between tags in pixels
+      const numTries = 100; // Number of attempts to find a non-overlapping position
 
-     const positionOverlap = (p1, p2) => {
-       const dx = p1.x - p2.x;
-       const dy = p1.y - p2.y;
-       const distance = Math.sqrt(dx * dx + dy * dy);
+      const tagsContainer = document.getElementById('id_disseminate');
+      if (lampToggle) {
+        tagsContainer.classList.add('tagsVisible');
+      } else {
+        tagsContainer.classList.remove('tagsVisible');
+      }
 
-       return distance < minDistance;
-     };
+      const positionOverlap = (p1, p2) => {
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-     for (const tag of heroTags) {
-       let newPos;
-       let overlap;
-       let tries = 0;
+        return distance < minDistance;
+      };
 
-       do {
-         overlap = false;
-         newPos = getRandomPosition();
+      for (const tag of heroTags) {
+        let newPos;
+        let overlap;
+        let tries = 0;
 
-         // Check if new position overlaps with any previous position
-         for (const pos of positions) {
-           if (positionOverlap(newPos, pos)) {
-             overlap = true;
-             break;
-           }
-         }
-         tries++;
-       } while (overlap && tries < numTries);
+        do {
+          overlap = false;
+          newPos = getRandomPosition();
 
-       positions.push(newPos);
-     }
+          // Check if new position overlaps with any previous position
+          for (const pos of positions) {
+            if (positionOverlap(newPos, pos)) {
+              overlap = true;
+              break;
+            }
+          }
+          tries++;
+        } while (overlap && tries < numTries);
 
-     return positions;
-   };
+        positions.push(newPos);
+      }
 
+      return positions;
+    };
 
-   const positions = nonOverlappingPositions();
+    const positions = nonOverlappingPositions();
 
-   const transformedTags = heroTags.map((tag, index) => {
-     const { x, y } = positions[index];
-     const rotation = getRandomRotation();
-     return { ...tag, x, y, rotation };
-   });
+    const transformedTags = heroTags.map((tag, index) => {
+      const { x, y } = positions[index];
+      const rotation = getRandomRotation();
+      return { ...tag, x, y, rotation };
+    });
 
-   setTags(transformedTags);
- };
+    setTags(transformedTags);
+  };
 
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
@@ -203,7 +223,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       <div id='id_cursorcontainer'></div>
 
       {/* div for the heroTag dissemination */}
-      <div id={'id_disseminate'} className=' absolute inset-0'>
+      <div id={'id_disseminate'} className={'tags absolute inset-0'}>
         {lampToggle &&
           tags.map((tag, index) => (
             <div
@@ -242,12 +262,12 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         <div className='flex flex-col justify-center items-center'>
           {!lampToggle && (
             <div className='content__title' data-splitting data-effect1>
-              <h1 className={`${styles.heroHeadText}  text-black`}>
+              <h1 className={`${styles.heroHeadText} invisible text-black`}>
                 Hello, I'm Kasper
               </h1>
 
               <div className='content_title' data-splitting data-effect1>
-                <p className={`${styles.heroSubText} text-black`}>
+                <p className={`${styles.heroSubText} invisible text-black`}>
                   I'm<span className='space'></span>an
                   <span className='space'></span>interaction
                   <span className='space'></span>designer

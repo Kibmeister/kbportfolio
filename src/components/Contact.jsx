@@ -16,6 +16,20 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
+ const isValidName = (name) => {
+   const regex = /^[a-zA-Z\s]+$/;
+   return regex.test(name) && name.replace(/\s+/g, '').length >= 2;
+ };
+
+  const isValidEmail = (email) => {
+    const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    return regex.test(email);
+  };
+
+  const isValidMessage = (message) => {
+    return message.length >= 20;
+  };
+
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -28,6 +42,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+        if (form.name === '' && form.email === '' && form.message === '') {
+          alert('Please fill out all the fields before submitting the form.');
+          return;
+        }
+
+      if (!isValidName(form.name)) {
+        alert('Please enter a valid name containing only letters and spaces.');
+        return;
+      }
+
+      if (!isValidEmail(form.email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      if (!isValidMessage(form.message)) {
+        alert('Please enter a message with at least 20 characters.');
+        return;
+      }
+
+      setLoading(true);
+
+
     setLoading(true);
 
     emailjs
@@ -86,7 +124,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="Write your name"
+              placeholder='Write your name'
               className='bg-grey-10 py-4 px-6 placeholder:text-secondary grey-100  outline-none border-none font-medium'
             />
           </label>
@@ -97,8 +135,8 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="Write your email"
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary text-white  outline-none border-none font-medium'
+              placeholder='Write your email'
+              className='bg-grey-10 py-4 px-6 placeholder:text-secondary   outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -109,7 +147,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='Write your message'
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary text-white  outline-none border-none font-medium'
+              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium'
             />
           </label>
 
@@ -132,4 +170,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact,"contact");
+export default SectionWrapper(Contact, 'contact');

@@ -1,4 +1,3 @@
-
 /* for the sequential rendering of the headline letters */
 .space {
   display: inline-block;
@@ -17,7 +16,7 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: black; 
+  background-color: black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -30,7 +29,6 @@
   transform: scaleX(1);
 }
 
-
 /* locks the lamp container in place */
 .lampContainer {
   position: absolute;
@@ -38,11 +36,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* styles.css or a new CSS file */
-.tag button{
+.tag button {
   font-weight: bold;
   font-size: 2rem;
   color: black;
@@ -52,4 +50,25 @@
 
 .tag button:hover {
   transform: scale(1.2) rotate(0deg);
+}
+
+/* classes for the the lamptoggle on and off */
+body {
+  transition: background-color 0.5s ease, overflow 0.5s ease;
+}
+body.lamp-off {
+  background-color: rgba(10, 10, 10, 1);
+  overflow: hidden;
+}
+
+/* toggle class for the tags */
+#tags {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.tagsVisible {
+  opacity: 1;
+  visibility: visible;
 }
