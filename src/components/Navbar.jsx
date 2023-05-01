@@ -5,12 +5,11 @@ import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
 
-const Navbar = ({ heroRef }) => {
+const Navbar = ({ heroRef, animationClass }) => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   const [observedElements, setObservedElements] = useState([]);
   const [lastClicked, setLastClicked] = useState(null);
-  
 
   useEffect(() => {
     setObservedElements([
@@ -23,7 +22,6 @@ const Navbar = ({ heroRef }) => {
     rootMargin: '-35% 0px',
     threshold: Array.from({ length: 21 }, (_, i) => i * 0.05), // Create an array of threshold values from 0 to 1 with 0.05 increments
   });
-  
 
   useEffect(() => {
     entries.forEach((entry) => {
@@ -37,11 +35,10 @@ const Navbar = ({ heroRef }) => {
     });
   }, [entries, heroRef, lastClicked]);
 
-
   return (
     <nav
       id='navbar'
-      className={`${styles.paddingX} w-full flew items-center py-5 fixed top-0 z-20  bg-primary`}
+      className={`${styles.paddingX} animationClass w-full flew items-center py-5 fixed top-0 z-20  bg-primary`}
     >
       <div
         className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}
@@ -64,7 +61,7 @@ const Navbar = ({ heroRef }) => {
             className='w-9 h-9 object-container'
           />
           <p className='text-black text-[18px] font-bold cursor-pointer flex'>
-             &nbsp;
+            &nbsp;
             <span className='sm:block hidden'> | Interaction design </span>
           </p>
         </Link>

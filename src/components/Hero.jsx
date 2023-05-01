@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { styles } from '../styles';
 import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
@@ -150,17 +150,16 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   };
 
   const disseminateTags = () => {
+    const tagsContainer = document.getElementById('id_disseminate');
+    if (lampToggle) {
+      tagsContainer.classList.add('tagsVisible');
+    } else {
+      tagsContainer.classList.remove('tagsVisible');
+    }
     const nonOverlappingPositions = () => {
       const positions = [];
       const minDistance = 300; // Increased minimum distance between tags in pixels
       const numTries = 100; // Number of attempts to find a non-overlapping position
-
-      const tagsContainer = document.getElementById('id_disseminate');
-      if (lampToggle) {
-        tagsContainer.classList.add('tagsVisible');
-      } else {
-        tagsContainer.classList.remove('tagsVisible');
-      }
 
       const positionOverlap = (p1, p2) => {
         const dx = p1.x - p2.x;
@@ -224,28 +223,34 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
       {/* div for the heroTag dissemination */}
       <div id={'id_disseminate'} className={'tags absolute inset-0'}>
-        {lampToggle &&
-          tags.map((tag, index) => (
-            <div
-              key={index}
-              className='tag'
-              style={{
-                position: 'absolute',
-                left: `${tag.x}%`,
-                top: `${tag.y}%`,
-                transform: `rotate(${tag.rotation}deg)`,
-                zIndex: 10,
-              }}
-            >
-              <button
-                className='bg-transparent border-none outline-none p-0'
-                onMouseEnter={() => setIsHovering(true)} // Add this line
-                onMouseLeave={() => setIsHovering(false)} // Add this line
+        <AnimatePresence>
+          {lampToggle &&
+            tags.map((tag, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                className='tag'
+                style={{
+                  position: 'absolute',
+                  left: `${tag.x}%`,
+                  top: `${tag.y}%`,
+                  transform: `rotate(${tag.rotation}deg)`,
+                  zIndex: 10,
+                }}
               >
-                <p>{tag.term}</p>
-              </button>
-            </div>
-          ))}
+                <button
+                  className='bg-transparent border-none outline-none p-0'
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
+                >
+                  <p>{tag.term}</p>
+                </button>
+              </motion.div>
+            ))}
+        </AnimatePresence>
       </div>
 
       {/* div for the heading and subheading text, as well as the lampcanvas */}

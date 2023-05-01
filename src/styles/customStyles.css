@@ -57,18 +57,40 @@ body {
   transition: background-color 0.5s ease, overflow 0.5s ease;
 }
 body.lamp-off {
-  background-color: rgba(10, 10, 10, 1);
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 1);
+ 
 }
 
 /* toggle class for the tags */
-#tags {
+.tags {
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  transition: opacity  2s ease-in-out;
 }
 
 .tagsVisible {
   opacity: 1;
-  visibility: visible;
+
 }
+
+/* for the toggle of the scrollbar */
+.page-container {
+  overflow: hidden;
+}
+
+
+/* for the toggle of the navbar animation */
+.navbar-animate {
+  animation: disseminate 1s linear;
+}
+
+@keyframes disseminate {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+

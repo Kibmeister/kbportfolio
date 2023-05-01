@@ -20,6 +20,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalProject, setModalProject] = useState('');
   const [lampToggle, setLampToggle] = useState(false);
+  const [navbarAnimate, setNavbarAnimate] = useState(false);
 
   // check the id of the pressed projectcard
   // set the project from {projects} corresponding to that id as the modalProject
@@ -34,6 +35,8 @@ const App = () => {
   };
 
   useEffect(() => {
+
+    setNavbarAnimate(!lampToggle);
     const body = document.querySelector('body');
     if (lampToggle) {
       body.classList.add('lamp-off');
@@ -42,13 +45,16 @@ const App = () => {
     }
   }, [lampToggle]);
 
-  return (
-    <BrowserRouter>
-      <div className='relative z-0'>
-        {/* sets the cursor contianer for the div */}
-
-        {!lampToggle && <Navbar heroRef={heroRef} />}
-
+return (
+  <BrowserRouter>
+    <div className='relative z-0'>
+      {!lampToggle && (
+        <Navbar
+          heroRef={heroRef}
+          animationClass={navbarAnimate ? 'navbar-animate' : ''}
+        />
+      )}
+      <div className='page-container'>
         <div className='relative z-0'>
           <Hero
             setLampToggleApp={() => setLampToggle(!lampToggle)}
@@ -74,8 +80,9 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
-    </BrowserRouter>
-  );
+    </div>
+  </BrowserRouter>
+);
 };
 
 export default App;
