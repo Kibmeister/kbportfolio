@@ -31,11 +31,6 @@
 
 /* locks the lamp container in place */
 .lampContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 1;
 }
 
@@ -60,18 +55,6 @@ body.lamp-off {
   background-color: rgba(0, 0, 0, 1);
  
 }
-
-/* toggle class for the tags */
-.tags {
-  opacity: 0;
-  transition: opacity  2s ease-in-out;
-}
-
-.tagsVisible {
-  opacity: 1;
-
-}
-
 /* for the toggle of the scrollbar */
 .page-container {
   overflow: hidden;

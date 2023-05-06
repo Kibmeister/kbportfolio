@@ -117,13 +117,19 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   // listener for lampToggle
   useEffect(() => {
     disseminateTags();
+    const headerConatiner = document.querySelector('#id_headerContainer');
 
     if (lampToggle) {
+      //hide the header container
+      headerConatiner.style.opacity = 0;
+
       // Disable scroll when tags are visible
       window.addEventListener('scroll', handleScroll);
       cursor4Ref.current = new Cursor4();
       cursor4Ref.current.cursor = true;
     } else {
+      //show the header container
+      headerConatiner.style.opacity = 1;
       // Enable scroll when tags are not visible
       window.removeEventListener('scroll', handleScroll);
       if (cursor4Ref.current) {
@@ -150,12 +156,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   };
 
   const disseminateTags = () => {
-    const tagsContainer = document.getElementById('id_disseminate');
-    if (lampToggle) {
-      tagsContainer.classList.add('tagsVisible');
-    } else {
-      tagsContainer.classList.remove('tagsVisible');
-    }
     const nonOverlappingPositions = () => {
       const positions = [];
       const minDistance = 300; // Increased minimum distance between tags in pixels
@@ -220,7 +220,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     <section ref={ref} className='w-full h-screen mx:auto relative '>
       {/* container for the svg cursor */}
       <div id='id_cursorcontainer'></div>
-
       {/* div for the heroTag dissemination */}
       <div id={'id_disseminate'} className={'tags absolute inset-0'}>
         <AnimatePresence>
@@ -252,53 +251,59 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
             ))}
         </AnimatePresence>
       </div>
+      {/* wrapper div for the hero heading and the lamp canvas */}
 
-      {/* div for the heading and subheading text, as well as the lampcanvas */}
+      {/* xl:mt-12 flex xl:flex-row flex-col-reverse */}
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5 inset-0 top-[120px]
+`}
       >
-        <div className='lampContainer xl:flex-1 xl:h-auto md:h-[550px] h-[350px] '>
+        {/* container for the herotext and subtext */}
+        <div className='flex flex-col justify-center items-center'>
+          <div
+            id='id_headerContainer'
+            className='content__title'
+            data-splitting
+            data-effect1
+          >
+            <h1 className={`${styles.heroHeadText} invisible text-black`}>
+              Hello, I'm Kasper
+            </h1>
+
+            <div className='content_title' data-splitting data-effect1>
+              <p className={`${styles.heroSubText} invisible text-black`}>
+                I'm<span className='space'></span>an
+                <span className='space'></span>interaction
+                <span className='space'></span>designer
+                <span className='space'></span>specialized
+                <span className='space'></span>in
+                <span className='space'></span>
+                UI<span className='space'></span>and
+                <span className='space'></span>UX
+                <span className='space'></span>
+                design. <br className='sm:block hidden' /> My
+                <span className='space'></span>works
+                <span className='space'></span>are
+                <span className='space'></span>interdisciplinary
+                <span className='space'></span>in
+                <span className='space'></span>
+                form<span className='space'></span>and
+                <span className='space'></span>expression
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* container for the lamp canvas */}
+        <div className='lampContainer xl:flex-1 w-full h-full '>
           <LampCanvas
             setLamptoggle={(press) => lampPress(press)}
             setMouseHover={(hovering) => setLampHovering(hovering)}
           />
         </div>
 
-        <div className='flex flex-col justify-center items-center'>
-          {!lampToggle && (
-            <div className='content__title' data-splitting data-effect1>
-              <h1 className={`${styles.heroHeadText} invisible text-black`}>
-                Hello, I'm Kasper
-              </h1>
-
-              <div className='content_title' data-splitting data-effect1>
-                <p className={`${styles.heroSubText} invisible text-black`}>
-                  I'm<span className='space'></span>an
-                  <span className='space'></span>interaction
-                  <span className='space'></span>designer
-                  <span className='space'></span>specialized
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  UI<span className='space'></span>and
-                  <span className='space'></span>UX
-                  <span className='space'></span>
-                  design. <br className='sm:block hidden' /> My
-                  <span className='space'></span>works
-                  <span className='space'></span>are
-                  <span className='space'></span>interdisciplinary
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  form<span className='space'></span>and
-                  <span className='space'></span>expression
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-
         {/* interactive lamp object  */}
       </div>
-
       {/* The little knob that transitions the website down to the about section */}
       {!lampToggle ? (
         <div className='absolute xs:bottom-10 bottom-32 w-full z-[1] flex justify-center items-center'>

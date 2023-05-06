@@ -39,17 +39,20 @@ const ProjectModal = ({ modalProject, onClose }) => {
         </div>
       </div>
     </div>
-  ) : modalType === 'html' ? (
+  ) : modalType === 'coffeecan' ? (
     <div class='fixed z-30 inset-0 bg-black bg-opacity-50 flex justify-center items-center h-screen w-screen'>
       <div class='bg-[#efefef] w-full h-full relative flex flex-col justify-between p-8'>
-        <h1 class='text-4xl font-bold mb-8 pl-12'>Multimodal coffee can</h1>
+        <h1 class='text-4xl font-bold mb-2 pl-12'>Multimodal coffee can</h1>
+        <h3 class='text-1xl italic mb-14 pl-12'>
+          : haptic and auditory feedback for the visually impaired
+        </h3>
         <div class='flex flex-wrap'>
           <button onClick={onClose} className='absolute top-4 right-4'>
             Close
           </button>
           <div class='w-full md:w-1/3 px-12 mb-8 md:mb-0'>
             <h2 class='text-xl font-bold mb-4'>Feedback Design</h2>
-              <p class='mb-4'>
+            <p class='mb-4'>
               The model to the left depicts the two different forms of feedback,
               and in what scenario these are used. Tactons are structured
               tactile messages for non-visual information display, that are used
@@ -82,8 +85,8 @@ const ProjectModal = ({ modalProject, onClose }) => {
           </div>
           <div class='w-full md:w-2/3 px-12'>
             <h2 class='text-xl font-bold mb-4'>Story</h2>
-              <p class='mb-4'>
-                 This is a prototype of a multimodal coffee can, that is designed
+            <p class='mb-4 w-[800px]'>
+              This is a prototype of a multimodal coffee can, that is designed
               to assist and aid the visually impaired. Coffee can be poured,
               just as with a regular coffee can, though here it is implemented
               vibrotactile and auditory feedback to further exploit the
@@ -98,9 +101,6 @@ const ProjectModal = ({ modalProject, onClose }) => {
               assessment of the emitted feedback be significant enough to be
               higher regarded than their own practiced techniques, or will it be
               complementary.
-                
-
-                
             </p>
             <div class='aspect-w-16 aspect-h-9'>
               <ReactPlayer

@@ -6,7 +6,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
-  const earth = useGLTF('./lamp/lamp.gltf');
+  const earth = useGLTF('./ink_bottle_quill/scene.gltf');
 
   return (
     <primitive object={earth.scene} scale={7.0} position-y={-0.4} rotation-y={0} onClick={() => alert('Earth: saying YOLO') } />

@@ -25,7 +25,7 @@ import {
   threejs,
   ringmerking,
   coaxer,
-  multimodalThumbnail
+  multimodalThumbnail,
 } from '../assets';
 
 export const navLinks = [
@@ -250,7 +250,7 @@ const projects = [
   },
   {
     name: 'Multimodal coffeecan',
-    type: 'html',
+    type: 'coffeecan',
     description:
       'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: [
@@ -270,8 +270,29 @@ const projects = [
     image: multimodalThumbnail,
     source_code_link: 'https://github.com/',
   },
+  {
+    name: 'Topico EduTech',
+    type: 'topico',
+    description:
+      'A EduTech tool designed for fostering collaborative work for 6th grade students, with the aim of enhancing their vocabulary of a foreign language',
+    tags: [
+      {
+        name: 'Product design',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Design research',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'UI/UX design',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: multimodalThumbnail,
+    source_code_link: 'https://github.com/',
+  },
 ];
-
 
 const heroTags = [
   {
@@ -354,8 +375,13 @@ const heroTags = [
     id: 20,
     term: 'React',
   },
-
 ];
 
-
-export { services, technologies, experiences, testimonials, projects, heroTags};
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  heroTags,
+};

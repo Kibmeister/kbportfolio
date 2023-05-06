@@ -1,16 +1,22 @@
 import React, { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-
+import { AnimationMixer } from 'three';
+import * as THREE from 'three';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
 const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
-  const lamp = useGLTF('./ink_bottle_quill/scene.gltf');
+  const lamp = useGLTF('./lamp/scene.gltf');
 
   const [lampHover, setLampHover] = useState(false);
   const [lampToggle, setLampToggle] = useState(false);
   const isFirstRender = useRef(true);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [reverseTriggered, setReverseTriggered] = useState(false);
+  const [mixer] = useState(() => new AnimationMixer());
+  const [currentAction, setCurrentAction] = useState(null);
+
   const lampRef = useRef();
 
   // handles the stateupdate of the lammp hover
@@ -18,6 +24,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
     setMouseHover(lampHover);
   }, [lampHover]);
 
+  // lampToggle listener
   useEffect(() => {
     if (isFirstRender.current) {
       // Check if it's the initial render
@@ -27,18 +34,62 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
     }
   }, [lampToggle]);
 
-  useFrame(({ clock }) => {
-    if (lampHover) {
-      const elapsedTime = clock.getElapsedTime();
-      lampRef.current.rotation.x = -0.01 + Math.sin(elapsedTime * 2) * 0.1;
-      lampRef.current.rotation.y = -0.2 + Math.sin(elapsedTime * 2) * 0.1;
-      lampRef.current.rotation.z = -0.1 + Math.sin(elapsedTime * 2) * 0.1;
-    } else {
-      lampRef.current.rotation.x = -0.01;
-      lampRef.current.rotation.y = -0.2;
-      lampRef.current.rotation.z = -0.1;
+ useEffect(() => {
+   const clip = lamp.animations[1];
+   const action = mixer.clipAction(clip, lampRef.current);
+   action.reset();
+
+   if (animationTriggered) {
+     if (lamp.animations.length > 0) {
+       action.setLoop(THREE.LoopRepeat, 0);
+       action.clampWhenFinished = true;
+       action.play();
+       setCurrentAction(action);
+     }
+   } else if (reverseTriggered) {
+     if (currentAction) {
+       currentAction.time = currentAction.getClip().duration;
+     }
+   }
+ }, [
+   animationTriggered,
+   reverseTriggered,
+   mixer,
+   lamp,
+   lampRef,
+   currentAction,
+ ]);
+
+  useFrame((_, delta) => {
+    if (currentAction && !lampHover) {
+      currentAction.time -= delta;
     }
+    mixer.update(delta);
   });
+
+  const handlePointerEnter = () => {
+    // for the cursor hover
+    setLampHover(true);
+    document.body.style.cursor = 'pointer';
+
+    // for the animation
+    if (!animationTriggered && !reverseTriggered) {
+      setAnimationTriggered(true);
+      setReverseTriggered(false);
+    }
+  };
+
+  const handlePointerLeave = () => {
+    // for the cursor hover
+    setLampHover(false);
+    document.body.style.cursor = 'auto';
+
+    // for the lamp animation
+    if (!reverseTriggered && !animationTriggered) {
+      setAnimationTriggered(false);
+      setReverseTriggered(true);
+    }
+  };
 
   return (
     <mesh>
@@ -60,16 +111,10 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
       <primitive
         ref={lampRef}
         onClick={() => setLampToggle(!lampToggle)}
-        onPointerEnter={() => {
-          setLampHover(true);
-          document.body.style.cursor = 'pointer';
-        }}
-        onPointerLeave={() => {
-          setLampHover(false);
-          document.body.style.cursor = 'auto';
-        }}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
         object={lamp.scene}
-        scale={isMobile ? 16 : 20}
+        scale={isMobile ? 2 : 8}
         position={isMobile ? [0, -3, -2.2] : [0, -2, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
         pointerEvents
@@ -98,10 +143,10 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop='always'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [25, 5, 20], fov: 20 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
