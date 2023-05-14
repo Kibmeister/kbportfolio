@@ -33,7 +33,10 @@ import ringmerking from './ringmerking.svg'
 import coaxer from './Coaxer.svg';
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
-import multimodalThumbnail from './multimodalThumbnail.png';
+import multimodalThumbnail from './multimodalCoffeecan/multimodalThumbnail.png';
+import topicoThumbnail from './topico/Topico.svg'
+import scenario from './topico/scenario.svg'
+import topicoDevice from './topico/topicoDevice.svg';
 
 
 export {
@@ -69,5 +72,8 @@ export {
   coaxer,
   feedback,
   handle,
-  multimodalThumbnail
+  multimodalThumbnail,
+  topicoThumbnail,
+  scenario, 
+  topicoDevice
 };

@@ -26,6 +26,7 @@ import {
   ringmerking,
   coaxer,
   multimodalThumbnail,
+  topicoThumbnail,
 } from '../assets';
 
 export const navLinks = [
@@ -289,7 +290,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: multimodalThumbnail,
+    image: topicoThumbnail,
     source_code_link: 'https://github.com/',
   },
 ];

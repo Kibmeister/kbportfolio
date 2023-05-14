@@ -11,7 +11,7 @@ module.exports = {
         'container-title': '#516AAE',
         'grey-100': '#514E4D',
         'grey-10': '#EBEBEB',
-        'primary': '#FDFDFD',
+        primary: '#FDFDFD',
         'lion-100': '#FF7F1A',
         'black-100': '#100d25',
         'black-200': '#090325',

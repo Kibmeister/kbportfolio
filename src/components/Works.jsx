@@ -1,14 +1,11 @@
-import React, { useState} from 'react';
-import {Tilt} from 'react-tilt';
+import React, { useState } from 'react';
+import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { github } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-
-
-
 
 const ProjectCard = ({
   index,
@@ -18,9 +15,13 @@ const ProjectCard = ({
   image,
   onProjectClick,
 }) => {
-
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      onClick={() => {
+        onProjectClick(name);
+      }}
+      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+    >
       <Tilt
         options={{
           max: 45,
@@ -29,12 +30,7 @@ const ProjectCard = ({
         }}
         className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
       >
-        <div
-          className='relative w-full h-[230px]'
-          onClick={() => {
-           onProjectClick(name);
-          }}
-        >
+        <div className='relative w-full h-[230px]'>
           <img src={image} alt={name} className='w-full h-full object-cover' />
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>

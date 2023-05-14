@@ -121,7 +121,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
     if (lampToggle) {
       //hide the header container
-      headerConatiner.style.opacity = 0;
+      // headerConatiner.style.opacity = 0;
 
       // Disable scroll when tags are visible
       window.addEventListener('scroll', handleScroll);
@@ -129,7 +129,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       cursor4Ref.current.cursor = true;
     } else {
       //show the header container
-      headerConatiner.style.opacity = 1;
+      // headerConatiner.style.opacity = 1;
       // Enable scroll when tags are not visible
       window.removeEventListener('scroll', handleScroll);
       if (cursor4Ref.current) {
@@ -215,6 +215,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   };
 
   //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
+  //TODO: the lamp div is cut of upon initial render which makes the model itslef cut of, fix this
   return (
     //   mx:auto relative
     <section ref={ref} className='w-full h-screen mx:auto relative '>
@@ -253,49 +254,53 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
 
-      {/* xl:mt-12 flex xl:flex-row flex-col-reverse */}
       <div
-        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5 inset-0 top-[120px]
-`}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5
+      inset-0 top-[120px]
+    `}
       >
         {/* container for the herotext and subtext */}
-        <div className='flex flex-col justify-center items-center'>
-          <div
-            id='id_headerContainer'
-            className='content__title'
-            data-splitting
-            data-effect1
-          >
-            <h1 className={`${styles.heroHeadText} invisible text-black`}>
-              Hello, I'm Kasper
-            </h1>
+        <div className='flex flex-col justify-center items-center flex-shrink-0 lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px '>
+          {lampToggle ? (
+            <div className=''> </div>
+          ) : (
+            <div
+              id='id_headerContainer'
+              className='content__title'
+              data-splitting
+              data-effect1
+            >
+              <h1 className={`${styles.heroHeadText} invisible text-black`}>
+                Hello, I'm Kasper
+              </h1>
 
-            <div className='content_title' data-splitting data-effect1>
-              <p className={`${styles.heroSubText} invisible text-black`}>
-                I'm<span className='space'></span>an
-                <span className='space'></span>interaction
-                <span className='space'></span>designer
-                <span className='space'></span>specialized
-                <span className='space'></span>in
-                <span className='space'></span>
-                UI<span className='space'></span>and
-                <span className='space'></span>UX
-                <span className='space'></span>
-                design. <br className='sm:block hidden' /> My
-                <span className='space'></span>works
-                <span className='space'></span>are
-                <span className='space'></span>interdisciplinary
-                <span className='space'></span>in
-                <span className='space'></span>
-                form<span className='space'></span>and
-                <span className='space'></span>expression
-              </p>
+              <div className='content_title' data-splitting data-effect1>
+                <p className={`${styles.heroSubText} invisible text-black`}>
+                  I'm<span className='space'></span>an
+                  <span className='space'></span>interaction
+                  <span className='space'></span>designer
+                  <span className='space'></span>specialized
+                  <span className='space'></span>in
+                  <span className='space'></span>
+                  UI<span className='space'></span>and
+                  <span className='space'></span>UX
+                  <span className='space'></span>
+                  design. <br className='sm:block hidden' /> My
+                  <span className='space'></span>works
+                  <span className='space'></span>are
+                  <span className='space'></span>interdisciplinary
+                  <span className='space'></span>in
+                  <span className='space'></span>
+                  form<span className='space'></span>and
+                  <span className='space'></span>expression.
+                </p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* container for the lamp canvas */}
-        <div className='lampContainer xl:flex-1 w-full h-full '>
+        <div className='lampContainer  w-full h-full '>
           <LampCanvas
             setLamptoggle={(press) => lampPress(press)}
             setMouseHover={(hovering) => setLampHovering(hovering)}

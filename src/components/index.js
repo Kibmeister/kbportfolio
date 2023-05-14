@@ -14,6 +14,8 @@ import Feedbacks from './Feedbacks';
 import ProjectModal from './ProjectModal';
 import Contact from './Contact';
 import CanvasLoader from './Loader';
+import Coffeecan from './Projects/Coffeecan';
+
 
 export {
   Hero,
@@ -30,4 +32,5 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  Coffeecan
 };

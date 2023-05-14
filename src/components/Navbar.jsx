@@ -55,7 +55,7 @@ const Navbar = ({ heroRef, animationClass }) => {
             <Link
               id='navbar'
               to='/'
-              className='flex items-center gap-2'
+              className='flex flex-shrink-0 items-center gap-2'
               onClick={() => {
                 setActive('');
                 window.scrollTo(0, 0);
@@ -73,7 +73,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                 <span className='sm:block hidden'> | Interaction design </span>
               </p>
             </Link>
-            <ul className='list-none hidden sm:flex flex-row gap-10'>
+            <ul className='list-none hidden md:flex flex-row gap-10'>
               {navLinks.map((link, index) => (
                 <li
                   key={link.id}
@@ -95,7 +95,7 @@ const Navbar = ({ heroRef, animationClass }) => {
             </ul>
 
             {/* Hamburger menu containing the link elements when in mobile mode */}
-            <div className='sm:hidden flex jusstify-end items-center'>
+            <div className='md:hidden flex jusstify-end items-center'>
               <img
                 src={toggle ? close : menu}
                 alt='menu'

@@ -12,12 +12,8 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
   const [lampHover, setLampHover] = useState(false);
   const [lampToggle, setLampToggle] = useState(false);
   const isFirstRender = useRef(true);
-  const [animationTriggered, setAnimationTriggered] = useState(false);
-  const [reverseTriggered, setReverseTriggered] = useState(false);
   const [mixer] = useState(() => new AnimationMixer());
   const [currentAction, setCurrentAction] = useState(null);
-  const [idleAction, setIdleAction] = useState(null);
-  const [idleTriggered, setIdleTriggered] = useState(false);
 
   const lampRef = useRef();
 
@@ -35,82 +31,36 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
       setLamptoggle(lampToggle);
     }
   }, [lampToggle]);
+ 
+  //hover animation
+  useEffect(() => {
+    if (!lampToggle) {
+      const clip = lamp.animations[2];
+      console.log(' this is the lamp object');
+      console.log(lamp);
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
 
-  //idel animation 1 
-  // useEffect(() => {
-  //   const clip = lamp.animations[2];
-  //   const action = mixer.clipAction(clip, lampRef.current);
-  //   action.setLoop(THREE.LoopOnce, 0);
-  //   action.clampWhenFinished = true;
-  //   setIdleAction(action);
-  // }, [mixer, lamp, lampRef]);
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+      setCurrentAction(action);
+    }
+  }, [lampHover, mixer, lamp, lampRef]);
 
-  // useEffect(() => {
-  //   const firstTimeout = setTimeout(() => {
-  //     if (idleAction && !idleTriggered) {
-  //       idleAction.reset();
-  //       idleAction.play();
-  //       setIdleTriggered(true);
-  //     }
-  //   }, 3000); // 3 seconds after the page load
+  // click animation
+  useEffect(() => {
+    if (lampToggle) {
+      const clip = lamp.animations[0]; // the animation to play when the lamp is clicked
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
 
-  //   const interval = setInterval(() => {
-  //     if (
-  //       idleAction &&
-  //       !lampHover &&
-  //       !animationTriggered &&
-  //       !reverseTriggered
-  //     ) {
-  //       idleAction.reset();
-  //       idleAction.play();
-  //       setIdleTriggered(true);
-  //     }
-  //   }, 8000); // Every 8 seconds
-
-  //   return () => {
-  //     clearTimeout(firstTimeout);
-  //     clearInterval(interval);
-  //   };
-  // }, [
-  //   idleAction,
-  //   idleTriggered,
-  //   lampHover,
-  //   animationTriggered,
-  //   reverseTriggered,
-  // ]);
-
-
-  //welcome animation
- useEffect(() => {
-  const clip = lamp.animations[0];
-  const action = mixer.clipAction(clip, lampRef.current);
-  action.reset();
-
-  if (lampHover && !animationTriggered) {
-    action.setLoop(THREE.LoopOnce, 0);
-    action.clampWhenFinished = true;
-    action.play();
-    setCurrentAction(action);
-    setAnimationTriggered(true);
-    setReverseTriggered(false);
-  } 
-}, [lampHover, animationTriggered, mixer, lamp, lampRef]);
-//farwell animation
-useEffect(() => {
-  const clip = lamp.animations[1];
-  const action = mixer.clipAction(clip, lampRef.current);
-  action.reset();
-
-  if (!lampHover && !reverseTriggered) {
-    action.setLoop(THREE.LoopOnce, 0);
-    action.clampWhenFinished = true;
-    action.time = action.getClip().duration;
-    action.play();
-    setCurrentAction(action);
-    setReverseTriggered(true);
-    setAnimationTriggered(false);
-  } 
-}, [lampHover, reverseTriggered, mixer, lamp, lampRef]);
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+      setCurrentAction(action);
+    }
+  }, [lampToggle, mixer, lamp, lampRef]);
 
   useFrame((_, delta) => {
     if (currentAction && !lampHover) {
@@ -123,24 +73,12 @@ useEffect(() => {
     // for the cursor hover
     setLampHover(true);
     document.body.style.cursor = 'pointer';
-
-    // for the animation
-    if (!animationTriggered && !reverseTriggered) {
-      setAnimationTriggered(true);
-      setReverseTriggered(false);
-    }
   };
 
   const handlePointerLeave = () => {
     // for the cursor hover
     setLampHover(false);
     document.body.style.cursor = 'auto';
-
-    // for the lamp animation
-    if (!reverseTriggered && !animationTriggered) {
-      setAnimationTriggered(false);
-      setReverseTriggered(true);
-    }
   };
 
   return (
@@ -167,8 +105,8 @@ useEffect(() => {
         onPointerLeave={handlePointerLeave}
         object={lamp.scene}
         scale={isMobile ? 2 : 8}
-        position={isMobile ? [0, -3, -2.2] : [0, -2, -1.5]}
-        rotation={[-0.0, -1.2, -0.1]}
+        position={isMobile ? [0, -3, -2.2] : [0, -4, -1.5]}
+        rotation={[-0.0, -0.5, -0.0]}
         pointerEvents
       />
     </mesh>
