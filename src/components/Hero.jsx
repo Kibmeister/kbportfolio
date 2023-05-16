@@ -215,7 +215,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   };
 
   //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
-  //TODO: the lamp div is cut of upon initial render which makes the model itslef cut of, fix this
   return (
     //   mx:auto relative
     <section ref={ref} className='w-full h-screen mx:auto relative '>
@@ -260,7 +259,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     `}
       >
         {/* container for the herotext and subtext */}
-        <div className='flex flex-col justify-center items-center flex-shrink-0 lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px '>
+        <div className='flex flex-col justify-center items-start flex-shrink-0 lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] '>
           {lampToggle ? (
             <div className=''> </div>
           ) : (

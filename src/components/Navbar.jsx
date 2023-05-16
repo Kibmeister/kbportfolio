@@ -11,6 +11,7 @@ const Navbar = ({ heroRef, animationClass }) => {
   const [toggle, setToggle] = useState(false);
   const [observedElements, setObservedElements] = useState([]);
   const [lastClicked, setLastClicked] = useState(null);
+  const [heroInView, setHeroInView] = useState(true);
 
   useEffect(() => {
     setObservedElements([
@@ -24,13 +25,18 @@ const Navbar = ({ heroRef, animationClass }) => {
     threshold: Array.from({ length: 21 }, (_, i) => i * 0.05), // Create an array of threshold values from 0 to 1 with 0.05 increments
   });
 
+  //listener for which section is hovered
   useEffect(() => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && !lastClicked) {
+      if (entry.isIntersecting) {
         if (entry.target === heroRef.current) {
+          setHeroInView(true);
           setActive('');
         } else {
-          setActive(entry.target.id);
+          setHeroInView(false);
+          if (!lastClicked) {
+            setActive(entry.target.id);
+          }
         }
       }
     });
@@ -78,7 +84,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.id
+                    active === link.id && !heroInView
                       ? 'text-black active-underline'
                       : 'text-secondary'
                   } hover:text-black- text-[18px] font-medium cursor-pointer hover-underline`}

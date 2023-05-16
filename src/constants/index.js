@@ -207,7 +207,7 @@ const testimonials = [
 const projects = [
   {
     name: 'Ringmerking',
-    type: 'svg',
+    type: 'ringmerking',
     description:
       'Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ',
     tags: [
@@ -229,7 +229,7 @@ const projects = [
   },
   {
     name: 'Coaxer',
-    type: 'svg',
+    type: 'coaxer',
     description:
       'Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.',
     tags: [

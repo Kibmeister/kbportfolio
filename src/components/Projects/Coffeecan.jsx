@@ -1,20 +1,25 @@
+import React from 'react';
+import ReactPlayer from 'react-player';
 
-
-const Coffeecan = ({feedback, onClose }) => {
+const Coffeecan = ({ feedback, onClose }) => {
   return (
-    <div class='fixed inset-0 z-30 mx:auto bg-black bg-opacity-50 flex justify-center items-center h-screen w-screen'>
+    <div class='fixed inset-0 z-30 mx:auto bg-[#efefef] flex justify-center items-center h-screen w-screen overflow-y-auto'>
       <div class='bg-[#efefef] w-full h-full relative flex flex-col justify-between p-8'>
-        <h1 class='text-4xl font-bold mb-2 pl-12'>Multimodal coffee can</h1>
-        <h3 class='text-1xl italic mb-14 pl-12'>
-          : haptic and auditory feedback for the visually impaired
-        </h3>
+        <div className='header'>
+          <h1 class='text-4xl font-bold mb-2 pl-12'>Multimodal coffee can</h1>
+          <h3 class='text-1xl italic mb-14 pl-12'>
+            : haptic and auditory feedback for the visually impaired
+          </h3>
+        </div>
+
         <div class='flex flex-wrap'>
           <button onClick={onClose} className='absolute top-4 right-4'>
             Close
           </button>
           <div class='w-full md:w-1/3 px-12 mb-8 md:mb-0'>
-            <h2 class='text-xl font-bold mb-4'>Feedback Design</h2>
-            <p class='mb-4'>
+            <h2 class='text-2xl mb-14'>Feedback Design</h2>
+            <p class='mb-12'>
+              {' '}
               The model to the left depicts the two different forms of feedback,
               and in what scenario these are used. Tactons are structured
               tactile messages for non-visual information display, that are used
@@ -27,8 +32,8 @@ const Coffeecan = ({feedback, onClose }) => {
               presented in a concurrently manner.
             </p>
 
-            <img src={feedback} alt='Feedback Design' class='w-full mb-4' />
-            <ul class='list-disc list-inside mb-4'>
+            <img src={feedback} alt='Feedback Design' class='w-full mb-12' />
+            <ul class='list-disc list-inside mb-12 space-y-4'>
               <li>
                 Grabbing the handle and receive feedback upon amount (tactile
                 and auditory feedback)
@@ -46,8 +51,9 @@ const Coffeecan = ({feedback, onClose }) => {
             </ul>
           </div>
           <div class='w-full md:w-2/3 px-12'>
-            <h2 class='text-xl font-bold mb-4'>Story</h2>
-            <p class='mb-4 w-[800px]'>
+            <h2 class='text-2xl mb-14'>Story</h2>
+            <p class='mb-12 max-w-[800px]'>
+              {' '}
               This is a prototype of a multimodal coffee can, that is designed
               to assist and aid the visually impaired. Coffee can be poured,
               just as with a regular coffee can, though here it is implemented
@@ -64,12 +70,12 @@ const Coffeecan = ({feedback, onClose }) => {
               higher regarded than their own practiced techniques, or will it be
               complementary.
             </p>
-            <div class='aspect-w-16 aspect-h-9'>
+            <div class='flex flex-col content start aspect-w-16 aspect-h-9 items-start'>
               <ReactPlayer
                 className='react-player'
                 url='https://vimeo.com/498087574'
                 width='800px'
-                height='600px'
+                height='500px'
                 controls
               />
             </div>
