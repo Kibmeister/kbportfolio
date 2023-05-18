@@ -64,7 +64,7 @@ return (
 
         <About />
         <Experience />
-        <Tech />
+        
         <Works onProjectClick={handleModalClick} />
 
         {showModal && (

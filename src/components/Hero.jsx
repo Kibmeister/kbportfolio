@@ -8,6 +8,8 @@ import { gsap } from 'gsap';
 import { LampCanvas } from './canvas';
 import { heroTags } from '../constants';
 import { Cursor4 } from '../scripts/cursors/cursor4';
+import { useTranslation } from 'react-i18next';
+
 
 // Custom Hook
 const useSplittingAnimation = (lampToggle) => {
@@ -112,6 +114,9 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampHovering, setLampHovering] = useState(false);
   const cursor4Ref = useRef(null);
 
+  // i18n hook
+  const { t } = useTranslation();
+
   useSplittingAnimation(lampToggle);
 
   // listener for lampToggle
@@ -204,7 +209,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
     setTags(transformedTags);
   };
-
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
   const lampPress = () => {
@@ -270,7 +274,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-effect1
             >
               <h1 className={`${styles.heroHeadText} invisible text-black`}>
-                Hello, I'm Kasper
+                {t('header')}
               </h1>
 
               <div className='content_title' data-splitting data-effect1>

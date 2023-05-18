@@ -48,6 +48,16 @@ export const navLinks = [
   },
 ];
 
+
+
+const LANGUAGES = [
+  { label: 'English', code: 'en' },
+  { label: 'Norwegian', code: 'no' },
+  { label: 'Spanish', code: 'es' },
+  { label: 'Italian', code: 'it' },
+  { label: 'French', code: 'fr' },
+  { label: 'German', code: 'de' },
+];
 const services = [
   {
     title: 'Web Developer',
@@ -385,4 +395,5 @@ export {
   testimonials,
   projects,
   heroTags,
+  LANGUAGES,
 };

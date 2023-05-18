@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
-import { navLinks } from '../constants';
+import { navLinks, LANGUAGES } from '../constants';
 import { logo, menu, close } from '../assets';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
+import { useTranslation } from 'react-i18next';
+import '../i18n';
 
 const Navbar = ({ heroRef, animationClass }) => {
   const [active, setActive] = useState('');
@@ -41,6 +43,17 @@ const Navbar = ({ heroRef, animationClass }) => {
       }
     });
   }, [entries, heroRef, lastClicked]);
+
+  const { t, i18n } = useTranslation();
+
+  // function for listening after language change
+  const onChangeLang = (e) => {
+    console.log("Newly selected language: ");
+    console.log(e.target.value);
+    const languageCode = e.target.value;
+    i18n.changeLanguage(languageCode);
+  };
+
 
   return (
     <AnimatePresence>
@@ -99,6 +112,13 @@ const Navbar = ({ heroRef, animationClass }) => {
                 </li>
               ))}
             </ul>
+            <select defaultValue="en" onChange={onChangeLang}>
+              {LANGUAGES.map(({ code, label }) => (
+                <option key={code} value={code}>
+                  {label}
+                </option>
+              ))}
+            </select>
 
             {/* Hamburger menu containing the link elements when in mobile mode */}
             <div className='md:hidden flex jusstify-end items-center'>
