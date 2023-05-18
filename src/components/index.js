@@ -14,6 +14,7 @@ import ProjectModal from './ProjectModal';
 import Contact from './Contact';
 import CanvasLoader from './Loader';
 import Coffeecan from './Projects/Coffeecan';
+import CustomDropdown from './CustomDropdown';
 
 
 export {
@@ -30,5 +31,6 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
-  Coffeecan
+  Coffeecan,
+  CustomDropdown,
 };

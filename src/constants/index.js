@@ -27,8 +27,16 @@ import {
   coaxer,
   multimodalThumbnail,
   topicoThumbnail,
+  usa,
+  norway,
+  spain,
+  italy,
+  france,
+  germany,
 } from '../assets';
 
+
+//only used for internalObserver
 export const navLinks = [
   {
     id: 'about',
@@ -49,12 +57,12 @@ export const navLinks = [
 ];
 
 const LANGUAGES = [
-  { label: 'English', code: 'en' },
-  { label: 'Norwegian', code: 'no' },
-  { label: 'Spanish', code: 'es' },
-  { label: 'Italian', code: 'it' },
-  { label: 'French', code: 'fr' },
-  { label: 'German', code: 'de' },
+  { label: 'En', code: 'en', icon:  usa } ,
+  { label: 'No', code: 'no', icon:  norway } ,
+  { label: 'Es', code: 'es', icon:  spain } ,
+  { label: 'It', code: 'it', icon:  italy } ,
+  { label: 'Fr', code: 'fr', icon:  france } ,
+  { label: 'De', code: 'de', icon: germany } ,
 ];
 const services = [
   {

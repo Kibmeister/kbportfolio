@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks, LANGUAGES } from '../constants';
 import { logo, menu, close } from '../assets';
+import CustomDropdown from './CustomDropdown';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
 import { useTranslation } from 'react-i18next';
 
@@ -13,21 +14,9 @@ const Navbar = ({ heroRef, animationClass }) => {
   const [observedElements, setObservedElements] = useState([]);
   const [lastClicked, setLastClicked] = useState(null);
   const [heroInView, setHeroInView] = useState(true);
-  const [linkArr, setLinkArr] = useState([]);
 
   // i18n hook
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    console.log('This is the link array:');
-    const links = t('navBar.links', { returnObjects: true });
-    links.forEach((link) => {
-      console.log(link);
-    });
-
-    setLinkArr(links);
-    console.log(' - - - - - - - - - - - - - - - - - - - - -');
-  }, [t]);
 
   // use effect for intersectionObserver
   useEffect(() => {
@@ -62,8 +51,8 @@ const Navbar = ({ heroRef, animationClass }) => {
   // function for listening after language change
   const onChangeLang = (e) => {
     console.log('Newly selected language: ');
-    console.log(e.target.value);
-    const languageCode = e.target.value;
+    console.log(e);
+    const languageCode = e;
     i18n.changeLanguage(languageCode);
   };
 
@@ -124,13 +113,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                 </li>
               ))}
             </ul>
-            <select defaultValue='en' onChange={onChangeLang}>
-              {LANGUAGES.map(({ code, label }) => (
-                <option key={code} value={code}>
-                  {label}
-                </option>
-              ))}
-            </select>
+            <CustomDropdown onChangeLang={onChangeLang} />
 
             {/* Hamburger menu containing the link elements when in mobile mode */}
             <div className='md:hidden flex jusstify-end items-center'>
@@ -147,7 +130,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                 } p-6 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 `}
               >
                 <ul className='list-none flex justify-end items-start flex-col gap-4'>
-                  {navLinks.map((link) => (
+                  {t('navBar.links', { returnObjects: true }).map((link) => (
                     <li
                       key={link.id}
                       className={`${
@@ -162,7 +145,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                         setToggle(!toggle);
                       }}
                     >
-                      <a href={`#${link.id}`}>{link.title}</a>
+                      <a href={`#${link.id}`}>{link.value}</a>
                     </li>
                   ))}
                 </ul>
