@@ -10,94 +10,6 @@ import { heroTags } from '../constants';
 import { Cursor4 } from '../scripts/cursors/cursor4';
 import { useTranslation } from 'react-i18next';
 
-
-// Custom Hook
-const useSplittingAnimation = (lampToggle) => {
-  useEffect(() => {
-    const animateTitles = (fx1Titles) => {
-      fx1Titles.forEach((title) => {
-        const h1Chars = title.querySelectorAll('h1 .char');
-        const pChars = title.querySelectorAll('p .char');
-
-        // Set visibility to visible when the animation starts
-        title.querySelector('h1').style.visibility = 'visible';
-        title.querySelector('p').style.visibility = 'visible';
-
-        // Animate h1 chars
-        gsap.fromTo(
-          h1Chars,
-          {
-            'will-change': 'opacity, transform',
-            opacity: 0,
-            scale: 1,
-            rotationZ: () => gsap.utils.random(-20, 20),
-          },
-          {
-            ease: 'power4',
-            opacity: 1,
-            scale: 1,
-            rotation: 0,
-            stagger: 0.1, // Stagger value for h1
-          }
-        );
-
-        // Animate p chars
-        gsap.fromTo(
-          pChars,
-          {
-            'will-change': 'opacity, transform',
-            opacity: 0,
-            scale: 1,
-            rotationZ: () => gsap.utils.random(-20, 20),
-          },
-          {
-            ease: 'power4',
-            opacity: 1,
-            scale: 1,
-            rotation: 0,
-            stagger: 0.02, // Stagger value for p (4 times faster than h1)
-          }
-        );
-      });
-    };
-
-    const handleSplittingAnimation = () => {
-      const fx1Titles = [
-        ...document.querySelectorAll(
-          '.content__title[data-splitting][data-effect1]'
-        ),
-      ];
-      Splitting({ target: '[data-splitting]', by: 'chars' });
-
-      // Apply the custom font classes and set the initial opacity to 0
-      fx1Titles.forEach((title) => {
-        const h1Chars = title.querySelectorAll('h1 .char');
-        const fontClasses = styles.heroHeadText.split(' ');
-        h1Chars.forEach((char) => {
-          fontClasses.forEach((fontClass) => {
-            char.classList.add(fontClass);
-          });
-          char.style.opacity = 0; // Set the initial opacity to 0
-        });
-      });
-
-      requestAnimationFrame(() => {
-        animateTitles(fx1Titles);
-      });
-    };
-
-    if (document.readyState === 'complete') {
-      handleSplittingAnimation();
-    } else {
-      window.addEventListener('load', handleSplittingAnimation);
-    }
-
-    return () => {
-      window.removeEventListener('load', handleSplittingAnimation);
-    };
-  }, [lampToggle]);
-};
-
 const getRandomRotation = () => {
   return Math.random() * 40 - 30; // Generates a random number between -30 and 30
 };
@@ -112,12 +24,114 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
+  const [header, setHeader] = useState(false);
+  const [subHeader, setsubHeader] = useState(false);
   const cursor4Ref = useRef(null);
 
   // i18n hook
   const { t } = useTranslation();
 
-  useSplittingAnimation(lampToggle);
+  // header animation hook
+  const useSplittingAnimation = (lampToggle, header, subHeader) => {
+    useEffect(() => {
+      const animateTitles = (fx1Titles) => {
+        fx1Titles.forEach((title) => {
+          const h1Chars = title.querySelectorAll('h1 .char');
+          const pChars = title.querySelectorAll('p .char');
+
+          // Set visibility to visible when the animation starts
+          title.querySelector('h1').style.visibility = 'visible';
+          title.querySelector('p').style.visibility = 'visible';
+
+          // Animate h1 chars
+          gsap.fromTo(
+            h1Chars,
+            {
+              'will-change': 'opacity, transform',
+              opacity: 0,
+              scale: 1,
+              rotationZ: () => gsap.utils.random(-20, 20),
+            },
+            {
+              ease: 'power4',
+              opacity: 1,
+              scale: 1,
+              rotation: 0,
+              stagger: 0.1, // Stagger value for h1
+            }
+          );
+
+          // Animate p chars
+          gsap.fromTo(
+            pChars,
+            {
+              'will-change': 'opacity, transform',
+              opacity: 0,
+              scale: 1,
+              rotationZ: () => gsap.utils.random(-20, 20),
+            },
+            {
+              ease: 'power4',
+              opacity: 1,
+              scale: 1,
+              rotation: 0,
+              stagger: 0.02, // Stagger value for p (4 times faster than h1)
+            }
+          );
+        });
+      };
+
+      const handleSplittingAnimation = () => {
+        const fx1Titles = [
+          ...document.querySelectorAll(
+            '.content__title[data-splitting][data-effect1]'
+          ),
+        ];
+        Splitting({ target: '[data-splitting]', by: 'chars' });
+
+        // applying a custom font class for the h1 characters
+        fx1Titles.forEach((title) => {
+          const h1Chars = title.querySelectorAll('h1 .char');
+          const fontClasses = styles.heroHeadText.split(' ');
+          h1Chars.forEach((char) => {
+            fontClasses.forEach((fontClass) => {
+              char.classList.add(fontClass);
+            });
+            char.style.opacity = 0; // Set the initial opacity to 0
+          });
+        });
+
+        requestAnimationFrame(() => {
+          if (fx1Titles.length != 0) {
+            animateTitles(fx1Titles);
+          }
+        });
+      };
+
+      if (document.readyState === 'complete') {
+        handleSplittingAnimation();
+      } else {
+        window.addEventListener('load', handleSplittingAnimation);
+      }
+
+      return () => {
+        window.removeEventListener('load', handleSplittingAnimation);
+      };
+    }, [lampToggle, header, subHeader]);
+  };
+
+  // listener for the t language updater
+  useEffect(() => {
+    setHeader(t('hero.header'));
+    setsubHeader(t('hero.subHeader'));
+
+    console.log('Header : ');
+    console.log(header);
+    console.log('Subheader : ');
+    console.log(subHeader);
+  }, [t]);
+
+  useSplittingAnimation(lampToggle, header, subHeader);
 
   // listener for lampToggle
   useEffect(() => {
@@ -214,7 +228,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const lampPress = () => {
     console.log(' Hero.jsx lampPress called ');
     setLampToggle(!lampToggle); // Toggle tags visibility
-
     setLampToggleApp(); // propagate the toggle to parent component
   };
 
@@ -273,29 +286,20 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-splitting
               data-effect1
             >
-              <h1 className={`${styles.heroHeadText} invisible text-black`}>
-                {t('header')}
+              <h1
+                id={'id_header'}
+                className={`${styles.heroHeadText}  text-black`}
+              >
+                {header}
               </h1>
 
-              <div className='content_title' data-splitting data-effect1>
-                <p className={`${styles.heroSubText} invisible text-black`}>
-                  I'm<span className='space'></span>an
-                  <span className='space'></span>interaction
-                  <span className='space'></span>designer
-                  <span className='space'></span>specialized
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  UI<span className='space'></span>and
-                  <span className='space'></span>UX
-                  <span className='space'></span>
-                  design. <br className='sm:block hidden' /> My
-                  <span className='space'></span>works
-                  <span className='space'></span>are
-                  <span className='space'></span>interdisciplinary
-                  <span className='space'></span>in
-                  <span className='space'></span>
-                  form<span className='space'></span>and
-                  <span className='space'></span>expression.
+              {/* {t('subHeader')} */}
+              <div data-splitting data-effect1>
+                <p
+                  id={'id_subHeader'}
+                  className={`${styles.heroSubText}  text-black max-w-[600px]`}
+                >
+                  {subHeader}
                 </p>
               </div>
             </div>

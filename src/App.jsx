@@ -9,7 +9,6 @@ import {
   Feedbacks,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
   ProjectModal,

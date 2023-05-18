@@ -1,0 +1,15 @@
+{
+  "navBar": {
+    "title": "Interaction design",
+    "links": [
+      { "id": "about", "value": "About" },
+      { "id": "work", "value": "Work" },
+      { "id": "portfolio", "value": "Portfolio" },
+      { "id": "contact", "value": "Contact" }
+    ]
+  },
+  "hero": {
+    "header": "Hello, I'm Kasper",
+    "subHeader": "I'm an interaction designer specialized in UI and UX design. My works are interdisciplinary in form and expression."
+  }
+}

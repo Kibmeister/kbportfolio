@@ -1,0 +1,15 @@
+{
+  "navBar": {
+    "title": "Interaksjonsdesign",
+    "links": [
+      { "id": "about", "value": "Om meg" },
+      { "id": "work", "value": "Erfaring" },
+      { "id": "portfolio", "value": "Portefølje" },
+      { "id": "contact", "value": "Kontakt" }
+    ]
+  },
+  "hero": {
+    "header": "Hello, I'm Kasper",
+    "subHeader": "Jeg er en interaksjonsdesigner som spesialiserer meg innenfor UI og UX design. Mine prosjekter er tverrfaglige i fasong og uttrykk."
+  }
+}

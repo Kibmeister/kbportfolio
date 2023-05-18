@@ -6,7 +6,6 @@ import { navLinks, LANGUAGES } from '../constants';
 import { logo, menu, close } from '../assets';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
 import { useTranslation } from 'react-i18next';
-import '../i18n';
 
 const Navbar = ({ heroRef, animationClass }) => {
   const [active, setActive] = useState('');
@@ -14,7 +13,23 @@ const Navbar = ({ heroRef, animationClass }) => {
   const [observedElements, setObservedElements] = useState([]);
   const [lastClicked, setLastClicked] = useState(null);
   const [heroInView, setHeroInView] = useState(true);
+  const [linkArr, setLinkArr] = useState([]);
 
+  // i18n hook
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    console.log('This is the link array:');
+    const links = t('navBar.links', { returnObjects: true });
+    links.forEach((link) => {
+      console.log(link);
+    });
+
+    setLinkArr(links);
+    console.log(' - - - - - - - - - - - - - - - - - - - - -');
+  }, [t]);
+
+  // use effect for intersectionObserver
   useEffect(() => {
     setObservedElements([
       heroRef.current,
@@ -44,16 +59,13 @@ const Navbar = ({ heroRef, animationClass }) => {
     });
   }, [entries, heroRef, lastClicked]);
 
-  const { t, i18n } = useTranslation();
-
   // function for listening after language change
   const onChangeLang = (e) => {
-    console.log("Newly selected language: ");
+    console.log('Newly selected language: ');
     console.log(e.target.value);
     const languageCode = e.target.value;
     i18n.changeLanguage(languageCode);
   };
-
 
   return (
     <AnimatePresence>
@@ -89,11 +101,11 @@ const Navbar = ({ heroRef, animationClass }) => {
               />
               <p className='text-black text-[18px] font-bold cursor-pointer flex'>
                 &nbsp;
-                <span className='sm:block hidden'> | Interaction design </span>
+                <span className='sm:block hidden'>{t('navBar.title')}</span>
               </p>
             </Link>
             <ul className='list-none hidden md:flex flex-row gap-10'>
-              {navLinks.map((link, index) => (
+              {t('navBar.links', { returnObjects: true }).map((link, index) => (
                 <li
                   key={link.id}
                   className={`${
@@ -107,12 +119,12 @@ const Navbar = ({ heroRef, animationClass }) => {
                   }}
                 >
                   <a data-target={`#${link.id}`} href={`#${link.id}`}>
-                    {link.title}
+                    {link.value}
                   </a>
                 </li>
               ))}
             </ul>
-            <select defaultValue="en" onChange={onChangeLang}>
+            <select defaultValue='en' onChange={onChangeLang}>
               {LANGUAGES.map(({ code, label }) => (
                 <option key={code} value={code}>
                   {label}

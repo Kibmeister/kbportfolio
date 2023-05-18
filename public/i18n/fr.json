@@ -1,0 +1,16 @@
+{
+  "navBar" :{
+    "title" : "Design d'interaction",
+      "links": [
+      { "id": "about", "value": "À propos" },
+      { "id": "work", "value": "Travail" },
+      { "id": "portfolio", "value": "Portfolio" },
+      { "id": "contact", "value": "Contact" }
+    ]
+
+  },
+  "hero" : {
+    "header": "Bonjour, je m'appelle Kasper.",
+     "subHeader": "Je suis un concepteur d'interaction spécialisé dans la conception d'interface utilisateur (UI) et d'expérience utilisateur (UX). Mes travaux sont interdisciplinaires dans leur forme et leur expression."
+  }
+}
