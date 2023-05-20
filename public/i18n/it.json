@@ -11,5 +11,16 @@
   "hero": {
     "header": "Ciao, sono Kasper.",
     "subHeader": "Sono un designer di interazione specializzato nel design UI e UX. I miei lavori sono interdisciplinari nella forma e nell'espressione."
+  },
+  "about": {
+    "p": "Introduzione",
+    "h2": "Panoramica",
+    "subHeader": "Sono un designer innovativo che unisce appassionatamente tecnologia e utenti, padroneggiando il design dell'esperienza utente, interfacce utente intuitive, sviluppo di prodotti all'avanguardia e sviluppo front-end elegante.",
+    "tiltcards": [
+      { "id": "ux", "value": "Designer UX" },
+      { "id": "ui", "value": "Designer UI" },
+      { "id": "productdesigner", "value": "Designer di prodotti" },
+      { "id": "frontenddeveloper", "value": "Sviluppatore front-end" }
+    ]
   }
 }

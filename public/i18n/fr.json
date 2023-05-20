@@ -1,16 +1,26 @@
 {
-  "navBar" :{
-    "title" : "Design d'interaction",
-      "links": [
+  "navBar": {
+    "title": "Design d'interaction",
+    "links": [
       { "id": "about", "value": "À propos" },
       { "id": "work", "value": "Travail" },
       { "id": "portfolio", "value": "Portfolio" },
       { "id": "contact", "value": "Contact" }
     ]
-
   },
-  "hero" : {
+  "hero": {
     "header": "Bonjour, je m'appelle Kasper.",
-     "subHeader": "Je suis un concepteur d'interaction spécialisé dans la conception d'interface utilisateur (UI) et d'expérience utilisateur (UX). Mes travaux sont interdisciplinaires dans leur forme et leur expression."
+    "subHeader": "Je suis un concepteur d'interaction spécialisé dans la conception d'interface utilisateur (UI) et d'expérience utilisateur (UX). Mes travaux sont interdisciplinaires dans leur forme et leur expression."
+  },
+  "about": {
+    "p": "Introduction",
+    "h2": "Aperçu",
+    "subHeader": "Je suis un designer innovant qui réunit passionnément la technologie et les utilisateurs, maîtrisant la conception d'expérience utilisateur, les interfaces utilisateur intuitives, le développement de produits de pointe et le développement front-end élégant.",
+    "tiltcards": [
+      { "id": "ux", "value": "Concepteur UX" },
+      { "id": "ui", "value": "Concepteur UI" },
+      { "id": "productdesigner", "value": "Concepteur de produits" },
+      { "id": "frontenddeveloper", "value": "Développeur front-end" }
+    ]
   }
 }

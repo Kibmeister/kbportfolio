@@ -11,5 +11,16 @@
   "hero": {
     "header": "Hello, I'm Kasper",
     "subHeader": "Jeg er en interaksjonsdesigner som spesialiserer meg innenfor UI og UX design. Mine prosjekter er tverrfaglige i fasong og uttrykk."
+  },
+  "about": {
+    "p": "Introduksjon",
+    "h2": "Oversikt",
+    "subHeader": "Jeg er en innovativ designer som lidenskapelig forener teknologi og brukere, behersker brukeropplevelsesdesign, intuitive brukergrensesnitt, banebrytende produktutvikling og strømlinjeformet front-end-utvikling.",
+    "tiltcards": [
+      { "id": "ux", "value": "UX-designer" },
+      { "id": "ui", "value": "UI-designer" },
+      { "id": "productdesigner", "value": "Produktdesigner" },
+      { "id": "frontenddeveloper", "value": "Frontend-utvikler" }
+    ]
   }
 }

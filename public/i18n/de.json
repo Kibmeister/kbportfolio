@@ -1,15 +1,26 @@
 {
-  "navBar" :{
-    "title" : "Interaktionsdesign",
-     "links": [
+  "navBar": {
+    "title": "Interaktionsdesign",
+    "links": [
       { "id": "about", "value": "Über" },
       { "id": "work", "value": "Arbeit" },
       { "id": "portfolio", "value": "Portfolio" },
       { "id": "contact", "value": "Kontakt" }
     ]
   },
-  "hero" : {
+  "hero": {
     "header": "Hallo, ich bin Kasper",
-     "subHeader": "Ich bin ein Interaction Designer, spezialisiert auf UI- und UX-Design. Meine Arbeiten sind interdisziplinär in Form und Ausdruck."
+    "subHeader": "Ich bin ein Interaction Designer, spezialisiert auf UI- und UX-Design. Meine Arbeiten sind interdisziplinär in Form und Ausdruck."
+  },
+  "about": {
+    "p": "Einführung",
+    "h2": "Übersicht",
+    "subHeader": "Ich bin ein innovativer Designer, der leidenschaftlich Technologie und Benutzer vereint, Benutzererfahrungsdesign beherrscht, intuitive Benutzeroberflächen, hochmoderne Produktentwicklung und elegante Frontend-Entwicklung.",
+    "tiltcards": [
+      { "id": "ux", "value": "UX-Designer" },
+      { "id": "ui", "value": "UI-Designer" },
+      { "id": "productdesigner", "value": "Produktdesigner" },
+      { "id": "frontenddeveloper", "value": "Frontend-Entwickler" }
+    ]
   }
 }

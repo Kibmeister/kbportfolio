@@ -2,11 +2,14 @@ import React from 'react';
 import {Tilt} from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { services } from '../constants';
+import { imageMap } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { useTranslation } from 'react-i18next';
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, value, id }) => {
+const iconSrc = imageMap[id];
+
   return (
     <Tilt className='bg-white xs:w-[250px] w-full'>
       <motion.div
@@ -17,10 +20,8 @@ const ServiceCard = ({ index, title, icon }) => {
           options={{ max: 45, scale: 1, speed: 450 }}
           className='bg-white- py-5 px-12 min-h-[280px] flex justify-evenly items-center felx-col'
         >
-          <img src={icon} alt={title} className='w-16 h-16 object-contain' />
-          <h3 className='text-container-title text-[20px] font-bold text-center'>
-            {title}
-          </h3>
+          <img src={iconSrc} alt={value} className='w-16 h-16 object-contain' />
+          <h3 className=' text-[20px] font-bold text-center'>{value}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -28,24 +29,27 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+  const { t } = useTranslation();
+  
+
+  console.log('about values: ');
+  console.log(t('about.tiltcards', { returnObjects: true }));
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>{t('about.p')}</p>
+        <h2 className={styles.sectionHeadText}>{t('about.h2')}</h2>
       </motion.div>
       <motion.p
         vairants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
       >
-        Im a pro, of course im a pro jada jada jada jada jada jada jada jada
-        jadajada jada jadajada jada jadavjada jada jadajada jada jadajada jada
-        jadajada jada jadajada jada jadajada jada jada
+        {t('about.subHeader')}
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 '>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {t('about.tiltcards', { returnObjects: true }).map((value, index) => (
+          <ServiceCard key={value.id} index={index} {...value} />
         ))}
       </div>
     </>

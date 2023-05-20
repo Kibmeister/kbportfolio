@@ -24,7 +24,7 @@ const CustomDropdown = ({ onChangeLang }) => {
         <button
           id='dropdownDefaultButton'
           data-dropdown-toggle='dropdown'
-          className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+          className='bg-black text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 text-center inline-flex items-center '
           type='button'
           onClick={toggleDropdown}
         >
@@ -54,7 +54,7 @@ const CustomDropdown = ({ onChangeLang }) => {
       <div
         id='dropdown'
         ref={dropdownRef}
-        className={`absolute mt-2 z-10 bg-white divide-y divide-gray-100  shadow w-22 dark:bg-gray-700 
+        className={`absolute mt-2 z-10 bg-white divide-y divide-gray-100  shadow w-22
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul

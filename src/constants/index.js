@@ -64,24 +64,13 @@ const LANGUAGES = [
   { label: 'Fr', code: 'fr', icon:  france } ,
   { label: 'De', code: 'de', icon: germany } ,
 ];
-const services = [
-  {
-    title: 'Web Developer',
-    icon: web,
-  },
-  {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
-  {
-    title: 'Backend Developer',
-    icon: backend,
-  },
-  {
-    title: 'Content Creator',
-    icon: creator,
-  },
-];
+const imageMap = {
+  ux: web,
+  ui: mobile,
+  productdesigner: backend,
+  frontenddeveloper: creator,
+};
+
 
 const technologies = [
   {
@@ -395,7 +384,7 @@ const heroTags = [
 ];
 
 export {
-  services,
+  imageMap,
   technologies,
   experiences,
   testimonials,
