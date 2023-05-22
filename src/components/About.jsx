@@ -2,13 +2,13 @@ import React from 'react';
 import {Tilt} from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { imageMap } from '../constants';
+import { imageMapAbout } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { useTranslation } from 'react-i18next';
 
 const ServiceCard = ({ index, value, id }) => {
-const iconSrc = imageMap[id];
+const iconSrc = imageMapAbout[id];
 
   return (
     <Tilt className='bg-white xs:w-[250px] w-full'>
@@ -30,10 +30,7 @@ const iconSrc = imageMap[id];
 
 const About = () => {
   const { t } = useTranslation();
-  
 
-  console.log('about values: ');
-  console.log(t('about.tiltcards', { returnObjects: true }));
   return (
     <>
       <motion.div variants={textVariant()}>

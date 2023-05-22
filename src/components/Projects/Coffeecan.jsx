@@ -1,75 +1,43 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { useTranslation } from 'react-i18next';
 
 const Coffeecan = ({ feedback, onClose }) => {
+   const { t, i18n } = useTranslation();
   return (
     <div class='fixed inset-0 z-30 mx:auto bg-[#efefef] flex justify-center items-center h-screen w-screen overflow-y-auto'>
       <div class='bg-[#efefef] w-full h-full relative flex flex-col justify-between p-8'>
         <div className='header'>
-          <h1 class='text-4xl font-bold mb-2 pl-12'>Multimodal coffee can</h1>
+          <h1 class='text-4xl font-bold mb-2 pl-12'>
+            {t('portfolio.coffeecan.title')}
+          </h1>
           <h3 class='text-1xl italic mb-14 pl-12'>
-            : haptic and auditory feedback for the visually impaired
+            {t('portfolio.coffeecan.caption')}
           </h3>
         </div>
 
         <div class='flex flex-wrap'>
           <button onClick={onClose} className='absolute top-4 right-4'>
-            Close
+            {t('portfolio.coffeecan.buttonclose')}
           </button>
           <div class='w-full md:w-1/3 px-12 mb-8 md:mb-0'>
-            <h2 class='text-2xl mb-14'>Feedback Design</h2>
-            <p class='mb-12'>
-              {' '}
-              The model to the left depicts the two different forms of feedback,
-              and in what scenario these are used. Tactons are structured
-              tactile messages for non-visual information display, that are used
-              to inform the user through output of vibrotactile waves. Tactons
-              are based on frequency, amplitude, waveform and rhythm as main
-              parameters. In conjunction with tactons, the can emitts earcons
-              through several of the sequences of interaction. Earcons are here
-              used as in parallel with tactons. Earcons are the equivalent to
-              tactons just on the auditory modality, and in this design
-              presented in a concurrently manner.
-            </p>
+            <h2 class='text-2xl mb-14'>
+              {t('portfolio.coffeecan.feedbackdesignT')}
+            </h2>
+            <p class='mb-12'>{t('portfolio.coffeecan.feedbackdesignP')}</p>
 
             <img src={feedback} alt='Feedback Design' class='w-full mb-12' />
             <ul class='list-disc list-inside mb-12 space-y-4'>
-              <li>
-                Grabbing the handle and receive feedback upon amount (tactile
-                and auditory feedback)
-              </li>
-              <li>Pouring from the coffee can (tactile feedback)</li>
-              <li>
-                {' '}
-                Confirmation of the cup successfully poured (tactile and
-                auditory feedback)
-              </li>
-              <li>
-                Confirmation that the temperature has the appropriate drinking
-                temperature (auditory feedback)
-              </li>
+              {t('portfolio.coffeecan.ul', { returnObjects: true }).map(
+                (item, index) => (
+                  <li key={index}> {item.value}</li>
+                )
+              )}
             </ul>
           </div>
           <div class='w-full md:w-2/3 px-12'>
-            <h2 class='text-2xl mb-14'>Story</h2>
-            <p class='mb-12 max-w-[800px]'>
-              {' '}
-              This is a prototype of a multimodal coffee can, that is designed
-              to assist and aid the visually impaired. Coffee can be poured,
-              just as with a regular coffee can, though here it is implemented
-              vibrotactile and auditory feedback to further exploit the
-              perception capacity available for user. Thus, the theme for this
-              project is multimodal interaction, which is how systems can be
-              designed to utilize input and output through different channels of
-              perception, available for the user. By heightening the level of
-              tactile and auditory feedback, the goal was to see if it is
-              possible for visually impaired people to make fewer errors when
-              pouring, as well as shortening the pouring time. Also, how will
-              the user make sense of the feedback when exposed to it, will the
-              assessment of the emitted feedback be significant enough to be
-              higher regarded than their own practiced techniques, or will it be
-              complementary.
-            </p>
+            <h2 class='text-2xl mb-14'>{t('portfolio.coffeecan.storyT')}</h2>
+            <p class='mb-12 max-w-[800px]'>{t('portfolio.coffeecan.storyP')}</p>
             <div class='flex flex-col content start aspect-w-16 aspect-h-9 items-start'>
               <ReactPlayer
                 className='react-player'

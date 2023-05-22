@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,69 +9,80 @@ import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
+import { useTranslation } from 'react-i18next';
+import { imageMapExperience } from '../constants';
 
 const ExperienceCard = ({ experience }) => {
+  const iconSrc = imageMapExperience[experience.id];
+
   return (
     <VerticalTimelineElement
       contentStyle={{
         background: '#FDFDFD',
         color: '#000000',
-        boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)'
+        boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)',
       }}
       contentArrowStyle={{ borderRight: '7px solid  #FDFDFD' }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
       icon={
         <div className='flex justify-center items-center w-full h-full shadown '>
           <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            src={iconSrc}
+            alt={experience.title}
+            className='w-[60%] h-[60%] object-contain '
           />
         </div>
       }
     >
       <div>
-        <h3 className='text-container-title text-[24px] font-bold'>
-          {experience.title}
-        </h3>
+        <h3 className=' text-[24px] font-bold'>{experience.title}</h3>
         <p
           className='text-black text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.profession}
         </p>
       </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {experience.points.map((point, index) => (
+        {experience.workdescription.map((workdesc, index) => (
           <li
             key={`experience-point-${index}`}
             className='text-black-100 text-[14px] pl-1 tracking-wider'
           >
-            {point}
+            {workdesc.value}
           </li>
         ))}
       </ul>
     </VerticalTimelineElement>
   );
 };
+
 const Experience = () => {
+  const { t, i18n } = useTranslation();
+
+  console.log('experience values: ');
+  console.log('Experiences:', t('experiences', { returnObjects: true }));
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My experience</p>
-        <h2 className={styles.sectionHeadText}>Work experience</h2>
+        <p className={styles.sectionSubText}>{t('workexperience.p')}</p>
+        <h2 className={styles.sectionHeadText}>{t('workexperience.h3')}</h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline lineColor={'#EBEBEB'}>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
+          {t('workexperience.experiences', { returnObjects: true }).map(
+            (experience, index) => (
+              <ExperienceCard
+                key={experience.id}
+                index={index}
+                experience={experience} // pass the whole experience object as one prop
+              />
+            )
+          )}
         </VerticalTimeline>
       </div>
     </>

@@ -33,6 +33,8 @@ import {
   italy,
   france,
   germany,
+  fourhuman, 
+  kantega
 } from '../assets';
 
 
@@ -64,12 +66,18 @@ const LANGUAGES = [
   { label: 'Fr', code: 'fr', icon:  france } ,
   { label: 'De', code: 'de', icon: germany } ,
 ];
-const imageMap = {
+const imageMapAbout = {
   ux: web,
   ui: mobile,
   productdesigner: backend,
   frontenddeveloper: creator,
 };
+
+const imageMapExperience = {
+  fourhuman: fourhuman,
+  kantega: kantega,
+};
+
 
 
 const technologies = [
@@ -384,7 +392,8 @@ const heroTags = [
 ];
 
 export {
-  imageMap,
+  imageMapAbout,
+  imageMapExperience,
   technologies,
   experiences,
   testimonials,

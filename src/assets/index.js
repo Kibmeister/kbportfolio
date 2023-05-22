@@ -44,6 +44,9 @@ import italy from './flags/italy.svg';
 import france from './flags/france.svg';
 import germany from './flags/germany.svg';
 import globe from './globe.svg';
+import kantega from './company/kantega.png';
+import fourhuman from './company/fourhuman.png';
+
 
 export {
   logo,
@@ -89,4 +92,6 @@ export {
   france,
   germany,
   globe,
+  kantega,
+  fourhuman,
 };

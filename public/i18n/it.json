@@ -22,5 +22,116 @@
       { "id": "productdesigner", "value": "Designer di prodotti" },
       { "id": "frontenddeveloper", "value": "Sviluppatore front-end" }
     ]
+  },
+  "workexperience": {
+    "p": "La mia esperienza",
+    "h3": "Esperienza lavorativa",
+    "experiences": [
+      {
+        "id": "fourhuman",
+        "profession": "UX Designer",
+        "title": "4Human HRM",
+        "date": "11.2021 - 07.2022",
+        "workdescription": [
+          {
+            "id": "1",
+            "value": "Ho sviluppato e mantenuto un sistema di design per 4Human HRM utilizzando il software di design grafico Figma."
+          },
+          {
+            "id": "2",
+            "value": "Ho creato e progettato il formato su cui si basava la documentazione del sistema di design, così come la documentazione del sistema di design stesso."
+          },
+          {
+            "id": "3",
+            "value": "Ho collaborato e condiviso conoscenze e prospettive sulla direzione del sistema di design attraverso frequenti incontri settimanali."
+          },
+          {
+            "id": "4",
+            "value": "Ho fornito feedback costruttivo al team di design su potenziali responsabilità, così come opportunità per i componenti del sistema di design."
+          }
+        ]
+      },
+      {
+        "id": "kantega",
+        "profession": "UX Designer",
+        "title": "Kantega",
+        "date": "06.2022 - 07.2022",
+        "workdescription": [
+          {
+            "id": "1",
+            "value": "Ho lavorato come stagista estivo, servendo come UX designer in un team interdisciplinare con un co-designer e quattro altri sviluppatori per un periodo di sei settimane."
+          },
+          {
+            "id": "2",
+            "value": "Ho progettato e rinnovato un servizio per birdwatchers in Norvegia, con un focus su attrarre nuovi utenti e priorità all'uso mobile-first."
+          },
+          {
+            "id": "3",
+            "value": "Ho disegnato wireframes e progettato l'identità visiva iniziale per il servizio rinnovato. Ho utilizzato Figma per creare un sistema di design approssimativo per il servizio, così come per la prototipazione."
+          },
+          {
+            "id": "4",
+            "value": "Ho condotto ricerche utente facilitando interviste con potenziali utenti e esperti del dominio, che hanno coinvolto anche test pratici dell'utente su vari prototipi, incluso il testing guerrilla."
+          }
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "coffeecan": {
+      "title": "Caffettiera multimodale",
+      "caption": ": feedback aptico e uditivo per i non vedenti",
+      "buttonclose": "Chiudi",
+      "feedbackdesignT": "Design del feedback",
+      "feedbackdesignP": "Il modello sottostante mostra le due diverse forme di feedback, e in quale scenario vengono utilizzate. I tactons sono messaggi tattili strutturati per la visualizzazione di informazioni non visive, che vengono utilizzati per informare l'utente attraverso l'output di onde vibrotattili. I tactons si basano su frequenza, ampiezza, forma d'onda e ritmo come parametri principali. In combinazione con i tactons, la lattina emette earcons attraverso diverse sequenze di interazione. Gli earcons vengono utilizzati qui in parallelo con i tactons. Gli earcons sono l'equivalente dei tactons solo sulla modalità uditiva, e in questo design vengono presentati in modo simultaneo.",
+      "ul": [
+        {
+          "id": 1,
+          "value": " Grabbing the handle and receive feedback upon amount (tactile and auditory feedback)"
+        },
+        {
+          "id": 2,
+          "value": "Pouring from the coffee can (tactile feedback)"
+        },
+        {
+          "id": 3,
+          "value": "Confirmation of the cup successfully poured (tactile and auditory feedback)"
+        },
+        {
+          "id": 4,
+          "value": " Confirmation that the temperature has the appropriate drinking temperature (auditory feedback)"
+        }
+      ],
+      "storyT": "Story",
+      "storyP": "This is a prototype of a multimodal coffee can, that is designed to assist and aid the visually impaired. Coffee can be poured, just as with a regular coffee can, though here it is implemented vibrotactile and auditory feedback to further exploit the perception capacity available for user. Thus, the theme for this project is multimodal interaction, which is how systems can be designed to utilize input and output through different channels of perception, available for the user. By heightening the level of tactile and auditory feedback, the goal was to see if it is possible for visually impaired people to make fewer errors when pouring, as well as shortening the pouring time. Also, how will the user make sense of the feedback when exposed to it, will the assessment of the emitted feedback be significant enough to be higher regarded than their own practiced techniques, or will it be complementary."
+    },
+    "topico": {
+      "title": "Topico - Interactive EduTech tool",
+      "caption": " : enhance collaboration and verbal skills with Topico's Game-Based Approach",
+      "buttonclose": "close",
+      "conceptT": "Concept",
+      "conceptP": " Topico is an innovative EduTech tool tailored for sixth grade English classes, designed to facilitate language learning and engagement through audio-based interactions. As an EduTech solution, Topico bridges the gap between technology and education, creating a unique platform that enables the teacher to direct the themes of the vocabulary curriculum for the students. The students are encouraged to learn the vocabulary through engaging in a collaborative practice where they are to come up with and thought of word and practice their pronunciation.",
+      "ul": [
+        {
+          "id": 1,
+          "value": "Audio Descriptions: Topico stores audio files of important words and topics discussed in class, providing an accessible resource for students to review and reinforce their learning."
+        },
+        {
+          "id": 2,
+          "value": "Teacher-friendly Interface: Topico's website is designed to be simple and user-friendly, allowing teachers to focus on educational content instead of technical complexities."
+        },
+        {
+          "id": 3,
+          "value": "Aligned with Educational Standards: Topico's game meets the Danish Ministry of Education's requirements, ensuring students develop necessary verbal skills for their curriculum."
+        },
+        {
+          "id": 4,
+          "value": "Multilingual Support: Topico encourages multilingual communication and learning, allowing students to use their native language when discussing word meanings."
+        }
+      ],
+      "storyT": "Story",
+      "storyP": "In a classroom setting, students engage in learning English and collaborate with their peers using Topico, an educational tool that transforms language learning into an interactive and enjoyable experience. Topico incorporates audio descriptions, a user-friendly interface for teachers, and adheres to educational standards, effectively enhancing the students' learning process and engagement with language. While students utilize their native languages to discuss and explore English vocabulary, Topico helps bridge the gap between cultures, creating a welcoming learning environment. Topico has been thoughtfully designed to support the evolution of language education and foster a positive learning experience.",
+      "storyItalic": "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
+    }
   }
 }
