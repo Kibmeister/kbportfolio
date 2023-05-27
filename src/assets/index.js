@@ -29,8 +29,7 @@ import tesla from './company/tesla.png';
 import carrent from './carrent.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
-import ringmerking from './ringmerking.svg';
-import coaxer from './Coaxer.svg';
+import ringmerking from './ringmerking/ringmerking.svg';
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
 import multimodalThumbnail from './multimodalCoffeecan/multimodalThumbnail.png';
@@ -46,6 +45,13 @@ import germany from './flags/germany.svg';
 import globe from './globe.svg';
 import kantega from './company/kantega.png';
 import fourhuman from './company/fourhuman.png';
+import coaxer from './coaxer/Coaxer.svg';
+import coaxerNO from './coaxer/Coaxer no.svg';
+import coaxerES from './coaxer/Coaxer es.svg';
+import coaxerIT from './coaxer/Coaxer it.svg';
+import coaxerFR from './coaxer/Coaxer fr.svg';
+import coaxerDE from './coaxer/Coaxer de.svg';
+
 
 
 export {
@@ -94,4 +100,9 @@ export {
   globe,
   kantega,
   fourhuman,
+  coaxerNO,
+  coaxerES,
+  coaxerIT,
+  coaxerFR,
+  coaxerDE,
 };

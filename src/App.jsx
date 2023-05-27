@@ -24,9 +24,11 @@ const App = () => {
   // check the id of the pressed projectcard
   // set the project from {projects} corresponding to that id as the modalProject
   // set the showModal state to true
-  const handleModalClick = (name) => {
+  const handleModalClick = (type) => {
+    console.log('appjs this is name');
+    console.log(type);
     projects.filter((project) => {
-      if (project.name === name) {
+      if (project.type === type) {
         setModalProject(project);
       }
     });
@@ -34,7 +36,6 @@ const App = () => {
   };
 
   useEffect(() => {
-
     setNavbarAnimate(!lampToggle);
     const body = document.querySelector('body');
     if (lampToggle) {
@@ -44,44 +45,44 @@ const App = () => {
     }
   }, [lampToggle]);
 
-return (
-  <BrowserRouter>
-    <div className='relative z-0'>
-      {!lampToggle && (
-        <Navbar
-          heroRef={heroRef}
-          animationClass={navbarAnimate ? 'navbar-animate' : ''}
-        />
-      )}
-      <div className='page-container'>
-        <div className='relative z-0'>
-          <Hero
-            setLampToggleApp={() => setLampToggle(!lampToggle)}
-            ref={heroRef}
-          />
-        </div>
-
-        <About />
-        <Experience />
-        
-        <Works onProjectClick={handleModalClick} />
-
-        {showModal && (
-          <ProjectModal
-            modalProject={modalProject}
-            onClose={() => setShowModal(false)}
+  return (
+    <BrowserRouter>
+      <div className='relative z-0'>
+        {!lampToggle && (
+          <Navbar
+            heroRef={heroRef}
+            animationClass={navbarAnimate ? 'navbar-animate' : ''}
           />
         )}
-        <Feedbacks />
+        <div className='page-container'>
+          <div className='relative z-0'>
+            <Hero
+              setLampToggleApp={() => setLampToggle(!lampToggle)}
+              ref={heroRef}
+            />
+          </div>
 
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
+          <About />
+          <Experience />
+
+          <Works onProjectClick={handleModalClick} />
+
+          {showModal && (
+            <ProjectModal
+              modalProject={modalProject}
+              onClose={() => setShowModal(false)}
+            />
+          )}
+          <Feedbacks />
+
+          <div className='relative z-0'>
+            <Contact />
+            <StarsCanvas />
+          </div>
         </div>
       </div>
-    </div>
-  </BrowserRouter>
-);
+    </BrowserRouter>
+  );
 };
 
 export default App;

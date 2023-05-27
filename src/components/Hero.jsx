@@ -9,6 +9,7 @@ import { LampCanvas } from './canvas';
 import { heroTags } from '../constants';
 import { Cursor4 } from '../scripts/cursors/cursor4';
 import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 const getRandomRotation = () => {
   return Math.random() * 40 - 30; // Generates a random number between -30 and 30
@@ -124,11 +125,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   useEffect(() => {
     setHeader(t('hero.header'));
     setsubHeader(t('hero.subHeader'));
-
-    console.log('Header : ');
-    console.log(header);
-    console.log('Subheader : ');
-    console.log(subHeader);
   }, [t]);
 
   useSplittingAnimation(lampToggle, header, subHeader);

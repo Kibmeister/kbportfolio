@@ -62,9 +62,6 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   const { t, i18n } = useTranslation();
 
-  console.log('experience values: ');
-  console.log('Experiences:', t('experiences', { returnObjects: true }));
-
   return (
     <>
       <motion.div variants={textVariant()}>

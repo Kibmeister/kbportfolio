@@ -78,6 +78,9 @@
     ]
   },
   "portfolio": {
+    "coaxer": {
+      "buttonclose": "Lukk"
+    },
     "coffeecan": {
       "title": "Multimodal coffe can",
       "caption": ": haptic and auditory feedback for the visually impaired",
@@ -105,18 +108,114 @@
     "topico": {
       "title": "Topico - Interactive EduTech tool",
       "caption": " : enhance collaboration and verbal skills with Topico's Game-Based Approach",
-      "buttonclose": "close",
+      "buttonclose": "Close",
       "conceptT": "Concept",
       "conceptP": " Topico is an innovative EduTech tool tailored for sixth grade English classes, designed to facilitate language learning and engagement through audio-based interactions. As an EduTech solution, Topico bridges the gap between technology and education, creating a unique platform that enables the teacher to direct the themes of the vocabulary curriculum for the students. The students are encouraged to learn the vocabulary through engaging in a collaborative practice where they are to come up with and thought of word and practice their pronunciation.",
       "ul": [
-        { "id": 1, "value": "Audio Descriptions: Topico stores audio files of important words and topics discussed in class, providing an accessible resource for students to review and reinforce their learning."},
-        { "id": 2, "value": "Teacher-friendly Interface: Topico's website is designed to be simple and user-friendly, allowing teachers to focus on educational content instead of technical complexities." },
-        { "id": 3, "value": "Aligned with Educational Standards: Topico's game meets the Danish Ministry of Education's requirements, ensuring students develop necessary verbal skills for their curriculum." },
-        { "id": 4, "value": "Multilingual Support: Topico encourages multilingual communication and learning, allowing students to use their native language when discussing word meanings." }
+        {
+          "id": 1,
+          "value": "Audio Descriptions: Topico stores audio files of important words and topics discussed in class, providing an accessible resource for students to review and reinforce their learning."
+        },
+        {
+          "id": 2,
+          "value": "Teacher-friendly Interface: Topico's website is designed to be simple and user-friendly, allowing teachers to focus on educational content instead of technical complexities."
+        },
+        {
+          "id": 3,
+          "value": "Aligned with Educational Standards: Topico's game meets the Danish Ministry of Education's requirements, ensuring students develop necessary verbal skills for their curriculum."
+        },
+        {
+          "id": 4,
+          "value": "Multilingual Support: Topico encourages multilingual communication and learning, allowing students to use their native language when discussing word meanings."
+        }
       ],
-      "storyT" : "Story", 
-      "storyP" : "In a classroom setting, students engage in learning English and collaborate with their peers using Topico, an educational tool that transforms language learning into an interactive and enjoyable experience. Topico incorporates audio descriptions, a user-friendly interface for teachers, and adheres to educational standards, effectively enhancing the students' learning process and engagement with language. While students utilize their native languages to discuss and explore English vocabulary, Topico helps bridge the gap between cultures, creating a welcoming learning environment. Topico has been thoughtfully designed to support the evolution of language education and foster a positive learning experience.",
-      "storyItalic" : "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
+      "storyT": "Story",
+      "storyP": "In a classroom setting, students engage in learning English and collaborate with their peers using Topico, an educational tool that transforms language learning into an interactive and enjoyable experience. Topico incorporates audio descriptions, a user-friendly interface for teachers, and adheres to educational standards, effectively enhancing the students' learning process and engagement with language. While students utilize their native languages to discuss and explore English vocabulary, Topico helps bridge the gap between cultures, creating a welcoming learning environment. Topico has been thoughtfully designed to support the evolution of language education and foster a positive learning experience.",
+      "storyItalic": "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
     }
+  },
+  "portfolioTiles" :{
+    "p": "My past work",
+    "h2": "My portfolio",
+    "subHeader": "This is a collection of my previous works, I worked interdiciplinary in all the projects with an emphasize on UX. Most of them are created during studies.. ",
+
+    "tiles": [
+      {
+        "name": "Ringmerking",
+        "type": "ringmerking",
+        "description": "Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "design remake",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobile",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "Coaxer",
+        "type": "coaxer",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "react",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "restapi",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "scss",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "Multimodal coffeecan",
+        "type": "coffeecan",
+        "description": "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "tags": [
+          {
+            "name": "nextjs",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "supabase",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "css",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "Topico EduTech",
+        "type": "topico",
+        "description": "A EduTech tool designed for fostering collaborative work for 6th grade students, with the aim of enhancing their vocabulary of a foreign language",
+        "tags": [
+          {
+            "name": "Product design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Design research",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "UI/UX design",
+            "color": "pink-text-gradient"
+          }
+        ]
+      }
+    ]
   }
 }

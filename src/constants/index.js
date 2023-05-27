@@ -24,7 +24,6 @@ import {
   tripguide,
   threejs,
   ringmerking,
-  coaxer,
   multimodalThumbnail,
   topicoThumbnail,
   usa,
@@ -33,10 +32,15 @@ import {
   italy,
   france,
   germany,
-  fourhuman, 
-  kantega
+  fourhuman,
+  kantega,
+  coaxer,
+  coaxerNO,
+  coaxerES,
+  coaxerIT,
+  coaxerFR,
+  coaxerDE,
 } from '../assets';
-
 
 //only used for internalObserver
 export const navLinks = [
@@ -59,12 +63,12 @@ export const navLinks = [
 ];
 
 const LANGUAGES = [
-  { label: 'En', code: 'en', icon:  usa } ,
-  { label: 'No', code: 'no', icon:  norway } ,
-  { label: 'Es', code: 'es', icon:  spain } ,
-  { label: 'It', code: 'it', icon:  italy } ,
-  { label: 'Fr', code: 'fr', icon:  france } ,
-  { label: 'De', code: 'de', icon: germany } ,
+  { label: 'En', code: 'en', icon: usa },
+  { label: 'No', code: 'no', icon: norway },
+  { label: 'Es', code: 'es', icon: spain },
+  { label: 'It', code: 'it', icon: italy },
+  { label: 'Fr', code: 'fr', icon: france },
+  { label: 'De', code: 'de', icon: germany },
 ];
 const imageMapAbout = {
   ux: web,
@@ -78,7 +82,21 @@ const imageMapExperience = {
   kantega: kantega,
 };
 
+const imageMapWorks = {
+  topico: topicoThumbnail,
+  coffeecan: multimodalThumbnail,
+  coaxer: coaxer,
+  ringmerking: ringmerking,
+};
 
+const imageMapCoaxer = {
+  en: coaxer,
+  no: coaxerNO,
+  es: coaxerES,
+  it: coaxerIT,
+  fr: coaxerFR,
+  de: coaxerDE,
+};
 
 const technologies = [
   {
@@ -394,10 +412,12 @@ const heroTags = [
 export {
   imageMapAbout,
   imageMapExperience,
+  imageMapWorks,
   technologies,
   experiences,
   testimonials,
   projects,
   heroTags,
   LANGUAGES,
+  imageMapCoaxer,
 };
