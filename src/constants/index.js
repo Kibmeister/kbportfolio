@@ -40,6 +40,11 @@ import {
   coaxerIT,
   coaxerFR,
   coaxerDE,
+  RingmerkingNO,
+  RingmerkingES,
+  RingmerkingIT,
+  RingmerkingFR,
+  RingmerkingDE,
 } from '../assets';
 
 //only used for internalObserver
@@ -98,6 +103,14 @@ const imageMapCoaxer = {
   de: coaxerDE,
 };
 
+const imageMapRingmerking = {
+  en: ringmerking,
+  no: RingmerkingNO,
+  es: RingmerkingES,
+  it: RingmerkingIT,
+  fr: RingmerkingFR,
+  de: RingmerkingDE
+};
 const technologies = [
   {
     name: 'HTML 5',
@@ -420,4 +433,5 @@ export {
   heroTags,
   LANGUAGES,
   imageMapCoaxer,
+  imageMapRingmerking,
 };

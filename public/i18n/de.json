@@ -81,6 +81,9 @@
     "coaxer": {
       "buttonclose": "Schließen"
     },
+    "ringmerking": {
+      "buttonclose": "Schließen"
+    },
     "coffeecan": {
       "title": "Multimodale Kaffeekanne",
       "caption": ": haptisches und auditives Feedback für Sehbehinderte",

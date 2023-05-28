@@ -81,6 +81,9 @@
     "coaxer": {
       "buttonclose": "Cerrar"
     },
+    "ringmerking": {
+      "buttonclose": "Cerrar"
+    },
     "coffeecan": {
       "title": "Cafetera multimodal",
       "caption": ": retroalimentación háptica y auditiva para personas con discapacidad visual",

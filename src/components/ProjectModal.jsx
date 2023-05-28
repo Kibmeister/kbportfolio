@@ -7,11 +7,12 @@ import Coaxer from './Projects/Coaxer';
 import Ringmerking from './Projects/Ringmerking';
 import { useTranslation } from 'react-i18next';
 import { imageMapCoaxer } from '../constants';
+import { imageMapRingmerking } from '../constants';
 
 const ProjectModal = ({ modalProject, onClose }) => {
   const [modalType, setModalType] = useState('svg');
   const [coaxerBackground, setcoaxerBackground] = useState('');
-  const [ringmerkingBackground, setRingmerkingBackground] = useState('second');
+  const [ringmerkingBackground, setRingmerkingBackground] = useState('');
 
   //retrieving the t object
   const { t, i18n } = useTranslation();
@@ -19,10 +20,10 @@ const ProjectModal = ({ modalProject, onClose }) => {
   // listener for the t language updater
   useEffect(() => {
     const svgCoaxer = imageMapCoaxer[i18n.language];
+    const svgRingmerking = imageMapRingmerking[i18n.language];
     setcoaxerBackground(svgCoaxer);
+    setRingmerkingBackground(svgRingmerking);
 
-    console.log('Project modal language : ');
-    console.log(i18n.language);
   }, [t, i18n]);
 
   useEffect(() => {
@@ -41,7 +42,10 @@ const ProjectModal = ({ modalProject, onClose }) => {
   }, [modalProject]);
 
   return modalType === 'ringmerking' ? (
-    <Ringmerking onClose={onClose} ></Ringmerking>
+    <Ringmerking
+      onClose={onClose}
+      ringmerkingBackground={ringmerkingBackground}
+    ></Ringmerking>
   ) : modalType === 'coaxer' ? (
     <Coaxer onClose={onClose} coaxerBackground={coaxerBackground}></Coaxer>
   ) : modalType === 'coffeecan' ? (

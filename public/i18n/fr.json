@@ -81,6 +81,9 @@
     "coaxer": {
       "buttonclose": "Fermer"
     },
+    "ringmerking": {
+      "buttonclose": "Fermer"
+    },
     "coffeecan": {
       "title": "Cafetière multimodale",
       "caption": ": retour haptique et auditif pour les malvoyants",

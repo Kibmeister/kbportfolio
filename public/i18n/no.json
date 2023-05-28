@@ -78,8 +78,11 @@
     ]
   },
   "portfolio": {
-    "coaxer" : {
-      "buttonclose" : "Lukk"
+    "coaxer": {
+      "buttonclose": "Lukk"
+    },
+    "ringmerking": {
+      "buttonclose": "Lukk"
     },
     "coffeecan": {
       "title": "Multimodal kaffekanne",

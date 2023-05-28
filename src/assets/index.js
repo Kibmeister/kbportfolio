@@ -29,7 +29,7 @@ import tesla from './company/tesla.png';
 import carrent from './carrent.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
-import ringmerking from './ringmerking/ringmerking.svg';
+
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
 import multimodalThumbnail from './multimodalCoffeecan/multimodalThumbnail.png';
@@ -51,8 +51,12 @@ import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
-
-
+import ringmerking from './ringmerking/ringmerking.svg';
+import RingmerkingNO from './ringmerking/Ringmerking no.svg';
+import RingmerkingES from './ringmerking/Ringmerking es.svg';
+import RingmerkingIT from './ringmerking/Ringmerking it.svg';
+import RingmerkingFR from './ringmerking/Ringmerking fr.svg';
+import RingmerkingDE from './ringmerking/Ringmerking de.svg';
 
 export {
   logo,
@@ -105,4 +109,9 @@ export {
   coaxerIT,
   coaxerFR,
   coaxerDE,
+  RingmerkingNO,
+  RingmerkingES,
+  RingmerkingIT,
+  RingmerkingFR,
+  RingmerkingDE,
 };
