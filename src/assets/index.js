@@ -45,18 +45,20 @@ import germany from './flags/germany.svg';
 import globe from './globe.svg';
 import kantega from './company/kantega.png';
 import fourhuman from './company/fourhuman.png';
-import coaxer from './coaxer/Coaxer.svg';
+import coaxerEN from './coaxer/Coaxer en.svg';
 import coaxerNO from './coaxer/Coaxer no.svg';
 import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
-import ringmerking from './ringmerking/ringmerking.svg';
+import RingmerkingEN from './ringmerking/Ringmerking en.svg';
 import RingmerkingNO from './ringmerking/Ringmerking no.svg';
 import RingmerkingES from './ringmerking/Ringmerking es.svg';
 import RingmerkingIT from './ringmerking/Ringmerking it.svg';
 import RingmerkingFR from './ringmerking/Ringmerking fr.svg';
 import RingmerkingDE from './ringmerking/Ringmerking de.svg';
+import mike from './testimonals/mike.jpeg'
+
 
 export {
   logo,
@@ -87,8 +89,6 @@ export {
   carrent,
   jobit,
   tripguide,
-  ringmerking,
-  coaxer,
   feedback,
   handle,
   multimodalThumbnail,
@@ -104,14 +104,17 @@ export {
   globe,
   kantega,
   fourhuman,
+  coaxerEN,
   coaxerNO,
   coaxerES,
   coaxerIT,
   coaxerFR,
   coaxerDE,
+  RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,
   RingmerkingIT,
   RingmerkingFR,
   RingmerkingDE,
+  mike,
 };

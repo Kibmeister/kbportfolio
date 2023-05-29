@@ -224,5 +224,36 @@
         ]
       }
     ]
+  },
+  "testimonals": {
+    "p": "Was andere sagen",
+    "h2": "Referenzen",
+    "subHeader": "Hier kannst du lesen, was andere über mich als Berater sagen",
+    "entries": [
+      {
+        "text": "Als UX-Leiter bei 4human hatte ich das Vergnügen, sieben Monate eng mit Kasper zusammenzuarbeiten. In dieser Zeit habe ich gesehen, wie er sich zu einem talentierten und engagierten User Interface (UI) Designer entwickelt hat. Ich kann Kasper uneingeschränkt für zukünftige Möglichkeiten im UI/UX-Designbereich empfehlen. Von Anfang an hat Kasper ein scharfes Auge für Details und ein tiefes Verständnis für die Nuancen eines effektiven User Interface Designs gezeigt. Er war in der Lage, die Prinzipien unseres Designsystems schnell zu erlernen und anzuwenden, was zu einer nahtlosen Integration in unser Team geführt hat. Seine Lernbereitschaft und sein Wachstumswille, kombiniert mit seiner Offenheit für Feedback, haben die Zusammenarbeit mit ihm zu einer absoluten Freude gemacht. Ein bedeutender Beitrag von Kasper während seiner Zeit bei 4human war die Entwicklung der Grundlagen für die Dokumentation unseres Designsystems. Dies hat die Effizienz und Konsistenz unserer Designprojekte erheblich verbessert und letztendlich zu einer kohärenteren Benutzererfahrung in unserer Produktreihe geführt. Neben seinen technischen Fähigkeiten besitzt Kasper exzellente Kommunikations- und Kollaborationsfähigkeiten. Er war immer daran interessiert, seine Erkenntnisse und Ideen mit dem Team zu teilen, was ein positives und kreatives Arbeitsumfeld gefördert hat. Seine Leidenschaft für UI/UX Design ist offensichtlich, daher bin ich zuversichtlich, dass er weiterhin in seiner Karriere herausragende Leistungen erbringen wird. Kasper ist eine wertvolle Ergänzung für jedes UX Design-Team. Er hat nicht nur seine Fähigkeiten als junior UI/UX Designer bewiesen, sondern auch die Grundlagen für eine erfolgreiche und wirkungsvolle Karriere in diesem Bereich gelegt. Ich habe keine Zweifel daran, dass Kasper weiterhin diejenigen beeindrucken und inspirieren wird, die das Privileg haben, mit ihm zusammenzuarbeiten.",
+        "name": "Mihael Gorensek",
+        "designation": "Leiter Design",
+        "company": "4Human"
+      }
+    ]
+  },
+  "contact": {
+    "p": "Kontakt aufnehmen",
+    "h2": "Kontakt",
+    "inputName": "Ihr Name",
+    "inputNamePlaceholder": "Schreiben Sie Ihren Namen",
+    "inputEmail": "Ihre E-Mail-Adresse",
+    "inputEmailPlaceholder": "Schreiben Sie Ihre E-Mail-Adresse",
+    "inputMessage": "Ihre Nachricht",
+    "inputMessagePlaceholder": "Schreiben Sie Ihre Nachricht",
+    "alertEmptyFields": "Bitte füllen Sie alle Felder aus, bevor Sie das Formular absenden.",
+    "alertName": "Bitte geben Sie einen gültigen Namen mit nur Buchstaben und Leerzeichen ein.",
+    "alertEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "alertMessage": "Bitte geben Sie eine Nachricht mit mindestens 20 Zeichen ein.",
+    "confirmation": "Vielen Dank. Ich werde mich so schnell wie möglich bei Ihnen melden.",
+    "errormessage": "Hoppla, etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+    "sendButton": "Senden",
+    "sendButtonLoading": "Senden..."
   }
 }

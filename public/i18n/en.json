@@ -137,7 +137,7 @@
       "storyItalic": "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
     }
   },
-  "portfolioTiles" :{
+  "portfolioTiles": {
     "p": "My past work",
     "h2": "My portfolio",
     "subHeader": "This is a collection of my previous works, I worked interdiciplinary in all the projects with an emphasize on UX. Most of them are created during studies.. ",
@@ -220,5 +220,36 @@
         ]
       }
     ]
+  },
+  "testimonals": {
+    "p": "What others say",
+    "h2": "Testimonals",
+    "subHeader": "Here you can read what others have to say about me as a consultant ",
+    "entries": [
+      {
+        "text": "As the UX Lead at 4human, I have had the pleasure of working closely with Kasper for seven months. In that time, I have seen him develop into a talented and dedicated User Interface (UI) Designer. I wholeheartedly recommend Kasper for any future opportunities in the UI/UX design field. From the very beginning, Kasper demonstrated a keen eye for detail and a deep understanding of the nuances of effective user interface design. He was able to quickly learn and apply the principles of our design system, leading to a seamless integration into our team. His willingness to learn and grow, along with his receptiveness to feedback, made it an absolute joy to work with him. A significant contribution by Kasper during his time at 4human was his development of the foundation for our design system documentation. This has greatly improved the efficiency and consistency of our design projects, ultimately leading to a more cohesive user experience across our product suite. In addition to his technical skills, Kasper possesses excellent communication and collaboration abilities. He was always eager to share his insights and ideas with the team, which fostered a positive and creative work environment. His passion for UI/UX design is evident, so I am confident that he will continue to excel in his career. Kasper is a valuable addition to any UX design team. He has not only proven his capabilities as a junior UI/UX designer but has also laid the groundwork for a successful and impactful career in the field. I have no doubt that Kasper will continue to impress and inspire those who have the privilege of working with him.",
+        "name": "Mihael Gorensek",
+        "designation": "Head designer",
+        "company": "4Human"
+      }
+    ]
+  },
+  "contact": {
+    "p": "Get in touch",
+    "h2": "Contact",
+    "inputName": "Your name",
+    "inputNamePlaceholder": "Write your name",
+    "inputEmail": "Your Email",
+    "inputEmailPlaceholder": "Write your email",
+    "inputMessage": "Your message",
+    "inputMessagePlaceholder": "Write your message",
+    "alertEmptyFields": "Please fill out all the fields before submitting the form.",
+    "alertName": "Please enter a valid name containing only letters and spaces.",
+    "alertEmail": "Please enter a valid email address.",
+    "alertMessage": "Please enter a message with at least 20 characters.",
+    "confirmation": "Thank you. I will get back to you as soon as possible.",
+    "errormessage": "Ahh, something went wrong. Please try again.",
+    "sendButton" : "Send",
+    "sendButtonLoading" : "Sending..."
   }
 }

@@ -12,15 +12,22 @@ const Ringmerking = ({ onClose, ringmerkingBackground }) => {
         <button onClick={onClose} className='absolute top-4 right-4'>
           {t('portfolio.ringmerking.buttonclose')}
         </button>
+
         <div id='svg-container' className='flex-1'>
-          <img
-            src={ringmerkingBackground}
-            alt='projectimage'
-            className='object-contain mx-auto my-auto w-full h-full max-h-full max-w-full'
-            style={{
-              maxHeight: '100vh',
-            }}
-          />
+          <a
+            href='https://www.figma.com/proto/luE2AxlVtZQhwBOWhaOBWJ/Final-design-sprint---Kantega?page-id=0%3A1&node-id=1-16074&viewport=696%2C112%2C0.12&scaling=scale-down&starting-point-node-id=1%3A16074'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img
+              src={ringmerkingBackground}
+              alt='projectimage'
+              className='object-contain mx-auto my-auto w-full h-full max-h-full max-w-full'
+              style={{
+                maxHeight: '100vh',
+              }}
+            />
+          </a>
         </div>
       </div>
     </div>

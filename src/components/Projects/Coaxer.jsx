@@ -11,11 +11,20 @@ const Coaxer = ({ onClose, coaxerBackground }) => {
         <button onClick={onClose} className='absolute top-4 right-4'>
           {t('portfolio.coaxer.buttonclose')}
         </button>
-        <div id='svg-container' className='flex-1'>
+        <div
+          id='svg-container'
+          className='flex-1'
+          onClick={() => {
+            window.open(
+              'https://www.figma.com/proto/VV2pmxTkpHyAONnmwdfDUM/Coaxer?page-id=1%3A2&type=design&node-id=1-853&viewport=738%2C262%2C0.08&scaling=min-zoom&starting-point-node-id=1%3A853',
+              '_blank'
+            );
+          }}
+        >
           <img
             src={coaxerBackground}
             alt='projectimage'
-            className='object-contain mx-auto my-auto w-full h-full max-h-full max-w-full'
+            className='object-contain mx-auto my-auto w-full h-full max-h-full max-w-full cursor-pointer'
             style={{
               maxHeight: '100vh',
             }}
@@ -25,5 +34,6 @@ const Coaxer = ({ onClose, coaxerBackground }) => {
     </div>
   );
 };
+
 
 export default Coaxer;

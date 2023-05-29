@@ -226,5 +226,36 @@
         ]
       }
     ]
+  },
+  "testimonals": {
+    "p": "Lo que dicen los demás",
+    "h2": "Testimonios",
+    "subHeader": "Aquí puedes leer lo que los demás tienen que decir sobre mí como consultor",
+    "entries": [
+      {
+        "text": "Como líder de UX en 4human, he tenido el placer de trabajar de cerca con Kasper durante siete meses. En ese tiempo, lo he visto desarrollarse como un talentoso y dedicado Diseñador de Interfaz de Usuario (UI). Recomiendo sinceramente a Kasper para cualquier oportunidad futura en el campo del diseño UI/UX. Desde el principio, Kasper ha demostrado tener un ojo agudo para los detalles y una profunda comprensión de los matices de un diseño de interfaz de usuario efectivo. Ha sido capaz de aprender y aplicar rápidamente los principios de nuestro sistema de diseño, lo que ha llevado a una integración perfecta en nuestro equipo. Su disposición para aprender y crecer, junto con su receptividad a los comentarios, ha hecho que trabajar con él sea un verdadero placer. Una contribución significativa de Kasper durante su tiempo en 4human ha sido el desarrollo de los fundamentos para la documentación de nuestro sistema de diseño. Esto ha mejorado considerablemente la eficiencia y consistencia de nuestros proyectos de diseño, lo que en última instancia ha llevado a una experiencia de usuario más coherente en nuestra suite de productos. Además de sus habilidades técnicas, Kasper posee excelentes habilidades de comunicación y colaboración. Siempre ha estado ansioso por compartir sus ideas y conocimientos con el equipo, lo que ha fomentado un ambiente de trabajo positivo y creativo. Su pasión por el diseño UI/UX es evidente, por lo que estoy seguro de que continuará destacando en su carrera. Kasper es un valioso aporte para cualquier equipo de diseño UX. No solo ha demostrado sus capacidades como diseñador junior de UI/UX, sino que también ha sentado las bases para una exitosa y impactante carrera en este campo. No tengo ninguna duda de que Kasper seguirá impresionando e inspirando a aquellos que tienen el privilegio de trabajar con él.",
+        "name": "Mihael Gorensek",
+        "designation": "Jefe de diseño",
+        "company": "4Human"
+      }
+    ]
+  },
+  "contact": {
+    "p": "Ponte en contacto",
+    "h2": "Contacto",
+    "inputName": "Tu nombre",
+    "inputNamePlaceholder": "Escribe tu nombre",
+    "inputEmail": "Tu correo electrónico",
+    "inputEmailPlaceholder": "Escribe tu correo electrónico",
+    "inputMessage": "Tu mensaje",
+    "inputMessagePlaceholder": "Escribe tu mensaje",
+    "alertEmptyFields": "Por favor, completa todos los campos antes de enviar el formulario.",
+    "alertName": "Por favor, ingresa un nombre válido que contenga solo letras y espacios.",
+    "alertEmail": "Por favor, ingresa una dirección de correo electrónico válida.",
+    "alertMessage": "Por favor, ingresa un mensaje con al menos 20 caracteres.",
+    "confirmation": "Gracias. Me pondré en contacto contigo lo antes posible.",
+    "errormessage": "Ups, algo salió mal. Por favor, inténtalo nuevamente.",
+    "sendButton": "Enviar",
+    "sendButtonLoading": "Enviando..."
   }
 }

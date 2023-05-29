@@ -23,7 +23,6 @@ import {
   jobit,
   tripguide,
   threejs,
-  ringmerking,
   multimodalThumbnail,
   topicoThumbnail,
   usa,
@@ -34,17 +33,19 @@ import {
   germany,
   fourhuman,
   kantega,
-  coaxer,
+  coaxerEN,
   coaxerNO,
   coaxerES,
   coaxerIT,
   coaxerFR,
   coaxerDE,
+  RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,
   RingmerkingIT,
   RingmerkingFR,
   RingmerkingDE,
+  mike
 } from '../assets';
 
 //only used for internalObserver
@@ -90,12 +91,12 @@ const imageMapExperience = {
 const imageMapWorks = {
   topico: topicoThumbnail,
   coffeecan: multimodalThumbnail,
-  coaxer: coaxer,
-  ringmerking: ringmerking,
+  coaxer: coaxerEN,
+  ringmerking: RingmerkingEN,
 };
 
 const imageMapCoaxer = {
-  en: coaxer,
+  en: coaxerEN,
   no: coaxerNO,
   es: coaxerES,
   it: coaxerIT,
@@ -104,13 +105,18 @@ const imageMapCoaxer = {
 };
 
 const imageMapRingmerking = {
-  en: ringmerking,
+  en: RingmerkingEN,
   no: RingmerkingNO,
   es: RingmerkingES,
   it: RingmerkingIT,
   fr: RingmerkingFR,
-  de: RingmerkingDE
+  de: RingmerkingDE,
 };
+
+const imageMapTestimonals = {
+  one: mike,
+}
+
 const technologies = [
   {
     name: 'HTML 5',
@@ -224,27 +230,11 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
+      'As the UX Lead at 4human, I have had the pleasure of working closely with Kasper for seven months. In that time, I have seen him develop into a talented and dedicated User Interface (UI) Designer. I wholeheartedly recommend Kasper for any future opportunities in the UI/UX design field. From the very beginning, Kasper demonstrated a keen eye for detail and a deep understanding of the nuances of effective user interface design. He was able to quickly learn and apply the principles of our design system, leading to a seamless integration into our team. His willingness to learn and grow, along with his receptiveness to feedback, made it an absolute joy to work with him. A significant contribution by Kasper during his time at 4human was his development of the foundation for our design system documentation. This has greatly improved the efficiency and consistency of our design projects, ultimately leading to a more cohesive user experience across our product suite. In addition to his technical skills, Kasper possesses excellent communication and collaboration abilities. He was always eager to share his insights and ideas with the team, which fostered a positive and creative work environment. His passion for UI/UX design is evident so I am confident that he will continue to excel in his career.Kasper is a valuable addition to any UX design team. He has not only proven his capabilities as a junior UI/UX designer but has also laid the groundwork for a successful and impactful career in the field. I have no doubt that Kasper will continue to impress and inspire those who have the privilege of working with him.',
+    name: 'Mihael Gorensek',
+    designation: 'Head Designer',
+    company: '4Human',
     image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
 ];
 
@@ -268,7 +258,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: ringmerking,
+    image: RingmerkingEN,
     source_code_link: 'https://github.com/',
   },
   {
@@ -290,7 +280,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: coaxer,
+    image: coaxerEN,
     source_code_link: 'https://github.com/',
   },
   {
@@ -434,4 +424,5 @@ export {
   LANGUAGES,
   imageMapCoaxer,
   imageMapRingmerking,
+  imageMapTestimonals,
 };

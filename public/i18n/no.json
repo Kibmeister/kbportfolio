@@ -221,5 +221,36 @@
         ]
       }
     ]
+  },
+  "testimonals": {
+    "p": "Hva andre har sagt",
+    "h2": "Tilbakemeldinger",
+    "subHeader": "Her kan du lese om hva andre har å si om meg som konsulent ",
+    "entries": [
+      {
+        "text": "Som UX-leder hos 4human har jeg hatt gleden av å jobbe tett sammen med Kasper i syv måneder. I løpet av den tiden har jeg sett ham utvikle seg til å bli en talentfull og dedikert brukergrensesnittsdesigner (UI-designer). Jeg anbefaler Kasper helhjertet for fremtidige muligheter innenfor UI/UX-designfeltet. Fra begynnelsen viste Kasper en skarp øye for detaljer og en dyp forståelse av nyansene i effektivt brukergrensesnittsdesign. Han var i stand til å lære raskt og anvende prinsippene i vårt designsystem, noe som førte til en sømløs integrasjon i teamet vårt. Hans vilje til å lære og vokse, sammen med hans evne til å ta imot tilbakemeldinger, gjorde det til en absolutt glede å jobbe med ham. Et betydelig bidrag fra Kasper i løpet av hans tid hos 4human var utviklingen av grunnlaget for vår designsystemdokumentasjon. Dette har betydelig forbedret effektiviteten og konsistensen i våre designprosjekter, og har til slutt ført til en mer helhetlig brukeropplevelse på tvers av våre produktløsninger. I tillegg til sine tekniske ferdigheter, besitter Kasper utmerkede kommunikasjons- og samarbeidsevner. Han var alltid ivrig etter å dele sine innsikter og ideer med teamet, noe som skapte et positivt og kreativt arbeidsmiljø. Hans lidenskap for UI/UX-design er tydelig, så jeg er trygg på at han vil fortsette å utmerke seg i karrieren sin. Kasper er et verdifullt tilskudd til ethvert UX-designteam. Han har ikke bare bevist sine evner som junior UI/UX-designer, men har også lagt grunnlaget for en vellykket og innflytelsesrik karriere innen feltet. Jeg tviler ikke på at Kasper vil fortsette å imponere og inspirere de som har privilegiet av å jobbe med ham.",
+        "name": "Mihael Gorensek",
+        "designation": "Hoveddesigner",
+        "company": "4Human"
+      }
+    ]
+  },
+  "contact": {
+    "p": "Ta kontakt",
+    "h2": "Kontakt",
+    "inputName": "Ditt navn",
+    "inputNamePlaceholder": "Skriv ditt navn",
+    "inputEmail": "Din e-post",
+    "inputEmailPlaceholder": "Skriv din e-post",
+    "inputMessage": "Din melding",
+    "inputMessagePlaceholder": "Skriv din melding",
+    "alertEmptyFields": "Vennligst fyll ut alle feltene før du sender skjemaet.",
+    "alertName": "Vennligst skriv inn et gyldig navn med kun bokstaver og mellomrom.",
+    "alertEmail": "Vennligst skriv inn en gyldig e-postadresse.",
+    "alertMessage": "Vennligst skriv inn en melding med minst 20 tegn.",
+    "confirmation": "Takk. Jeg vil svare deg så snart som mulig.",
+    "errormessage": "Oops, noe gikk galt. Vennligst prøv igjen.",
+    "sendButton": "Send",
+    "sendButtonLoading": "Sender..."
   }
 }

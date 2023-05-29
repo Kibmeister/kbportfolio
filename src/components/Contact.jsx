@@ -5,6 +5,7 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const formRef = useRef();
@@ -14,12 +15,13 @@ const Contact = () => {
     message: '',
   });
 
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
 
- const isValidName = (name) => {
-   const regex = /^[a-zA-Z\s]+$/;
-   return regex.test(name) && name.replace(/\s+/g, '').length >= 2;
- };
+  const isValidName = (name) => {
+    const regex = /^[a-zA-Z\s]+$/;
+    return regex.test(name) && name.replace(/\s+/g, '').length >= 2;
+  };
 
   const isValidEmail = (email) => {
     const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
@@ -43,28 +45,27 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-        if (form.name === '' && form.email === '' && form.message === '') {
-          alert('Please fill out all the fields before submitting the form.');
-          return;
-        }
+    if (form.name === '' && form.email === '' && form.message === '') {
+      alert(t('contact.alertEmptyFields'));
+      return;
+    }
 
-      if (!isValidName(form.name)) {
-        alert('Please enter a valid name containing only letters and spaces.');
-        return;
-      }
+    if (!isValidName(form.name)) {
+      alert(t('contact.alertName'));
+      return;
+    }
 
-      if (!isValidEmail(form.email)) {
-        alert('Please enter a valid email address.');
-        return;
-      }
+    if (!isValidEmail(form.email)) {
+      alert(t('contact.alertEmail'));
+      return;
+    }
 
-      if (!isValidMessage(form.message)) {
-        alert('Please enter a message with at least 20 characters.');
-        return;
-      }
+    if (!isValidMessage(form.message)) {
+      alert(t('contact.alertMessage'));
+      return;
+    }
 
-      setLoading(true);
-
+    setLoading(true);
 
     setLoading(true);
 
@@ -84,7 +85,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          alert(t('contact.confirmation'));
 
           setForm({
             name: '',
@@ -96,7 +97,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert('Ahh, something went wrong. Please try again.');
+          alert(t('contact.errormessage'));
         }
       );
   };
@@ -109,8 +110,8 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-primary rounded-2xl '
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <p className={styles.sectionSubText}>{t('contact.p')}h</p>
+        <h3 className={styles.sectionHeadText}>{t('contact.h2')}</h3>
 
         <form
           ref={formRef}
@@ -118,44 +119,52 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your Name</span>
+            <span className='text-black font-medium mb-4'>
+              {t('contact.inputName')}
+            </span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder='Write your name'
+              placeholder={t('contact.inputNamePlaceholder')}
               className='bg-grey-10 py-4 px-6 placeholder:text-secondary grey-100  outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your email</span>
+            <span className='text-black font-medium mb-4'>
+              {t('contact.inputEmail')}
+            </span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder='Write your email'
+              placeholder={t('contact.inputEmailPlaceholder')}
               className='bg-grey-10 py-4 px-6 placeholder:text-secondary   outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>Your Message</span>
+            <span className='text-black font-medium mb-4'>
+              {t('contact.inputMessage')}
+            </span>
             <textarea
               rows={4}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='Write your message'
+              placeholder={t('contact.inputMessagePlaceholder')}
               className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-lion-100 py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
+            className='bg-black-100 py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading
+              ? t('contact.sendButtonLoading')
+              : t('contact.sendButton')}
           </button>
         </form>
       </motion.div>
