@@ -9,7 +9,6 @@ import { LampCanvas } from './canvas';
 import { heroTags } from '../constants';
 import { Cursor4 } from '../scripts/cursors/cursor4';
 import { useTranslation } from 'react-i18next';
-import i18n from 'i18next';
 
 const getRandomRotation = () => {
   return Math.random() * 40 - 30; // Generates a random number between -30 and 30
@@ -25,15 +24,25 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
-  const [header, setHeader] = useState(false);
-  const [subHeader, setsubHeader] = useState(false);
+  const [header, setHeader] = useState("Hello, I'm Kasper");
+  const [subHeader, setsubHeader] = useState(
+    "I'm an interaction designer specialized in UI and UX design. My works are interdisciplinary in form and expression."
+  );
   const cursor4Ref = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   // i18n hook
   const { t } = useTranslation();
 
+  // listener for the t language updater
+  useEffect(() => {
+    setHeader(t('hero.header'));
+    setsubHeader(t('hero.subHeader'));
+    setShouldAnimate(true); // Trigger animation when language changes
+  }, [t]);
+
   // header animation hook
-  const useSplittingAnimation = (lampToggle, header, subHeader) => {
+  const useSplittingAnimation = () => {
     useEffect(() => {
       const animateTitles = (fx1Titles) => {
         fx1Titles.forEach((title) => {
@@ -81,14 +90,14 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           );
         });
       };
-
       const handleSplittingAnimation = () => {
         const fx1Titles = [
           ...document.querySelectorAll(
             '.content__title[data-splitting][data-effect1]'
           ),
         ];
-        Splitting({ target: '[data-splitting]', by: 'chars' });
+
+        Splitting({ target: '#id_header, #id_subHeader', by: 'chars' });
 
         // applying a custom font class for the h1 characters
         fx1Titles.forEach((title) => {
@@ -108,26 +117,23 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           }
         });
       };
-
       if (document.readyState === 'complete') {
         handleSplittingAnimation();
       } else {
-        window.addEventListener('load', handleSplittingAnimation);
+        const onLoad = () => {
+          handleSplittingAnimation();
+          window.removeEventListener('load', onLoad);
+        };
+        window.addEventListener('load', onLoad);
       }
-
+      setShouldAnimate(false);
       return () => {
         window.removeEventListener('load', handleSplittingAnimation);
       };
-    }, [lampToggle, header, subHeader]);
+    }, [lampToggle, header, subHeader, shouldAnimate]);
   };
 
-  // listener for the t language updater
-  useEffect(() => {
-    setHeader(t('hero.header'));
-    setsubHeader(t('hero.subHeader'));
-  }, [t]);
-
-  useSplittingAnimation(lampToggle, header, subHeader);
+  useSplittingAnimation();
 
   // listener for lampToggle
   useEffect(() => {
