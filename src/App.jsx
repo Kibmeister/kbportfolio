@@ -20,6 +20,7 @@ const App = () => {
   const [modalProject, setModalProject] = useState('');
   const [lampToggle, setLampToggle] = useState(false);
   const [navbarAnimate, setNavbarAnimate] = useState(false);
+  const [selectedLang, setSelectedLang] = useState('en');
 
   // check the id of the pressed projectcard
   // set the project from {projects} corresponding to that id as the modalProject
@@ -52,6 +53,8 @@ const App = () => {
           <Navbar
             heroRef={heroRef}
             animationClass={navbarAnimate ? 'navbar-animate' : ''}
+            selectedLang={selectedLang}
+            setSelectedLang={setSelectedLang}
           />
         )}
         <div className='page-container'>

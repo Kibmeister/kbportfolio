@@ -130,7 +130,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       return () => {
         window.removeEventListener('load', handleSplittingAnimation);
       };
-    }, [lampToggle, header, subHeader, shouldAnimate]);
+    }, [lampToggle, header, subHeader, shouldAnimate ]);
   };
 
   useSplittingAnimation();

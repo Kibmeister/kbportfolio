@@ -19,6 +19,7 @@ module.exports = {
       },
       boxShadow: {
         card: '0px 8px 24px 0px rgba(0,0,0,0.15);',
+        dropdown: '0px 4px 12px 0px rgba(0,0,0,0.15);',
       },
       screens: {
         xs: '450px',

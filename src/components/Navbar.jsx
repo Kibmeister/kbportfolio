@@ -8,7 +8,7 @@ import CustomDropdown from './CustomDropdown';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
 import { useTranslation } from 'react-i18next';
 
-const Navbar = ({ heroRef, animationClass }) => {
+const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   const [observedElements, setObservedElements] = useState([]);
@@ -93,7 +93,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                 <span className='sm:block hidden'>{t('navBar.title')}</span>
               </p>
             </Link>
-            <ul className='list-none hidden md:flex flex-row gap-10'>
+            <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
               {t('navBar.links', { returnObjects: true }).map((link, index) => (
                 <li
                   key={link.id}
@@ -101,7 +101,7 @@ const Navbar = ({ heroRef, animationClass }) => {
                     active === link.id && !heroInView
                       ? 'text-black active-underline'
                       : 'text-secondary'
-                  } hover:text-black- text-[18px] font-medium cursor-pointer hover-underline`}
+                  } hover:text-black- text-[18px] font-medium cursor-pointer hover-underline whitespace-nowrap`}
                   onClick={() => {
                     setActive(link.id);
                     setLastClicked(link.id);
@@ -113,10 +113,16 @@ const Navbar = ({ heroRef, animationClass }) => {
                 </li>
               ))}
             </ul>
-            <CustomDropdown onChangeLang={onChangeLang} />
+            <div className='md:block hidden mx-4'>
+              <CustomDropdown
+                selectedLang={selectedLang}
+                setSelectedLang={setSelectedLang}
+                onChangeLang={onChangeLang}
+              />
+            </div>
 
             {/* Hamburger menu containing the link elements when in mobile mode */}
-            <div className='md:hidden flex jusstify-end items-center'>
+            <div className='md:hidden flex jusstify-end items-center '>
               <img
                 src={toggle ? close : menu}
                 alt='menu'
@@ -127,7 +133,7 @@ const Navbar = ({ heroRef, animationClass }) => {
               <div
                 className={`${
                   !toggle ? 'hidden' : 'flex'
-                } p-6 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 `}
+                } p-6 bg-white absolute top-16 right-0  my-2 min-w-[140px] z-10 shadow-dropdown`}
               >
                 <ul className='list-none flex justify-end items-start flex-col gap-4'>
                   {t('navBar.links', { returnObjects: true }).map((link) => (
@@ -148,6 +154,13 @@ const Navbar = ({ heroRef, animationClass }) => {
                       <a href={`#${link.id}`}>{link.value}</a>
                     </li>
                   ))}
+                  <li>
+                    <CustomDropdown
+                      selectedLang={selectedLang}
+                      setSelectedLang={setSelectedLang}
+                      onChangeLang={onChangeLang}
+                    />
+                  </li>
                 </ul>
               </div>
             </div>

@@ -2,8 +2,7 @@ import React, { useState, useRef } from 'react';
 import { globe } from '../assets';
 import { LANGUAGES } from '../constants';
 
-const CustomDropdown = ({ onChangeLang }) => {
-  const [selectedLang, setSelectedLang] = useState('en');
+const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -12,7 +11,6 @@ const CustomDropdown = ({ onChangeLang }) => {
     onChangeLang(event.target.value);
     setDropdownVisible(false); // Close dropdown after selecting an option
   };
-
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
@@ -46,7 +44,11 @@ const CustomDropdown = ({ onChangeLang }) => {
           </svg>
         </button>
         <div className='globe-icon-container'>
-          <img src={globe} width='32x' height='32px' alt='glob-icon'></img>
+          <img
+            src={globe}
+            style={{ width: '2em', height: '2em' }}
+            alt='glob-icon'
+          ></img>
         </div>
       </div>
 
@@ -54,7 +56,7 @@ const CustomDropdown = ({ onChangeLang }) => {
       <div
         id='dropdown'
         ref={dropdownRef}
-        className={`absolute mt-2 z-10 bg-white divide-y divide-gray-100  shadow w-22
+        className={`absolute mt-2 z-10 bg-white divide-y divide-gray-100  dropdown w-22 shadow-dropdown
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul
