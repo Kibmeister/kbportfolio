@@ -1,4 +1,26 @@
 {
+  "herotags": [
+    { "id": 1, "term": "Brukergrensesnitt (UI)" },
+    { "id": 2, "term": "Brukeropplevelse (UX)" },
+    { "id": 3, "term": "Interaksjonsdesign" },
+    { "id": 4, "term": "Informasjonsarkitektur (IA)" },
+    { "id": 5, "term": "Wireframe" },
+    { "id": 6, "term": "Prototype" },
+    { "id": 7, "term": "Brukervennlighetstesting" },
+    { "id": 8, "term": "Tilgjengelighet" },
+    { "id": 9, "term": "Responsivt Design" },
+    { "id": 10, "term": "Mobile First Design" },
+    { "id": 11, "term": "Visuelt Design" },
+    { "id": 12, "term": "Typografi" },
+    { "id": 13, "term": "Fargeteori" },
+    { "id": 14, "term": "Designsystem" },
+    { "id": 15, "term": "UI Komponenter" },
+    { "id": 16, "term": "Animasjon" },
+    { "id": 17, "term": "Motion Design" },
+    { "id": 18, "term": "CSS" },
+    { "id": 19, "term": "JavaScript" },
+    { "id": 20, "term": "React" }
+  ],
   "navBar": {
     "title": "Interaksjonsdesign",
     "links": [

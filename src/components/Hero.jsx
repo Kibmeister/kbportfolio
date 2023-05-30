@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { styles } from '../styles';
 import 'splitting/dist/splitting.css';
@@ -13,11 +13,37 @@ import { useTranslation } from 'react-i18next';
 const getRandomRotation = () => {
   return Math.random() * 40 - 30; // Generates a random number between -30 and 30
 };
-const getRandomPosition = () => {
-  const x = Math.random() * 100;
-  const y = Math.random() * 100;
-  return { x, y };
+const getRandomPosition = (
+  lampContainerBounds,
+  tagWidth = 100,
+  tagHeight = 50
+) => {
+  let positions = [];
+  const segmentWidth =
+    window.innerWidth / Math.ceil(window.innerWidth / tagWidth);
+  const segmentHeight =
+    window.innerHeight / Math.ceil(window.innerHeight / tagHeight);
+
+  // Creating a grid of positions across the viewport
+  for (let y = segmentHeight / 2; y < window.innerHeight; y += segmentHeight) {
+    for (let x = segmentWidth / 2; x < window.innerWidth; x += segmentWidth) {
+      // Exclude positions inside the lampContainerBounds
+      if (
+        x < lampContainerBounds.left ||
+        x > lampContainerBounds.right ||
+        y < lampContainerBounds.top ||
+        y > lampContainerBounds.bottom
+      ) {
+        positions.push({ x, y });
+      }
+    }
+  }
+
+  // Return a random position from the generated grid
+  const randomIndex = Math.floor(Math.random() * positions.length);
+  return positions[randomIndex];
 };
+
 
 const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [tags, setTags] = useState([]);
@@ -30,6 +56,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   );
   const cursor4Ref = useRef(null);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+  const lampContainerRef = useRef(null);
 
   // i18n hook
   const { t } = useTranslation();
@@ -130,7 +157,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       return () => {
         window.removeEventListener('load', handleSplittingAnimation);
       };
-    }, [lampToggle, header, subHeader, shouldAnimate ]);
+    }, [lampToggle, header, subHeader, shouldAnimate]);
   };
 
   useSplittingAnimation();
@@ -138,23 +165,25 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   // listener for lampToggle
   useEffect(() => {
     disseminateTags();
-    const headerConatiner = document.querySelector('#id_headerContainer');
 
     if (lampToggle) {
-      //hide the header container
-      // headerConatiner.style.opacity = 0;
+      console.log('ON cursor4ref state : ');
+      console.log(cursor4Ref);
 
       // Disable scroll when tags are visible
       window.addEventListener('scroll', handleScroll);
-      cursor4Ref.current = new Cursor4();
+      cursor4Ref.current = new Cursor4(lampToggle);
       cursor4Ref.current.cursor = true;
     } else {
-      //show the header container
-      // headerConatiner.style.opacity = 1;
-      // Enable scroll when tags are not visible
+      console.log('OFF cursor4ref state : ');
+      console.log(cursor4Ref);
+
       window.removeEventListener('scroll', handleScroll);
-      if (cursor4Ref.current) {
+
+      if (!lampToggle && cursor4Ref.current) {
         cursor4Ref.current.removeCursor();
+
+        //cursor4Ref = null; // Or set it to some default cursor
       }
     }
     return () => {
@@ -164,67 +193,92 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
   // listener for lampHover
   useEffect(() => {
-    console.log('The lamp is hovering : ');
-    console.log(lampHovering);
+    // console.log('The lamp is hovering : ');
+    // console.log(lampHovering);
     if (cursor4Ref.current) {
       cursor4Ref.current.setHovering(isHovering, lampHovering);
     }
   }, [isHovering, lampHovering]);
+
+  //listener for lampcontainer mount
+  useLayoutEffect(() => {
+    const lampContainerElement = document.querySelector('#id_lampContainer');
+    if (lampContainerElement) {
+      lampContainerRef.current = lampContainerElement;
+      disseminateTags();
+    }
+  }, []);
 
   const handleScroll = () => {
     // Prevent scrolling when tags are visible
     window.scrollTo(0, 0);
   };
 
-  const disseminateTags = () => {
-    const nonOverlappingPositions = () => {
-      const positions = [];
-      const minDistance = 300; // Increased minimum distance between tags in pixels
-      const numTries = 100; // Number of attempts to find a non-overlapping position
+  const nonOverlappingPositions = (lampContainerBounds) => {
+    const positions = [];
+    const minDistance = 100; // Increased minimum distance between tags in pixels
+    const numTries = 500; // Number of attempts to find a non-overlapping position
 
-      const positionOverlap = (p1, p2) => {
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        return distance < minDistance;
-      };
-
-      for (const tag of heroTags) {
-        let newPos;
-        let overlap;
-        let tries = 0;
-
-        do {
-          overlap = false;
-          newPos = getRandomPosition();
-
-          // Check if new position overlaps with any previous position
-          for (const pos of positions) {
-            if (positionOverlap(newPos, pos)) {
-              overlap = true;
-              break;
-            }
-          }
-          tries++;
-        } while (overlap && tries < numTries);
-
-        positions.push(newPos);
-      }
-
-      return positions;
+    const positionOverlap = (p1, p2) => {
+      const dx = p1.x - p2.x;
+      const dy = p1.y - p2.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      return distance < minDistance;
     };
 
-    const positions = nonOverlappingPositions();
+    for (const tag of heroTags) {
+      let newPos;
+      let overlap;
+      let tries = 0;
 
-    const transformedTags = heroTags.map((tag, index) => {
-      const { x, y } = positions[index];
-      const rotation = getRandomRotation();
-      return { ...tag, x, y, rotation };
-    });
+      do {
+        overlap = false;
+        newPos = getRandomPosition(lampContainerBounds);
 
-    setTags(transformedTags);
+        // Check if new position overlaps with any previous position
+        for (const pos of positions) {
+          if (positionOverlap(newPos, pos)) {
+            overlap = true;
+            break;
+          }
+        }
+        tries++;
+      } while ((overlap || !lampContainerBounds) && tries < numTries);
+
+      positions.push(newPos);
+    }
+
+    return positions;
   };
+
+const disseminateTags = () => {
+  setTimeout(() => {
+    if (lampContainerRef.current) {
+      const lampContainer = document.querySelector('#id_lampContainer');
+      const lampContainerBounds = lampContainer.getBoundingClientRect();
+      const { left, top, width, height } = lampContainerBounds;
+
+      const positions = nonOverlappingPositions(lampContainerBounds);
+
+      const transformedTags = t('herotags', {
+        returnObjects: true,
+      }).map((tag, index) => {
+        const { x, y } = positions[index];
+
+        const adjustedX = Math.floor(x);
+        const adjustedY = Math.floor(y);
+
+        const rotation = getRandomRotation();
+        return { ...tag, x: adjustedX, y: adjustedY, rotation };
+      });
+
+      setTags(transformedTags);
+    }
+  }, 100);
+};
+
+
+
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
   const lampPress = () => {
@@ -253,8 +307,8 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
                 className='tag'
                 style={{
                   position: 'absolute',
-                  left: `${tag.x}%`,
-                  top: `${tag.y}%`,
+                  left: `${tag.x}px`,
+                  top: `${tag.y}px`,
                   transform: `rotate(${tag.rotation}deg)`,
                   zIndex: 10,
                 }}
@@ -309,7 +363,11 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         </div>
 
         {/* container for the lamp canvas */}
-        <div className='lampContainer  w-full h-full '>
+        <div
+          ref={lampContainerRef}
+          id='id_lampContainer'
+          className='lampContainer  w-full h-full '
+        >
           <LampCanvas
             setLamptoggle={(press) => lampPress(press)}
             setMouseHover={(hovering) => setLampHovering(hovering)}

@@ -8,7 +8,7 @@ import { imageMapTestimonals } from '../constants';
 
 const FeedBackCard = ({ index, testimonial }) => {
   const imgSrc = imageMapTestimonals['one'];
-
+//TODO: fix the left marign of the header and subheader to fit in with the rest of the page
   return (
     <motion.div
       variants={fadeIn('', 'spring', index * 0.5, 0.75)}

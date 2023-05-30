@@ -36,8 +36,8 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
   useEffect(() => {
     if (!lampToggle) {
       const clip = lamp.animations[0];
-      console.log(' this is the lamp object');
-      console.log(lamp);
+      // console.log(' this is the lamp object');
+      // console.log(lamp);
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
 

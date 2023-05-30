@@ -2,25 +2,31 @@ import { Cursors } from './../cursors';
 import { isTouchDevices, isSafari } from './../utils';
 
 export class Cursor4 extends Cursors {
-  constructor() {
+  constructor(lampToggle) {
     super();
     this.speed = !isTouchDevices ? (!isSafari ? 0.4 : 0.9) : 1;
     this.delta = !isTouchDevices ? (!isSafari ? 0.15 : 0.05) : 0.2;
-    // this.state = {
-    //   isHovering: true,
-    //   lampHovering: false,
-    // };
+    this.lampToggle = lampToggle;
     this.init();
     this.loop();
   }
 
+  // TODO: it is like this remove function only hides it until the site is swaped back and forth between source code and regular display.
   removeCursor() {
-    this.container.innerHTML = '';
+    // Ensure container exists
+    if (!this.container) return;
+
+    // Remove all child nodes
+    while (this.container.firstChild) {
+      this.container.removeChild(this.container.firstChild);
+    }
   }
 
   // Modify the setHovering method in the Cursor4 class
   setHovering(isHovering, lampHovering) {
     //this.state.isHovering = !this.state.isHovering;
+    // console.log('SetHover lamtoggle state : ');
+    // console.log(this.lampToggle);
 
     if (lampHovering) {
       this.notifyRadiusUpdate(400);

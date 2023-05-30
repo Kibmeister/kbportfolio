@@ -1,4 +1,27 @@
 {
+  "herotags": [
+    { "id": 1, "term": "Interfaz de Usuario (UI)" },
+    { "id": 2, "term": "Experiencia de Usuario (UX)" },
+    { "id": 3, "term": "Diseño de Interacción" },
+    { "id": 4, "term": "Arquitectura de Información (IA)" },
+    { "id": 5, "term": "Esquema" },
+    { "id": 6, "term": "Prototipo" },
+    { "id": 7, "term": "Pruebas de Usabilidad" },
+    { "id": 8, "term": "Accesibilidad" },
+    { "id": 9, "term": "Diseño Responsivo" },
+    { "id": 10, "term": "Diseño Móvil Primero" },
+    { "id": 11, "term": "Diseño Visual" },
+    { "id": 12, "term": "Tipografía" },
+    { "id": 13, "term": "Teoría del Color" },
+    { "id": 14, "term": "Sistema de Diseño" },
+    { "id": 15, "term": "Componentes de la Interfaz de Usuario" },
+    { "id": 16, "term": "Animación" },
+    { "id": 17, "term": "Diseño de Movimiento" },
+    { "id": 18, "term": "CSS" },
+    { "id": 19, "term": "JavaScript" },
+    { "id": 20, "term": "React" }
+  ],
+
   "navBar": {
     "title": "Diseño de interacción",
     "links": [

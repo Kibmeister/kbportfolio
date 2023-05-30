@@ -1,4 +1,26 @@
 {
+  "herotags": [
+    { "id": 1, "term": "Brukergrensesnitt (UI)" },
+    { "id": 2, "term": "Benutzererfahrung (UX)" },
+    { "id": 3, "term": "Interaktionsdesign" },
+    { "id": 4, "term": "Informationsarchitektur (IA)" },
+    { "id": 5, "term": "Wireframe" },
+    { "id": 6, "term": "Prototyp" },
+    { "id": 7, "term": "Benutzerfreundlichkeitstests" },
+    { "id": 8, "term": "Barrierefreiheit" },
+    { "id": 9, "term": "Responsive Design" },
+    { "id": 10, "term": "Mobile First Design" },
+    { "id": 11, "term": "Visuelles Design" },
+    { "id": 12, "term": "Typografie" },
+    { "id": 13, "term": "Farbtheorie" },
+    { "id": 14, "term": "Designsystem" },
+    { "id": 15, "term": "UI-Komponenten" },
+    { "id": 16, "term": "Animation" },
+    { "id": 17, "term": "Motion Design" },
+    { "id": 18, "term": "CSS" },
+    { "id": 19, "term": "JavaScript" },
+    { "id": 20, "term": "React" }
+  ],
   "navBar": {
     "title": "Interaktionsdesign",
     "links": [
