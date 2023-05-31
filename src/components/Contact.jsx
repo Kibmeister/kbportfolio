@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
+import {  InkQuillCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
@@ -110,7 +110,7 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-primary rounded-2xl '
       >
-        <p className={styles.sectionSubText}>{t('contact.p')}h</p>
+        <p className={styles.sectionSubText}>{t('contact.p')}</p>
         <h3 className={styles.sectionHeadText}>{t('contact.h2')}</h3>
 
         <form
@@ -128,7 +128,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder={t('contact.inputNamePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary grey-100  outline-none border-none font-medium'
+              className='bg-grey-10 py-4 px-6 placeholder:text-secondary grey-100  outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
           <label className='flex flex-col'>
@@ -141,7 +141,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder={t('contact.inputEmailPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary   outline-none border-none font-medium'
+              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
           <label className='flex flex-col'>
@@ -154,7 +154,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder={t('contact.inputMessagePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium'
+              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
 
@@ -162,9 +162,7 @@ const Contact = () => {
             type='submit'
             className='bg-black-100 py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
           >
-            {loading
-              ? t('contact.sendButtonLoading')
-              : t('contact.sendButton')}
+            {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
           </button>
         </form>
       </motion.div>
@@ -173,7 +171,7 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <EarthCanvas />
+        <InkQuillCanvas />
       </motion.div>
     </div>
   );

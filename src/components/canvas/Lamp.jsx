@@ -98,7 +98,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
           <pointLight intensity={1} />
         </>
       ) : null}
-
+ 
       <primitive
         ref={lampRef}
         onClick={() => setLampToggle(!lampToggle)}
@@ -106,7 +106,13 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
         onPointerLeave={handlePointerLeave}
         object={lamp.scene}
         scale={isMobile ? 5 : isXl ? 7 : 8}
-        position={isMobile ? [-2.4, -0.6, -2.2] : isXl ? [-2.4, -3, -2.2] : [(-1, -5, -1.5)]}
+        position={
+          isMobile
+            ? [-2.4, -0.6, -2.2]
+            : isXl
+            ? [-2.4, -3, -2.2]
+            : [-1, -5, -1.5]
+        }
         rotation={[-0.0, -0.5, -0.0]}
         pointerEvents
       />

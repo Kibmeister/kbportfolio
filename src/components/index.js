@@ -1,6 +1,5 @@
 import {
-  EarthCanvas,
-  BallCanvas,
+  InkQuillCanvas,
   ComputersCanvas,
   StarsCanvas,
 } from './canvas';
@@ -27,8 +26,7 @@ export {
   Contact,
   ProjectModal,
   CanvasLoader,
-  EarthCanvas,
-  BallCanvas,
+  InkQuillCanvas,
   ComputersCanvas,
   StarsCanvas,
   Coffeecan,

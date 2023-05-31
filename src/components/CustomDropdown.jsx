@@ -60,13 +60,13 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul
-          className='py-2 text-sm text-gray-700 dark:text-gray-200'
+          className='py-2 text-sm text-black'
           aria-labelledby='dropdownDefaultButton'
         >
           {LANGUAGES.map(({ code, label, icon }) => (
             <li
               className={
-                'mr-2 flex flex-row justify-center align-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                ' flex flex-row justify-center align-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
               }
               key={code}
             >
@@ -82,6 +82,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
                 width='32px'
                 height='32x'
                 alt='language-icon'
+                className={'mr-2'}
               ></img>
             </li>
           ))}
