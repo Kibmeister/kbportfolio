@@ -8,7 +8,7 @@ import { imageMapTestimonals } from '../constants';
 
 const FeedBackCard = ({ index, testimonial }) => {
   const imgSrc = imageMapTestimonals['one'];
-//TODO: fix the left marign of the header and subheader to fit in with the rest of the page
+  //TODO: fix the left marign of the header and subheader to fit in with the rest of the page
   return (
     <motion.div
       variants={fadeIn('', 'spring', index * 0.5, 0.75)}
@@ -37,27 +37,25 @@ const FeedBackCard = ({ index, testimonial }) => {
   );
 };
 
-
 //the below class has some funky left and right horizontal margins
 const Feedbacks = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className={''}>
-      <div className={`${styles.padding} mx-[-4rem] `}>
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>{t('testimonals.p')}</p>
-          <h2 className={styles.sectionHeadText}>{t('testimonals.h2')}</h2>
-        </motion.div>
-        <div className='w-full flex'>
-          <motion.p
-            variants={fadeIn('', '', 0.1, 1)}
-            className='mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
-          >
-            {t('testimonals.subHeader')}
-          </motion.p>
-        </div>
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>{t('testimonals.p')}</p>
+        <h2 className={styles.sectionHeadText}>{t('testimonals.h2')}</h2>
+      </motion.div>
+      <div className='w-full flex'>
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1)}
+          className='mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
+        >
+          {t('testimonals.subHeader')}
+        </motion.p>
       </div>
+
       <div className={`${styles.paddingX} mx-[-4rem] flex flex-wrap gap-7`}>
         {t('testimonals.entries', { returnObjects: true }).map(
           (testimonial, index) => (
@@ -65,7 +63,7 @@ const Feedbacks = () => {
           )
         )}
       </div>
-    </div>
+    </>
   );
 };
 

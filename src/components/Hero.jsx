@@ -44,7 +44,6 @@ const getRandomPosition = (
   return positions[randomIndex];
 };
 
-
 const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [tags, setTags] = useState([]);
   const [lampToggle, setLampToggle] = useState(false);
@@ -167,17 +166,11 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     disseminateTags();
 
     if (lampToggle) {
-      console.log('ON cursor4ref state : ');
-      console.log(cursor4Ref);
-
       // Disable scroll when tags are visible
       window.addEventListener('scroll', handleScroll);
       cursor4Ref.current = new Cursor4(lampToggle);
       cursor4Ref.current.cursor = true;
     } else {
-      console.log('OFF cursor4ref state : ');
-      console.log(cursor4Ref);
-
       window.removeEventListener('scroll', handleScroll);
 
       if (!lampToggle && cursor4Ref.current) {
@@ -217,7 +210,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const nonOverlappingPositions = (lampContainerBounds) => {
     const positions = [];
     const minDistance = 100; // Increased minimum distance between tags in pixels
-    const numTries = 500; // Number of attempts to find a non-overlapping position
+    const numTries = 1000; // Number of attempts to find a non-overlapping position
 
     const positionOverlap = (p1, p2) => {
       const dx = p1.x - p2.x;
@@ -251,33 +244,30 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     return positions;
   };
 
-const disseminateTags = () => {
-  setTimeout(() => {
-    if (lampContainerRef.current) {
-      const lampContainer = document.querySelector('#id_lampContainer');
-      const lampContainerBounds = lampContainer.getBoundingClientRect();
-      const { left, top, width, height } = lampContainerBounds;
+  const disseminateTags = () => {
+    setTimeout(() => {
+      if (lampContainerRef.current) {
+        const lampContainer = document.querySelector('#id_lampContainer');
+        const lampContainerBounds = lampContainer.getBoundingClientRect();
+        const { left, top, width, height } = lampContainerBounds;
 
-      const positions = nonOverlappingPositions(lampContainerBounds);
+        const positions = nonOverlappingPositions(lampContainerBounds);
 
-      const transformedTags = t('herotags', {
-        returnObjects: true,
-      }).map((tag, index) => {
-        const { x, y } = positions[index];
+        const transformedTags = t('herotags', {
+          returnObjects: true,
+        }).map((tag, index) => {
+          const { x, y } = positions[index];
 
-        const adjustedX = Math.floor(x);
-        const adjustedY = Math.floor(y);
+          const adjustedX = Math.floor(x);
+          const adjustedY = Math.floor(y);
 
-        const rotation = getRandomRotation();
-        return { ...tag, x: adjustedX, y: adjustedY, rotation };
-      });
-
-      setTags(transformedTags);
-    }
-  }, 100);
-};
-
-
+          const rotation = getRandomRotation();
+          return { ...tag, x: adjustedX, y: adjustedY, rotation };
+        });
+        setTags(transformedTags);
+      }
+    }, 100);
+  };
 
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section

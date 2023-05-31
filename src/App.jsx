@@ -39,11 +39,11 @@ const App = () => {
   useEffect(() => {
     setNavbarAnimate(!lampToggle);
     const body = document.querySelector('body');
-    if (lampToggle) {
-      body.classList.add('lamp-off');
-    } else {
-      body.classList.remove('lamp-off');
-    }
+    // if (lampToggle) {
+    //   body.classList.add('lamp-off');
+    // } else {
+    //   body.classList.remove('lamp-off');
+    // }
   }, [lampToggle]);
 
   return (

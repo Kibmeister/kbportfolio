@@ -6,7 +6,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
-const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
+const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const lamp = useGLTF('./lamp/scene.gltf');
 
   const [lampHover, setLampHover] = useState(false);
@@ -31,7 +31,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
       setLamptoggle(lampToggle);
     }
   }, [lampToggle]);
- 
+
   //hover animation
   useEffect(() => {
     if (!lampToggle) {
@@ -81,6 +81,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
     document.body.style.cursor = 'auto';
   };
 
+  console.log('is Mobile state', isMobile);
   return (
     <mesh>
       {lampHover || !lampToggle ? (
@@ -104,8 +105,8 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
         object={lamp.scene}
-        scale={isMobile ? 2 : 8}
-        position={isMobile ? [0, -3, -2.2] : [0, -4, -1.5]}
+        scale={isMobile ? 5 : isXl ? 7 : 8}
+        position={isMobile ? [-2.4, -0.6, -2.2] : isXl ? [-2.4, -3, -2.2] : [(-1, -5, -1.5)]}
         rotation={[-0.0, -0.5, -0.0]}
         pointerEvents
       />
@@ -115,19 +116,24 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile }) => {
 
 const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isXl, setIsXl] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max- width: 500px)');
+    const mediaQueryMobile = window.matchMedia('(max-width: 765px)');
+    const mediaQueryXl = window.matchMedia('(max-width: 1280px)');
 
-    setIsMobile(mediaQuery.matches);
+    setIsMobile(mediaQueryMobile.matches);
+    setIsXl(mediaQueryXl.matches);
 
     const handleMedaQuryChange = (event) => {
       setIsMobile(event.matches);
     };
-    mediaQuery.addEventListener('change', handleMedaQuryChange);
+    mediaQueryMobile.addEventListener('change', handleMedaQuryChange);
+    mediaQueryXl.addEventListener('change', handleMedaQuryChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMedaQuryChange);
+      mediaQueryMobile.removeEventListener('change', handleMedaQuryChange);
+      mediaQueryXl.removeEventListener('change', handleMedaQuryChange);
     };
   }, []);
 
@@ -150,6 +156,7 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
           setMouseHover={setMouseHover}
           setLamptoggle={setLamptoggle}
           isMobile={isMobile}
+          isXl={isXl}
         />
       </Suspense>
 
