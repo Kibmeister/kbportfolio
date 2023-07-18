@@ -32,7 +32,7 @@
     ]
   },
   "hero": {
-    "header": "Bonjour, je m'appelle Kasper.",
+    "header": "Bonjour, je m'appelle Kasper ",
     "subHeader": "Je suis un concepteur d'interaction spécialisé dans la conception d'interface utilisateur (UI) et d'expérience utilisateur (UX). Mes travaux sont interdisciplinaires dans leur forme et leur expression."
   },
   "about": {
@@ -246,6 +246,25 @@
           },
           {
             "name": "Conception UI/UX",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "Ancien site web de portfolio",
+        "type": "oldwebsite",
+        "description": "Mon premier site web de portfolio présente une esthétique brutaliste avec des couleurs vives, s'inspirant de la palette de couleurs des chaussures Air Max 97 de Sean Wotherspoon. Les fenêtres de l'interface utilisateur sont interactives, rappelant l'interface d'un système d'exploitation des années 90.",
+        "tags": [
+          {
+            "name": "Portfolio website",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Brutalist webdesign",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "90s Windows OS",
             "color": "pink-text-gradient"
           }
         ]

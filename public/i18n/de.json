@@ -244,6 +244,25 @@
             "color": "pink-text-gradient"
           }
         ]
+      },
+      {
+        "name": "Alte Portfolio-Website",
+        "type": "oldwebsite",
+        "description": "Meine erste Portfolio-Website präsentiert eine brutalistische Ästhetik mit lebendigen Farben, inspiriert von der Farbpalette der Air Max 97 Sneaker von Sean Wotherspoon. Die UI-Fenster sind interaktiv und erinnern an eine OS-Oberfläche der 90er Jahre.",
+        "tags": [
+          {
+            "name": "Portfolio website",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Brutalist webdesign",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "90s Windows OS",
+            "color": "pink-text-gradient"
+          }
+        ]
       }
     ]
   },

@@ -21,6 +21,7 @@ const ExperienceCard = ({ experience }) => {
         background: '#FDFDFD',
         color: '#000000',
         boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)',
+        fontFamily: 'garet-book'
       }}
       contentArrowStyle={{ borderRight: '7px solid  #FDFDFD' }}
       date={experience.date}
@@ -36,9 +37,11 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className=' text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className=' text-[24px] garet-book font-bold text-black'>
+          {experience.title}
+        </h3>
         <p
-          className='text-black text-[16px] font-semibold'
+          className='garet-book text-black text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.profession}
@@ -49,7 +52,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.workdescription.map((workdesc, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-black-100 text-[14px] pl-1 tracking-wider'
+            className='garet-book text-black-100 text-[14px] pl-1 tracking-wider'
           >
             {workdesc.value}
           </li>
@@ -70,7 +73,7 @@ const Experience = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
-        <VerticalTimeline lineColor={'#EBEBEB'}>
+        <VerticalTimeline lineColor={'#1d1d1e'}>
           {t('workexperience.experiences', { returnObjects: true }).map(
             (experience, index) => (
               <ExperienceCard

@@ -35,6 +35,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
           >
+            <rect width='100%' height='100%' fill='black' stroke='black' />
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
@@ -56,7 +57,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
       <div
         id='dropdown'
         ref={dropdownRef}
-        className={`absolute mt-2 z-10 bg-white divide-y divide-gray-100  dropdown w-22 shadow-dropdown
+        className={`absolute mt-2 z-10  divide-y divide-black dropdown w-22 shadow-dropdown
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul

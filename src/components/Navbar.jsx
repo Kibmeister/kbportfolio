@@ -81,16 +81,17 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              <img
+              {/* <img
                 src={logo}
                 alt='logo'
                 width='100'
                 height='50'
                 className='w-9 h-9 object-container'
-              />
-              <p className='text-black text-[18px] font-bold cursor-pointer flex'>
+              /> */}
+              <p className='font-garet-heavy text-black-3 text-[12px] cursor-pointer flex'>
                 &nbsp;
-                <span className='sm:block hidden'>{t('navBar.title')}</span>
+                <span>KASPER BORGBJERG</span>
+                {/* {t('navBar.title')} */}
               </p>
             </Link>
             <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
@@ -99,9 +100,9 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                   key={link.id}
                   className={`${
                     active === link.id && !heroInView
-                      ? 'text-black active-underline'
-                      : 'text-secondary'
-                  } hover:text-black- text-[18px] font-medium cursor-pointer hover-underline whitespace-nowrap`}
+                      ? 'text-black border-b-2 border-secondary'
+                      : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
+                  } text-[18px] font-medium cursor-pointer`}
                   onClick={() => {
                     setActive(link.id);
                     setLastClicked(link.id);

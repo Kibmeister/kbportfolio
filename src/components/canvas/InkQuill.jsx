@@ -9,7 +9,12 @@ const InkQuill = () => {
   const earth = useGLTF('./ink_bottle_quill/scene.gltf');
 
   return (
-    <primitive object={earth.scene} scale={7.0} position-y={-0.4} rotation-y={0} />
+    <primitive
+      object={earth.scene}
+      scale={7.0}
+      position-y={-0.4}
+      rotation-y={0}
+    />
   );
 };
 
@@ -26,11 +31,12 @@ const InkQuillCanvas = () => {
         position: [-4, -60, 20],
       }}
     >
-      <directionalLight intensity={1} position={[-5, 5, 5]} />
-      <ambientLight intensity={0.5} />
+      <directionalLight intensity={1} position={[-20, 50, 10]} />
+      <ambientLight intensity={1} />
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
+          autoRotateSpeed={1}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

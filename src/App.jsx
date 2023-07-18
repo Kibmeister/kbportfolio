@@ -28,22 +28,30 @@ const App = () => {
   const handleModalClick = (type) => {
     console.log('appjs this is name');
     console.log(type);
-    projects.filter((project) => {
-      if (project.type === type) {
-        setModalProject(project);
-      }
-    });
+
+    if (type == 'oldwebsite') {
+      window.open(
+        'https://www.kasperborgbjerg.co'
+      );
+    } else {
+      projects.filter((project) => {
+        if (project.type === type) {
+          setModalProject(project);
+        }
+      });
+    }
+
     setShowModal(true);
   };
 
   useEffect(() => {
     setNavbarAnimate(!lampToggle);
     const body = document.querySelector('body');
-    // if (lampToggle) {
-    //   body.classList.add('lamp-off');
-    // } else {
-    //   body.classList.remove('lamp-off');
-    // }
+    if (lampToggle) {
+      body.classList.add('lamp-off');
+    } else {
+      body.classList.remove('lamp-off');
+    }
   }, [lampToggle]);
 
   return (

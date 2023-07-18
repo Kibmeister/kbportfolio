@@ -15,6 +15,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
+  name,
   onProjectClick,
 }) => {
   const iconSrc = imageMapWorks[type];
@@ -42,8 +43,8 @@ const ProjectCard = ({
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>
         <div className='mt-5 '>
-          <h3 className='font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-black text-[14px]'>{description}</p>
+          <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
+          <p className='garet-book mt-2 text-black text-[14px]'>{description}</p>
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
@@ -69,7 +70,7 @@ const Works = ({ onProjectClick }) => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className='mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
+          className='garet-book mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
         >
           {t('portfolioTiles.subHeader')}
         </motion.p>

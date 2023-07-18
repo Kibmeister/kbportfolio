@@ -15,13 +15,13 @@ const FeedBackCard = ({ index, testimonial }) => {
       className='bg-white p-10  xs:w-[px] w-full shadow-card'
     >
       <div className='mt-1 text-black'>
-        <p>{testimonial.text}</p>
+        <p className='great-book'>{testimonial.text}</p>
         <div className='mt-7 flex justify-between items-center gap-1'>
           <div className='flex-1 flex flex-col'>
-            <p className='text-content-title  font-medium text-[16px]'>
-              <span className='blue-text-gradient'>@</span> {testimonial.name}
+            <p className='great-book text-content-title  font-medium text-[16px]'>
+              <span className='great-book blue-text-gradient'>@</span> {testimonial.name}
             </p>
-            <p className='m1-1 text-secondary text-[12px]'>
+            <p className='great-book m1-1  text-[12px]'>
               {testimonial.designation} of {testimonial.company}
             </p>
           </div>
@@ -50,7 +50,7 @@ const Feedbacks = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className='mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
+          className='garet-book mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
         >
           {t('testimonals.subHeader')}
         </motion.p>

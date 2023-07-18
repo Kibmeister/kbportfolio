@@ -1,25 +1,46 @@
 @font-face {
-    font-family: 'cooper_hewittheavy';
-    src: url('./fonts/cooperhewitt-heavy-webfont.woff2') format('woff2'),
-         url('./fonts/cooperhewitt-heavy-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'chalga-folk';
+  src: url('./fonts/chalgafolkdemo-webfont.woff2') format('woff2'),
+    url('./fonts/chalgafolkdemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'cooper_hewittbold';
-    src: url('./fonts/cooperhewitt-bold-webfont.woff2') format('woff2'),
-         url('./fonts/cooperhewitt-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-
+  font-family: 'garet-book';
+  src: url('./fonts/Garet-Book.woff2') format('woff2'),
+    url('./fonts/Garet-Book.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'garet-heavy';
+  src: url('./fonts/Garet-heavy.woff2') format('woff2'),
+    url('./fonts/Garet-heavy.woff') format('woff');
+}
+
 /* font.css */
 .hero-head-text {
-  font-family: 'cooper_hewittheavy', sans-serif;
+  font-family: 'chalga-folk', sans-serif;
+  color: var(--color-secondaryVar);
+}
+.hero-sub-text {
+  font-family: 'garet-book', sans-serif;
+  color: var(--color-blackVar);
+}
+.section-head-text {
+  font-family: 'chalga-folk', sans-serif;
+  color: var(--color-blackVar);
+}
+.section-sub-text {
+  font-family: 'garet-heavy', sans-serif;
+  color: var(--color-tertiaryVar);
 }
 
-.section-head-text {
-  font-family: 'cooper_hewittbold', sans-serif;
+
+
+.garet-book {
+  font-family: 'garet-book', sans-serif;
+}
+.garet-heavy {
+  font-family: 'garet-heavy', sans-serif;
 }

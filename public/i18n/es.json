@@ -247,6 +247,25 @@
             "color": "pink-text-gradient"
           }
         ]
+      },
+      {
+        "name": "Antiguo sitio web de portafolio",
+        "type": "oldwebsite",
+        "description": "Mi primer sitio web de portafolio muestra una estética brutalista con colores vibrantes, inspirado en la paleta de colores de las zapatillas Air Max 97 de Sean Wotherspoon. Las ventanas de la interfaz de usuario son interactivas, evocando la interfaz de un sistema operativo de los años 90.",
+        "tags": [
+          {
+            "name": "Portfolio website",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Brutalist webdesign",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "90s Windows OS",
+            "color": "pink-text-gradient"
+          }
+        ]
       }
     ]
   },

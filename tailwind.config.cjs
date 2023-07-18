@@ -4,18 +4,21 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
+      fontFamily: {
+        'garet-heavy': ['garet-heavy', 'sans-serif'],
+        'chalga-folk': ['chalga-folk', 'sans-serif'],
+        'garet-book': ['garet-book', 'sans-serif'],
+      },
       colors: {
-        primary: '#FDFDFD',
-        secondary: '#A29D9D',
-        tertiary: '#151030',
-        'container-title': '#516AAE',
-        'grey-100': '#514E4D',
-        'grey-10': '#EBEBEB',
-        primary: '#FDFDFD',
-        'lion-100': '#FF7F1A',
-        'black-100': '#100d25',
-        'black-200': '#090325',
-        'white-100': '#ffffff',
+        primary: '#F2F2E8',
+        secondary: '#FF5800',
+        tertiary: '#AEAC92',
+        black: '#1E1E1D',
+        lightblack: '#8C8C88',
+        primaryVar: 'var(--color-primary)',
+        secondaryVar: 'var(--color-secondary)',
+        tertiaryVar: 'var(--color-tertiary)',
+        blackVar: 'var(--color-black)',
       },
       boxShadow: {
         card: '0px 8px 24px 0px rgba(0,0,0,0.15);',
@@ -27,6 +30,11 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('/src/assets/herobg.png')",
       },
+    },
+  },
+  variants: {
+    extend: {
+      borderColor: ['responsive', 'hover', 'focus', 'active'],
     },
   },
   plugins: [],

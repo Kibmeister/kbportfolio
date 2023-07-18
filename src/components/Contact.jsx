@@ -119,7 +119,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>
+            <span className='garet-book font-medium mb-4'>
               {t('contact.inputName')}
             </span>
             <input
@@ -128,11 +128,11 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder={t('contact.inputNamePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary grey-100  outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>
+            <span className='garet-book font-medium mb-4'>
               {t('contact.inputEmail')}
             </span>
             <input
@@ -141,11 +141,11 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder={t('contact.inputEmailPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-black font-medium mb-4'>
+            <span className='garet-book font-medium mb-4'>
               {t('contact.inputMessage')}
             </span>
             <textarea
@@ -154,13 +154,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder={t('contact.inputMessagePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:text-secondary  outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book  outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-black-100 py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
+            className='garet-book bg-secondary py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
           >
             {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
           </button>

@@ -5,14 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primaryVar: #f2f2e8;
+  --color-secondaryVar: #ff5800;
+  --color-tertiaryVar: #AEAC92;
+  --color-blackVar: #1E1E1D;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open-sans", sans-serif;
+  /* font-family: "garet-book", sans-serif; */
   scroll-behavior: smooth;
-  /* color-scheme: light; */
+  /* color-scheme: var(--color-primaryVar); */
+}
+body {
+  background-color: var(--color-primaryVar);
 }
 
 .hash-span {
@@ -46,7 +55,7 @@
 }
 
 .green-pink-gradient {
-  background: "#00cea8";
+  background: '#00cea8';
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }

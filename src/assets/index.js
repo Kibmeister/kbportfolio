@@ -22,7 +22,7 @@ import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 
 import meta from './company/meta.png';
-import shopify from './company/shopify.png';
+import shopify from './company/shopify.png'; 
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 
@@ -32,8 +32,8 @@ import tripguide from './tripguide.png';
 
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
-import multimodalThumbnail from './multimodalCoffeecan/multimodalThumbnail.png';
-import topicoThumbnail from './topico/Topico.svg';
+import multimodalcoffeecanthumbnail from './multimodalCoffeecan/multimodalcoffeecanthumbnail.svg'
+import topicoThumbnail from './topico/topicothumbnail.svg';
 import scenario from './topico/scenario.svg';
 import topicoDevice from './topico/topicoDevice.svg';
 import usa from './flags/usa.svg';
@@ -51,13 +51,15 @@ import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
+import coaxerThumbnail from './coaxer/coaxerThumbnail.svg';
 import RingmerkingEN from './ringmerking/Ringmerking en.svg';
 import RingmerkingNO from './ringmerking/Ringmerking no.svg';
 import RingmerkingES from './ringmerking/Ringmerking es.svg';
 import RingmerkingIT from './ringmerking/Ringmerking it.svg';
 import RingmerkingFR from './ringmerking/Ringmerking fr.svg';
 import RingmerkingDE from './ringmerking/Ringmerking de.svg';
-import mike from './testimonals/mike.jpeg'
+import mike from './testimonals/mike.jpeg';
+import oldwebsite from './oldwebsite/oldwebsite.png';
 
 
 export {
@@ -91,7 +93,6 @@ export {
   tripguide,
   feedback,
   handle,
-  multimodalThumbnail,
   topicoThumbnail,
   scenario,
   topicoDevice,
@@ -117,4 +118,7 @@ export {
   RingmerkingFR,
   RingmerkingDE,
   mike,
+  oldwebsite,
+  coaxerThumbnail,
+  multimodalcoffeecanthumbnail,
 };

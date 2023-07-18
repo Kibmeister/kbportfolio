@@ -241,6 +241,25 @@
             "color": "pink-text-gradient"
           }
         ]
+      },
+      {
+        "name": "Gammel porteføljenettside",
+        "type": "oldwebsite",
+        "description": "Min første porteføljenettside viser en brutalistisk estetikk med levende farger, inspirert av Sean Wotherspoon's Air Max 97-sneaker fargepalett. UI-vinduene er interaktive og minner om et OS-grensesnitt fra 90-tallet.",
+        "tags": [
+          {
+            "name": "Portfolio website",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Brutalist webdesign",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "90s Windows OS",
+            "color": "pink-text-gradient"
+          }
+        ]
       }
     ]
   },

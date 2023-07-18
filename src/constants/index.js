@@ -23,7 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
-  multimodalThumbnail,
+  multimodalcoffeecanthumbnail,
   topicoThumbnail,
   usa,
   norway,
@@ -39,13 +39,15 @@ import {
   coaxerIT,
   coaxerFR,
   coaxerDE,
+  coaxerThumbnail,
   RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,
   RingmerkingIT,
   RingmerkingFR,
   RingmerkingDE,
-  mike
+  mike,
+  oldwebsite,
 } from '../assets';
 
 //only used for internalObserver
@@ -90,9 +92,10 @@ const imageMapExperience = {
 
 const imageMapWorks = {
   topico: topicoThumbnail,
-  coffeecan: multimodalThumbnail,
-  coaxer: coaxerEN,
+  coffeecan: multimodalcoffeecanthumbnail,
+  coaxer: coaxerThumbnail,
   ringmerking: RingmerkingEN,
+  oldwebsite: oldwebsite,
 };
 
 const imageMapCoaxer = {
@@ -115,7 +118,7 @@ const imageMapRingmerking = {
 
 const imageMapTestimonals = {
   one: mike,
-}
+};
 
 const technologies = [
   {
@@ -302,7 +305,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: multimodalThumbnail,
+    image: multimodalcoffeecanthumbnail,
     source_code_link: 'https://github.com/',
   },
   {

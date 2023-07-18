@@ -11,9 +11,9 @@ const ServiceCard = ({ index, value, id }) => {
 const iconSrc = imageMapAbout[id];
 
   return (
-    <Tilt className='bg-white xs:w-[250px] w-full'>
+    <Tilt className='xs:w-[250px] w-full'>
       <motion.div
-        className='w-full shadow-card'
+        className='w-full shadow-card bg-white'
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
       >
         <div
@@ -21,7 +21,9 @@ const iconSrc = imageMapAbout[id];
           className='bg-white- py-5 px-12 min-h-[280px] flex justify-evenly items-center felx-col'
         >
           <img src={iconSrc} alt={value} className='w-16 h-16 object-contain' />
-          <h3 className=' text-[20px] font-bold text-center'>{value}</h3>
+          <h3 className=' text-[20px] garet-book text-center text-black'>
+            {value}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
@@ -39,7 +41,7 @@ const About = () => {
       </motion.div>
       <motion.p
         vairants={fadeIn('', '', 0.1, 1)}
-        className='mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
+        className='garet-book mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
       >
         {t('about.subHeader')}
       </motion.p>

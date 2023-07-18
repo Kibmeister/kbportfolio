@@ -49,7 +49,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
-  const [header, setHeader] = useState("Hello, I'm Kasper");
+  const [header, setHeader] = useState('Hello,');
   const [subHeader, setsubHeader] = useState(
     "I'm an interaction designer specialized in UI and UX design. My works are interdisciplinary in form and expression."
   );
@@ -62,6 +62,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
   // listener for the t language updater
   useEffect(() => {
+    //split t.hero.header into two strings and set them tot header and header1 respectively
     setHeader(t('hero.header'));
     setsubHeader(t('hero.subHeader'));
     setShouldAnimate(true); // Trigger animation when language changes
@@ -315,7 +316,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         </AnimatePresence>
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
-
       <div
         className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5
       inset-0 top-[120px]
@@ -332,18 +332,18 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-splitting
               data-effect1
             >
-              <h1
-                id={'id_header'}
-                className={`${styles.heroHeadText}  text-black`}
-              >
-                {header}
-              </h1>
+              <div className='flex flex-row gap-12'>
+                {' '}
+                <h1 id={'id_header'} className={`${styles.heroHeadText}`}>
+                  {header}
+                </h1>
+              </div>
 
               {/* {t('subHeader')} */}
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText}  text-black max-w-[600px]`}
+                  className={`${styles.heroSubText}   max-w-[800px]`}
                 >
                   {subHeader}
                 </p>
@@ -371,7 +371,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         <div className='absolute xs:bottom-10 bottom-32 w-full z-[1] flex justify-center items-center'>
           <a href='#about'>
             <div
-              className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary
+              className='w-[35px] h-[64px] rounded-3xl border-4 border-tertiary
           flex justify-center items-start p-2'
             >
               <motion.dev
@@ -383,7 +383,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
-                className='w-3 h-3 rounded-full bg-secondary mb-1'
+                className='w-3 h-3 rounded-full bg-tertiary mb-1'
               />
             </div>
           </a>

@@ -32,7 +32,7 @@
     ]
   },
   "hero": {
-    "header": "Ciao, sono Kasper.",
+    "header": "Ciao, sono Kasper ",
     "subHeader": "Sono un designer di interazione specializzato nel design UI e UX. I miei lavori sono interdisciplinari nella forma e nell'espressione."
   },
   "about": {
@@ -243,6 +243,25 @@
           },
           {
             "name": "Design UI/UX",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "Vecchio sito web del portfolio",
+        "type": "oldwebsite",
+        "description": "Il mio primo sito web del portfolio presenta un'estetica brutalista con colori vivaci, tratta ispirazione dalla palette di colori delle sneakers Air Max 97 di Sean Wotherspoon. Le finestre dell'interfaccia utente sono interattive, evocando l'interfaccia di un sistema operativo degli anni '90.",
+        "tags": [
+          {
+            "name": "Portfolio website",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "Brutalist webdesign",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "90s Windows OS",
             "color": "pink-text-gradient"
           }
         ]
