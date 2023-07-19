@@ -4,13 +4,16 @@ import { LANGUAGES } from '../constants';
 
 const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [activeItem, setActiveItem] = useState(LANGUAGES[0]?.code);
   const dropdownRef = useRef(null);
 
   const handleLangChange = (event) => {
     setSelectedLang(event.target.value);
+    setActiveItem(event.target.value);
     onChangeLang(event.target.value);
     setDropdownVisible(false); // Close dropdown after selecting an option
   };
+
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
@@ -18,7 +21,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   return (
     <div className='relative '>
       {/* dropdown button */}
-      <div className='relative  flex flex-row justify-start items-center gap-3'>
+      <div className=' relative  flex flex-row justify-start items-center gap-3'>
         <button
           id='dropdownDefaultButton'
           data-dropdown-toggle='dropdown'
@@ -35,7 +38,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
           >
-            <rect width='100%' height='100%' fill='black' stroke='black' />
+            <rect width='100%' height='100%' fill='#1E1E1D' stroke='#1E1E1D' />
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
@@ -57,7 +60,7 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
       <div
         id='dropdown'
         ref={dropdownRef}
-        className={`absolute mt-2 z-10  divide-y divide-black dropdown w-22 shadow-dropdown
+        className={`bg-primary absolute mt-2 z-10  divide-y divide-black dropdown w-22 shadow-dropdown
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul
@@ -66,9 +69,8 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
         >
           {LANGUAGES.map(({ code, label, icon }) => (
             <li
-              className={
-                ' flex flex-row justify-center align-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
-              }
+              className={`flex flex-row justify-center align-center hover-underline relative 
+                ${activeItem === code ? 'text-black' : 'text-lightblack'}`}
               key={code}
             >
               <button

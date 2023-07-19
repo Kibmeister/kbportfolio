@@ -76,3 +76,18 @@ body.lamp-off {
     transform: translateY(0%);
   }
 }
+
+.hover-underline:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FF5800; /* replace with your secondary color */
+  transition: width .3s;
+  position: absolute;
+  bottom: 0;
+}
+.hover-underline:hover:after {
+  width: 100%;
+}
+

@@ -26,7 +26,7 @@
     "links": [
       { "id": "about", "value": "Om meg" },
       { "id": "work", "value": "Erfaring" },
-      { "id": "portfolio", "value": "Portefølje" },
+      { "id": "portfolio", "value": "Portfolio" },
       { "id": "contact", "value": "Kontakt" }
     ]
   },
@@ -162,7 +162,7 @@
   },
   "portfolioTiles": {
     "p": "Mitt tidligere arbeid",
-    "h2": "Min portefølje",
+    "h2": "Mitt portfolio",
     "subHeader": "Dette er en samling av mitt tidligere arbeid. Jeg har jobbet tverrfaglig på alle prosjekter, med vekt på UX. De fleste av disse ble laget under studiene mine.",
 
     "tiles": [

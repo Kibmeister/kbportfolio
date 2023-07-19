@@ -62,7 +62,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
   // listener for the t language updater
   useEffect(() => {
-    //split t.hero.header into two strings and set them tot header and header1 respectively
     setHeader(t('hero.header'));
     setsubHeader(t('hero.subHeader'));
     setShouldAnimate(true); // Trigger animation when language changes
@@ -332,18 +331,17 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-splitting
               data-effect1
             >
-              <div className='flex flex-row gap-12'>
-                {' '}
-                <h1 id={'id_header'} className={`${styles.heroHeadText}`}>
-                  {header}
-                </h1>
-              </div>
-
+              <h1
+                id={'id_header'}
+                className={`${styles.heroHeadText} `}
+              >
+                {header}
+              </h1>
               {/* {t('subHeader')} */}
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText}   max-w-[800px]`}
+                  className={`${styles.heroSubText} max-w-[600px]`}
                 >
                   {subHeader}
                 </p>

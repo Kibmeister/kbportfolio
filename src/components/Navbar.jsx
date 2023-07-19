@@ -84,7 +84,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              <p className='font-garet-heavy text-black-3 text-[12px] cursor-pointer flex'>
+              <p className='font-garet-heavy text-black-3 text-[18px] cursor-pointer flex'>
                 &nbsp;
                 <span>KASPER BORGBJERG</span>
               </p>
@@ -131,7 +131,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
               <div
                 className={`${
                   !toggle ? 'hidden' : 'flex'
-                } p-6 bg-white absolute top-16 right-0  my-2 min-w-[140px] z-10 shadow-dropdown`}
+                } p-6 bg-primary absolute top-16 right-0  my-2 min-w-[140px] z-10 shadow-dropdown`}
               >
                 <ul className='list-none flex justify-end items-start flex-col gap-4'>
                   {t('navBar.links', { returnObjects: true }).map((link) => (
@@ -139,9 +139,9 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                       key={link.id}
                       className={`${
                         scrollActive === link.id || clickActive === link.id
-                          ? 'text-black active-underline'
-                          : 'text-secondary'
-                      } hover:text-black- text-[18px] font-medium cursor-pointer hover-underline`}
+                            ? 'text-black border-b-2 border-secondary'
+                      : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
+                      } garet-book hover:text-black- text-[18px] font-medium cursor-pointer hover-underline`}
                       onClick={() => {
                         setClickActive(link.id);
                         setScrollActive(null);
