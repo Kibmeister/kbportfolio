@@ -49,7 +49,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
-  const [header, setHeader] = useState('Hello,');
+  const [header, setHeader] = useState("Hello, I'm Kasper");
   const [subHeader, setsubHeader] = useState(
     "I'm an interaction designer specialized in UI and UX design. My works are interdisciplinary in form and expression."
   );
@@ -315,6 +315,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         </AnimatePresence>
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
+
       <div
         className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5
       inset-0 top-[120px]
@@ -333,15 +334,16 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
             >
               <h1
                 id={'id_header'}
-                className={`${styles.heroHeadText} `}
+                className={`${styles.heroHeadText}  `}
               >
                 {header}
               </h1>
+
               {/* {t('subHeader')} */}
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText} max-w-[600px]`}
+                  className={`${styles.heroSubText} max-w-[60vw]`}
                 >
                   {subHeader}
                 </p>

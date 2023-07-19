@@ -15,11 +15,11 @@ const FeedBackCard = ({ index, testimonial }) => {
       className='bg-white p-10  xs:w-[px] w-full shadow-card'
     >
       <div className='mt-1 text-black'>
-        <p className='great-book'>{testimonial.text}</p>
+        <p className='garet-book'>{testimonial.text}</p>
         <div className='mt-7 flex justify-between items-center gap-1'>
           <div className='flex-1 flex flex-col'>
-            <p className='great-book text-content-title  font-medium text-[16px]'>
-              <span className='great-book blue-text-gradient'>@</span> {testimonial.name}
+            <p className='garet-book text-content-title  font-medium text-[16px]'>
+              <span className='garet-book blue-text-gradient'>@</span> {testimonial.name}
             </p>
             <p className='great-book m1-1  text-[12px]'>
               {testimonial.designation} of {testimonial.company}

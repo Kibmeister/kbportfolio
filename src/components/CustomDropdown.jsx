@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { globe } from '../assets';
 import { LANGUAGES } from '../constants';
 
@@ -6,6 +6,21 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [activeItem, setActiveItem] = useState(LANGUAGES[0]?.code);
   const dropdownRef = useRef(null);
+
+  // This effect sets up the global click listener
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleLangChange = (event) => {
     setSelectedLang(event.target.value);
@@ -17,7 +32,6 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
-
   return (
     <div className='relative '>
       {/* dropdown button */}
