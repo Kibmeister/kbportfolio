@@ -48,6 +48,10 @@ import {
   RingmerkingDE,
   mike,
   oldwebsite,
+  uxicon,
+  uiicon,
+  productdesignicon,
+  frontendicon
 } from '../assets';
 
 //only used for internalObserver
@@ -79,10 +83,10 @@ const LANGUAGES = [
   { label: 'De', code: 'de', icon: germany },
 ];
 const imageMapAbout = {
-  ux: web,
-  ui: mobile,
-  productdesigner: backend,
-  frontenddeveloper: creator,
+  ux: uxicon,
+  ui: uiicon,
+  productdesigner: productdesignicon,
+  frontenddeveloper: frontendicon,
 };
 
 const imageMapExperience = {

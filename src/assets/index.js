@@ -60,6 +60,10 @@ import RingmerkingFR from './ringmerking/Ringmerking fr.svg';
 import RingmerkingDE from './ringmerking/Ringmerking de.svg';
 import mike from './testimonals/mike.jpeg';
 import oldwebsite from './oldwebsite/oldwebsite.png';
+import uxicon from './uxicon.png';
+import uiicon from './uiicon.png';
+import productdesignicon from './productdesignicon.png';
+import frontendicon from './frontendicon.png';
 
 
 export {
@@ -121,4 +125,8 @@ export {
   oldwebsite,
   coaxerThumbnail,
   multimodalcoffeecanthumbnail,
+  uxicon,
+  uiicon,
+  productdesignicon,
+  frontendicon,
 };

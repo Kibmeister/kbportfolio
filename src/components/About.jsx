@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tilt} from 'react-tilt';
+import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { imageMapAbout } from '../constants';
@@ -8,7 +8,7 @@ import { SectionWrapper } from '../hoc';
 import { useTranslation } from 'react-i18next';
 
 const ServiceCard = ({ index, value, id }) => {
-const iconSrc = imageMapAbout[id];
+  const iconSrc = imageMapAbout[id];
 
   return (
     <Tilt className='xs:w-[250px] w-full'>
@@ -18,12 +18,15 @@ const iconSrc = imageMapAbout[id];
       >
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
-          className='bg-white- py-5 px-12 min-h-[280px] flex justify-evenly items-center felx-col'
+          className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
         >
-          <img src={iconSrc} alt={value} className='w-16 h-16 object-contain' />
-          <h3 className=' text-[20px] garet-book text-center text-black'>
+          <img src={iconSrc} alt={value} className='w-64 h-64 object-contain' />
+          <p
+            className='garet-book text-black text-[16px] font-semibold'
+            style={{ margin: 0 }}
+          >
             {value}
-          </h3>
+          </p>
         </div>
       </motion.div>
     </Tilt>

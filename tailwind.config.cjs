@@ -8,7 +8,7 @@ module.exports = {
         'garet-heavy': ['garet-heavy', 'sans-serif'],
         'chalga-folk': ['chalga-folk', 'sans-serif'],
         'garet-book': ['garet-book', 'sans-serif'],
-      },
+      }, 
       colors: {
         primary: '#F2F2E8',
         secondary: '#FF5800',
