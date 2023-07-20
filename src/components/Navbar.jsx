@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
@@ -8,7 +8,6 @@ import CustomDropdown from './CustomDropdown';
 import { useIntersectionObserver } from '../utils/useIntersectionObserver';
 import { useTranslation } from 'react-i18next';
 
-  
 const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
   const [scrollActive, setScrollActive] = useState('');
   const [clickActive, setClickActive] = useState(null);
@@ -16,6 +15,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
   const [toggle, setToggle] = useState(false);
   const [observedElements, setObservedElements] = useState([]);
   const [heroInView, setHeroInView] = useState(true);
+  const menuRef = useRef(null); // added line
 
   const { t, i18n } = useTranslation();
 
@@ -58,6 +58,19 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
     const languageCode = e;
     i18n.changeLanguage(languageCode);
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setToggle(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
 
   return (
     <AnimatePresence>
@@ -120,8 +133,10 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 onChangeLang={onChangeLang}
               />
             </div>
-            {/* Hamburger menu containing the link elements when in mobile mode */}
-            <div className='md:hidden flex jusstify-end items-center '>
+            <div
+              ref={menuRef}
+              className='md:hidden flex justify-end items-center '
+            >
               <img
                 src={toggle ? close : menu}
                 alt='menu'
@@ -139,9 +154,9 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                       key={link.id}
                       className={`${
                         scrollActive === link.id || clickActive === link.id
-                            ? 'text-black border-b-2 border-secondary'
-                      : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                      } garet-book hover:text-black- text-[18px] font-medium cursor-pointer hover-underline`}
+                          ? 'text-black border-b-2 border-secondary'
+                          : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
+                      } garet-book hover:text-black- text-[18px] font-medium cursor-pointer `}
                       onClick={() => {
                         setClickActive(link.id);
                         setScrollActive(null);

@@ -59,8 +59,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
   // i18n hook
   const { t } = useTranslation();
-
-  // listener for the t language updater
   useEffect(() => {
     setHeader(t('hero.header'));
     setsubHeader(t('hero.subHeader'));
@@ -158,7 +156,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       };
     }, [lampToggle, header, subHeader, shouldAnimate]);
   };
-
   useSplittingAnimation();
 
   // listener for lampToggle
@@ -317,33 +314,32 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       {/* wrapper div for the hero heading and the lamp canvas */}
 
       <div
-        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xl:flex-row flex-col items-start gap-5
-      inset-0 top-[120px]
-    `}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex sm:flex-col xl:flex-row items-start gap-5 inset-0 top-[120px]`}
       >
         {/* container for the herotext and subtext */}
-        <div className='flex flex-col justify-center items-start flex-shrink-0 lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] '>
+        <div className='flex flex-col justify-center items-start flex-shrink-0 sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] relative'>
           {lampToggle ? (
-            <div className=''> </div>
+            <div id='id_proxydiv' className='content__title absolute inset-0'>
+              {/* content of id_proxydiv */}
+            </div>
           ) : (
             <div
               id='id_headerContainer'
-              className='content__title'
+              className={`content__title absolute sm:inset-auto sm:w-100% md:min-w-[700px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px]`}
               data-splitting
               data-effect1
             >
               <h1
                 id={'id_header'}
-                className={`${styles.heroHeadText}  `}
+                className={`${styles.heroHeadText} sm:text-base sm:leading-relaxed md:text-2xl`}
               >
                 {header}
               </h1>
 
-              {/* {t('subHeader')} */}
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText} max-w-[60vw]`}
+                  className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg md:max-w-[70vw] lg:max-w-[50vw]`}
                 >
                   {subHeader}
                 </p>
@@ -351,7 +347,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
             </div>
           )}
         </div>
-
         {/* container for the lamp canvas */}
         <div
           ref={lampContainerRef}
@@ -363,7 +358,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
             setMouseHover={(hovering) => setLampHovering(hovering)}
           />
         </div>
-
         {/* interactive lamp object  */}
       </div>
       {/* The little knob that transitions the website down to the about section */}
