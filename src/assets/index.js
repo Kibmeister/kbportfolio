@@ -22,7 +22,7 @@ import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 
 import meta from './company/meta.png';
-import shopify from './company/shopify.png'; 
+import shopify from './company/shopify.png';
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 
@@ -32,7 +32,7 @@ import tripguide from './tripguide.png';
 
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
-import multimodalcoffeecanthumbnail from './multimodalCoffeecan/multimodalcoffeecanthumbnail.svg'
+import multimodalcoffeecanthumbnail from './multimodalCoffeecan/multimodalcoffeecanthumbnail.svg';
 import topicoThumbnail from './topico/topicothumbnail.svg';
 import scenario from './topico/scenario.svg';
 import topicoDevice from './topico/topicoDevice.svg';
@@ -64,7 +64,12 @@ import uxicon from './uxicon.png';
 import uiicon from './uiicon.png';
 import productdesignicon from './productdesignicon.png';
 import frontendicon from './frontendicon.png';
-
+// import typewriterEn from './3Dmodels/typewriter/typewriterEn.gltf';
+// import typewriterEs from './3Dmodels/typewriter/typewriterEs.gltf';
+// import typewriterNo from './3Dmodels/typewriter/typewriterNo.gltf';
+// import typewriterIt from './3Dmodels/typewriter/typewriterIt.gltf';
+// import typewriterFr from './3Dmodels/typewriter/typewriterFr.gltf';
+// import typewriterDe from './3Dmodels/typewriter/typewriterDe.gltf';
 
 export {
   logo,
@@ -129,4 +134,10 @@ export {
   uiicon,
   productdesignicon,
   frontendicon,
+  // typewriterEn,
+  // typewriterEs,
+  // typewriterNo,
+  // typewriterIt,
+  // typewriterFr,
+  // typewriterDe,
 };

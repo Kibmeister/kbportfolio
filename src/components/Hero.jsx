@@ -305,19 +305,18 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 >
-                  <p>{tag.term}</p>
+                  <p className="garet-book">{tag.term}</p>
                 </button>
               </motion.div>
             ))}
         </AnimatePresence>
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
-
       <div
-        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex sm:flex-col xl:flex-row items-start gap-5 inset-0 top-[120px]`}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xs:flex-col sm:flex-col md:flex-col xl:flex-row items-start gap-5 inset-0 top-[120px]`}
       >
-        {/* container for the herotext and subtext */}
-        <div className='flex flex-col justify-center items-start flex-shrink-0 sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] relative'>
+        {/* container for the herotext/subtext */}
+        <div className='flex flex-col justify-center items-start flex-shrink-0  xs:min-w-[250px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] relative'>
           {lampToggle ? (
             <div id='id_proxydiv' className='content__title absolute inset-0'>
               {/* content of id_proxydiv */}
@@ -325,21 +324,18 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           ) : (
             <div
               id='id_headerContainer'
-              className={`content__title absolute sm:inset-auto sm:w-100% md:min-w-[700px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px]`}
+              className={`content__title absolute sm:inset-auto sm:w-100% md:min-w-[700px] xs:min-w-[500px] sm:min-w-[600px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px]`}
               data-splitting
               data-effect1
             >
-              <h1
-                id={'id_header'}
-                className={`${styles.heroHeadText} sm:text-base sm:leading-relaxed md:text-2xl`}
-              >
+              <h1 id={'id_header'} className={`${styles.heroHeadText}  `}>
                 {header}
               </h1>
 
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg md:max-w-[70vw] lg:max-w-[50vw]`}
+                  className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg xs:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
                   {subHeader}
                 </p>
@@ -351,7 +347,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         <div
           ref={lampContainerRef}
           id='id_lampContainer'
-          className='lampContainer  w-full h-full '
+          className='lampContainer w-full h-full '
         >
           <LampCanvas
             setLamptoggle={(press) => lampPress(press)}

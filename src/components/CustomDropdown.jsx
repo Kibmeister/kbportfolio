@@ -11,7 +11,11 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownVisible(false);
+        // Ignore the clicks on the dropdown button
+        const buttonElement = document.getElementById('dropdownDefaultButton');
+        if (event.target !== buttonElement) {
+          setDropdownVisible(false);
+        }
       }
     };
 
@@ -35,7 +39,10 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
   return (
     <div className='relative '>
       {/* dropdown button */}
-      <div className=' relative  flex flex-row justify-start items-center gap-3'>
+      <div
+        id='id_dropdowncontainer'
+        className=' relative  flex flex-row justify-start items-center gap-3'
+      >
         <button
           id='dropdownDefaultButton'
           data-dropdown-toggle='dropdown'
@@ -83,8 +90,12 @@ const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
         >
           {LANGUAGES.map(({ code, label, icon }) => (
             <li
-              className={`flex flex-row justify-center align-center hover-underline relative 
-                ${activeItem === code ? 'text-black' : 'text-lightblack'}`}
+              className={`flex flex-row justify-center align-center hover:border-secondary relative 
+    ${
+      activeItem === code
+        ? 'text-black border-b-2 border-secondary'
+        : 'text-lightblack border-b-2 border-transparent'
+    }`}
               key={code}
             >
               <button

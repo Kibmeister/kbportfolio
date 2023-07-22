@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useTranslation } from 'react-i18next';
 
 import CanvasLoader from '../Loader';
 
 const InkQuill = () => {
-  const earth = useGLTF('./typewriter/scene.gltf');
+  const { i18n } = useTranslation();
+  const [typewriterModel, setTypewriterModel] = useState(null);
+
+  // Preload all typewriter GLTF models
+  const typewriterModels = {
+    en: useGLTF('./typewriters/typewriterEn.gltf'),
+    fr: useGLTF('./typewriters/typewriterFr.gltf'),
+    de: useGLTF('./typewriters/typewriterDe.gltf'),
+    it: useGLTF('./typewriters/typewriterIt.gltf'),
+    no: useGLTF('./typewriters/typewriterNo.gltf'),
+    es: useGLTF('./typewriters/typewriterEs.gltf'),
+    // Add other models as needed
+  };
+
+  useEffect(() => {
+    const model = typewriterModels[i18n.language];
+    if (!model) {
+      console.error(`No typewriter model found for language: ${i18n.language}`);
+    }
+    setTypewriterModel(model);
+  }, [i18n.language]);
 
   return (
-    <primitive
-      object={earth.scene}
-      scale={1.2}
-      position-y={-0.4}
-      rotation={[0, 4.7, 0]}
-    />
+    typewriterModel && (
+      <primitive
+        object={typewriterModel.scene}
+        scale={1.2}
+        position-y={-0.4}
+        rotation={[0, 4.7, 0]}
+      />
+    )
   );
 };
 
@@ -22,7 +45,7 @@ const InkQuillCanvas = () => {
   return (
     <Canvas
       frameLoop='demand'
-      gl={{ perserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true }}
       dpr={[1, 2]}
       camera={{
         fov: 1.8,

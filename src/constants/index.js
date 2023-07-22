@@ -51,7 +51,13 @@ import {
   uxicon,
   uiicon,
   productdesignicon,
-  frontendicon
+  frontendicon,
+  // typewriterEn,
+  // typewriterNo,
+  // typewriterEs,
+  // typewriterIt,
+  // typewriterFr,
+  // typewriterDe
 } from '../assets';
 
 //only used for internalObserver
@@ -110,7 +116,14 @@ const imageMapCoaxer = {
   fr: coaxerFR,
   de: coaxerDE,
 };
-
+const modelMapTypewriter = {
+  // en: typewriterEn,
+  // no: typewriterNo,
+  // es: typewriterEs,
+  // it: typewriterIt,
+  // fr: typewriterFr,
+  // de: typewriterDe,
+};
 const imageMapRingmerking = {
   en: RingmerkingEN,
   no: RingmerkingNO,
@@ -432,4 +445,5 @@ export {
   imageMapCoaxer,
   imageMapRingmerking,
   imageMapTestimonals,
+  modelMapTypewriter,
 };

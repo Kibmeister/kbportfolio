@@ -82,7 +82,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
       >
         <nav
           id='navbar'
-          className={`${styles.paddingX} ${animationClass} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+          className={`${styles.paddingNavbar} ${animationClass} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
         >
           <div
             className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}
@@ -103,7 +103,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
               </p>
             </Link>
 
-            {/* ... the rest of your component ... */}
+  
 
             <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
               {t('navBar.links', { returnObjects: true }).map((link, index) => (
@@ -120,7 +120,11 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                     setScrollActive(null);
                   }}
                 >
-                  <a data-target={`#${link.id}`} href={`#${link.id}`}>
+                  <a
+                    className='whitespace-nowrap'
+                    data-target={`#${link.id}`}
+                    href={`#${link.id}`}
+                  >
                     {link.value}
                   </a>
                 </li>
@@ -156,14 +160,16 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                         scrollActive === link.id || clickActive === link.id
                           ? 'text-black border-b-2 border-secondary'
                           : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                      } garet-book hover:text-black- text-[18px] font-medium cursor-pointer `}
+                      } garet-book hover:text-black text-[18px] font-medium cursor-pointer flex items-center min-w-max`}
                       onClick={() => {
                         setClickActive(link.id);
                         setScrollActive(null);
                         setToggle(!toggle);
                       }}
                     >
-                      <a href={`#${link.id}`}>{link.value}</a>
+                      <a href={`#${link.id}`} className='whitespace-nowrap'>
+                        {link.value}
+                      </a>
                     </li>
                   ))}
                   <li>
