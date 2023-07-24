@@ -16,9 +16,9 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const isFirstRender = useRef(true);
   const [mixer] = useState(() => new AnimationMixer());
   const [currentAction, setCurrentAction] = useState(null);
+  const initialAnimationPlayed = useRef(false);
 
   const lampRef = useRef();
-
 
   // handles the stateupdate of the lammp hover
   useEffect(() => {
@@ -38,8 +38,9 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
   // page onload animation
   useEffect(() => {
- 
-      // Your animation logic here
+    if (lamp.scene) {
+      // check if the lamp model is loaded
+      console.log('page onload animation useeffect');
       const clip = lamp.animations[2]; // The animation to play upon page load
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
@@ -48,8 +49,8 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
       action.clampWhenFinished = true;
       action.play();
       setCurrentAction(action);
-  
-  }, []);
+    }
+  }, [lamp, lampRef, mixer]); // add lamp to the dependency array
 
   //hover animation
   useEffect(() => {
@@ -80,13 +81,6 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
       setCurrentAction(action);
     }
   }, [lampToggle, mixer, lamp, lampRef]);
-
-  useFrame((_, delta) => {
-    if (currentAction && !lampHover) {
-      currentAction.time -= delta;
-    }
-    mixer.update(delta);
-  });
 
   const handlePointerEnter = () => {
     // for the cursor hover

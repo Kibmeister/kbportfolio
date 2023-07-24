@@ -49,131 +49,81 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
-  const [header, setHeader] = useState("Hello, I'm Kasper");
-  const [subHeader, setsubHeader] = useState(
-    "I'm an interaction designer specialized in UI and UX design. My works are interdisciplinary in form and expression."
-  );
+  const hasAnimatedRef = useRef(false);
+
   const cursor4Ref = useRef(null);
   const lampContainerRef = useRef(null);
   const componentMountedRef = useRef(false);
-  const [loaded, setLoaded] = useState(false);
 
   // i18n hook
   const { t } = useTranslation();
-  useEffect(() => {
-    // console.log(" language useeffect is called");
-    setHeader(t('hero.header'));
-    setsubHeader(t('hero.subHeader'));
-  }, [t]);
-
-  //hook for loading the splitting and gsap library
-  useEffect(() => {
-    const loadGsapAndSplitting = async () => {
-      await gsap; // wait until gsap is ready
-      await Splitting; // wait until Splitting is ready
-      setLoaded(true);
-    };
-    loadGsapAndSplitting();
-  }, []); // run once on initial render
 
   // header animation hook
   const useSplittingAnimation = () => {
     useLayoutEffect(() => {
-      if (loaded) {
-        const animateTitles = (fx1Titles) => {
-          console.log('useLayoutEffect is called');
-          fx1Titles.forEach((title) => {
-            const h1Chars = title.querySelectorAll('h1 .char');
-            const pChars = title.querySelectorAll('p .char');
+      const animateTitles = (fx1Titles) => {
+        console.log('animationTitles is called');
+        fx1Titles.forEach((title) => {
+          const h1Chars = title.querySelectorAll('h1 .char');
+          const pChars = title.querySelectorAll('p .char');
 
-            // Set visibility to visible when the animation starts
-            title.querySelector('h1').style.visibility = 'visible';
-            title.querySelector('p').style.visibility = 'visible';
-
-            // Animate h1 chars
-            gsap.fromTo(
-              h1Chars,
-              {
-                'will-change': 'opacity, transform',
-                opacity: 0,
-                scale: 1,
-                rotationZ: () => gsap.utils.random(-20, 20),
-              },
-              {
-                ease: 'power4',
-                opacity: 1,
-                scale: 1,
-                rotation: 0,
-                stagger: 0.1, // Stagger value for h1
-              }
-            );
-
-            // Animate p chars
-            gsap.fromTo(
-              pChars,
-              {
-                'will-change': 'opacity, transform',
-                opacity: 0,
-                scale: 1,
-                rotationZ: () => gsap.utils.random(-20, 20),
-              },
-              {
-                ease: 'power4',
-                opacity: 1,
-                scale: 1,
-                rotation: 0,
-                stagger: 0.02, // Stagger value for p (4 times faster than h1)
-              }
-            );
-          });
-        };
-        const handleSplittingAnimation = () => {
-          const fx1Titles = [
-            ...document.querySelectorAll(
-              '.content__title[data-splitting][data-effect1]'
-            ),
-          ];
-
-          Splitting({ target: '#id_header, #id_subHeader', by: 'chars' });
-
-          // applying a custom font class for the h1 characters
-          fx1Titles.forEach((title) => {
-            const h1Chars = title.querySelectorAll('h1 .char');
-            const fontClasses = styles.heroHeadText.split(' ');
-            h1Chars.forEach((char) => {
-              fontClasses.forEach((fontClass) => {
-                char.classList.add(fontClass);
-              });
-              char.style.opacity = 0; // Set the initial opacity to 0
-            });
-          });
-
-          requestAnimationFrame(() => {
-            if (fx1Titles.length != 0) {
-              animateTitles(fx1Titles);
+          // Animate h1 chars
+          gsap.fromTo(
+            h1Chars,
+            {
+              'will-change': 'transform',
+              opacity: 0,
+              scale: 0.6,
+              rotationZ: () => gsap.utils.random(-20, 20),
+            },
+            {
+              ease: 'power4',
+              opacity: 1,
+              scale: 1,
+              rotation: 0,
+              stagger: 0.1, // Stagger value for h1
             }
-          });
-        };
-        if (document.readyState === 'complete' || componentMountedRef.current) {
-          handleSplittingAnimation();
-        } else {
-          const onLoad = () => {
-            handleSplittingAnimation();
-            window.removeEventListener('load', onLoad);
-          };
-          window.addEventListener('load', onLoad);
-        }
+          );
 
-        // After the animation has run, set componentMountedRef to true
-        if (!componentMountedRef.current) {
-          componentMountedRef.current = true;
-        }
+          // Animate p chars
+          gsap.fromTo(
+            pChars,
+            {
+              'will-change': 'transform',
+              opacity: 0,
+              scale: 0.6,
+              rotationZ: () => gsap.utils.random(-20, 20),
+            },
+            {
+              ease: 'power4',
+              opacity: 1,
+              scale: 1,
+              rotation: 0,
+              stagger: 0.02, // Stagger value for p (4 times faster than h1)
+            }
+          );
+        });
+      };
+      const handleSplittingAnimation = () => {
+        const fx1Titles = [
+          ...document.querySelectorAll(
+            '.content__title[data-splitting][data-effect1]'
+          ),
+        ];
 
-        return () => {
-          window.removeEventListener('load', handleSplittingAnimation);
-        };
+        Splitting({ target: '#id_header, #id_subHeader', by: 'chars' });
+
+        requestAnimationFrame(() => {
+          if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
+            animateTitles(fx1Titles);
+            hasAnimatedRef.current = true;
+          }
+        });
+      };
+      if (document.readyState === 'complete' || componentMountedRef.current) {
+        handleSplittingAnimation();
       }
-    }, [lampToggle, loaded]);
+    }, [lampToggle]);
   };
 
   useSplittingAnimation();
@@ -187,13 +137,16 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       window.addEventListener('scroll', handleScroll);
       cursor4Ref.current = new Cursor4(lampToggle);
       cursor4Ref.current.cursor = true;
+      // Reset hasAnimatedRef to false so that animation can run again
+      hasAnimatedRef.current = false;
     } else {
       window.removeEventListener('scroll', handleScroll);
 
       if (!lampToggle && cursor4Ref.current) {
         cursor4Ref.current.removeCursor();
-
         //cursor4Ref = null; // Or set it to some default cursor
+
+        
       }
     }
     return () => {
@@ -210,7 +163,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     }
   }, [isHovering, lampHovering]);
 
-  //listener for lampcontainer mount
+  // listener for lampcontainer mount
   useLayoutEffect(() => {
     const lampContainerElement = document.querySelector('#id_lampContainer');
     if (lampContainerElement) {
@@ -294,7 +247,6 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
     setLampToggleApp(); // propagate the toggle to parent component
   };
 
-  //TODO: the view-port jumps once the scrollbar is disabled in the tagVisible toggle
   return (
     //   mx:auto relative
     <section ref={ref} className='w-full h-screen mx:auto relative '>
@@ -349,14 +301,14 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-effect1
             >
               <h1 id={'id_header'} className={`${styles.heroHeadText}  `}>
-                {header}
+                {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
                   className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg xs:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
-                  {subHeader}
+                  {t('hero.subHeader')}
                 </p>
               </div>
             </div>
