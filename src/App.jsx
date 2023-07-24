@@ -86,7 +86,7 @@ const App = () => {
           <Feedbacks />
 
           <div className='relative z-0'>
-            {/* <Contact /> */}
+            <Contact />
             <StarsCanvas />
           </div> 
            <Footer />

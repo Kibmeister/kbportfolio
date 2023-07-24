@@ -288,7 +288,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
         className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xs:flex-col sm:flex-col md:flex-col xl:flex-row items-start gap-5 inset-0 top-[120px]`}
       >
         {/* container for the herotext/subtext */}
-        <div className='flex flex-col justify-center items-start flex-shrink-0  xs:min-w-[250px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-[300px] relative'>
+        <div className='flex flex-col justify-center items-start flex-shrink-0  xs:min-w-[250px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-auto relative'>
           {lampToggle ? (
             <div id='id_proxydiv' className='content__title absolute inset-0'>
               {/* content of id_proxydiv */}
@@ -296,11 +296,14 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           ) : (
             <div
               id='id_headerContainer'
-              className={`content__title absolute sm:inset-auto sm:w-100% md:min-w-[700px] xs:min-w-[500px] sm:min-w-[600px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px]`}
+              className={`content__title relative sm:inset-auto sm:w-full md:min-w-[700px] xs:min-w-[500px] sm:min-w-[600px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] max-w-[700px]`}
               data-splitting
               data-effect1
             >
-              <h1 id={'id_header'} className={`${styles.heroHeadText}  `}>
+              <h1
+                id={'id_header'}
+                className={`${styles.heroHeadText} break-words break-normal`}
+              >
                 {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>

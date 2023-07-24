@@ -1,5 +1,5 @@
 import {
-  InkQuillCanvas,
+  Typewriter,
   ComputersCanvas,
   StarsCanvas,
 } from './canvas';
@@ -27,7 +27,7 @@ export {
   Contact,
   ProjectModal,
   CanvasLoader,
-  InkQuillCanvas,
+  Typewriter,
   ComputersCanvas,
   StarsCanvas,
   Coffeecan,
