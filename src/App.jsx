@@ -12,6 +12,7 @@ import {
   Works,
   StarsCanvas,
   ProjectModal,
+  Footer,
 } from './components';
 
 const App = () => {
@@ -30,9 +31,7 @@ const App = () => {
     console.log(type);
 
     if (type == 'oldwebsite') {
-      window.open(
-        'https://www.kasperborgbjerg.co'
-      );
+      window.open('https://www.kasperborgbjerg.co');
     } else {
       projects.filter((project) => {
         if (project.type === type) {
@@ -90,6 +89,7 @@ const App = () => {
             <Contact />
             <StarsCanvas />
           </div>
+          <Footer />
         </div>
       </div>
     </BrowserRouter>

@@ -32,7 +32,7 @@ export class Cursors {
 
   // Add this method to the Cursors class
   updateRadius(newRadius) {
-    console.log('update radius is called');
+    // console.log('update radius is called');
 
     // Update the radius of the tiny cursor elements
     this.radiusCursor = newRadius;

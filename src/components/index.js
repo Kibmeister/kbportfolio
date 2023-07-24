@@ -14,6 +14,7 @@ import Contact from './Contact';
 import CanvasLoader from './Loader';
 import Coffeecan from './Projects/Coffeecan';
 import CustomDropdown from './CustomDropdown';
+import Footer from './Footer';
 
 
 export {
@@ -31,4 +32,5 @@ export {
   StarsCanvas,
   Coffeecan,
   CustomDropdown,
+  Footer
 };

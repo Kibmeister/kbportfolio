@@ -2,9 +2,11 @@ import React, { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { AnimationMixer } from 'three';
 import * as THREE from 'three';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
+useGLTF.preload('./lamp/scene.gltf');
+
 
 const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const lamp = useGLTF('./lamp/scene.gltf');
@@ -17,6 +19,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
   const lampRef = useRef();
 
+
   // handles the stateupdate of the lammp hover
   useEffect(() => {
     setMouseHover(lampHover);
@@ -24,6 +27,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
   // lampToggle listener
   useEffect(() => {
+    // console.log('This is the animations', lamp);
     if (isFirstRender.current) {
       // Check if it's the initial render
       isFirstRender.current = false; // Set it to false for subsequent renders
@@ -32,10 +36,25 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
     }
   }, [lampToggle]);
 
+  // page onload animation
+  useEffect(() => {
+ 
+      // Your animation logic here
+      const clip = lamp.animations[2]; // The animation to play upon page load
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
+
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+      setCurrentAction(action);
+  
+  }, []);
+
   //hover animation
   useEffect(() => {
     if (!lampToggle) {
-      const clip = lamp.animations[0];
+      const clip = lamp.animations[2];
       // console.log(' this is the lamp object');
       // console.log(lamp);
       const action = mixer.clipAction(clip, lampRef.current);
@@ -81,7 +100,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
     document.body.style.cursor = 'auto';
   };
 
-  console.log('is Mobile state', isMobile);
+  // console.log('is Mobile state', isMobile);
   return (
     <mesh>
       {lampHover || !lampToggle ? (
@@ -98,12 +117,12 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
           <pointLight intensity={1} />
         </>
       ) : null}
- 
+
       <primitive
         ref={lampRef}
-        onClick={() => setLampToggle(!lampToggle)}
-        onPointerEnter={handlePointerEnter}
-        onPointerLeave={handlePointerLeave}
+        onClick={isMobile ? null : () => setLampToggle(!lampToggle)}
+        onPointerEnter={isMobile ? null : handlePointerEnter}
+        onPointerLeave={isMobile ? null : handlePointerLeave}
         object={lamp.scene}
         scale={isMobile ? 5 : isXl ? 7 : 8}
         position={
@@ -152,12 +171,6 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* This will enable the 360 degree rotation of the model */}
-        {/* <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        /> */}
         <Lamp
           setMouseHover={setMouseHover}
           setLamptoggle={setLamptoggle}
