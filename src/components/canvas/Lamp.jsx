@@ -35,34 +35,21 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
   // onpageload animation
   useEffect(() => {
+    console.log("this is the lamp object", lamp);
     if (!lampToggle) {
-      const clip = lamp.animations[1];
+      const clip = lamp.animations[2];
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
       action.setLoop(THREE.LoopOnce, 0);
       action.clampWhenFinished = true;
       action.play();
-     
     }
   }, [mixer, lamp, lampRef]);
 
   // hover animation
   useEffect(() => {
     if (lampHover === true && !lampToggle) {
-      const clip = lamp.animations[1];
-      const action = mixer.clipAction(clip, lampRef.current);
-      action.reset();
-      action.setLoop(THREE.LoopOnce, 0);
-      action.clampWhenFinished = true;
-      action.play();
-     
-    }
-  }, [lampHover, mixer, lamp, lampRef]);
-
-  // hover animation
-  useEffect(() => {
-    if (lampHover === true && !lampToggle) {
-      const clip = lamp.animations[1];
+      const clip = lamp.animations[3];
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
       action.setLoop(THREE.LoopOnce, 0);
@@ -75,7 +62,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   // click animation
   useEffect(() => {
     if (lampToggle) {
-      const clip = lamp.animations[0]; // the animation to play when the lamp is clicked
+      const clip = lamp.animations[4]; // the animation to play when the lamp is clicked
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
 
