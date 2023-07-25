@@ -7,7 +7,6 @@ import { Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 useGLTF.preload('./lamp/scene.gltf');
 
-
 const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const lamp = useGLTF('./lamp/scene.gltf');
 
@@ -15,14 +14,12 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const [lampToggle, setLampToggle] = useState(false);
   const isFirstRender = useRef(true);
   const [mixer] = useState(() => new AnimationMixer());
-  const [currentAction, setCurrentAction] = useState(null);
-  const initialAnimationPlayed = useRef(false);
 
   const lampRef = useRef();
 
   // handles the stateupdate of the lammp hover
   useEffect(() => {
-    setMouseHover(lampHover);
+    setMouseHover(lampHover === true);
   }, [lampHover]);
 
   // lampToggle listener
@@ -36,35 +33,42 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
     }
   }, [lampToggle]);
 
-  // page onload animation
-  useEffect(() => {
-    if (lamp.scene) {
-      // check if the lamp model is loaded
-      console.log('page onload animation useeffect');
-      const clip = lamp.animations[2]; // The animation to play upon page load
-      const action = mixer.clipAction(clip, lampRef.current);
-      action.reset();
-
-      action.setLoop(THREE.LoopOnce, 0);
-      action.clampWhenFinished = true;
-      action.play();
-      setCurrentAction(action);
-    }
-  }, [lamp, lampRef, mixer]); // add lamp to the dependency array
-
-  //hover animation
+  // onpageload animation
   useEffect(() => {
     if (!lampToggle) {
-      const clip = lamp.animations[2];
-      // console.log(' this is the lamp object');
-      // console.log(lamp);
+      const clip = lamp.animations[1];
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
-
       action.setLoop(THREE.LoopOnce, 0);
       action.clampWhenFinished = true;
       action.play();
-      setCurrentAction(action);
+     
+    }
+  }, [mixer, lamp, lampRef]);
+
+  // hover animation
+  useEffect(() => {
+    if (lampHover === true && !lampToggle) {
+      const clip = lamp.animations[1];
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+     
+    }
+  }, [lampHover, mixer, lamp, lampRef]);
+
+  // hover animation
+  useEffect(() => {
+    if (lampHover === true && !lampToggle) {
+      const clip = lamp.animations[1];
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+     
     }
   }, [lampHover, mixer, lamp, lampRef]);
 
@@ -78,9 +82,15 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
       action.setLoop(THREE.LoopOnce, 0);
       action.clampWhenFinished = true;
       action.play();
-      setCurrentAction(action);
+     
     }
   }, [lampToggle, mixer, lamp, lampRef]);
+
+  useFrame((_, delta) => {
+    if (mixer) {
+      mixer.update(delta);
+    }
+  });
 
   const handlePointerEnter = () => {
     // for the cursor hover

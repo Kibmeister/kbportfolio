@@ -32,7 +32,7 @@
      setTypewriterModelPath(modelPath);
    }, [i18n.language]);
 
-   const typewriterModel = useGLTF('./typewriters/typewriterEn.gltf');
+   const typewriterModel = useGLTF(typewriterModelPath);
 
    return (
      typewriterModel && (
