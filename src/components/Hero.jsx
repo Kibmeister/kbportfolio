@@ -81,7 +81,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.2, // Stagger value for h1
+              stagger: 0.1, // Stagger value for h1
             }
           );
 
@@ -99,7 +99,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.04, // Stagger value for p (4 times faster than h1)
+              stagger: 0.02, // Stagger value for p (4 times faster than h1)
             }
           );
         });

@@ -13,6 +13,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const [lampHover, setLampHover] = useState(false);
   const [lampToggle, setLampToggle] = useState(false);
   const isFirstRender = useRef(true);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
   const [mixer] = useState(() => new AnimationMixer());
 
   const lampRef = useRef();
@@ -34,9 +35,22 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   }, [lampToggle]);
 
   // onpageload animation
+  // update isPageLoaded when page load animation is done
   useEffect(() => {
-    console.log("this is the lamp object", lamp);
-    if (!lampToggle) {
+    const clip = lamp.animations[1];
+    const action = mixer.clipAction(clip, lampRef.current);
+    action.reset();
+    action.setLoop(THREE.LoopOnce, 0);
+    action.clampWhenFinished = true;
+    action.play();
+
+     setIsPageLoaded(true);
+    // add an event listener for the 'finished' event
+
+  }, [mixer, lamp, lampRef]);
+  // hover animation
+  useEffect(() => {
+    if (lampHover === true && !lampToggle) {
       const clip = lamp.animations[2];
       const action = mixer.clipAction(clip, lampRef.current);
       action.reset();
@@ -44,34 +58,32 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
       action.clampWhenFinished = true;
       action.play();
     }
-  }, [mixer, lamp, lampRef]);
-
-  // hover animation
-  useEffect(() => {
-    if (lampHover === true && !lampToggle) {
-      const clip = lamp.animations[3];
-      const action = mixer.clipAction(clip, lampRef.current);
-      action.reset();
-      action.setLoop(THREE.LoopOnce, 0);
-      action.clampWhenFinished = true;
-      action.play();
-     
-    }
   }, [lampHover, mixer, lamp, lampRef]);
 
   // click animation
-  useEffect(() => {
-    if (lampToggle) {
-      const clip = lamp.animations[4]; // the animation to play when the lamp is clicked
-      const action = mixer.clipAction(clip, lampRef.current);
-      action.reset();
-
-      action.setLoop(THREE.LoopOnce, 0);
-      action.clampWhenFinished = true;
-      action.play();
-     
-    }
-  }, [lampToggle, mixer, lamp, lampRef]);
+  // only run this effect after the page has loaded
+ useEffect(() => {
+   if (isPageLoaded) {
+     // when the lamp is toggled off
+     if (lampToggle) {
+       const clip = lamp.animations[2];
+       const action = mixer.clipAction(clip, lampRef.current);
+       action.reset();
+       action.setLoop(THREE.LoopOnce, 0);
+       action.clampWhenFinished = true;
+       action.play();
+     }
+     // when the lamp is toggled on
+     if (!lampToggle) {
+       const clip = lamp.animations[2];
+       const action = mixer.clipAction(clip, lampRef.current);
+       action.reset();
+       action.setLoop(THREE.LoopOnce, 0);
+       action.clampWhenFinished = true;
+       action.play();
+     }
+   }
+ }, [lampToggle]);
 
   useFrame((_, delta) => {
     if (mixer) {
