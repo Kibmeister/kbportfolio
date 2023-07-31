@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className='relative z-0'>
+      <div className='relative z-0 flex flex-col min-h-screen '>
         {!lampToggle && (
           <Navbar
             heroRef={heroRef}
@@ -64,7 +64,7 @@ const App = () => {
             setSelectedLang={setSelectedLang}
           />
         )}
-        <div className='page-container'>
+        <div className='flex-grow-1 page-container '>
           <div className='relative z-0'>
             <Hero
               setLampToggleApp={() => setLampToggle(!lampToggle)}
@@ -88,8 +88,8 @@ const App = () => {
           <div className='relative z-0'>
             <Contact />
             <StarsCanvas />
-          </div> 
-           <Footer />
+          </div>
+          <Footer />
         </div>
       </div>
     </BrowserRouter>

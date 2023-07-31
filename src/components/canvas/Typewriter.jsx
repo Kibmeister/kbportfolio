@@ -1,50 +1,98 @@
- import React, { useEffect, useState } from 'react';
- import { Suspense } from 'react';
- import { Canvas } from '@react-three/fiber';
- import { OrbitControls, useGLTF } from '@react-three/drei';
- import { useTranslation } from 'react-i18next';
+import React, { useEffect, useState, useRef } from 'react';
+import { Suspense } from 'react';
+import { AnimationMixer } from 'three';
+import * as THREE from 'three';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, useGLTF, Preload } from '@react-three/drei';
+import { useTranslation } from 'react-i18next';
 
- import CanvasLoader from '../Loader';
+import CanvasLoader from '../Loader';
 
- const Typewriter = () => {
-   const { i18n } = useTranslation();
+const Typewriter = ({ mailStatus }) => {
+  const { i18n } = useTranslation();
+  const [mixer] = useState(() => new AnimationMixer());
+  const [receivedMailStatus, setReceivedMailStatus] = useState(false);
 
-   const typewriterModelPaths = {
-     en: './typewriters/typewriterEn.gltf',
-     fr: './typewriters/typewriterFr.gltf',
-     de: './typewriters/typewriterDe.gltf',
-     it: './typewriters/typewriterIt.gltf',
-     no: './typewriters/typewriterNo.gltf',
-     es: './typewriters/typewriterEs.gltf',
-   };
+  const typewriterRef = useRef();
+  const { scene, animations } = useGLTF('./typewriters/typewriter.gltf');
 
-   const [typewriterModelPath, setTypewriterModelPath] = useState(
-     typewriterModelPaths['en']
-   );
+  const typewriterModelPaths = {
+    en: './typewriters/typewriterEn.gltf',
+    fr: './typewriters/typewriterFr.gltf',
+    de: './typewriters/typewriterDe.gltf',
+    it: './typewriters/typewriterIt.gltf',
+    no: './typewriters/typewriterNo.gltf',
+    es: './typewriters/typewriterEs.gltf',
+  };
 
-   useEffect(() => {
-     const modelPath = typewriterModelPaths[i18n.language];
-     if (!modelPath) {
-       console.error(
-         `No typewriter model found for language: ${i18n.language}`
-       );
-     }
-     setTypewriterModelPath(modelPath);
-   }, [i18n.language]);
+  const [typewriterModelPath, setTypewriterModelPath] = useState(
+    typewriterModelPaths['en']
+  );
 
-   const typewriterModel = useGLTF(typewriterModelPath);
+  //hook for settting internal state
+  useEffect(() => {
+    setReceivedMailStatus(mailStatus);
+  }, [receivedMailStatus]);
 
-   return (
-     typewriterModel && (
-       <primitive
-         object={typewriterModel.scene}
-         scale={1.2}
-         position-y={-0.4}
-         rotation={[0, 4.7, 0]}
-       />
-     )
-   );
- };
+  //i18n hook
+  // useEffect(() => {
+  //   const modelPath = typewriterModelPaths[i18n.language];
+  //   if (!modelPath) {
+  //     console.error(`No typewriter model found for language: ${i18n.language}`);
+  //   }
+  //   setTypewriterModelPath(modelPath);
+  // }, [i18n.language]);
+
+  // //mail sent hook
+  useEffect(() => {
+    console.log('Animations', animations);
+    if (receivedMailStatus) {
+      console.log('The typewriter animation runs');
+      const action = mixer.clipAction(animations[0], typewriterRef.current);
+      action.reset();
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
+    }
+  }, [scene, receivedMailStatus]);
+
+
+    useFrame((_, delta) => {
+      if (mixer) {
+        mixer.update(delta);
+      }
+    });
+
+  const handlePointerClick = () => {
+    // for the cursor hover
+    setReceivedMailStatus(!receivedMailStatus);
+  };
+
+  const handlePointerEnter = () => {
+    // for the cursor hover
+    document.body.style.cursor = 'pointer';
+  };
+
+  const handlePointerLeave = () => {
+    // for the cursor hover
+    document.body.style.cursor = 'auto';
+  };
+
+  return (
+    scene && (
+      <primitive
+        ref={typewriterRef}
+        onClick={handlePointerClick}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
+        object={scene}
+        scale={1.2}
+        position-y={-0.4}
+        rotation={[0, 4.7, 0]}
+      />
+    )
+  );
+};
 
 //TODO: the fat gltf models in typewriter screws up the fluent hero section animation
 const TypewriterCanvas = () => {
@@ -67,11 +115,14 @@ const TypewriterCanvas = () => {
           autoRotate
           autoRotateSpeed={1}
           enableZoom={false}
+          enablePan={false}
+          enableRotate={false}
           // maxPolarAngle={Math.PI / 2}
           // minPolarAngle={Math.PI / 2}
         />
         <Typewriter />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };

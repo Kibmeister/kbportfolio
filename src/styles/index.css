@@ -18,7 +18,7 @@
   box-sizing: border-box;
   /* font-family: "garet-book", sans-serif; */
   scroll-behavior: smooth;
-  /* color-scheme: var(--color-primaryVar); */
+  /* color-scheme: var(--color-blackVar); */
 }
 body {
   background-color: var(--color-primaryVar);

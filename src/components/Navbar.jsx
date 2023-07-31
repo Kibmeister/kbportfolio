@@ -99,7 +99,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
             >
               <p className='font-garet-heavy text-black-3 text-[18px] cursor-pointer flex'>
                 &nbsp;
-                <span>KASPER BORGBJERG</span>
+                <span>K</span>
               </p>
             </Link>
 

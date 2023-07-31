@@ -17,6 +17,7 @@ const Contact = () => {
 
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const [mailStatus, setMailStatus] = useState(false);
 
   const isValidName = (name) => {
     const regex = /^[a-zA-Z\s]+$/;
@@ -159,7 +160,10 @@ const Contact = () => {
           </label>
 
           <button
-            type='submit'
+            // type='submit'
+            onClick={() => {
+              setMailStatus;
+            }}
             className='garet-book bg-secondary py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
           >
             {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
@@ -171,7 +175,7 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <Typewriter />
+        <Typewriter mailStatus={mailStatus} />
       </motion.div>
     </div>
   );
