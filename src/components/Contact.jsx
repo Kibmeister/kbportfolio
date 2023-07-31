@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
-import {  Typewriter } from './canvas';
+import { TypewriterCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
@@ -66,7 +66,7 @@ const Contact = () => {
       return;
     }
 
-    setLoading(true);
+    setMailStatus(true);
 
     setLoading(true);
 
@@ -76,7 +76,7 @@ const Contact = () => {
         'template_rfzq5zq',
         {
           from_name: form.name,
-          to_name: 'JavaScript Mastery',
+          to_name: 'Kasper Borgbjerg',
           from_email: form.email,
           to_email: 'sujata@jsmastery.pro',
           message: form.message,
@@ -86,6 +86,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+         setTimeout(() => setMailStatus(false), 5000);
           alert(t('contact.confirmation'));
 
           setForm({
@@ -98,6 +99,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
+          setMailStatus(false); // Reset mailStatus on error
           alert(t('contact.errormessage'));
         }
       );
@@ -160,10 +162,7 @@ const Contact = () => {
           </label>
 
           <button
-            // type='submit'
-            onClick={() => {
-              setMailStatus;
-            }}
+            type='submit'
             className='garet-book bg-secondary py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
           >
             {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
@@ -175,7 +174,7 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <Typewriter mailStatus={mailStatus} />
+        <TypewriterCanvas mailStatus={mailStatus} />
       </motion.div>
     </div>
   );

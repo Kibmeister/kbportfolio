@@ -1,7 +1,7 @@
 import {
-  Typewriter,
-  ComputersCanvas,
+  LampCanvas,
   StarsCanvas,
+  TypewriterCanvas,
 } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
@@ -27,10 +27,10 @@ export {
   Contact,
   ProjectModal,
   CanvasLoader,
-  Typewriter,
-  ComputersCanvas,
   StarsCanvas,
+  TypewriterCanvas,
+  LampCanvas,
   Coffeecan,
   CustomDropdown,
-  Footer
+  Footer,
 };

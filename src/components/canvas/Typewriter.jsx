@@ -14,7 +14,6 @@ const Typewriter = ({ mailStatus }) => {
   const [receivedMailStatus, setReceivedMailStatus] = useState(false);
 
   const typewriterRef = useRef();
-  const { scene, animations } = useGLTF('./typewriters/typewriter.gltf');
 
   const typewriterModelPaths = {
     en: './typewriters/typewriterEn.gltf',
@@ -29,19 +28,22 @@ const Typewriter = ({ mailStatus }) => {
     typewriterModelPaths['en']
   );
 
+  const { scene, animations } = useGLTF(typewriterModelPath);
+
   //hook for settting internal state
   useEffect(() => {
+    console.log('mailstatus promt received', mailStatus);
     setReceivedMailStatus(mailStatus);
-  }, [receivedMailStatus]);
+  }, [mailStatus]);
 
-  //i18n hook
-  // useEffect(() => {
-  //   const modelPath = typewriterModelPaths[i18n.language];
-  //   if (!modelPath) {
-  //     console.error(`No typewriter model found for language: ${i18n.language}`);
-  //   }
-  //   setTypewriterModelPath(modelPath);
-  // }, [i18n.language]);
+  // i18n hook
+  useEffect(() => {
+    const modelPath = typewriterModelPaths[i18n.language];
+    if (!modelPath) {
+      console.error(`No typewriter model found for language: ${i18n.language}`);
+    }
+    setTypewriterModelPath(modelPath);
+  }, [i18n.language]);
 
   // //mail sent hook
   useEffect(() => {
@@ -56,35 +58,16 @@ const Typewriter = ({ mailStatus }) => {
     }
   }, [scene, receivedMailStatus]);
 
-
-    useFrame((_, delta) => {
-      if (mixer) {
-        mixer.update(delta);
-      }
-    });
-
-  const handlePointerClick = () => {
-    // for the cursor hover
-    setReceivedMailStatus(!receivedMailStatus);
-  };
-
-  const handlePointerEnter = () => {
-    // for the cursor hover
-    document.body.style.cursor = 'pointer';
-  };
-
-  const handlePointerLeave = () => {
-    // for the cursor hover
-    document.body.style.cursor = 'auto';
-  };
+  useFrame((_, delta) => {
+    if (mixer) {
+      mixer.update(delta);
+    }
+  });
 
   return (
     scene && (
       <primitive
         ref={typewriterRef}
-        onClick={handlePointerClick}
-        onPointerEnter={handlePointerEnter}
-        onPointerLeave={handlePointerLeave}
         object={scene}
         scale={1.2}
         position-y={-0.4}
@@ -95,14 +78,14 @@ const Typewriter = ({ mailStatus }) => {
 };
 
 //TODO: the fat gltf models in typewriter screws up the fluent hero section animation
-const TypewriterCanvas = () => {
+const TypewriterCanvas = ({ mailStatus }) => {
   return (
     <Canvas
       frameLoop='demand'
       gl={{ preserveDrawingBuffer: true }}
       dpr={[1, 2]}
       camera={{
-        fov: 1.8,
+        fov: 1.5,
         near: 0.1,
         far: 80,
         position: [50, 55, 25],
@@ -120,7 +103,7 @@ const TypewriterCanvas = () => {
           // maxPolarAngle={Math.PI / 2}
           // minPolarAngle={Math.PI / 2}
         />
-        <Typewriter />
+        <Typewriter mailStatus={mailStatus} />
       </Suspense>
       <Preload all />
     </Canvas>
