@@ -13,13 +13,26 @@ export class Cursor4 extends Cursors {
 
   // TODO: it is like this remove function only hides it until the site is swaped back and forth between source code and regular display.
   removeCursor() {
-    // Ensure container exists
-    if (!this.container) return;
+    // Remove event listeners
+    window.removeEventListener('touchmove', this.updateCoordinates);
+    window.removeEventListener('mousemove', this.updateCoordinates);
 
-    // Remove all child nodes
-    while (this.container.firstChild) {
-      this.container.removeChild(this.container.firstChild);
-    }
+    // Hide the cursor
+    this.container.style.display = 'none';
+
+    // Set some flag to indicate that the cursor is removed
+    this.isCursorRemoved = true;
+  }
+
+  enableCursor() {
+    window.addEventListener('touchmove', this.updateCoordinates);
+    window.addEventListener('mousemove', this.updateCoordinates);
+
+    // Hide the cursor
+    this.container.style.display = 'block';
+
+    // Set some flag to indicate that the cursor is removed
+    this.isCursorRemoved = false;
   }
 
   // Modify the setHovering method in the Cursor4 class
@@ -31,7 +44,7 @@ export class Cursor4 extends Cursors {
     if (lampHovering) {
       this.notifyRadiusUpdate(400);
     } else if (isHovering) {
-      this.notifyRadiusUpdate(150); // Change the value to the desired radius when hovering
+      this.notifyRadiusUpdate(200); // Change the value to the desired radius when hovering
     } else {
       this.notifyRadiusUpdate(100); // Change the value back to the initial radius when not hovering
     }

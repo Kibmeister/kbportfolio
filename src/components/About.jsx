@@ -11,7 +11,7 @@ const ServiceCard = ({ index, value, id }) => {
   const iconSrc = imageMapAbout[id];
 
   return (
-    <Tilt className='xs:w-[250px] w-full'>
+    <Tilt className='mobile:w-[250px] w-full'>
       <motion.div
         className='w-full shadow-card bg-white'
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}

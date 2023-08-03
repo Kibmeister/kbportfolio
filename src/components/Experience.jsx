@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience }) => {
         background: '#FDFDFD',
         color: '#000000',
         boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)',
-        fontFamily: 'garet-book'
+        fontFamily: 'garet-book',
       }}
       contentArrowStyle={{ borderRight: '7px solid  #FDFDFD' }}
       date={experience.date}
@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className=' text-[24px] garet-book font-bold text-black'>
+        <h3 className=' text-[24px] garet-book font-bold text-black break-words break-normal'>
           {experience.title}
         </h3>
         <p

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const yourName = '© K';
+  const yourName = '© Kasper Borgbjerg';
 
   return (
     <div

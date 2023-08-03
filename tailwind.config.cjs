@@ -8,7 +8,7 @@ module.exports = {
         'garet-heavy': ['garet-heavy', 'sans-serif'],
         'chalga-folk': ['chalga-folk', 'sans-serif'],
         'garet-book': ['garet-book', 'sans-serif'],
-      }, 
+      },
       colors: {
         primary: '#F2F2E8',
         secondary: '#FF5800',
@@ -25,7 +25,7 @@ module.exports = {
         dropdown: '0px 4px 12px 0px rgba(0,0,0,0.15);',
       },
       screens: {
-        xs: '300px',
+        mobile: '300px',
       },
       backgroundImage: {
         'hero-pattern': "url('/src/assets/herobg.png')",

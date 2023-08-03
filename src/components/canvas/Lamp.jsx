@@ -3,11 +3,21 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { AnimationMixer } from 'three';
 import * as THREE from 'three';
 import { Preload, useGLTF } from '@react-three/drei';
+import { useTranslation } from 'react-i18next';
 
 import CanvasLoader from '../Loader';
 useGLTF.preload('./lamp/scene.gltf');
 
-const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
+const Lamp = ({
+  setMouseHover,
+  setLamptoggle,
+  isMobile,
+  isSM,
+  isMD,
+  isLG,
+  isXL,
+  is2XL,
+}) => {
   const lamp = useGLTF('./lamp/scene.gltf');
 
   const [lampHover, setLampHover] = useState(false);
@@ -17,6 +27,9 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
   const [mixer] = useState(() => new AnimationMixer());
 
   const lampRef = useRef();
+  const { i18n } = useTranslation();
+
+  //language hook
 
   // handles the stateupdate of the lammp hover
   useEffect(() => {
@@ -44,9 +57,8 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
     action.clampWhenFinished = true;
     action.play();
 
-     setIsPageLoaded(true);
+    setIsPageLoaded(true);
     // add an event listener for the 'finished' event
-
   }, [mixer, lamp, lampRef]);
   // hover animation
   useEffect(() => {
@@ -62,28 +74,28 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
   // click animation
   // only run this effect after the page has loaded
- useEffect(() => {
-   if (isPageLoaded) {
-     // when the lamp is toggled off
-     if (lampToggle) {
-       const clip = lamp.animations[2];
-       const action = mixer.clipAction(clip, lampRef.current);
-       action.reset();
-       action.setLoop(THREE.LoopOnce, 0);
-       action.clampWhenFinished = true;
-       action.play();
-     }
-     // when the lamp is toggled on
-     if (!lampToggle) {
-       const clip = lamp.animations[2];
-       const action = mixer.clipAction(clip, lampRef.current);
-       action.reset();
-       action.setLoop(THREE.LoopOnce, 0);
-       action.clampWhenFinished = true;
-       action.play();
-     }
-   }
- }, [lampToggle]);
+  useEffect(() => {
+    if (isPageLoaded) {
+      // when the lamp is toggled off
+      if (lampToggle) {
+        const clip = lamp.animations[2];
+        const action = mixer.clipAction(clip, lampRef.current);
+        action.reset();
+        action.setLoop(THREE.LoopOnce, 0);
+        action.clampWhenFinished = true;
+        action.play();
+      }
+      // when the lamp is toggled on
+      if (!lampToggle) {
+        const clip = lamp.animations[2];
+        const action = mixer.clipAction(clip, lampRef.current);
+        action.reset();
+        action.setLoop(THREE.LoopOnce, 0);
+        action.clampWhenFinished = true;
+        action.play();
+      }
+    }
+  }, [lampToggle]);
 
   useFrame((_, delta) => {
     if (mixer) {
@@ -110,7 +122,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
         <>
           <hemisphereLight intensity={0.15} groundColor='black' />
           <spotLight
-            position={[-20, 50, 10]}
+            position={[10, 50, 20]}
             angle={0.12}
             penumbra={1}
             intensity={1}
@@ -127,12 +139,38 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
         onPointerEnter={isMobile ? null : handlePointerEnter}
         onPointerLeave={isMobile ? null : handlePointerLeave}
         object={lamp.scene}
-        scale={isMobile ? 5 : isXl ? 7 : 8}
+        scale={
+          isMobile && i18n.language === 'fr'
+            ? 4
+            : isMobile
+            ? 6
+            : isSM
+            ? 6
+            : isMD
+            ? 6
+            : isLG
+            ? 7
+            : isXL
+            ? 8
+            : is2XL
+            ? 9
+            : 6
+        }
         position={
-          isMobile
+          isMobile && i18n.language === 'fr'
+            ? [-2.4, 1.5, -2.2]
+            : isMobile
             ? [-2.4, -0.6, -2.2]
-            : isXl
-            ? [-2.4, -3, -2.2]
+            : isSM
+            ? [-2.4, -0.6, -2.2]
+            : isMD
+            ? [-2.4, -1.2, -2.2]
+            : isLG
+            ? [-2.0, -3, -2.2]
+            : isXL
+            ? [-1, -3, -1.5]
+            : is2XL
+            ? [-0.8, -4, -1.5]
             : [-1, -5, -1.5]
         }
         rotation={[-0.0, -0.5, -0.0]}
@@ -144,24 +182,59 @@ const Lamp = ({ setMouseHover, setLamptoggle, isMobile, isXl }) => {
 
 const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isXl, setIsXl] = useState(false);
+  const [isSM, setIsSM] = useState(false);
+  const [isMD, setIsMD] = useState(false);
+  const [isLG, setIsLG] = useState(false);
+  const [isXL, setIsXL] = useState(false);
+  const [is2XL, setIs2XL] = useState(false);
 
   useEffect(() => {
-    const mediaQueryMobile = window.matchMedia('(max-width: 765px)');
-    const mediaQueryXl = window.matchMedia('(max-width: 1280px)');
+    const mediaQueryMobile = window.matchMedia('(max-width: 639px)');
+    const mediaQuerySM = window.matchMedia(
+      '(min-width: 640px) and (max-width: 767px)'
+    );
+    const mediaQueryMD = window.matchMedia(
+      '(min-width: 768px) and (max-width: 1023px)'
+    );
+    const mediaQueryLG = window.matchMedia(
+      '(min-width: 1024px) and (max-width: 1279px)'
+    );
+    const mediaQueryXL = window.matchMedia(
+      '(min-width: 1280px) and (max-width: 1535px)'
+    );
+    const mediaQuery2XL = window.matchMedia('(min-width: 1536px)');
 
-    setIsMobile(mediaQueryMobile.matches);
-    setIsXl(mediaQueryXl.matches);
+    const handleMediaQueryChangeMobile = (event) => setIsMobile(event.matches);
+    const handleMediaQueryChangeSM = (event) => setIsSM(event.matches);
+    const handleMediaQueryChangeMD = (event) => setIsMD(event.matches);
+    const handleMediaQueryChangeLG = (event) => setIsLG(event.matches);
+    const handleMediaQueryChangeXL = (event) => setIsXL(event.matches);
+    const handleMediaQueryChange2XL = (event) => setIs2XL(event.matches);
 
-    const handleMedaQuryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-    mediaQueryMobile.addEventListener('change', handleMedaQuryChange);
-    mediaQueryXl.addEventListener('change', handleMedaQuryChange);
+    mediaQueryMobile.addEventListener('change', handleMediaQueryChangeMobile);
+    mediaQuerySM.addEventListener('change', handleMediaQueryChangeSM);
+    mediaQueryMD.addEventListener('change', handleMediaQueryChangeMD);
+    mediaQueryLG.addEventListener('change', handleMediaQueryChangeLG);
+    mediaQueryXL.addEventListener('change', handleMediaQueryChangeXL);
+    mediaQuery2XL.addEventListener('change', handleMediaQueryChange2XL);
+
+    handleMediaQueryChangeMobile(mediaQueryMobile);
+    handleMediaQueryChangeSM(mediaQuerySM);
+    handleMediaQueryChangeMD(mediaQueryMD);
+    handleMediaQueryChangeLG(mediaQueryLG);
+    handleMediaQueryChangeXL(mediaQueryXL);
+    handleMediaQueryChange2XL(mediaQuery2XL);
 
     return () => {
-      mediaQueryMobile.removeEventListener('change', handleMedaQuryChange);
-      mediaQueryXl.removeEventListener('change', handleMedaQuryChange);
+      mediaQueryMobile.removeEventListener(
+        'change',
+        handleMediaQueryChangeMobile
+      );
+      mediaQuerySM.removeEventListener('change', handleMediaQueryChangeSM);
+      mediaQueryMD.removeEventListener('change', handleMediaQueryChangeMD);
+      mediaQueryLG.removeEventListener('change', handleMediaQueryChangeLG);
+      mediaQueryXL.removeEventListener('change', handleMediaQueryChangeXL);
+      mediaQuery2XL.removeEventListener('change', handleMediaQueryChange2XL);
     };
   }, []);
 
@@ -178,7 +251,11 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
           setMouseHover={setMouseHover}
           setLamptoggle={setLamptoggle}
           isMobile={isMobile}
-          isXl={isXl}
+          isSM={isSM}
+          isMD={isMD}
+          isLG={isLG}
+          isXL={isXL}
+          is2XL={is2XL}
         />
       </Suspense>
 

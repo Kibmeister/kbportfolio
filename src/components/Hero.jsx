@@ -49,20 +49,51 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [lampHovering, setLampHovering] = useState(false);
-  const hasAnimatedRef = useRef(false);
+  const [headerCaptionHeight, setHeaderCaptionRef] = useState(false);
+  const [headerCaptionWidth, setHeaderCaptionWidth] = useState(false);
+  const [isInitialRender, setIsInitialRender] = useState(true);
 
+  const hasAnimatedRef = useRef(false);
   const cursor4Ref = useRef(null);
   const lampContainerRef = useRef(null);
   const componentMountedRef = useRef(false);
+  const headerCaptionRef = useRef(null);
 
   // i18n hook
   const { t } = useTranslation();
+
+  // hook for the proxy div
+  useEffect(() => {
+    if (isInitialRender) {
+      setIsInitialRender(false);
+    } else {
+      setTimeout(() => {
+        const updateDimensions = () => {
+          if (headerCaptionRef.current) {
+            console.log(
+              'divs offsetheight',
+              headerCaptionRef.current.offsetHeight
+            );
+            setHeaderCaptionRef(headerCaptionRef.current.offsetHeight);
+            setHeaderCaptionWidth(headerCaptionRef.current.offsetWidth);
+          }
+        };
+        updateDimensions();
+
+        window.addEventListener('resize', updateDimensions);
+
+        // Cleanup function
+        return () => {
+          window.removeEventListener('resize', updateDimensions);
+        };
+      }, 500); // wait for 500 ms before running this block of code
+    }
+  }, [isInitialRender, t]);
 
   // header animation hook
   const useSplittingAnimation = () => {
     useLayoutEffect(() => {
       const animateTitles = (fx1Titles) => {
-        console.log('animationTitles is called');
         fx1Titles.forEach((title) => {
           const h1Chars = title.querySelectorAll('h1 .char');
           const pChars = title.querySelectorAll('p .char');
@@ -136,17 +167,17 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       // Disable scroll when tags are visible
       window.addEventListener('scroll', handleScroll);
       cursor4Ref.current = new Cursor4(lampToggle);
-      cursor4Ref.current.cursor = true;
+      cursor4Ref.current.enableCursor();
+      // cursor4Ref.current.cursor = true;
       // Reset hasAnimatedRef to false so that animation can run again
       hasAnimatedRef.current = false;
     } else {
       window.removeEventListener('scroll', handleScroll);
 
       if (!lampToggle && cursor4Ref.current) {
+        // cursor4Ref.current.cursor = false;
         cursor4Ref.current.removeCursor();
         //cursor4Ref = null; // Or set it to some default cursor
-
-        
       }
     }
     return () => {
@@ -242,7 +273,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
   const lampPress = () => {
-    console.log(' Hero.jsx lampPress called ');
+    console.log(' Hero.jsx lampPress called ', lampToggle);
     setLampToggle(!lampToggle); // Toggle tags visibility
     setLampToggleApp(); // propagate the toggle to parent component
   };
@@ -262,7 +293,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut' }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
                 className='tag'
                 style={{
                   position: 'absolute',
@@ -285,31 +316,39 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
       <div
-        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex xs:flex-col sm:flex-col md:flex-col xl:flex-row items-start gap-5 inset-0 top-[120px]`}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex mobile:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start gap-5 inset-0 top-[120px]`}
       >
         {/* container for the herotext/subtext */}
-        <div className='flex flex-col justify-center items-start flex-shrink-0  xs:min-w-[250px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-auto relative'>
+        <div className='flex flex-col justify-center items-start flex-shrink-0  mobile:min-w-[200px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-auto relative'>
           {lampToggle ? (
-            <div id='id_proxydiv' className='content__title absolute inset-0'>
+            <div
+              id='id_proxydiv'
+              style={{
+                minHeight: `${headerCaptionHeight}px`,
+                minWidth: `${headerCaptionWidth}px`,
+              }}
+              className='content__title inset-0 top-0 left-0'
+            >
               {/* content of id_proxydiv */}
             </div>
           ) : (
             <div
+              ref={headerCaptionRef}
               id='id_headerContainer'
-              className={`content__title relative sm:inset-auto sm:w-full md:min-w-[700px] xs:min-w-[500px] sm:min-w-[600px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] max-w-[700px]`}
+              className={`content__title relative sm:inset-auto sm:w-full md:min-w-[700px] mobile:min-w-[200px] sm:min-w-[600px] lg:min-w-[700px] xl:min-w-[700px] 2xl:min-w-[700px] max-w-[700px]`}
               data-splitting
               data-effect1
             >
               <h1
                 id={'id_header'}
-                className={`${styles.heroHeadText} break-words break-normal`}
+                className={`${styles.heroHeadText} `}
               >
                 {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
-                  className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg xs:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
+                  className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg mobile:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
                   {t('hero.subHeader')}
                 </p>
@@ -332,7 +371,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       </div>
       {/* The little knob that transitions the website down to the about section */}
       {!lampToggle ? (
-        <div className='absolute xs:bottom-10 bottom-32 w-full z-[1] flex justify-center items-center'>
+        <div className='absolute mobile:bottom-10 bottom-32 w-full z-[1] flex justify-center items-center'>
           <a href='#about'>
             <div
               className='w-[35px] h-[64px] rounded-3xl border-4 border-tertiary

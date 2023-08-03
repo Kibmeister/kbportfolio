@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -18,7 +18,21 @@ const ProjectCard = ({
   name,
   onProjectClick,
 }) => {
-  const iconSrc = imageMapWorks[type];
+  const { t, i18n } = useTranslation();
+  const [thumbnailPath, setThumbnailPath] = useState(imageMapWorks[type]['en']);
+  
+
+    useEffect(() => {
+      const path = imageMapWorks[type][i18n.language];
+      if (!path) {
+        console.error(`No thumbnail found for language: ${i18n.language}`);
+      }
+      setThumbnailPath(path);
+    }, [i18n.language]);
+
+
+
+
   return (
     <motion.div
       onClick={() => {
@@ -36,15 +50,18 @@ const ProjectCard = ({
       >
         <div className='relative w-full h-[230px]'>
           <img
-            src={iconSrc}
+            src={thumbnailPath}
             alt={name}
             className='w-full h-full object-cover'
           />
+
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>
         <div className='mt-5 '>
           <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
-          <p className='garet-book mt-2 text-black text-[14px]'>{description}</p>
+          <p className='garet-book mt-2 text-black text-[14px]'>
+            {description}
+          </p>
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (

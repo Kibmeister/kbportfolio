@@ -32,7 +32,7 @@ const Typewriter = ({ mailStatus }) => {
 
   //hook for settting internal state
   useEffect(() => {
-    console.log('mailstatus promt received', mailStatus);
+    // console.log('mailstatus promt received', mailStatus);
     setReceivedMailStatus(mailStatus);
   }, [mailStatus]);
 
@@ -40,16 +40,16 @@ const Typewriter = ({ mailStatus }) => {
   useEffect(() => {
     const modelPath = typewriterModelPaths[i18n.language];
     if (!modelPath) {
-      console.error(`No typewriter model found for language: ${i18n.language}`);
+      // console.error(`No typewriter model found for language: ${i18n.language}`);
     }
     setTypewriterModelPath(modelPath);
   }, [i18n.language]);
 
   // //mail sent hook
   useEffect(() => {
-    console.log('Animations', animations);
+    // console.log('Animations', animations);
     if (receivedMailStatus) {
-      console.log('The typewriter animation runs');
+      // console.log('The typewriter animation runs');
       const action = mixer.clipAction(animations[0], typewriterRef.current);
       action.reset();
       action.setLoop(THREE.LoopOnce, 0);

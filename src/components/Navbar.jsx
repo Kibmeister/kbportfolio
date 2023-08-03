@@ -97,13 +97,18 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 window.scrollTo(0, 0);
               }}
             >
+              {/* <img
+                src={logo}
+                alt='logo'
+                width='100'
+                height='50'
+                className='w-12 h-12 object-container'
+              /> */}
               <p className='font-garet-heavy text-black-3 text-[18px] cursor-pointer flex'>
                 &nbsp;
-                <span>K</span>
+                <span>Kasper Borgbjerg </span>
               </p>
             </Link>
-
-  
 
             <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
               {t('navBar.links', { returnObjects: true }).map((link, index) => (

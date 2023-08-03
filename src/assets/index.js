@@ -32,8 +32,20 @@ import tripguide from './tripguide.png';
 
 import feedback from './multimodalCoffeecan/feedback.png';
 import handle from './multimodalCoffeecan/handle.jpg';
-import multimodalcoffeecanthumbnail from './multimodalCoffeecan/multimodalcoffeecanthumbnail.svg';
-import topicoThumbnail from './topico/topicothumbnail.svg';
+import multimodalcoffeecanthumbnail from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail.svg';
+import multimodalcoffeecanthumbnailEN from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail en.svg';
+import multimodalcoffeecanthumbnailNO from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail no.svg';
+import multimodalcoffeecanthumbnailES from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail es.svg';
+import multimodalcoffeecanthumbnailIT from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail it.svg';
+import multimodalcoffeecanthumbnailFR from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail fr.svg';
+import multimodalcoffeecanthumbnailDE from './multimodalCoffeecan/thumbnails/multimodalcoffeecanthumbnail de.svg';
+import topicoThumbnailEN from './topico/thumbnails/topicothumbnail en.svg';
+import topicoThumbnailNO from './topico/thumbnails/topicothumbnail no.svg';
+import topicoThumbnailES from './topico/thumbnails/topicothumbnail es.svg';
+import topicoThumbnailIT from './topico/thumbnails/topicothumbnail it.svg';
+import topicoThumbnailFR from './topico/thumbnails/topicothumbnail fr.svg';
+import topicoThumbnailDE from './topico/thumbnails/topicothumbnail de.svg';
+
 import scenario from './topico/scenario.svg';
 import topicoDevice from './topico/topicoDevice.svg';
 import usa from './flags/usa.svg';
@@ -51,7 +63,14 @@ import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
-import coaxerThumbnail from './coaxer/coaxerThumbnail.svg';
+import coaxerThumbnail from './coaxer/thumbnails/coaxerThumbnail.svg';
+import coaxerThumbnailEN from './coaxer/thumbnails/coaxerThumbnail en.svg';
+import coaxerThumbnailNO from './coaxer/thumbnails/coaxerThumbnail no.svg';
+import coaxerThumbnailES from './coaxer/thumbnails/coaxerThumbnail es.svg';
+import coaxerThumbnailIT from './coaxer/thumbnails/coaxerThumbnail it.svg';
+import coaxerThumbnailFR from './coaxer/thumbnails/coaxerThumbnail fr.svg';
+import coaxerThumbnailDE from './coaxer/thumbnails/coaxerThumbnail de.svg';
+
 import RingmerkingEN from './ringmerking/Ringmerking en.svg';
 import RingmerkingNO from './ringmerking/Ringmerking no.svg';
 import RingmerkingES from './ringmerking/Ringmerking es.svg';
@@ -64,12 +83,6 @@ import uxicon from './uxicon.png';
 import uiicon from './uiicon.png';
 import productdesignicon from './productdesignicon.png';
 import frontendicon from './frontendicon.png';
-// import typewriterEn from './3Dmodels/typewriter/typewriterEn.gltf';
-// import typewriterEs from './3Dmodels/typewriter/typewriterEs.gltf';
-// import typewriterNo from './3Dmodels/typewriter/typewriterNo.gltf';
-// import typewriterIt from './3Dmodels/typewriter/typewriterIt.gltf';
-// import typewriterFr from './3Dmodels/typewriter/typewriterFr.gltf';
-// import typewriterDe from './3Dmodels/typewriter/typewriterDe.gltf';
 
 export {
   logo,
@@ -102,7 +115,6 @@ export {
   tripguide,
   feedback,
   handle,
-  topicoThumbnail,
   scenario,
   topicoDevice,
   usa,
@@ -134,10 +146,22 @@ export {
   uiicon,
   productdesignicon,
   frontendicon,
-  // typewriterEn,
-  // typewriterEs,
-  // typewriterNo,
-  // typewriterIt,
-  // typewriterFr,
-  // typewriterDe,
+  topicoThumbnailEN,
+  topicoThumbnailNO,
+  topicoThumbnailES,
+  topicoThumbnailIT,
+  topicoThumbnailFR,
+  topicoThumbnailDE,
+  multimodalcoffeecanthumbnailEN,
+  multimodalcoffeecanthumbnailNO,
+  multimodalcoffeecanthumbnailES,
+  multimodalcoffeecanthumbnailIT,
+  multimodalcoffeecanthumbnailFR,
+  multimodalcoffeecanthumbnailDE,
+  coaxerThumbnailEN,
+  coaxerThumbnailNO,
+  coaxerThumbnailES,
+  coaxerThumbnailIT,
+  coaxerThumbnailFR,
+  coaxerThumbnailDE,
 };

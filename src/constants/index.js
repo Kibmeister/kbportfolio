@@ -24,7 +24,6 @@ import {
   tripguide,
   threejs,
   multimodalcoffeecanthumbnail,
-  topicoThumbnail,
   usa,
   norway,
   spain,
@@ -52,12 +51,24 @@ import {
   uiicon,
   productdesignicon,
   frontendicon,
-  // typewriterEn,
-  // typewriterNo,
-  // typewriterEs,
-  // typewriterIt,
-  // typewriterFr,
-  // typewriterDe
+  topicoThumbnailEN,
+  topicoThumbnailNO,
+  topicoThumbnailES,
+  topicoThumbnailIT,
+  topicoThumbnailFR,
+  topicoThumbnailDE,
+  multimodalcoffeecanthumbnailEN,
+  multimodalcoffeecanthumbnailNO,
+  multimodalcoffeecanthumbnailES,
+  multimodalcoffeecanthumbnailIT,
+  multimodalcoffeecanthumbnailFR,
+  multimodalcoffeecanthumbnailDE,
+  coaxerThumbnailEN,
+  coaxerThumbnailNO,
+  coaxerThumbnailES,
+  coaxerThumbnailIT,
+  coaxerThumbnailFR,
+  coaxerThumbnailDE,
 } from '../assets';
 
 //only used for internalObserver
@@ -101,11 +112,46 @@ const imageMapExperience = {
 };
 
 const imageMapWorks = {
-  topico: topicoThumbnail,
-  coffeecan: multimodalcoffeecanthumbnail,
-  coaxer: coaxerThumbnail,
-  ringmerking: RingmerkingEN,
-  oldwebsite: oldwebsite,
+  topico: {
+    en: topicoThumbnailEN,
+    no: topicoThumbnailNO,
+    es: topicoThumbnailES,
+    it: topicoThumbnailIT,
+    fr: topicoThumbnailFR,
+    de: topicoThumbnailDE,
+  },
+  coffeecan: {
+    en: multimodalcoffeecanthumbnailEN,
+    no: multimodalcoffeecanthumbnailNO,
+    es: multimodalcoffeecanthumbnailES,
+    it: multimodalcoffeecanthumbnailIT,
+    fr: multimodalcoffeecanthumbnailFR,
+    de: multimodalcoffeecanthumbnailDE,
+  },
+  coaxer: {
+    en: coaxerThumbnailEN,
+    no: coaxerThumbnailNO,
+    es: coaxerThumbnailES,
+    it: coaxerThumbnailIT,
+    fr: coaxerThumbnailFR,
+    de: coaxerThumbnailDE,
+  },
+  ringmerking: {
+    en: RingmerkingEN,
+    no: RingmerkingNO,
+    es: RingmerkingES,
+    it: RingmerkingIT,
+    fr: RingmerkingFR,
+    de: RingmerkingDE,
+  },
+  oldwebsite: {
+    en: oldwebsite,
+    no: oldwebsite,
+    es: oldwebsite,
+    it: oldwebsite,
+    fr: oldwebsite,
+    de: oldwebsite,
+  },
 };
 
 const imageMapCoaxer = {
@@ -344,7 +390,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: topicoThumbnail,
+    image: topicoThumbnailEN,
     source_code_link: 'https://github.com/',
   },
 ];
