@@ -70,10 +70,10 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       setTimeout(() => {
         const updateDimensions = () => {
           if (headerCaptionRef.current) {
-            console.log(
-              'divs offsetheight',
-              headerCaptionRef.current.offsetHeight
-            );
+            // console.log(
+            //   'divs offsetheight',
+            //   headerCaptionRef.current.offsetHeight
+            // );
             setHeaderCaptionRef(headerCaptionRef.current.offsetHeight);
             setHeaderCaptionWidth(headerCaptionRef.current.offsetWidth);
           }
@@ -280,7 +280,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
   return (
     //   mx:auto relative
-    <section ref={ref} className='w-full h-screen mx:auto relative '>
+    <section ref={ref} id='hero' className='w-full h-screen mx:auto relative '>
       {/* container for the svg cursor */}
       <div id='id_cursorcontainer'></div>
       {/* div for the heroTag dissemination */}

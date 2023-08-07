@@ -153,7 +153,7 @@ const Lamp = ({
             : isXL
             ? 8
             : is2XL
-            ? 9
+            ? 8.5
             : 6
         }
         position={
@@ -170,7 +170,7 @@ const Lamp = ({
             : isXL
             ? [-1, -3, -1.5]
             : is2XL
-            ? [-0.8, -4, -1.5]
+            ? [-0.7, -4, -1.5]
             : [-1, -5, -1.5]
         }
         rotation={[-0.0, -0.5, -0.0]}
@@ -226,10 +226,7 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
     handleMediaQueryChange2XL(mediaQuery2XL);
 
     return () => {
-      mediaQueryMobile.removeEventListener(
-        'change',
-        handleMediaQueryChangeMobile
-      );
+      mediaQueryMobile.removeEventListener('change',handleMediaQueryChangeMobile);
       mediaQuerySM.removeEventListener('change', handleMediaQueryChangeSM);
       mediaQueryMD.removeEventListener('change', handleMediaQueryChangeMD);
       mediaQueryLG.removeEventListener('change', handleMediaQueryChangeLG);
