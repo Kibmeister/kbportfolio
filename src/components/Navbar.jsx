@@ -40,6 +40,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (entry.target === heroRef.current) {
+          setActiveLink(null);
         } else {
           console.log('Entry is intersecting', entry.target.id);
 

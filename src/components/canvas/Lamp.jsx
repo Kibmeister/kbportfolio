@@ -50,15 +50,17 @@ const Lamp = ({
   // onpageload animation
   // update isPageLoaded when page load animation is done
   useEffect(() => {
-    const clip = lamp.animations[1];
-    const action = mixer.clipAction(clip, lampRef.current);
-    action.reset();
-    action.setLoop(THREE.LoopOnce, 0);
-    action.clampWhenFinished = true;
-    action.play();
+    setTimeout(() => {
+      const clip = lamp.animations[0];
+      const action = mixer.clipAction(clip, lampRef.current);
+      action.reset();
+      action.setLoop(THREE.LoopOnce, 0);
+      action.clampWhenFinished = true;
+      action.play();
 
-    setIsPageLoaded(true);
-    // add an event listener for the 'finished' event
+      setIsPageLoaded(true);
+      // add an event listener for the 'finished' event
+    }, 150);
   }, [mixer, lamp, lampRef]);
   // hover animation
   useEffect(() => {
@@ -226,7 +228,10 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
     handleMediaQueryChange2XL(mediaQuery2XL);
 
     return () => {
-      mediaQueryMobile.removeEventListener('change',handleMediaQueryChangeMobile);
+      mediaQueryMobile.removeEventListener(
+        'change',
+        handleMediaQueryChangeMobile
+      );
       mediaQuerySM.removeEventListener('change', handleMediaQueryChangeSM);
       mediaQueryMD.removeEventListener('change', handleMediaQueryChangeMD);
       mediaQueryLG.removeEventListener('change', handleMediaQueryChangeLG);

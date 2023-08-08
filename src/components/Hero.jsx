@@ -112,7 +112,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.1, // Stagger value for h1
+              stagger: 0.2, // Stagger value for h1
             }
           );
 
@@ -130,7 +130,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.02, // Stagger value for p (4 times faster than h1)
+              stagger: 0.04, // Stagger value for p (4 times faster than h1)
             }
           );
         });
@@ -146,6 +146,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
         requestAnimationFrame(() => {
           if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
+            console.log('header animation called');
             animateTitles(fx1Titles);
             hasAnimatedRef.current = true;
           }
@@ -339,10 +340,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
               data-splitting
               data-effect1
             >
-              <h1
-                id={'id_header'}
-                className={`${styles.heroHeadText} `}
-              >
+              <h1 id={'id_header'} className={`${styles.heroHeadText} `}>
                 {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>

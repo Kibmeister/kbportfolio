@@ -31,7 +31,7 @@ const App = () => {
     console.log(type);
 
     if (type == 'oldwebsite') {
-      window.open('https://www.kasperborgbjerg.co');
+      window.open('https://www.kasperborgbjerg.online');
     } else {
       projects.filter((project) => {
         if (project.type === type) {

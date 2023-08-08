@@ -38,7 +38,6 @@ import {
   coaxerIT,
   coaxerFR,
   coaxerDE,
-  coaxerThumbnail,
   RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,
@@ -73,6 +72,7 @@ import {
 
 //only used for internalObserver
 export const navLinks = [
+
   {
     id: 'about',
     title: 'About',

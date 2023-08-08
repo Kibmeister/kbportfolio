@@ -63,7 +63,6 @@ import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
-import coaxerThumbnail from './coaxer/thumbnails/coaxerThumbnail.svg';
 import coaxerThumbnailEN from './coaxer/thumbnails/coaxerThumbnail en.svg';
 import coaxerThumbnailNO from './coaxer/thumbnails/coaxerThumbnail no.svg';
 import coaxerThumbnailES from './coaxer/thumbnails/coaxerThumbnail es.svg';
@@ -140,7 +139,6 @@ export {
   RingmerkingDE,
   mike,
   oldwebsite,
-  coaxerThumbnail,
   multimodalcoffeecanthumbnail,
   uxicon,
   uiicon,
