@@ -63,12 +63,12 @@ import coaxerES from './coaxer/Coaxer es.svg';
 import coaxerIT from './coaxer/Coaxer it.svg';
 import coaxerFR from './coaxer/Coaxer fr.svg';
 import coaxerDE from './coaxer/Coaxer de.svg';
-import coaxerThumbnailEN from './coaxer/thumbnails/coaxerThumbnail en.svg';
-import coaxerThumbnailNO from './coaxer/thumbnails/coaxerThumbnail no.svg';
-import coaxerThumbnailES from './coaxer/thumbnails/coaxerThumbnail es.svg';
-import coaxerThumbnailIT from './coaxer/thumbnails/coaxerThumbnail it.svg';
-import coaxerThumbnailFR from './coaxer/thumbnails/coaxerThumbnail fr.svg';
-import coaxerThumbnailDE from './coaxer/thumbnails/coaxerThumbnail de.svg';
+import coaxerThumbnailEN from './coaxer/thumbnails/coaxerthumbnail en.svg';
+import coaxerThumbnailNO from './coaxer/thumbnails/coaxerthumbnail no.svg';
+import coaxerThumbnailES from './coaxer/thumbnails/coaxerthumbnail es.svg';
+import coaxerThumbnailIT from './coaxer/thumbnails/coaxerthumbnail it.svg';
+import coaxerThumbnailFR from './coaxer/thumbnails/coaxerthumbnail fr.svg';
+import coaxerThumbnailDE from './coaxer/thumbnails/coaxerthumbnail de.svg';
 
 import RingmerkingEN from './ringmerking/Ringmerking en.svg';
 import RingmerkingNO from './ringmerking/Ringmerking no.svg';
