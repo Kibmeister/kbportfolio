@@ -43,7 +43,7 @@ const ProjectCard = ({
         }}
         className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
       >
-        <div className='relative w-full h-[230px]'>
+        {/* <div className='relative w-full h-[230px]'>
           <img
             src={thumbnailPath}
             alt={name}
@@ -64,7 +64,7 @@ const ProjectCard = ({
               # {tag.name}
             </p>
           ))}
-        </div>
+        </div> */}
       </Tilt>
     </motion.div>
   );

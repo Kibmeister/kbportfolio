@@ -35,7 +35,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-     {/* <div>
+     <div>
         <h3 className=' text-[24px] garet-book font-bold text-black break-words break-normal'>
           {experience.title}
         </h3>
@@ -45,7 +45,7 @@ const ExperienceCard = ({ experience }) => {
         >
           {experience.profession}
         </p>
-      </div>  */}
+      </div> 
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
         {experience.workdescription.map((workdesc, index) => (
