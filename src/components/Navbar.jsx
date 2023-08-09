@@ -98,7 +98,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
               }}
             >
               <p className='font-garet-heavy text-black-3 text-[18px] cursor-pointer flex'>
-                Kasper Borgbjerg 
+                Kasper Borgbjerg
               </p>
             </ScrollLink>
 
@@ -136,6 +136,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 selectedLang={selectedLang}
                 setSelectedLang={setSelectedLang}
                 onChangeLang={onChangeLang}
+                setToggle={setToggle}
               />
             </div>
             {/* hamburger menu with dropdown */}

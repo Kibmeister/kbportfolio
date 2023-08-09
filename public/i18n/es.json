@@ -287,12 +287,17 @@
     "h2": "Contacto",
     "inputName": "Tu nombre",
     "inputNamePlaceholder": "Escribe tu nombre",
+    "inputCompany": "Tu empresa",
+    "inputCompanyPlaceholder": "Escribe el nombre de tu empresa",
+
     "inputEmail": "Tu correo electrónico",
     "inputEmailPlaceholder": "Escribe tu correo electrónico",
     "inputMessage": "Tu mensaje",
     "inputMessagePlaceholder": "Escribe tu mensaje",
     "alertEmptyFields": "Por favor, completa todos los campos antes de enviar el formulario.",
     "alertName": "Por favor, ingresa un nombre válido que contenga solo letras y espacios.",
+    "alertCompany": "El nombre de la empresa que ha introducido no cumple con los estándares de nomenclatura aceptados.",
+
     "alertEmail": "Por favor, ingresa una dirección de correo electrónico válida.",
     "alertMessage": "Por favor, ingresa un mensaje con al menos 20 caracteres.",
     "confirmation": "Gracias. Me pondré en contacto contigo lo antes posible.",

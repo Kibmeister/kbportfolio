@@ -23,6 +23,24 @@ const Contact = () => {
     const regex = /^[a-zA-Z\s]+$/;
     return regex.test(name) && name.replace(/\s+/g, '').length >= 2;
   };
+  const isValidCompany = (name) => {
+    // Check against characters from Part 2 of The Company Regulations
+    const mainRegex = /^[a-zA-ZÀ-Žà-ž0-9&@$£€¥.,:;’'“”‘’!?"*=%+#%]*$/;
+
+    // Check the first three characters for restricted symbols
+    const firstThreeRegex = /^[*=%+#%]{1,3}/;
+
+    // Check if the name has more than two characters
+    if (name.length <= 2) {
+      return false;
+    }
+
+    // Return false if the name violates any of the rules
+    if (!mainRegex.test(name) || firstThreeRegex.test(name)) {
+      return false;
+    }
+    return true;
+  };
 
   const isValidEmail = (email) => {
     const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
@@ -56,6 +74,13 @@ const Contact = () => {
       return;
     }
 
+    if (!isValidCompany(form.company)) {
+      alert(
+        "The company name you've entered does not conform to the accepted naming standards."
+      );
+      return;
+    }
+
     if (!isValidEmail(form.email)) {
       alert(t('contact.alertEmail'));
       return;
@@ -77,6 +102,7 @@ const Contact = () => {
         {
           from_name: form.name,
           to_name: 'Kasper Borgbjerg',
+          from_company: form.company,
           from_email: form.email,
           to_email: 'sujata@jsmastery.pro',
           message: form.message,
@@ -91,6 +117,7 @@ const Contact = () => {
 
           setForm({
             name: '',
+            company: '',
             email: '',
             message: '',
           });
@@ -134,6 +161,21 @@ const Contact = () => {
               className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
             />
           </label>
+
+          <label className='flex flex-col'>
+            <span className='garet-book font-medium mobile:mb-2 mb-4'>
+              {t('contact.inputCompany')}
+            </span>
+            <input
+              type='company'
+              name='company'
+              value={form.company}
+              onChange={handleChange}
+              placeholder={t('contact.inputCompanyPlaceholder')}
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
+            />
+          </label>
+
           <label className='flex flex-col'>
             <span className='garet-book font-medium mobile:mb-2 mb-4'>
               {t('contact.inputEmail')}

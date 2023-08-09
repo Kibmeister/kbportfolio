@@ -57,7 +57,7 @@ const Feedbacks = () => {
       </div>
 
       <div
-        className={`${styles.paddingX} mt-10 mx-[-4rem] flex flex-wrap gap-7`}
+        className={` mt-10 flex flex-wrap gap-7`}
       >
         {t('testimonals.entries', { returnObjects: true }).map(
           (testimonial, index) => (
