@@ -250,15 +250,15 @@
         "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
         "tags": [
           {
-            "name": "react",
+            "name": "mobile design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "restapi",
+            "name": "gamification/nudging",
             "color": "green-text-gradient"
           },
           {
-            "name": "scss",
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]
@@ -269,15 +269,15 @@
         "description": "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         "tags": [
           {
-            "name": "nextjs",
+            "name": "multimodal interaction",
             "color": "blue-text-gradient"
           },
           {
-            "name": "supabase",
+            "name": "universal design",
             "color": "green-text-gradient"
           },
           {
-            "name": "css",
+            "name": "tangible interaction",
             "color": "pink-text-gradient"
           }
         ]
