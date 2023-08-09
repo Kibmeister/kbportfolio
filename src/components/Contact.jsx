@@ -7,7 +7,7 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
 
-const Contact = () => {
+const Contact = ({ activeMediaQuery }) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -216,7 +216,10 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <TypewriterCanvas mailStatus={mailStatus} />
+        <TypewriterCanvas
+          activeMediaQuery={activeMediaQuery}
+          mailStatus={mailStatus}
+        />
       </motion.div>
     </div>
   );

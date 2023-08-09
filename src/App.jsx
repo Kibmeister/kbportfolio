@@ -124,7 +124,7 @@ const App = () => {
           <Feedbacks />
 
           <div className='relative z-0'>
-            <Contact />
+            <Contact activeMediaQuery={activeMediaQuery} />
             <StarsCanvas />
           </div>
           <Footer />

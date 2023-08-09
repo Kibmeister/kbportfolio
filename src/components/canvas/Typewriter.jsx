@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 import CanvasLoader from '../Loader';
 
-const Typewriter = ({ mailStatus }) => {
+const Typewriter = ({ mailStatus, activeMediaQuery }) => {
   const { i18n } = useTranslation();
   const [mixer] = useState(() => new AnimationMixer());
   const [receivedMailStatus, setReceivedMailStatus] = useState(false);
@@ -69,7 +69,21 @@ const Typewriter = ({ mailStatus }) => {
       <primitive
         ref={typewriterRef}
         object={scene}
-        scale={1.2}
+        scale={
+          activeMediaQuery === 'mobile'
+            ? 0.7
+            : activeMediaQuery === 'sm'
+            ? 0.8
+            : activeMediaQuery === 'md'
+            ? 0.9
+            : activeMediaQuery === 'lg'
+            ? 1
+            : activeMediaQuery === 'xl'
+            ? 1.1
+            : activeMediaQuery === '2xl'
+            ? 1.2
+            : 1.2
+        }
         position-y={-0.4}
         rotation={[0, 4.7, 0]}
       />
