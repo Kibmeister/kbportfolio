@@ -172,16 +172,16 @@
 
     "tiles": [
       {
-        "name": "Anellatura",
-        "type": "anellatura",
-        "description": "Applicazione mobile che consente agli osservatori di uccelli di registrare avvistamenti di uccelli e seguirli per vedere il loro habitat e informazioni più specifiche.",
+        "name": "Ringmerking",
+        "type": "ringmerking",
+        "description": "Applicazione mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per osservarne l'habitat e informazioni più specifiche.",
         "tags": [
           {
             "name": "figma",
             "color": "blue-text-gradient"
           },
           {
-            "name": "design rimodellato",
+            "name": "rimodellamento del design",
             "color": "green-text-gradient"
           },
           {
@@ -193,10 +193,10 @@
       {
         "name": "Coaxer",
         "type": "coaxer",
-        "description": "App di gestione del tempo mobile sviluppata attraverso un processo di progettazione ultrapersonalizzato con l'obiettivo di alleviare lo stress e strutturare le attività per gli studenti impegnati emettendo suoni di notifica personalizzati.",
+        "description": "App di gestione del tempo mobile sviluppata attraverso un processo di progettazione ultra personalizzato con l'obiettivo di alleviare lo stress e strutturare compiti per lo studente impegnato emettendo suoni di notifica personalizzati.",
         "tags": [
           {
-            "name": "mobile design",
+            "name": "design mobile",
             "color": "blue-text-gradient"
           },
           {
@@ -204,15 +204,15 @@
             "color": "green-text-gradient"
           },
           {
-            "name": "design ultrapersonale",
+            "name": "design ultra personalizzato",
             "color": "pink-text-gradient"
           }
         ]
       },
       {
-        "name": "Coffeecan multimodale",
+        "name": "Multimodal coffeecan",
         "type": "coffeecan",
-        "description": "Una piattaforma completa per la prenotazione di viaggi che consente agli utenti di prenotare voli, hotel e auto a noleggio, e offre raccomandazioni selezionate per destinazioni popolari.",
+        "description": "Un design multimodale di una lattina da caffè con enfasi sulla percezione tattile e uditiva, rivolto ad aiutare le persone con disabilità visiva e cieche a versare il caffè in modo migliore.",
         "tags": [
           {
             "name": "interazione multimodale",
@@ -231,37 +231,37 @@
       {
         "name": "Topico EduTech",
         "type": "topico",
-        "description": "Uno strumento EduTech progettato per favorire il lavoro collaborativo per gli studenti di sesta elementare, con l'obiettivo di migliorare il loro vocabolario in una lingua straniera.",
+        "description": "Uno strumento EduTech progettato per favorire il lavoro collaborativo per gli studenti di sesta elementare, con l'obiettivo di potenziare il loro vocabolario in una lingua straniera.",
         "tags": [
           {
-            "name": "Product design",
+            "name": "design del prodotto",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Design research",
+            "name": "ricerca sul design",
             "color": "green-text-gradient"
           },
           {
-            "name": "design UI/UX",
+            "name": "design di UI/UX",
             "color": "pink-text-gradient"
           }
         ]
       },
       {
-        "name": "Vecchio sito web del portfolio",
-        "type": "vecchiosito",
-        "description": "Il mio primo sito web del portfolio presenta un'estetica brutalista con colori vivaci, ispirata alla palette di colori delle scarpe Air Max 97 di Sean Wotherspoon. Le finestre dell'interfaccia utente sono interattive, ricordando un'interfaccia di sistema operativo degli anni '90.",
+        "name": "Old portfolio website",
+        "type": "oldwebsite",
+        "description": "Il mio primo sito web di portfolio mostra un'estetica brutalista con colori vivaci, tratta ispirazione dalla palette di colori delle sneaker Air Max 97 di Sean Wotherspoon. Le finestre dell'interfaccia utente sono interattive, evocando l'interfaccia dei sistemi operativi degli anni '90.",
         "tags": [
           {
-            "name": "Sito web di portafoglio",
+            "name": "sito web del portfolio",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Design brutalista",
+            "name": "design web brutalista",
             "color": "green-text-gradient"
           },
           {
-            "name": "Sistema operativo anni '90",
+            "name": "sistema operativo Windows degli anni '90",
             "color": "pink-text-gradient"
           }
         ]

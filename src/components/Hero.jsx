@@ -60,7 +60,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   const headerCaptionRef = useRef(null);
 
   // i18n hook
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // hook for the proxy div
   useEffect(() => {
@@ -373,7 +373,21 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
       {/* The little knob that transitions the website down to the about section */}
       {!lampToggle ? (
         <div
-          className={`absolute mobile:bottom-40 bottom-12 w-full z-[1] flex justify-center items-center`}
+          className={`absolute ${
+            i18n.language === 'en' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'no' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'es' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'it' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'fr' && activeMediaQuery === 'mobile'
+              ? 'bottom-10'
+              : i18n.language === 'de' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : 'bottom-10'
+          } w-full z-[1] flex justify-center items-center`}
         >
           <a href='#about'>
             <div

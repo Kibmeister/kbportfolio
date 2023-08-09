@@ -169,7 +169,7 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
-        "description": "Mobilapplikasjon som lar fuglekikkere registrere fugleobservasjoner og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
+        "description": "Mobilapplikasjon som lar fuglekikkere registrere fuglesyn og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
         "tags": [
           {
             "name": "figma",
@@ -188,7 +188,7 @@
       {
         "name": "Coaxer",
         "type": "coaxer",
-        "description": "Mobil tidsstyringsapp utviklet gjennom en ultrapersonalisert designprosess med mål om å lindre stress og strukturere oppgaver for travle studenter ved å sende personlige varselslyder.",
+        "description": "Mobil tidsstyringsapp utviklet gjennom en ultrapersonalisert designprosess med mål om å lindre stress og strukturere oppgaver for den travle studenten ved å sende ut personaliserte varselsignaler.",
         "tags": [
           {
             "name": "mobile design",
@@ -199,7 +199,7 @@
             "color": "green-text-gradient"
           },
           {
-            "name": "ultrapersonal design",
+            "name": "ultrapersonlig design",
             "color": "pink-text-gradient"
           }
         ]
@@ -207,18 +207,18 @@
       {
         "name": "Multimodal coffeecan",
         "type": "coffeecan",
-        "description": "En omfattende reisebestillingsplattform som lar brukere bestille fly, hotell og leiebiler, og tilbyr kuraterte anbefalinger for populære destinasjoner.",
+        "description": "En multimodal design av en kaffeboks med vekt på den taktile og auditive opplevelsen, rettet mot å hjelpe synshemmede og blinde personer med å helle kaffe.",
         "tags": [
           {
-            "name": "multimodal interaction",
+            "name": "multimodal interaksjon",
             "color": "blue-text-gradient"
           },
           {
-            "name": "universal design",
+            "name": "universell design",
             "color": "green-text-gradient"
           },
           {
-            "name": "tangible interaction",
+            "name": "håndgripelig interaksjon",
             "color": "pink-text-gradient"
           }
         ]
@@ -226,14 +226,14 @@
       {
         "name": "Topico EduTech",
         "type": "topico",
-        "description": "Et EduTech-verktøy designet for å fremme samarbeid blant elever i 6. klasse, med mål om å styrke deres ordforråd i et fremmedspråk.",
+        "description": "En EduTech-verktøy designet for å fremme samarbeidsarbeid for elever i 6. klasse, med mål om å forbedre deres vokabular i et fremmed språk.",
         "tags": [
           {
-            "name": "Product design",
+            "name": "produkt design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Design research",
+            "name": "designforskning",
             "color": "green-text-gradient"
           },
           {
@@ -245,18 +245,18 @@
       {
         "name": "Gammel porteføljenettside",
         "type": "oldwebsite",
-        "description": "Min første porteføljenettside viser en brutalistisk estetikk med levende farger, inspirert av Sean Wotherspoon's Air Max 97-sneaker fargepalett. UI-vinduene er interaktive, og minner om et OS-grensesnitt fra 90-tallet.",
+        "description": "Min første porteføljenettside viser en brutalistisk estetikk med livlige farger, og trekker inspirasjon fra Sean Wotherspoons fargeskjema for Air Max 97 joggesko. Brukergrensesnittvinduene er interaktive og minner om et grensesnitt fra 90-tallets operativsystem.",
         "tags": [
           {
-            "name": "Portfolio website",
+            "name": "porteføljenettsted",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Brutalist webdesign",
+            "name": "brutalistisk webdesign",
             "color": "green-text-gradient"
           },
           {
-            "name": "90s Windows OS",
+            "name": "90-tallets Windows OS",
             "color": "pink-text-gradient"
           }
         ]
