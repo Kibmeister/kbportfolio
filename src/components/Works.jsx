@@ -38,7 +38,7 @@ const ProjectCard = ({
           onClick={() => {
             onProjectClick(type);
           }}
-          className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'
+          className='bg-white p-5 mobile:w-[360px] sm:w-[360px] w-full cursor-pointer shadow-card'
         >
           <div className='relative w-full h-[230px]'>
             <img src={thumbnailPath} alt={name} className='w-full h-full ' />
@@ -73,7 +73,7 @@ const ProjectCard = ({
               scale: 1,
               speed: 450,
             }}
-            className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'
+            className='bg-white p-5 mobile:w-[360px] sm:w-[360px] w-full cursor-pointer shadow-card'
           >
             <div className='relative w-full h-[230px]'>
               <img src={thumbnailPath} alt={name} className='w-full h-full ' />
@@ -101,7 +101,7 @@ const ProjectCard = ({
   );
 };
 
-const Works = ({ onProjectClick }) => {
+const Works = ({ onProjectClick, activeMediaQuery }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
@@ -127,6 +127,7 @@ const Works = ({ onProjectClick }) => {
               {...project}
               key={`project-${index}`}
               onProjectClick={onProjectClick}
+              activeMediaQuery={activeMediaQuery}
             />
           )
         )}
@@ -134,6 +135,5 @@ const Works = ({ onProjectClick }) => {
     </>
   );
 };
-
 
 export default SectionWrapper(Works, 'portfolio');
