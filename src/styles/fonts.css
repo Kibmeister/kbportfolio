@@ -14,8 +14,8 @@
 
 @font-face {
   font-family: 'garet-heavy';
-  src: url('./fonts/Garet-heavy.woff2') format('woff2'),
-    url('./fonts/Garet-heavy.woff') format('woff');
+  src: url('./fonts/Garet-Heavy.woff2') format('woff2'),
+    url('./fonts/Garet-Heavy.woff') format('woff');
 }
 
 /* font.css */
@@ -35,8 +35,6 @@
   font-family: 'garet-heavy', sans-serif;
   color: var(--color-tertiaryVar);
 }
-
-
 
 .garet-book {
   font-family: 'garet-book', sans-serif;
