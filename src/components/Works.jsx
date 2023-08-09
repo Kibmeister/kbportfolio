@@ -43,7 +43,7 @@ const ProjectCard = ({
         }}
         className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
       >
-        {/* <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[230px]'>
           <img
             src={thumbnailPath}
             alt={name}
@@ -52,6 +52,7 @@ const ProjectCard = ({
 
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>
+        {/*
         <div className='mt-5 '>
           <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
           <p className='garet-book mt-2 text-black text-[14px]'>
