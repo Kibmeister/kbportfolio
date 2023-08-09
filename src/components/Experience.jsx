@@ -11,55 +11,55 @@ import { textVariant } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
 import { imageMapExperience } from '../constants';
 
-// const ExperienceCard = ({ experience }) => {
-//   const iconSrc = imageMapExperience[experience.id];
+const ExperienceCard = ({ experience }) => {
+  const iconSrc = imageMapExperience[experience.id];
 
-//   return (
-//     <VerticalTimelineElement
-//       contentStyle={{
-//         background: '#FDFDFD',
-//         color: '#000000',
-//         boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)',
-//         fontFamily: 'garet-book',
-//       }}
-//       contentArrowStyle={{ borderRight: '7px solid  #FDFDFD' }}
-//       date={experience.date}
-//       iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-//       icon={
-//         <div className='flex justify-center items-center w-full h-full shadown '>
-//           <img
-//             src={iconSrc}
-//             alt={experience.title}
-//             className='w-[60%] h-[60%] object-contain '
-//           />
-//         </div>
-//       }
-//     >
-//       <div>
-//         <h3 className=' text-[24px] garet-book font-bold text-black break-words break-normal'>
-//           {experience.title}
-//         </h3>
-//         <p
-//           className='garet-book text-black text-[16px] font-semibold'
-//           style={{ margin: 0 }}
-//         >
-//           {experience.profession}
-//         </p>
-//       </div>
+  return (
+    <VerticalTimelineElement
+      contentStyle={{
+        background: '#FDFDFD',
+        color: '#000000',
+        boxShadow: '0px 8px 24px 0px rgba(0,0,0,0.15)',
+        fontFamily: 'garet-book',
+      }}
+      contentArrowStyle={{ borderRight: '7px solid  #FDFDFD' }}
+      date={experience.date}
+      iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+      icon={
+        <div className='flex justify-center items-center w-full h-full shadown '>
+          <img
+            src={iconSrc}
+            alt={experience.title}
+            className='w-[60%] h-[60%] object-contain '
+          />
+        </div>
+      }
+    >
+      {/* <div>
+        <h3 className=' text-[24px] garet-book font-bold text-black break-words break-normal'>
+          {experience.title}
+        </h3>
+        <p
+          className='garet-book text-black text-[16px] font-semibold'
+          style={{ margin: 0 }}
+        >
+          {experience.profession}
+        </p>
+      </div>
 
-//       <ul className='mt-5 list-disc ml-5 space-y-2'>
-//         {experience.workdescription.map((workdesc, index) => (
-//           <li
-//             key={`experience-point-${index}`}
-//             className='garet-book text-black-100 text-[14px] pl-1 tracking-wider'
-//           >
-//             {workdesc.value}
-//           </li>
-//         ))}
-//       </ul>
-//     </VerticalTimelineElement>
-//   );
-// };
+      <ul className='mt-5 list-disc ml-5 space-y-2'>
+        {experience.workdescription.map((workdesc, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className='garet-book text-black-100 text-[14px] pl-1 tracking-wider'
+          >
+            {workdesc.value}
+          </li>
+        ))}
+      </ul> */}
+    </VerticalTimelineElement>
+  );
+};
 
 const Experience = () => {
   const { t, i18n } = useTranslation();
@@ -73,7 +73,7 @@ const Experience = () => {
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline lineColor={'#1d1d1e'}>
-          {/* {t('workexperience.experiences', { returnObjects: true }).map(
+          {t('workexperience.experiences', { returnObjects: true }).map(
             (experience, index) => (
               <ExperienceCard
                 key={experience.id}
@@ -81,7 +81,7 @@ const Experience = () => {
                 experience={experience} // pass the whole experience object as one prop
               />
             )
-          )} */}
+          )}
         </VerticalTimeline>
       </div>
     </>
