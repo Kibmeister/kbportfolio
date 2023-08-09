@@ -149,7 +149,7 @@ const Contact = ({ activeMediaQuery }) => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='garet-book font-medium mobile:mb-2 mb-4'>
+            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
               {t('contact.inputName')}
             </span>
             <input
@@ -158,12 +158,12 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.name}
               onChange={handleChange}
               placeholder={t('contact.inputNamePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='garet-book font-medium mobile:mb-2 mb-4'>
+            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
               {t('contact.inputCompany')}
             </span>
             <input
@@ -172,12 +172,12 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.company}
               onChange={handleChange}
               placeholder={t('contact.inputCompanyPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='garet-book font-medium mobile:mb-2 mb-4'>
+            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
               {t('contact.inputEmail')}
             </span>
             <input
@@ -186,11 +186,11 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.email}
               onChange={handleChange}
               placeholder={t('contact.inputEmailPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='garet-book font-medium mobile:mb-2 mb-4'>
+            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
               {t('contact.inputMessage')}
             </span>
             <textarea
@@ -199,13 +199,13 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.message}
               onChange={handleChange}
               placeholder={t('contact.inputMessagePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book  outline-none border-none font-medium lg:min-w-[400px]'
+              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book  outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
             />
           </label>
 
           <button
             type='submit'
-            className='garet-book bg-secondary py-3 px-8 outline-none w-fit text-white font-bold shadow-md'
+            className='garet-book bg-secondary py-3 px-8 outline-none w-fittext-[14px] text-white font-bold shadow-md'
           >
             {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
           </button>

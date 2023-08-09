@@ -71,18 +71,18 @@ const Typewriter = ({ mailStatus, activeMediaQuery }) => {
         object={scene}
         scale={
           activeMediaQuery === 'mobile'
-            ? 0.7
+            ? 0.5
             : activeMediaQuery === 'sm'
-            ? 0.8
+            ? 0.6
             : activeMediaQuery === 'md'
-            ? 0.9
+            ? 0.7
             : activeMediaQuery === 'lg'
-            ? 1
+            ? 0.8
             : activeMediaQuery === 'xl'
-            ? 1.1
+            ? 0.9
             : activeMediaQuery === '2xl'
-            ? 1.2
-            : 1.2
+            ? 1
+            : 1
         }
         position-y={-0.4}
         rotation={[0, 4.7, 0]}
