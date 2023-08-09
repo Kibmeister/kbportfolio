@@ -145,16 +145,18 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
             ? 4
             : activeMediaQuery === 'mobile'
             ? 6
+            : activeMediaQuery === 'sm' && i18n.language === 'fr'
+            ? 5
             : activeMediaQuery === 'sm'
             ? 6
             : activeMediaQuery === 'md'
             ? 6
             : activeMediaQuery === 'lg'
-            ? 7
+            ? 6.5
             : activeMediaQuery === 'xl'
-            ? 8
+            ? 6.5
             : activeMediaQuery === '2xl'
-            ? 8.5
+            ? 6.5
             : 6
         }
         position={
@@ -171,7 +173,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
             : activeMediaQuery === 'xl'
             ? [-1, -3, -1.5]
             : activeMediaQuery === '2xl'
-            ? [-0.7, -4, -1.5]
+            ? [-1.1, -3, -1.5]
             : [-1, -5, -1.5]
         }
         rotation={[-0.0, -0.5, -0.0]}

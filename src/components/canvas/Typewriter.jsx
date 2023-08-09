@@ -81,7 +81,7 @@ const Typewriter = ({ mailStatus, activeMediaQuery }) => {
             : activeMediaQuery === 'xl'
             ? 0.9
             : activeMediaQuery === '2xl'
-            ? 1
+            ? 1.1
             : 1
         }
         position-y={-0.4}
