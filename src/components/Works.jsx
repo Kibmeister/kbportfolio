@@ -31,49 +31,12 @@ const ProjectCard = ({
     setThumbnailPath(path);
   }, [i18n.language]);
 
-return (
-  <>
-    {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
-      <motion.div
-        onClick={() => {
-          onProjectClick(type);
-        }}
-        variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-      >
-        <div className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'>
-          <div className='relative w-full h-[230px]'>
-            <img src={thumbnailPath} alt={name} className='w-full h-full ' />
-
-            <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
-          </div>
-          <div className='mt-5 '>
-            <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
-            <p className='garet-book mt-2 text-black text-[14px]'>
-              {description}
-            </p>
-          </div>
-
-          <div className='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag) => (
-              <p className={`text-[14px] ${tag.color}`} key={tag.name}>
-                #{tag.name}
-              </p>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-    ) : (
-      <motion.div
-        onClick={() => {
-          onProjectClick(type);
-        }}
-        variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-      >
-        <Tilt
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
+  return (
+    <>
+      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+        <div
+          onClick={() => {
+            onProjectClick(type);
           }}
           className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'
         >
@@ -96,12 +59,46 @@ return (
               </p>
             ))}
           </div>
-        </Tilt>
-      </motion.div>
-    )}
-  </>
-);
+        </div>
+      ) : (
+        <motion.div
+          onClick={() => {
+            onProjectClick(type);
+          }}
+          variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+        >
+          <Tilt
+            options={{
+              max: 45,
+              scale: 1,
+              speed: 450,
+            }}
+            className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'
+          >
+            <div className='relative w-full h-[230px]'>
+              <img src={thumbnailPath} alt={name} className='w-full h-full ' />
 
+              <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
+            </div>
+            <div className='mt-5 '>
+              <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
+              <p className='garet-book mt-2 text-black text-[14px]'>
+                {description}
+              </p>
+            </div>
+
+            <div className='mt-4 flex flex-wrap gap-2'>
+              {tags.map((tag) => (
+                <p className={`text-[14px] ${tag.color}`} key={tag.name}>
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
+          </Tilt>
+        </motion.div>
+      )}
+    </>
+  );
 };
 
 const Works = ({ onProjectClick, activeMediaQuery }) => {
