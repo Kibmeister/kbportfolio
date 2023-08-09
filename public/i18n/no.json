@@ -191,15 +191,15 @@
         "description": "Mobil tidsstyringsapp utviklet gjennom en ultrapersonalisert designprosess med mål om å lindre stress og strukturere oppgaver for travle studenter ved å sende personlige varselslyder.",
         "tags": [
           {
-            "name": "react",
+            "name": "mobile design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "restapi",
+            "name": "gamification/nudging",
             "color": "green-text-gradient"
           },
           {
-            "name": "scss",
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]
@@ -210,15 +210,15 @@
         "description": "En omfattende reisebestillingsplattform som lar brukere bestille fly, hotell og leiebiler, og tilbyr kuraterte anbefalinger for populære destinasjoner.",
         "tags": [
           {
-            "name": "nextjs",
+            "name": "multimodal interaction",
             "color": "blue-text-gradient"
           },
           {
-            "name": "supabase",
+            "name": "universal design",
             "color": "green-text-gradient"
           },
           {
-            "name": "css",
+            "name": "tangible interaction",
             "color": "pink-text-gradient"
           }
         ]
@@ -229,15 +229,15 @@
         "description": "Et EduTech-verktøy designet for å fremme samarbeid blant elever i 6. klasse, med mål om å styrke deres ordforråd i et fremmedspråk.",
         "tags": [
           {
-            "name": "Produktdesign",
+            "name": "Product design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Designforskning",
+            "name": "Design research",
             "color": "green-text-gradient"
           },
           {
-            "name": "UI/UX-design",
+            "name": "UI/UX design",
             "color": "pink-text-gradient"
           }
         ]
@@ -245,7 +245,7 @@
       {
         "name": "Gammel porteføljenettside",
         "type": "oldwebsite",
-        "description": "Min første porteføljenettside viser en brutalistisk estetikk med levende farger, inspirert av Sean Wotherspoon's Air Max 97-sneaker fargepalett. UI-vinduene er interaktive og minner om et OS-grensesnitt fra 90-tallet.",
+        "description": "Min første porteføljenettside viser en brutalistisk estetikk med levende farger, inspirert av Sean Wotherspoon's Air Max 97-sneaker fargepalett. UI-vinduene er interaktive, og minner om et OS-grensesnitt fra 90-tallet.",
         "tags": [
           {
             "name": "Portfolio website",

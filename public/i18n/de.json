@@ -172,7 +172,7 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
-        "description": "Mobile Anwendung, die Vogelbeobachtern ermöglicht, Vogelsichtungen zu registrieren und diese Vögel zu verfolgen, um ihren Lebensraum und weitere spezifische Informationen zu sehen.",
+        "description": "Mobile Anwendung, die Vogelbeobachtern ermöglicht, Vogelbeobachtungen zu registrieren und diese Vögel zu verfolgen, um ihre Lebensräume und weitere spezifische Informationen zu sehen.",
         "tags": [
           {
             "name": "figma",
@@ -191,37 +191,37 @@
       {
         "name": "Coaxer",
         "type": "coaxer",
-        "description": "Mobile Zeitmanagement-App, die durch einen ultra-personalisierten Designprozess entwickelt wurde, um Stress abzubauen und Aufgaben für den geschäftigen Studenten durch personalisierte Benachrichtigungstöne zu strukturieren.",
+        "description": "Mobile Zeitmanagement-App, die durch einen hochpersonalisierten Designprozess entwickelt wurde, um Stress abzubauen und Aufgaben für den beschäftigten Studenten durch persönliche Benachrichtigungstöne zu strukturieren.",
         "tags": [
           {
-            "name": "react",
+            "name": "Mobiles Design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "restapi",
+            "name": "Gamification/Anstoßung",
             "color": "green-text-gradient"
           },
           {
-            "name": "scss",
+            "name": "Ultrapersonales Design",
             "color": "pink-text-gradient"
           }
         ]
       },
       {
-        "name": "Multimodal coffeecan",
-        "type": "coffeecan",
+        "name": "Multimodale Kaffeekanne",
+        "type": "kaffeekanne",
         "description": "Eine umfassende Reisebuchungsplattform, die es Benutzern ermöglicht, Flüge, Hotels und Mietwagen zu buchen und kuratierte Empfehlungen für beliebte Reiseziele bietet.",
         "tags": [
           {
-            "name": "nextjs",
+            "name": "Multimodale Interaktion",
             "color": "blue-text-gradient"
           },
           {
-            "name": "supabase",
+            "name": "Universelles Design",
             "color": "green-text-gradient"
           },
           {
-            "name": "css",
+            "name": "Tangible Interaktion",
             "color": "pink-text-gradient"
           }
         ]
@@ -247,19 +247,19 @@
       },
       {
         "name": "Alte Portfolio-Website",
-        "type": "oldwebsite",
-        "description": "Meine erste Portfolio-Website präsentiert eine brutalistische Ästhetik mit lebendigen Farben, inspiriert von der Farbpalette der Air Max 97 Sneaker von Sean Wotherspoon. Die UI-Fenster sind interaktiv und erinnern an eine OS-Oberfläche der 90er Jahre.",
+        "type": "altewebsite",
+        "description": "Meine erste Portfolio-Website präsentiert eine brutale Ästhetik mit lebendigen Farben und inspiriert von der Farbpalette von Sean Wotherspoons Air Max 97 Sneaker. Die UI-Fenster sind interaktiv und erinnern an eine OS-Benutzeroberfläche der 90er Jahre.",
         "tags": [
           {
-            "name": "Portfolio website",
+            "name": "Portfolio-Website",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Brutalist webdesign",
+            "name": "Brutales Webdesign",
             "color": "green-text-gradient"
           },
           {
-            "name": "90s Windows OS",
+            "name": "Windows 90er Jahre OS",
             "color": "pink-text-gradient"
           }
         ]

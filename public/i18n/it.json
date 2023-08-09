@@ -172,16 +172,16 @@
 
     "tiles": [
       {
-        "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "App mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per scoprire il loro habitat e altre informazioni specifiche.",
+        "name": "Anellatura",
+        "type": "anellatura",
+        "description": "Applicazione mobile che consente agli osservatori di uccelli di registrare avvistamenti di uccelli e seguirli per vedere il loro habitat e informazioni più specifiche.",
         "tags": [
           {
             "name": "figma",
             "color": "blue-text-gradient"
           },
           {
-            "name": "rimodellamento del design",
+            "name": "design rimodellato",
             "color": "green-text-gradient"
           },
           {
@@ -193,37 +193,37 @@
       {
         "name": "Coaxer",
         "type": "coaxer",
-        "description": "App mobile per la gestione del tempo sviluppata attraverso un processo di design ultra-personalizzato con l'obiettivo di alleviare lo stress e strutturare le attività per gli studenti impegnati mediante l'emissione di suoni di notifica personalizzati.",
+        "description": "App di gestione del tempo mobile sviluppata attraverso un processo di progettazione ultrapersonalizzato con l'obiettivo di alleviare lo stress e strutturare le attività per gli studenti impegnati emettendo suoni di notifica personalizzati.",
         "tags": [
           {
-            "name": "react",
+            "name": "mobile design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "restapi",
+            "name": "gamification/nudging",
             "color": "green-text-gradient"
           },
           {
-            "name": "scss",
+            "name": "design ultrapersonale",
             "color": "pink-text-gradient"
           }
         ]
       },
       {
-        "name": "Multimodal coffeecan",
+        "name": "Coffeecan multimodale",
         "type": "coffeecan",
-        "description": "Una piattaforma completa per la prenotazione di viaggi che consente agli utenti di prenotare voli, hotel e auto a noleggio, offrendo anche raccomandazioni selezionate per le destinazioni più popolari.",
+        "description": "Una piattaforma completa per la prenotazione di viaggi che consente agli utenti di prenotare voli, hotel e auto a noleggio, e offre raccomandazioni selezionate per destinazioni popolari.",
         "tags": [
           {
-            "name": "nextjs",
+            "name": "interazione multimodale",
             "color": "blue-text-gradient"
           },
           {
-            "name": "supabase",
+            "name": "design universale",
             "color": "green-text-gradient"
           },
           {
-            "name": "css",
+            "name": "interazione tangibile",
             "color": "pink-text-gradient"
           }
         ]
@@ -231,37 +231,37 @@
       {
         "name": "Topico EduTech",
         "type": "topico",
-        "description": "Uno strumento EduTech progettato per favorire il lavoro collaborativo degli studenti di sesta elementare, con l'obiettivo di migliorare il loro vocabolario in una lingua straniera.",
+        "description": "Uno strumento EduTech progettato per favorire il lavoro collaborativo per gli studenti di sesta elementare, con l'obiettivo di migliorare il loro vocabolario in una lingua straniera.",
         "tags": [
           {
-            "name": "Design di prodotto",
+            "name": "Product design",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Ricerca di design",
+            "name": "Design research",
             "color": "green-text-gradient"
           },
           {
-            "name": "Design UI/UX",
+            "name": "design UI/UX",
             "color": "pink-text-gradient"
           }
         ]
       },
       {
         "name": "Vecchio sito web del portfolio",
-        "type": "oldwebsite",
-        "description": "Il mio primo sito web del portfolio presenta un'estetica brutalista con colori vivaci, tratta ispirazione dalla palette di colori delle sneakers Air Max 97 di Sean Wotherspoon. Le finestre dell'interfaccia utente sono interattive, evocando l'interfaccia di un sistema operativo degli anni '90.",
+        "type": "vecchiosito",
+        "description": "Il mio primo sito web del portfolio presenta un'estetica brutalista con colori vivaci, ispirata alla palette di colori delle scarpe Air Max 97 di Sean Wotherspoon. Le finestre dell'interfaccia utente sono interattive, ricordando un'interfaccia di sistema operativo degli anni '90.",
         "tags": [
           {
-            "name": "Portfolio website",
+            "name": "Sito web di portafoglio",
             "color": "blue-text-gradient"
           },
           {
-            "name": "Brutalist webdesign",
+            "name": "Design brutalista",
             "color": "green-text-gradient"
           },
           {
-            "name": "90s Windows OS",
+            "name": "Sistema operativo anni '90",
             "color": "pink-text-gradient"
           }
         ]

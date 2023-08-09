@@ -44,11 +44,11 @@ const ProjectCard = ({
         className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
       >
         <div className='relative w-full h-[230px]'>
-          {/* <img
+          <img
             src={thumbnailPath}
             alt={name}
-            className='w-full h-full object-cover'
-          /> */}
+            className='w-full h-full '
+          />
 
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>
