@@ -5,7 +5,7 @@ import i18nBackend from 'i18next-http-backend';
 const getCurrentHost =
   import.meta.env.MODE === 'development'
     ? 'http://localhost:5173'
-    : 'https://www.kasperborgbjerg.co';
+    : 'https://kasperborgbjerg.co';
 
 i18n
   .use(i18nBackend)
