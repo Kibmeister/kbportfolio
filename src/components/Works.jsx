@@ -21,7 +21,7 @@ const ProjectCard = ({
   const { t, i18n } = useTranslation();
   const [thumbnailPath, setThumbnailPath] = useState(imageMapWorks[type]['en']);
 
-  console.log('Worsk -> screen size', activeMediaQuery);
+  console.log('Works -> screen size', activeMediaQuery);
 
   useEffect(() => {
     const path = imageMapWorks[type][i18n.language];
@@ -31,19 +31,20 @@ const ProjectCard = ({
     setThumbnailPath(path);
   }, [i18n.language]);
 
-  return (
-    <motion.div
-      onClick={() => {
-        onProjectClick(type);
-      }}
-      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-    >
-      {activeMediaQuery === 'mobile' || "sm" ? (
-        <>
-          <div className='relative h-[230px] bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'>
+return (
+  <>
+    {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+      <motion.div
+        onClick={() => {
+          onProjectClick(type);
+        }}
+        variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      >
+        <div className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'>
+          <div className='relative w-full h-[230px]'>
             <img src={thumbnailPath} alt={name} className='w-full h-full ' />
 
-            <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
+            <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
           </div>
           <div className='mt-5 '>
             <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
@@ -59,20 +60,27 @@ const ProjectCard = ({
               </p>
             ))}
           </div>
-        </>
-      ) : (
+        </div>
+      </motion.div>
+    ) : (
+      <motion.div
+        onClick={() => {
+          onProjectClick(type);
+        }}
+        variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      >
         <Tilt
           options={{
             max: 45,
             scale: 1,
             speed: 450,
           }}
-          className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
+          className='bg-white p-5 sm:w-[360px] w-full cursor-pointer shadow-card'
         >
           <div className='relative w-full h-[230px]'>
             <img src={thumbnailPath} alt={name} className='w-full h-full ' />
 
-            <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
+            <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
           </div>
           <div className='mt-5 '>
             <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
@@ -89,9 +97,11 @@ const ProjectCard = ({
             ))}
           </div>
         </Tilt>
-      )}
-    </motion.div>
-  );
+      </motion.div>
+    )}
+  </>
+);
+
 };
 
 const Works = ({ onProjectClick, activeMediaQuery }) => {

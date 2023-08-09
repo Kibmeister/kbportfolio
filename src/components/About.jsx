@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
   const iconSrc = imageMapAbout[id];
 
-  console.log('About screen size', activeMediaQuery);
 
   return (
     <>
