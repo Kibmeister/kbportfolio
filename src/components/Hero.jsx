@@ -379,13 +379,13 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
             : i18n.language === 'no' && activeMediaQuery === 'mobile'
             ? 'bottom-24'
             : i18n.language === 'es' && activeMediaQuery === 'mobile'
-            ? 'bottom-18'
+            ? 'bottom-19'
             : i18n.language === 'it' && activeMediaQuery === 'mobile'
             ? 'bottom-20'
             : i18n.language === 'fr' && activeMediaQuery === 'mobile'
             ? 'bottom-8'
             : i18n.language === 'de' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
+            ? 'bottom-24'
             : 'bottom-10'
           } w-full z-[1] flex justify-center items-center`}
         >
