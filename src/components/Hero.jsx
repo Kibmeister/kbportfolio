@@ -375,11 +375,11 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
         <div
           className={`absolute ${
             i18n.language === 'en' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
+            ? 'bottom-24'
             : i18n.language === 'no' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
+            ? 'bottom-24'
             : i18n.language === 'es' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
+            ? 'bottom-18'
             : i18n.language === 'it' && activeMediaQuery === 'mobile'
             ? 'bottom-20'
             : i18n.language === 'fr' && activeMediaQuery === 'mobile'
