@@ -101,7 +101,7 @@ const ProjectCard = ({
   );
 };
 
-const Works = ({ onProjectClick, activeMediaQuery }) => {
+const Works = ({ onProjectClick }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
@@ -127,7 +127,6 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
               {...project}
               key={`project-${index}`}
               onProjectClick={onProjectClick}
-              activeMediaQuery={activeMediaQuery}
             />
           )
         )}
@@ -135,5 +134,6 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
     </>
   );
 };
+
 
 export default SectionWrapper(Works, 'portfolio');
