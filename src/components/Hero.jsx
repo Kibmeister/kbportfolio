@@ -373,7 +373,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
       {/* The little knob that transitions the website down to the about section */}
       {!lampToggle ? (
         <div
-          className={`absolute mobile:bottom-30 bottom-12 w-full z-[1] flex justify-center items-center`}
+          className={`absolute mobile:bottom-40 bottom-12 w-full z-[1] flex justify-center items-center`}
         >
           <a href='#about'>
             <div
