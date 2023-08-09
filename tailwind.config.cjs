@@ -25,7 +25,7 @@ module.exports = {
         dropdown: '0px 4px 12px 0px rgba(0,0,0,0.15);',
       },
       screens: {
-        mobile: '300px',
+        mobile: { min: '300px', max: '639px' },
       },
       backgroundImage: {
         'hero-pattern': "url('/src/assets/herobg.png')",

@@ -24,10 +24,45 @@ const App = () => {
   const [lampToggle, setLampToggle] = useState(false);
   const [navbarAnimate, setNavbarAnimate] = useState(false);
   const [selectedLang, setSelectedLang] = useState('en');
+  const [activeMediaQuery, setActiveMediaQuery] = useState('');
 
-  // check the id of the pressed projectcard
-  // set the project from {projects} corresponding to that id as the modalProject
-  // set the showModal state to true
+  useEffect(() => {
+    const mediaQueries = {
+      mobile: '(max-width: 639px)',
+      sm: '(min-width: 640px) and (max-width: 767px)',
+      md: '(min-width: 768px) and (max-width: 1023px)',
+      lg: '(min-width: 1024px) and (max-width: 1279px)',
+      xl: '(min-width: 1280px) and (max-width: 1535px)',
+      '2xl': '(min-width: 1536px)',
+    };
+
+    const handleMediaQueryChange = () => {
+      for (const [key, query] of Object.entries(mediaQueries)) {
+        if (window.matchMedia(query).matches) {
+          setActiveMediaQuery(key);
+          break;
+        }
+      }
+    };
+
+    // Listen for media query changes and set the initial value
+    const mediaQueryLists = Object.values(mediaQueries).map((q) =>
+      window.matchMedia(q)
+    );
+
+    for (const mql of mediaQueryLists) {
+      mql.addEventListener('change', handleMediaQueryChange);
+    }
+
+    handleMediaQueryChange();
+
+    return () => {
+      for (const mql of mediaQueryLists) {
+        mql.removeEventListener('change', handleMediaQueryChange);
+      }
+    };
+  }, []);
+
   const handleModalClick = (type) => {
     console.log('appjs this is name');
     console.log(type);
@@ -71,6 +106,7 @@ const App = () => {
             <Hero
               setLampToggleApp={() => setLampToggle(!lampToggle)}
               ref={heroRef}
+              activeMediaQuery={activeMediaQuery}
             />
           </div>
 

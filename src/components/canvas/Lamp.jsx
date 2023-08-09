@@ -8,16 +8,7 @@ import { useTranslation } from 'react-i18next';
 import CanvasLoader from '../Loader';
 useGLTF.preload('./lamp/scene.gltf');
 
-const Lamp = ({
-  setMouseHover,
-  setLamptoggle,
-  isMobile,
-  isSM,
-  isMD,
-  isLG,
-  isXL,
-  is2XL,
-}) => {
+const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   const lamp = useGLTF('./lamp/scene.gltf');
 
   const [lampHover, setLampHover] = useState(false);
@@ -117,7 +108,7 @@ const Lamp = ({
     document.body.style.cursor = 'auto';
   };
 
-  // console.log('is Mobile state', isMobile);
+  //  console.log('is Mobile state', activeMediaQuery === 'mobile');
   return (
     <mesh>
       {lampHover || !lampToggle ? (
@@ -137,41 +128,49 @@ const Lamp = ({
 
       <primitive
         ref={lampRef}
-        onClick={isMobile ? null : () => setLampToggle(!lampToggle)}
-        onPointerEnter={isMobile ? null : handlePointerEnter}
-        onPointerLeave={isMobile ? null : handlePointerLeave}
+        onClick={
+          activeMediaQuery === 'mobile'
+            ? null
+            : () => setLampToggle(!lampToggle)
+        }
+        onPointerEnter={
+          activeMediaQuery === 'mobile' ? null : handlePointerEnter
+        }
+        onPointerLeave={
+          activeMediaQuery === 'mobile' ? null : handlePointerLeave
+        }
         object={lamp.scene}
         scale={
-          isMobile && i18n.language === 'fr'
+          activeMediaQuery === 'mobile' && i18n.language === 'fr'
             ? 4
-            : isMobile
+            : activeMediaQuery === 'mobile'
             ? 6
-            : isSM
+            : activeMediaQuery === 'sm'
             ? 6
-            : isMD
+            : activeMediaQuery === 'md'
             ? 6
-            : isLG
+            : activeMediaQuery === 'lg'
             ? 7
-            : isXL
+            : activeMediaQuery === 'xl'
             ? 8
-            : is2XL
+            : activeMediaQuery === '2xl'
             ? 8.5
             : 6
         }
         position={
-          isMobile && i18n.language === 'fr'
+          activeMediaQuery === 'mobile' && i18n.language === 'fr'
             ? [-2.4, 1.5, -2.2]
-            : isMobile
+            : activeMediaQuery === 'mobile'
             ? [-2.4, -0.6, -2.2]
-            : isSM
+            : activeMediaQuery === 'sm'
             ? [-2.4, -0.6, -2.2]
-            : isMD
+            : activeMediaQuery === 'md'
             ? [-2.4, -1.2, -2.2]
-            : isLG
+            : activeMediaQuery === 'lg'
             ? [-2.0, -3, -2.2]
-            : isXL
+            : activeMediaQuery === 'xl'
             ? [-1, -3, -1.5]
-            : is2XL
+            : activeMediaQuery === '2xl'
             ? [-0.7, -4, -1.5]
             : [-1, -5, -1.5]
         }
@@ -182,64 +181,7 @@ const Lamp = ({
   );
 };
 
-const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isSM, setIsSM] = useState(false);
-  const [isMD, setIsMD] = useState(false);
-  const [isLG, setIsLG] = useState(false);
-  const [isXL, setIsXL] = useState(false);
-  const [is2XL, setIs2XL] = useState(false);
-
-  useEffect(() => {
-    const mediaQueryMobile = window.matchMedia('(max-width: 639px)');
-    const mediaQuerySM = window.matchMedia(
-      '(min-width: 640px) and (max-width: 767px)'
-    );
-    const mediaQueryMD = window.matchMedia(
-      '(min-width: 768px) and (max-width: 1023px)'
-    );
-    const mediaQueryLG = window.matchMedia(
-      '(min-width: 1024px) and (max-width: 1279px)'
-    );
-    const mediaQueryXL = window.matchMedia(
-      '(min-width: 1280px) and (max-width: 1535px)'
-    );
-    const mediaQuery2XL = window.matchMedia('(min-width: 1536px)');
-
-    const handleMediaQueryChangeMobile = (event) => setIsMobile(event.matches);
-    const handleMediaQueryChangeSM = (event) => setIsSM(event.matches);
-    const handleMediaQueryChangeMD = (event) => setIsMD(event.matches);
-    const handleMediaQueryChangeLG = (event) => setIsLG(event.matches);
-    const handleMediaQueryChangeXL = (event) => setIsXL(event.matches);
-    const handleMediaQueryChange2XL = (event) => setIs2XL(event.matches);
-
-    mediaQueryMobile.addEventListener('change', handleMediaQueryChangeMobile);
-    mediaQuerySM.addEventListener('change', handleMediaQueryChangeSM);
-    mediaQueryMD.addEventListener('change', handleMediaQueryChangeMD);
-    mediaQueryLG.addEventListener('change', handleMediaQueryChangeLG);
-    mediaQueryXL.addEventListener('change', handleMediaQueryChangeXL);
-    mediaQuery2XL.addEventListener('change', handleMediaQueryChange2XL);
-
-    handleMediaQueryChangeMobile(mediaQueryMobile);
-    handleMediaQueryChangeSM(mediaQuerySM);
-    handleMediaQueryChangeMD(mediaQueryMD);
-    handleMediaQueryChangeLG(mediaQueryLG);
-    handleMediaQueryChangeXL(mediaQueryXL);
-    handleMediaQueryChange2XL(mediaQuery2XL);
-
-    return () => {
-      mediaQueryMobile.removeEventListener(
-        'change',
-        handleMediaQueryChangeMobile
-      );
-      mediaQuerySM.removeEventListener('change', handleMediaQueryChangeSM);
-      mediaQueryMD.removeEventListener('change', handleMediaQueryChangeMD);
-      mediaQueryLG.removeEventListener('change', handleMediaQueryChangeLG);
-      mediaQueryXL.removeEventListener('change', handleMediaQueryChangeXL);
-      mediaQuery2XL.removeEventListener('change', handleMediaQueryChange2XL);
-    };
-  }, []);
-
+const LampCanvas = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   return (
     <Canvas
       frameloop='always'
@@ -252,12 +194,7 @@ const LampCanvas = ({ setMouseHover, setLamptoggle }) => {
         <Lamp
           setMouseHover={setMouseHover}
           setLamptoggle={setLamptoggle}
-          isMobile={isMobile}
-          isSM={isSM}
-          isMD={isMD}
-          isLG={isLG}
-          isXL={isXL}
-          is2XL={is2XL}
+          activeMediaQuery={activeMediaQuery}
         />
       </Suspense>
 

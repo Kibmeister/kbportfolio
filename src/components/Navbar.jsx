@@ -25,8 +25,8 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
       ...navLinks.map(({ id }) => document.querySelector(`#${id}`)),
     ];
     setObservedElements(elements);
-    console.log('Section elements', elements); // Debug: Check if the elements are correct
-    console.log('Navlink elements', navLinks);
+    // console.log('Section elements', elements); // Debug: Check if the elements are correct
+    // console.log('Navlink elements', navLinks);
   }, []);
 
   const entries = useIntersectionObserver(observedElements, {
@@ -57,6 +57,8 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
     i18n.changeLanguage(languageCode);
   };
 
+
+  //hook for listening to page click events
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -83,7 +85,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
           className={`${styles.paddingNavbar} ${animationClass} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
         >
           <div
-            className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}
+            className={` px-6 mobile:px-0 sm:px-16 w-full flex justify-between items-center max-w-7xl mx-auto`}
           >
             <ScrollLink
               to='hero'
@@ -137,7 +139,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 onChangeLang={onChangeLang}
               />
             </div>
-
+            {/* hamburger menu with dropdown */}
             <div
               ref={menuRef}
               className='md:hidden flex justify-end items-center '
@@ -158,20 +160,24 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                     <li
                       key={link.id}
                       className={`${
-                        activeLink === link.id || clickActive === link.id
+                        activeLink === link.id
                           ? 'text-black border-b-2 border-secondary'
                           : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                      }`}
-                      onClick={() => {
-                        setClickActive(link.id);
-                        setToggle(!toggle);
-                      }}
+                      } text-[18px] font-medium cursor-pointer`}
                     >
                       <ScrollLink
                         to={link.id}
                         smooth={true}
                         duration={200}
                         className='whitespace-nowrap'
+                        onClick={() => {
+                          setActiveLink(link.id);
+                          setClickActive(link.id);
+                          setToggle(false);
+                          setTimeout(() => {
+                            setClickActive(null);
+                          }, 1000);
+                        }}
                       >
                         {link.value}
                       </ScrollLink>
@@ -182,6 +188,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                       selectedLang={selectedLang}
                       setSelectedLang={setSelectedLang}
                       onChangeLang={onChangeLang}
+                      setToggle={setToggle}
                     />
                   </li>
                 </ul>

@@ -44,7 +44,7 @@ const getRandomPosition = (
   return positions[randomIndex];
 };
 
-const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
+const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   const [tags, setTags] = useState([]);
   const [lampToggle, setLampToggle] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -146,7 +146,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
 
         requestAnimationFrame(() => {
           if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
-            console.log('header animation called');
+            // console.log('header animation called');
             animateTitles(fx1Titles);
             hasAnimatedRef.current = true;
           }
@@ -309,7 +309,9 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 >
-                  <p className='garet-book'>{tag.term}</p>
+                  <p className='sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl garet-book'>
+                    {tag.term}
+                  </p>
                 </button>
               </motion.div>
             ))}
@@ -317,7 +319,7 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
       </div>
       {/* wrapper div for the hero heading and the lamp canvas */}
       <div
-        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex mobile:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start gap-5 inset-0 top-[120px]`}
+        className={`${styles.paddingX} absolute max-w-7xl mx-auto flex mobile:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-start gap-5 inset-0 mobile:top-[80px] top-[120px]`}
       >
         {/* container for the herotext/subtext */}
         <div className='flex flex-col justify-center items-start flex-shrink-0  mobile:min-w-[200px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] 2xl:min-w-[700px] h-auto relative'>
@@ -363,28 +365,32 @@ const Hero = React.forwardRef(({ setLampToggleApp }, ref) => {
           <LampCanvas
             setLamptoggle={(press) => lampPress(press)}
             setMouseHover={(hovering) => setLampHovering(hovering)}
+            activeMediaQuery={activeMediaQuery}
           />
         </div>
         {/* interactive lamp object  */}
       </div>
       {/* The little knob that transitions the website down to the about section */}
       {!lampToggle ? (
-        <div className='absolute mobile:bottom-10 bottom-32 w-full z-[1] flex justify-center items-center'>
+        <div
+          className={`absolute mobile:bottom-30 bottom-12 w-full z-[1] flex justify-center items-center`}
+        >
           <a href='#about'>
             <div
-              className='w-[35px] h-[64px] rounded-3xl border-4 border-tertiary
-          flex justify-center items-start p-2'
+              className={` mobile:w-[26px] mobile:h-[42px] w-[35px] h-[64px] mobile:rounded-3xl rounded-3xl mobile:border-2.5 border-4 border-tertiary flex justify-center items-start mobile:p-1 p-2
+              
+          `}
             >
-              <motion.dev
+              <motion.div
                 animate={{
-                  y: [0, 24, 0],
+                  y: activeMediaQuery === 'mobile' ? [0, 16, 0] : [0, 24, 0],
                 }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
-                className='w-3 h-3 rounded-full bg-tertiary mb-1'
+                className={` mobile:w-2 mobile:h-2 w-3 h-3 rounded-full bg-tertiary mb-1 `}
               />
             </div>
           </a>

@@ -86,7 +86,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-         setTimeout(() => setMailStatus(false), 5000);
+          setTimeout(() => setMailStatus(false), 5000);
           alert(t('contact.confirmation'));
 
           setForm({
