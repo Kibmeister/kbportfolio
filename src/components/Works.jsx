@@ -52,19 +52,16 @@ const ProjectCard = ({
 
           <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
         </div>
-
         <div className='mt-5 '>
           <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
           <p className='garet-book mt-2 text-black text-[14px]'>
             {description}
           </p>
         </div>
-        
+        {/* className={`text-[14px] ${tag.color}`} */}
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              # {tag.name}
-            </p>
+            <p key={tag.name}># {tag.name}</p>
           ))}
         </div>
       </Tilt>
