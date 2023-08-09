@@ -26,6 +26,8 @@ const App = () => {
   const [selectedLang, setSelectedLang] = useState('en');
   const [activeMediaQuery, setActiveMediaQuery] = useState('');
 
+
+  //media query hook
   useEffect(() => {
     const mediaQueries = {
       mobile: '(max-width: 639px)',
@@ -63,6 +65,7 @@ const App = () => {
     };
   }, []);
 
+  //modals hook
   const handleModalClick = (type) => {
     console.log('appjs this is name');
     console.log(type);
@@ -79,7 +82,7 @@ const App = () => {
 
     setShowModal(true);
   };
-
+  //lamp toggle hook
   useEffect(() => {
     setNavbarAnimate(!lampToggle);
     const body = document.querySelector('body');
@@ -110,10 +113,13 @@ const App = () => {
             />
           </div>
 
-          <About />
+          <About activeMediaQuery={activeMediaQuery} />
           <Experience />
 
-          <Works onProjectClick={handleModalClick} />
+          <Works
+            onProjectClick={handleModalClick}
+            activeMediaQuery={activeMediaQuery}
+          />
 
           {showModal && (
             <ProjectModal

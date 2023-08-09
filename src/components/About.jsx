@@ -7,33 +7,67 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { useTranslation } from 'react-i18next';
 
-const ServiceCard = ({ index, value, id }) => {
+const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
   const iconSrc = imageMapAbout[id];
 
+  console.log('About screen size', activeMediaQuery);
+
   return (
-    <Tilt className='mobile:w-[250px] w-[250px]'>
-      <motion.div
-        className='w-full shadow-card bg-white'
-        variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      >
-        <div
-          options={{ max: 45, scale: 1, speed: 450 }}
-          className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
-        >
-          <img src={iconSrc} alt={value} className='w-64 h-64 object-contain' />
-          <p
-            className='garet-book text-black text-[16px] font-semibold'
-            style={{ margin: 0 }}
+    <>
+      {activeMediaQuery === 'mobile' || 'sm' ? (
+        <div className='mobile:w-[250px] w-[250px]'>
+          <motion.div
+            className='w-full shadow-card bg-white'
+            variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
           >
-            {value}
-          </p>
+            <div
+              options={{ max: 45, scale: 1, speed: 450 }}
+              className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
+            >
+              <img
+                src={iconSrc}
+                alt={value}
+                className='w-64 h-64 object-contain'
+              />
+              <p
+                className='garet-book text-black text-[16px] font-semibold'
+                style={{ margin: 0 }}
+              >
+                {value}
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-    </Tilt>
+      ) : (
+        <Tilt className='mobile:w-[250px] w-[250px]'>
+          <motion.div
+            className='w-full shadow-card bg-white'
+            variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+          >
+            <div
+              options={{ max: 45, scale: 1, speed: 450 }}
+              className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
+            >
+              <img
+                src={iconSrc}
+                alt={value}
+                className='w-64 h-64 object-contain'
+              />
+              <p
+                className='garet-book text-black text-[16px] font-semibold'
+                style={{ margin: 0 }}
+              >
+                {value}
+              </p>
+            </div>
+          </motion.div>
+        </Tilt>
+      )}
+    </>
   );
 };
 
-const About = () => {
+const About = ({ activeMediaQuery }) => {
   const { t } = useTranslation();
 
   return (
@@ -51,7 +85,12 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10 '>
         {t('about.tiltcards', { returnObjects: true }).map((value, index) => (
-          <ServiceCard key={value.id} index={index} {...value} />
+          <ServiceCard
+            activeMediaQuery={activeMediaQuery}
+            key={value.id}
+            index={index}
+            {...value}
+          />
         ))}
       </div>
     </>

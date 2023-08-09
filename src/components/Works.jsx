@@ -16,9 +16,12 @@ const ProjectCard = ({
   image,
   name,
   onProjectClick,
+  activeMediaQuery,
 }) => {
   const { t, i18n } = useTranslation();
   const [thumbnailPath, setThumbnailPath] = useState(imageMapWorks[type]['en']);
+
+  console.log('Worsk -> screen size', activeMediaQuery);
 
   useEffect(() => {
     const path = imageMapWorks[type][i18n.language];
@@ -35,43 +38,63 @@ const ProjectCard = ({
       }}
       variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
     >
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
-      >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={thumbnailPath}
-            alt={name}
-            className='w-full h-full '
-          />
+      {activeMediaQuery === 'mobile' || "sm" ? (
+        <>
+          <div className='relative h-[230px] bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'>
+            <img src={thumbnailPath} alt={name} className='w-full h-full ' />
 
-          <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
-        </div>
-        <div className='mt-5 '>
-          <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
-          <p className='garet-book mt-2 text-black text-[14px]'>
-            {description}
-          </p>
-        </div>
-
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p className={`text-[14px] ${tag.color}`} key={tag.name}>
-              #{tag.name}
+            <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
+          </div>
+          <div className='mt-5 '>
+            <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
+            <p className='garet-book mt-2 text-black text-[14px]'>
+              {description}
             </p>
-          ))}
-        </div>
-      </Tilt>
+          </div>
+
+          <div className='mt-4 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <p className={`text-[14px] ${tag.color}`} key={tag.name}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </>
+      ) : (
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className='bg-white p-5 , sm:w-[360px] w-full cursor-pointer shadow-card'
+        >
+          <div className='relative w-full h-[230px]'>
+            <img src={thumbnailPath} alt={name} className='w-full h-full ' />
+
+            <div className='absolute  inset-0 flex justify-end m-3 card-img-hover'></div>
+          </div>
+          <div className='mt-5 '>
+            <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
+            <p className='garet-book mt-2 text-black text-[14px]'>
+              {description}
+            </p>
+          </div>
+
+          <div className='mt-4 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <p className={`text-[14px] ${tag.color}`} key={tag.name}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </Tilt>
+      )}
     </motion.div>
   );
 };
 
-const Works = ({ onProjectClick }) => {
+const Works = ({ onProjectClick, activeMediaQuery }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
@@ -97,6 +120,7 @@ const Works = ({ onProjectClick }) => {
               {...project}
               key={`project-${index}`}
               onProjectClick={onProjectClick}
+              activeMediaQuery={activeMediaQuery}
             />
           )
         )}
