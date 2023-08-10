@@ -105,10 +105,10 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
   const { t } = useTranslation();
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>{t('portfolioTiles.p')}</p>
         <h2 className={styles.sectionHeadText}>{t('portfolioTiles.h2')}</h2>
-      </motion.div>
+      </div>
       <motion.p
         vairants={fadeIn('', '', 0.1, 1)}
         className='garet-book mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
