@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { slideIn } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import { imageMapWorks } from '../constants';
@@ -106,7 +105,7 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
   return (
     <>
       <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
+        variants={textVariant()}
         className='flex-[0.75] bg-primary rounded-2xl '
       >
         <p className={styles.sectionSubText}>{t('portfolioTiles.p')}</p>
