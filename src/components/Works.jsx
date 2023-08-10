@@ -17,10 +17,9 @@ const ProjectCard = ({
   onProjectClick,
   activeMediaQuery,
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [thumbnailPath, setThumbnailPath] = useState(imageMapWorks[type]['en']);
 
-  console.log('Works -> screen size', activeMediaQuery);
 
   useEffect(() => {
     const path = imageMapWorks[type][i18n.language];
@@ -105,16 +104,14 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
   return (
     <>
       <motion.div
-        variants={textVariant()}
-        className='flex-[0.75] bg-primary rounded-2xl '
-      >
+        variants={textVariant()}>
         <p className={styles.sectionSubText}>{t('portfolioTiles.p')}</p>
         <h2 className={styles.sectionHeadText}>{t('portfolioTiles.h2')}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className='garet-book mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
+        className='garet-book mt-4 text-[17px] max-w-3xl leading-[30px]'
       >
         {t('portfolioTiles.subHeader')}
       </motion.p>
