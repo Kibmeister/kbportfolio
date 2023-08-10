@@ -113,7 +113,7 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
       </motion.div>
 
       <motion.p
-        vairants={fadeIn('', '', 0.1, 1)}
+        variants={fadeIn('', '', 0.1, 1)}
         className='garet-book mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
       >
         {t('portfolioTiles.subHeader')}
