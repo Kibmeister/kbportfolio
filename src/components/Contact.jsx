@@ -141,7 +141,7 @@ const Contact = ({ activeMediaQuery }) => {
         className='flex-[0.75] bg-primary rounded-2xl '
       >
         <p className={styles.sectionSubText}>{t('contact.p')}</p>
-        <h3 className={styles.sectionHeadText}>{t('contact.h2')}</h3>
+        <h2 className={styles.sectionHeadText}>{t('contact.h2')}</h2>
 
         <form
           ref={formRef}
