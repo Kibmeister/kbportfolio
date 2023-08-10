@@ -51,7 +51,7 @@ const Feedbacks = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className='garet-book mt-3 text- text-[17px] maw-w-3xl leading-[30px]'
+          className='garet-book mt-3 text-[17px] maw-w-3xl leading-[30px]'
         >
           {t('testimonals.subHeader')}
         </motion.p>

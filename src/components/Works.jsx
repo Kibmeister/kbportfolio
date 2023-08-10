@@ -102,18 +102,18 @@ const ProjectCard = ({
 };
 
 const Works = ({ onProjectClick, activeMediaQuery }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>{t('about.p')}</p>
-        <h2 className={styles.sectionHeadText}>{t('about.h2')}</h2>
+        <p className={styles.sectionSubText}>{t('portfolioTiles.p')}</p>
+        <h2 className={styles.sectionHeadText}>{t('portfolioTiles.h2')}</h2>
       </motion.div>
       <motion.p
         vairants={fadeIn('', '', 0.1, 1)}
         className='garet-book mt-4 text-black text-[17px] max-w-3xl leading-[30px]'
       >
-        {t('about.subHeader')}
+        {t('portfolioTiles.subHeader')}
       </motion.p>
 
       <div className='mt-10 flex flex-wrap gap-7'>
