@@ -10,10 +10,11 @@ import { useTranslation } from 'react-i18next';
 const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
   const iconSrc = imageMapAbout[id];
 
+  console.log("About mediaquery", activeMediaQuery);
 
   return (
     <>
-      {activeMediaQuery === 'mobile' || 'sm' ? (
+      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
         <div className='mobile:w-[250px] w-[250px]'>
           <motion.div
             className='w-full shadow-card bg-white'

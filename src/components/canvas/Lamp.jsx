@@ -12,6 +12,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   const lamp = useGLTF('./lamp/scene.gltf');
 
   const [lampHover, setLampHover] = useState(false);
+  const [allowHover, setAllowHover] = useState(false);
   const [lampToggle, setLampToggle] = useState(false);
   const isFirstRender = useRef(true);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -28,6 +29,16 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   useEffect(() => {
     setMouseHover(lampHover === true);
   }, [lampHover]);
+
+  // hook for hover inhibitor
+  useEffect(() => {
+    const hoverTimeout = setTimeout(() => {
+      setAllowHover(true);
+    }, 4000); // 4 seconds
+
+    // Cleanup the timeout when the component is unmounted
+    return () => clearTimeout(hoverTimeout);
+  }, []);
 
   // lampToggle listener
   useEffect(() => {
@@ -99,12 +110,15 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   });
 
   const handlePointerEnter = () => {
+    if (!allowHover) return; // Don't execute if hover is not allowed
+
     // for the cursor hover
     setLampHover(true);
     document.body.style.cursor = 'pointer';
   };
 
   const handlePointerLeave = () => {
+    if (!allowHover) return; // Don't execute if hover is not allowed
     // for the cursor hover
     setLampHover(false);
     document.body.style.cursor = 'auto';
