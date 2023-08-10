@@ -103,17 +103,16 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
   const { t } = useTranslation();
   return (
     <>
-      <motion.div
-        variants={textVariant()}>
-        <p className={styles.sectionSubText}>{t('portfolioTiles.p')}</p>
-        <h2 className={styles.sectionHeadText}>{t('portfolioTiles.h2')}</h2>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>dette er p subheader</p>
+        <h2 className={styles.sectionHeadText}>dette er h2 subheader</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className='garet-book mt-4 text-[17px] max-w-3xl leading-[30px]'
       >
-        {t('portfolioTiles.subHeader')}
+        dette er også bare mock tekst
       </motion.p>
 
       <div className='mt-10 flex flex-wrap gap-7'>
