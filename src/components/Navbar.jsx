@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
- 
   const [clickActive, setClickActive] = useState(null);
   const [activeLink, setActiveLink] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -57,7 +56,6 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
     i18n.changeLanguage(languageCode);
   };
 
-
   //hook for listening to page click events
   useEffect(() => {
     function handleClickOutside(event) {
@@ -85,7 +83,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
           className={`${styles.paddingNavbar} ${animationClass} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
         >
           <div
-            className={` px-6 mobile:px-0 sm:px-16 w-full flex justify-between items-center max-w-7xl mx-auto`}
+            className={` px-6 mobile:px-0 sm:px-16 w-full sm:min-h-[28px] mobile:min-h-[28px] flex justify-between items-center max-w-7xl mx-auto`}
           >
             <ScrollLink
               to='hero'
@@ -97,20 +95,20 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                 setClickActive('home');
               }}
             >
-              <p className='font-garet-heavy text-black-3 text-[18px] cursor-pointer flex'>
-                Kasper Borgbjerg
-              </p>
+              <p className={`${styles.menubrandText}`}>KASPER BORGBJERG</p>
             </ScrollLink>
 
             <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
               {t('navBar.links', { returnObjects: true }).map((link, index) => (
                 <li
                   key={link.id}
-                  className={`${
-                    activeLink === link.id
-                      ? 'text-black border-b-2 border-secondary'
-                      : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                  } text-[18px] font-medium cursor-pointer`}
+                  className={`
+    ${styles.menulinkText} 
+    ${
+      activeLink === link.id
+        ? 'text-black border-b-2 border-secondary'
+        : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
+    }`}
                 >
                   <ScrollLink
                     className='whitespace-nowrap'
@@ -159,11 +157,13 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang }) => {
                   {t('navBar.links', { returnObjects: true }).map((link) => (
                     <li
                       key={link.id}
-                      className={`${
+                      className={`
+                      ${styles.menulinkTextHamburger}
+                      ${
                         activeLink === link.id
                           ? 'text-black border-b-2 border-secondary'
                           : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                      } text-[18px] font-medium cursor-pointer`}
+                      } `}
                     >
                       <ScrollLink
                         to={link.id}
