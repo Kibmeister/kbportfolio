@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { globe } from '../assets';
+import { styles } from '../styles';
 import { LANGUAGES } from '../constants';
 
 const CustomDropdown = ({
@@ -35,13 +36,13 @@ const CustomDropdown = ({
         <button
           id='dropdownDefaultButton'
           data-dropdown-toggle='dropdown'
-          className='bg-black text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 text-center inline-flex items-center '
+          className={`${styles.customdropdownBt}`}
           type='button'
           onClick={toggleDropdown}
         >
           {LANGUAGES.find((lang) => lang.code === selectedLang)?.label}
           <svg
-            className='w-4 h-4 ml-2'
+            className={`${styles.customdropdownSvg}`}
             aria-hidden='true'
             fill='none'
             stroke='currentColor'
@@ -60,7 +61,7 @@ const CustomDropdown = ({
         <div className='globe-icon-container'>
           <img
             src={globe}
-            style={{ width: '2em', height: '2em' }}
+            className={`${styles.customdropdownImg}`}
             alt='glob-icon'
           ></img>
         </div>
@@ -70,11 +71,11 @@ const CustomDropdown = ({
       <div
         id='dropdown'
         ref={dropdownRef}
-        className={`bg-primary absolute mt-2 z-10  divide-y divide-black dropdown w-22 shadow-dropdown
+        className={`${styles.customdropdown}
           ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
       >
         <ul
-          className='py-2 text-sm text-black'
+          className={`${styles.customdropdownList}`}
           aria-labelledby='dropdownDefaultButton'
         >
           {LANGUAGES.map(({ code, label, icon }) => (
@@ -99,7 +100,7 @@ const CustomDropdown = ({
                 width='32px'
                 height='32x'
                 alt='language-icon'
-                className={'mr-2'}
+                className={`${styles.customdropdownListImg}`}
               ></img>
             </li>
           ))}

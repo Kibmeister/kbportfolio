@@ -205,7 +205,7 @@ const Contact = ({ activeMediaQuery }) => {
 
           <button
             type='submit'
-            className='garet-book bg-secondary py-3 px-8 outline-none w-fittext-[14px] text-white font-bold shadow-md'
+            className='garet-book bg-secondary py-3 px-8 outline-none w-fit text-white shadow-md'
           >
             {loading ? t('contact.sendButtonLoading') : t('contact.sendButton')}
           </button>
