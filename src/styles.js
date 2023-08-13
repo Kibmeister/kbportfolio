@@ -10,9 +10,10 @@ const styles = {
     'hero-sub-text  2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[14px] sm:text-[14px] mobile:text-[14px] text-[16px] break-words break-normal',
 
   sectionSubText:
-    'section-sub-text  sm:text-[18px] text-[14px] uppercase tracking-wider break-words break-normal',
+    'section-sub-text 2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[12px] uppercase tracking-wider break-words break-normal',
+
   sectionHeadText:
-    'section-head-text md:text-[60px] sm:text-[50px] mobile:text-[40px] text-[30px] break-words break-normal',
+    'section-head-text  2xl:text-[70px] xl:text-[70px] lg:text-[60px] md:text-[50px] sm:text-[40px] mobile:text-[30px] text-[30px] break-words break-normal',
   sectionP:
     '2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[14px] garet-book mt-4 text-black max-w-3xl leading-[30px]',
 
@@ -51,6 +52,37 @@ const styles = {
 
   customdropdownListImg:
     '2xl:max-w-[32px] 2xl:max-h-[32px] xl:max-w-[28px] xl:max-h-[28px] md:max-w-[24px] md:max-h-[24px] sm:max-w-[24px] sm:max-h-[24px] mobile:max-w-[24px] mobile:max-h-[24px] 2xl:mr-2 xl:mr-2 lg:mr-1.5 md:mr-1 sm:mr-1 mobile:mr-1',
+
+  projectHigherordercomponent: 'bg-white h-screen w-screen fixed inset-0 z-30',
+
+  projectWrapper:
+    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto bg-white flex justify-center items-center h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
+
+  projectContainer:
+    'bg-white w-full h-full relative flex flex-col md:p-4 sm:p-2 mobile:p-2',
+
+  projectHeader:
+    'md:text-[60px] sm:text-[50px] mobile:text-[40px] text-[30px] garet-heavy font-bold mb-2 mobile:mt-5',
+
+  projectSubHeader:
+    '2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[12px] garet-book italic mb-14',
+
+  projectHeaderBtn:
+    '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book absolute top-4 right-4',
+
+  projectFlex:
+    'flex gap-10 2xl:flex-nowrap xl:flex-nowrap md:flex-nowrap sm:flex-wrap mobile:flex-wrap',
+
+  projectSection: 'w-full md:w-2/4  mb-8 md:mb-0',
+
+  projectSectionHeader:
+    '2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] mobile:text-[16px] garet-book mb-14',
+
+  projectSectionText:
+    '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book mb-12',
+
+  projectSectionList:
+    '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book',
 
   submitBtn: '',
 };
