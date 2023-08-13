@@ -44,10 +44,8 @@ const ProjectCard = ({
             <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
           </div>
           <div className='mt-5 '>
-            <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
-            <p className='garet-book mt-2 text-black text-[14px]'>
-              {description}
-            </p>
+            <h3 className={`${styles.tilesHeader}`}>{name}</h3>
+            <p className={`${styles.tilesP}`}>{description}</p>
           </div>
 
           <div className='mt-4 flex flex-wrap gap-2'>
@@ -79,10 +77,8 @@ const ProjectCard = ({
               <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
             </div>
             <div className='mt-5 '>
-              <h3 className='garet-book font-bold text-[24px]'>{name}</h3>
-              <p className='garet-book mt-2 text-black text-[14px]'>
-                {description}
-              </p>
+              <h3 className={`${styles.tilesHeader}`}>{name}</h3>
+              <p className={`${styles.tilesP}`}>{description}</p>
             </div>
 
             <div className='mt-4 flex flex-wrap gap-2'>
@@ -116,13 +112,11 @@ const Works = ({ onProjectClick, activeMediaQuery }) => {
       )}
 
       {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
-        <p className='garet-book mt-4 text-[17px] max-w-3xl leading-[30px]'>
-          {t('portfolioTiles.subHeader')}
-        </p>
+        <p className={`${styles.sectionP}`}>{t('portfolioTiles.subHeader')}</p>
       ) : (
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className='garet-book mt-4 text-[17px] max-w-3xl leading-[30px]'
+          className={`${styles.sectionP}`}
         >
           {t('portfolioTiles.subHeader')}
         </motion.p>

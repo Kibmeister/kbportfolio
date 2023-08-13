@@ -149,7 +149,7 @@ const Contact = ({ activeMediaQuery }) => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
+            <span className={`${styles.formSpan}`}>
               {t('contact.inputName')}
             </span>
             <input
@@ -158,12 +158,12 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.name}
               onChange={handleChange}
               placeholder={t('contact.inputNamePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
+              className={`${styles.formInput}`}
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
+            <span className={`${styles.formSpan}`}>
               {t('contact.inputCompany')}
             </span>
             <input
@@ -172,12 +172,12 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.company}
               onChange={handleChange}
               placeholder={t('contact.inputCompanyPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
+              className={`${styles.formInput}`}
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
+            <span className={`${styles.formSpan}`}>
               {t('contact.inputEmail')}
             </span>
             <input
@@ -186,11 +186,11 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.email}
               onChange={handleChange}
               placeholder={t('contact.inputEmailPlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
+              className={`${styles.formInput}`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='garet-book text-[14px] font-medium mobile:mb-2 mb-4'>
+            <span className={`${styles.formSpan}`}>
               {t('contact.inputMessage')}
             </span>
             <textarea
@@ -199,7 +199,7 @@ const Contact = ({ activeMediaQuery }) => {
               value={form.message}
               onChange={handleChange}
               placeholder={t('contact.inputMessagePlaceholder')}
-              className='bg-grey-10 py-4 px-6 placeholder:lightblack placeholder:font-garet-book  outline-none border-none text-[14px] font-medium lg:min-w-[400px]'
+              className={`${styles.formInput}`}
             />
           </label>
 

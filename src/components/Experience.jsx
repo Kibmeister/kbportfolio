@@ -35,28 +35,23 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-     <div>
-        <h3 className=' text-[24px] garet-book font-bold text-black break-words break-normal'>
-          {experience.title}
-        </h3>
+      <div>
+        <h3 className={`${styles.tilesHeader}`}>{experience.title}</h3>
         <p
           className='garet-book text-black text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.profession}
         </p>
-      </div> 
+      </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
         {experience.workdescription.map((workdesc, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className='garet-book text-black-100 text-[14px] pl-1 tracking-wider'
-          >
+          <li key={`experience-point-${index}`} className={`${styles.tilesP}`}>
             {workdesc.value}
           </li>
         ))}
-      </ul> 
+      </ul>
     </VerticalTimelineElement>
   );
 };

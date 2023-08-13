@@ -15,7 +15,7 @@ const FeedBackCard = ({ index, testimonial }) => {
       className='bg-white p-10  xs:w-[px] w-full shadow-card'
     >
       <div className='mt-1 text-black'>
-        <p className='garet-book text-[14px]'>{testimonial.text}</p>
+        <p className={`${styles.tilesP}`}>{testimonial.text}</p>
         <div className='mt-7 flex justify-between items-center gap-1'>
           <div className='flex-1 flex flex-col'>
             <p className='garet-book text-content-title  font-medium text-[16px]'>
@@ -51,15 +51,13 @@ const Feedbacks = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className='garet-book mt-3 text-[17px] maw-w-3xl leading-[30px]'
+          className={`${styles.sectionP}`}
         >
           {t('testimonals.subHeader')}
         </motion.p>
       </div>
 
-      <div
-        className={` mt-10 flex flex-wrap gap-7`}
-      >
+      <div className={` mt-10 flex flex-wrap gap-7`}>
         {t('testimonals.entries', { returnObjects: true }).map(
           (testimonial, index) => (
             <FeedBackCard key={index} index={index} testimonial={testimonial} />
