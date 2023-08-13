@@ -18,11 +18,11 @@ const FeedBackCard = ({ index, testimonial }) => {
         <p className={`${styles.tilesP}`}>{testimonial.text}</p>
         <div className='mt-7 flex justify-between items-center gap-1'>
           <div className='flex-1 flex flex-col'>
-            <p className='garet-book text-content-title  font-medium text-[16px]'>
+            <p className={ `${styles.tilesFeedbackName}`}>
               <span className='garet-book blue-text-gradient'>@</span>{' '}
               {testimonial.name}
             </p>
-            <p className='great-book m1-1  text-[12px]'>
+            <p className={ `${styles.tilesFeedbackCompany}`}>
               {testimonial.designation} of {testimonial.company}
             </p>
           </div>

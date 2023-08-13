@@ -14,14 +14,20 @@ const styles = {
 
   sectionHeadText:
     'section-head-text  2xl:text-[70px] xl:text-[70px] lg:text-[60px] md:text-[50px] sm:text-[40px] mobile:text-[30px] text-[30px] break-words break-normal',
+
   sectionP:
-    '2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[14px] garet-book mt-4 text-black max-w-3xl leading-[30px]',
+    '2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[14px] garet-book mt-4 text-black leading-[30px] 2xl:max-w-full xl:max-w-full lg:max-w-full md:max-w-[750px]',
 
   tilesHeader:
     '2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] mobile:text-[16px] garet-book  text-black break-words break-normal',
 
   tilesP:
     '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book mt-4 text-black  leading-[30px]',
+
+  tilesFeedbackName:
+    '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book text-content-title  font-medium',
+  tilesFeedbackCompany:
+    '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] great-book m1-1',
 
   formSpan:
     '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book  font-medium mobile:mb-2 mb-4',
