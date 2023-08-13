@@ -35,10 +35,9 @@ const styles = {
     '2xl:text-[16px] xl:text-[14px] lg:text-[14px] md:text-[12px] sm:text-[12px] mobile:text-[12px] py-2 text-black',
 
   customdropdownListImg:
-    '2xl:max-w-[32px] 2xl:max-h-[32px] xl:max-w-[28px] xl:max-h-[28px] md:max-w-[24px] md:max-h-[24px] sm:max-w-[24px] sm:max-h-[24px] mobile:max-w-[24px] mobile:max-h-[24px] 2xl:mr-2 xl:mr-2 lg:mr-1.5 md:mr-1 sm:mr-1',
+    '2xl:max-w-[32px] 2xl:max-h-[32px] xl:max-w-[28px] xl:max-h-[28px] md:max-w-[24px] md:max-h-[24px] sm:max-w-[24px] sm:max-h-[24px] mobile:max-w-[24px] mobile:max-h-[24px] 2xl:mr-2 xl:mr-2 lg:mr-1.5 md:mr-1 sm:mr-1 mobile:mr-1',
 
-  submitBtn:
-    '',
+  submitBtn: '',
 };
 
 export { styles };
