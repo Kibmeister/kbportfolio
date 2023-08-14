@@ -54,7 +54,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
                 className='w-64 h-64 object-contain'
               />
               <p
-                className='garet-book text-black text-[16px] font-semibold'
+                className={`${styles.tilesP} `}
                 style={{ margin: 0 }}
               >
                 {value}

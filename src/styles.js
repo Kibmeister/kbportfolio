@@ -9,6 +9,9 @@ const styles = {
   heroSubText:
     'hero-sub-text  2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[14px] sm:text-[14px] mobile:text-[14px] text-[16px] break-words break-normal',
 
+  heroLinkKnob:
+    '2xl:w-[36px] 2xl:h-[64px] xl:w-[34px] xl:h-[60px] lg:w-[32px] lg:h-[54px] md:w-[30px] md:h-[50px] sm:w-[28px] sm:h-[46px] mobile:w-[26px] mobile:h-[42px]  rounded-3xl  sm:border-3 mobile:border-2.5 border-4 border-tertiary flex justify-center items-start sm:p-1.5 mobile:p-1 p-2',
+
   sectionSubText:
     'section-sub-text 2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[12px] uppercase tracking-wider break-words break-normal',
 

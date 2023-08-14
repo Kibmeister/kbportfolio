@@ -390,21 +390,30 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
           } w-full z-[1] flex justify-center items-center`}
         >
           <a href='#about'>
-            <div
-              className={` mobile:w-[26px] mobile:h-[42px] w-[35px] h-[64px] mobile:rounded-3xl rounded-3xl mobile:border-2.5 border-4 border-tertiary flex justify-center items-start mobile:p-1 p-2
-              
-          `}
-            >
+            <div className={`${styles.heroLinkKnob}`}>
               <motion.div
                 animate={{
-                  y: activeMediaQuery === 'mobile' ? [0, 16, 0] : [0, 24, 0],
+                  y:
+                    activeMediaQuery === 'mobile'
+                      ? [0, 16, 0]
+                      : 'mobile'
+                      ? [0, 18, 0]
+                      : 'sm'
+                      ? [0, 20, 0]
+                      : 'md'
+                      ? [0, 20, 0]
+                      : 'lg'
+                      ? [0, 24, 0]
+                      : 'xl'
+                      ? [0, 24, 0]
+                      : [0, 24, 0],
                 }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
-                className={` mobile:w-2 mobile:h-2 w-3 h-3 rounded-full bg-tertiary mb-1 `}
+                className={`2xl:w-[15px] 2xl:h-[15px] xl:w-[13px] xl:h-[13px] lg:w-[11px] lg:h-[11px] md:w-[9px] md:h-[9px] sm:w-[9px] sm:h-[9px] mobile:w-[9px] mobile:h-[9px] rounded-full bg-tertiary mb-1`}
               />
             </div>
           </a>
