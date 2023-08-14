@@ -112,7 +112,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.2, // Stagger value for h1
+              stagger: isInitialRender ? 0.2 : 0.1, // Stagger value for h1
             }
           );
 
@@ -130,7 +130,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: 0.04, // Stagger value for p (4 times faster than h1)
+              stagger: isInitialRender ? 0.04 : 0.02, // Stagger value for p (4 times faster than h1)
             }
           );
         });
@@ -375,18 +375,18 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
         <div
           className={`absolute ${
             i18n.language === 'en' && activeMediaQuery === 'mobile'
-            ? 'bottom-24'
-            : i18n.language === 'no' && activeMediaQuery === 'mobile'
-            ? 'bottom-24'
-            : i18n.language === 'es' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
-            : i18n.language === 'it' && activeMediaQuery === 'mobile'
-            ? 'bottom-20'
-            : i18n.language === 'fr' && activeMediaQuery === 'mobile'
-            ? 'bottom-8'
-            : i18n.language === 'de' && activeMediaQuery === 'mobile'
-            ? 'bottom-24'
-            : 'bottom-10'
+              ? 'bottom-24'
+              : i18n.language === 'no' && activeMediaQuery === 'mobile'
+              ? 'bottom-24'
+              : i18n.language === 'es' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'it' && activeMediaQuery === 'mobile'
+              ? 'bottom-20'
+              : i18n.language === 'fr' && activeMediaQuery === 'mobile'
+              ? 'bottom-8'
+              : i18n.language === 'de' && activeMediaQuery === 'mobile'
+              ? 'bottom-24'
+              : 'bottom-10'
           } w-full z-[1] flex justify-center items-center`}
         >
           <a href='#about'>

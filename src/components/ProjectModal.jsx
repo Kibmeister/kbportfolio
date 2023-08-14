@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { feedback, scenario, topicoDevice } from '../assets';
-import ReactPlayer from 'react-player';
 import Coffeecan from './Projects/Coffeecan';
 import Topico from './Projects/Topico';
 import Coaxer from './Projects/Coaxer';
@@ -23,7 +22,6 @@ const ProjectModal = ({ modalProject, onClose }) => {
     const svgRingmerking = imageMapRingmerking[i18n.language];
     setcoaxerBackground(svgCoaxer);
     setRingmerkingBackground(svgRingmerking);
-
   }, [t, i18n]);
 
   useEffect(() => {

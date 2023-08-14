@@ -44,6 +44,7 @@ import {
   coaxerThumbnailIT,
   coaxerThumbnailFR,
   coaxerThumbnailDE,
+  userresearchericon,
 } from '../assets';
 
 //only used for internalObserver
@@ -79,7 +80,7 @@ const imageMapAbout = {
   ux: uxicon,
   ui: uiicon,
   productdesigner: productdesignicon,
-  frontenddeveloper: frontendicon,
+  userresearcher: userresearchericon,
 };
 
 const imageMapExperience = {

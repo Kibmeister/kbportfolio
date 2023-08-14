@@ -55,6 +55,7 @@ import uxicon from './uxicon.png';
 import uiicon from './uiicon.png';
 import productdesignicon from './productdesignicon.png';
 import frontendicon from './frontendicon.png';
+import userresearchericon from './userresearcerhicon.png';
 
 export {
   logo,
@@ -92,6 +93,7 @@ export {
   uiicon,
   productdesignicon,
   frontendicon,
+  userresearchericon,
   topicoThumbnailEN,
   topicoThumbnailNO,
   topicoThumbnailES,

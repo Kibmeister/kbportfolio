@@ -37,12 +37,12 @@
   "about": {
     "p": "Introduksjon",
     "h2": "Oversikt",
-    "subHeader": "Jeg er en innovativ designer som lidenskapelig forener teknologi og brukere, behersker brukeropplevelsesdesign, intuitive brukergrensesnitt, banebrytende produktutvikling og strømlinjeformet front-end-utvikling.",
+    "subHeader": "Jeg er en innovativ designer som lidenskapelig forener teknologi og brukere, mestrer design av brukeropplevelse, intuitive brukergrensesnitt, banebrytende produktutvikling, og grundig brukerforskning.",
     "tiltcards": [
       { "id": "ux", "value": "UX-designer" },
       { "id": "ui", "value": "UI-designer" },
       { "id": "productdesigner", "value": "Produktdesigner" },
-      { "id": "frontenddeveloper", "value": "Frontend-utvikler" }
+      { "id": "userresearcher", "value": "Brukerinnsikts forsker" }
     ]
   },
   "workexperience": {

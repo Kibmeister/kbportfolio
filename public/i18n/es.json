@@ -38,12 +38,12 @@
   "about": {
     "p": "Introducción",
     "h2": "Visión general",
-    "subHeader": "Soy un diseñador innovador que une apasionadamente la tecnología y los usuarios, dominando el diseño de experiencias de usuario, interfaces de usuario intuitivas, desarrollo de productos de vanguardia y desarrollo de front-end elegante.",
+    "subHeader": "Soy un diseñador innovador que apasionadamente une tecnología y usuarios, dominando el diseño de experiencia del usuario, interfaces de usuario intuitivas, desarrollo de productos de vanguardia, y una investigación de usuarios diligente.",
     "tiltcards": [
       { "id": "ux", "value": "Diseñador de UX" },
       { "id": "ui", "value": "Diseñador de UI" },
       { "id": "productdesigner", "value": "Diseñador de productos" },
-      { "id": "frontenddeveloper", "value": "Desarrollador front-end" }
+      { "id": "userresearcher", "value": "Investigador de usuarios" }
     ]
   },
   "workexperience": {

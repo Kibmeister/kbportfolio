@@ -65,7 +65,7 @@ const styles = {
     'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto bg-white flex justify-center items-center h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
 
   projectContainer:
-    'bg-white w-full h-full relative flex flex-col md:p-4 sm:p-2 mobile:p-2',
+    'bg-white w-full h-full relative flex flex-col 2xl:p-10 xl:p-8 lg:p-6 md:p-6 sm:p-6 mobile:p-4',
 
   projectHeader:
     'md:text-[60px] sm:text-[50px] mobile:text-[40px] text-[30px] garet-heavy font-bold mb-2 mobile:mt-5',
@@ -82,15 +82,30 @@ const styles = {
   projectSection: 'w-full md:w-2/4  mb-8 md:mb-0',
 
   projectSectionHeader:
-    '2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] mobile:text-[16px] garet-book mb-14',
+    '2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] mobile:text-[16px] garet-book 2xl:mb-14 xl:mb-12 lg:mb-10 md:mb-8 sm:mb-6 mobile:mb-4 ',
 
   projectSectionText:
     '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book mb-12',
 
   projectSectionList:
+    'list-disc list-inside 2xl:mb-12 xl:mb-12 lg:mb-12 md:mb-8 sm:mb-6 mobile:mb-4 space-y-4',
+
+  projectSectionListItem:
     '2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[14px] sm:text-[12px] mobile:text-[12px] garet-book',
 
-  submitBtn: '',
+  projectCoffeecanSubSection:
+    '2xl:flex-row xl:flex-row gap-4 lg:flex-row md:flex-col sm:flex-col mobile:flex-col flex flex-row ',
+
+  projectCoffeecanSectionReactplayer:
+    'react-player 2xl:w-full xl:max-w-[600px] lg:max-w-[600px] md:max-w-[500px] sm:max-w-[459px] mobile:max-w-[350px] ',
+
+  projectTopcioDemoImg:
+    'mobile:max-w-[400px] sm:max-w-[450px] md:max-w-[400px] lg:max-w-[450px] xl:min-w-[450px ] 2xl:min-w-[450px]',
+
+  projectTopicoSectionReactcplayer:
+    'react-player min-w-[220px] max-w-[220px] md:order-last sm:order-last mobile:order-last',
+
+  submitBtn: '   ',
 };
 
 export { styles };

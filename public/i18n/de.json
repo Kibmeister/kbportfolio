@@ -37,12 +37,12 @@
   "about": {
     "p": "Einführung",
     "h2": "Übersicht",
-    "subHeader": "Ich bin ein innovativer Designer, der leidenschaftlich Technologie und Benutzer vereint, Benutzererfahrungsdesign beherrscht, intuitive Benutzeroberflächen, hochmoderne Produktentwicklung und elegante Frontend-Entwicklung.",
+    "subHeader": "Ich bin ein innovativer Designer, der leidenschaftlich Technologie und Nutzer vereint, Meister im Design von Benutzererfahrung, intuitiven Benutzeroberflächen, zukunftsweisender Produktentwicklung, und sorgfältiger Benutzerforschung.",
     "tiltcards": [
       { "id": "ux", "value": "UX-Designer" },
       { "id": "ui", "value": "UI-Designer" },
       { "id": "productdesigner", "value": "Produktdesigner" },
-      { "id": "frontenddeveloper", "value": "Frontend-Entwickler" }
+      { "id": "userresearcher", "value": "Benutzerforscher" }
     ]
   },
   "workexperience": {

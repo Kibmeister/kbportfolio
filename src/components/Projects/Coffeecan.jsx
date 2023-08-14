@@ -32,10 +32,13 @@ const Coffeecan = ({ feedback, onClose }) => {
               </p>
 
               <img src={feedback} alt='Feedback Design' class='w-full mb-12' />
-              <ul class='list-disc list-inside mb-12 space-y-4'>
+              <ul class={`${styles.projectSectionList}`}>
                 {t('portfolio.coffeecan.ul', { returnObjects: true }).map(
                   (item, index) => (
-                    <li className={`${styles.projectSectionList}`} key={index}>
+                    <li
+                      className={`${styles.projectSectionListItem}`}
+                      key={index}
+                    >
                       {' '}
                       {item.value}
                     </li>
@@ -52,10 +55,8 @@ const Coffeecan = ({ feedback, onClose }) => {
               </p>
               <div class='flex flex-col content start aspect-w-16 aspect-h-9 items-start'>
                 <ReactPlayer
-                  className='react-player mobile:max-w-[200px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[600px] 2xl:w-full'
+                  className={ `${styles.projectSectionReactplayerCoffeecan}`}
                   url='https://vimeo.com/498087574'
-                  // width={400}
-                  // height={400}
                   controls
                 />
               </div>

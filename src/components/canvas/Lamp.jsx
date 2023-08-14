@@ -199,7 +199,12 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   );
 };
 
-const LampCanvas = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
+const LampCanvas = ({
+  setMouseHover,
+  setLamptoggle,
+  activeMediaQuery,
+
+}) => {
   return (
     <Canvas
       frameloop='always'
