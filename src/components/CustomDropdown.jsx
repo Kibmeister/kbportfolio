@@ -1,31 +1,67 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { globe } from '../assets';
 import { styles } from '../styles';
 import { LANGUAGES } from '../constants';
 
-const CustomDropdown = ({
-  onChangeLang,
-  selectedLang,
-  setSelectedLang,
-  setToggle,
-}) => {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [activeItem, setActiveItem] = useState(LANGUAGES[0]?.code);
+const CustomDropdown = ({ onChangeLang, selectedLang, setSelectedLang }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const dropdownRef = useRef(null);
 
   const handleLangChange = (event) => {
-    // console.log('the dropdownvisibility', dropdownVisible);
-    setToggle(false);
-    setSelectedLang(event.target.value);
-    setActiveItem(event.target.value);
-    onChangeLang(event.target.value);
-    setDropdownVisible(false); // Close dropdown after selecting an option
+    const selectedValue = event.target.value;
+    toggleOpen(); // Start the closing animation first
+    setSelectedLang(selectedValue);
+    onChangeLang(selectedValue);
   };
 
-  const toggleDropdown = () => {
-    // console.log('the dropdownvisibility', dropdownVisible);
-    setDropdownVisible(!dropdownVisible);
+  const toggleOpen = () => {
+    setIsOpen((prevState) => !prevState);
   };
+
+  const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+      transition: {
+        delay: 0.1,
+        type: 'spring',
+        stiffness: 20,
+        restDelta: 2,
+      },
+    }),
+    closed: {
+      clipPath: 'circle(0px at 0px 0px)',
+      transition: {
+        delay: 0.5,
+        type: 'spring',
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+  };
+
+  // hook for mouseclicks outside the dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        event.target.id !== 'dropdownDefaultButton'
+      ) {
+        setIsOpen(false); // Close the dropdown
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]); //
+
   return (
     <div className='relative '>
       {/* dropdown button */}
@@ -38,7 +74,9 @@ const CustomDropdown = ({
           data-dropdown-toggle='dropdown'
           className={`${styles.customdropdownBt}`}
           type='button'
-          onClick={toggleDropdown}
+          onClick={toggleOpen}
+          // initial={false}
+          // animate={isOpen ? 'open' : 'closed'}
         >
           {LANGUAGES.find((lang) => lang.code === selectedLang)?.label}
           <svg
@@ -50,12 +88,22 @@ const CustomDropdown = ({
             xmlns='http://www.w3.org/2000/svg'
           >
             <rect width='100%' height='100%' fill='#1E1E1D' stroke='#1E1E1D' />
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M19 9l-7 7-7-7'
-            ></path>
+
+            {isOpen ? (
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M19 15l-7 -7l-7 7'
+              ></path>
+            ) : (
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M19 9l-7 7-7-7'
+              ></path>
+            )}
           </svg>
         </button>
         <div className='globe-icon-container'>
@@ -67,12 +115,14 @@ const CustomDropdown = ({
         </div>
       </div>
 
-      {/*  dropdown */}
-      <div
+      {/* dropdown */}
+      <motion.div
         id='dropdown'
         ref={dropdownRef}
-        className={`${styles.customdropdown}
-          ${dropdownVisible ? 'visible' : 'invisible h-0 overflow-hidden'}`}
+        variants={sidebar}
+        initial='closed'
+        animate={isOpen ? 'open' : 'closed'}
+        className={`${styles.customdropdown}`}
       >
         <ul
           className={`${styles.customdropdownList}`}
@@ -80,13 +130,12 @@ const CustomDropdown = ({
         >
           {LANGUAGES.map(({ code, label, icon }) => (
             <li
-              className={`flex flex-row justify-center align-center hover:border-secondary relative 
-    ${
-      activeItem === code
-        ? 'text-black border-b-2 border-secondary'
-        : 'text-lightblack border-b-2 border-transparent'
-    }`}
               key={code}
+              className={`flex flex-row justify-center align-center hover:border-secondary relative ${
+                code === selectedLang
+                  ? 'text-black border-b-2 border-secondary'
+                  : 'text-lightblack border-b-2 border-transparent'
+              }`}
             >
               <button
                 className='block px-4 py-2  w-full text-left'
@@ -105,7 +154,7 @@ const CustomDropdown = ({
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };

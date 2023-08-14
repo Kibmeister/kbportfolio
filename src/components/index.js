@@ -1,8 +1,4 @@
-import {
-  LampCanvas,
-  StarsCanvas,
-  TypewriterCanvas,
-} from './canvas';
+import { LampCanvas, StarsCanvas, TypewriterCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -15,7 +11,7 @@ import CanvasLoader from './Loader';
 import Coffeecan from './Projects/Coffeecan';
 import CustomDropdown from './CustomDropdown';
 import Footer from './Footer';
-
+import MenuToggle from './Menutoggle';
 
 export {
   Hero,
@@ -33,4 +29,5 @@ export {
   Coffeecan,
   CustomDropdown,
   Footer,
+  MenuToggle,
 };

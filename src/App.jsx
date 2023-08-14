@@ -102,6 +102,7 @@ const App = () => {
             animationClass={navbarAnimate ? 'navbar-animate' : ''}
             selectedLang={selectedLang}
             setSelectedLang={setSelectedLang}
+            activeMediaQuery={activeMediaQuery}
           />
         )}
         <div className='flex-grow-1 page-container '>
