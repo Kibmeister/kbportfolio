@@ -6,6 +6,7 @@ import { TypewriterCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = ({ activeMediaQuery }) => {
   const formRef = useRef();
@@ -65,29 +66,31 @@ const Contact = ({ activeMediaQuery }) => {
     e.preventDefault();
 
     if (form.name === '' && form.email === '' && form.message === '') {
-      alert(t('contact.alertEmptyFields'));
+      toast.error(t('contact.alertEmptyFields'));
+
       return;
     }
 
     if (!isValidName(form.name)) {
-      alert(t('contact.alertName'));
+      toast.error(t('contact.alertName'));
+
       return;
     }
 
+    //TODO:make this toast multilangual
     if (!isValidCompany(form.company)) {
-      alert(
-        "The company name you've entered does not conform to the accepted naming standards."
-      );
+      toast.error(t('contact.alertCompay'));
       return;
     }
 
     if (!isValidEmail(form.email)) {
-      alert(t('contact.alertEmail'));
+      toast.error(t('contact.alertEmail'));
       return;
     }
 
     if (!isValidMessage(form.message)) {
-      alert(t('contact.alertMessage'));
+      toast.error(t('contact.alertMessage'));
+
       return;
     }
 
@@ -113,7 +116,7 @@ const Contact = ({ activeMediaQuery }) => {
         () => {
           setLoading(false);
           setTimeout(() => setMailStatus(false), 5000);
-          alert(t('contact.confirmation'));
+          toast.success(t('contact.confirmation'));
 
           setForm({
             name: '',
@@ -124,10 +127,10 @@ const Contact = ({ activeMediaQuery }) => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
+          // console.error(error);
 
           setMailStatus(false); // Reset mailStatus on error
-          alert(t('contact.errormessage'));
+          toast.error(t('contact.errormessage'));
         }
       );
   };
@@ -140,6 +143,7 @@ const Contact = ({ activeMediaQuery }) => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-primary rounded-2xl '
       >
+       
         <p className={styles.sectionSubText}>{t('contact.p')}</p>
         <h2 className={styles.sectionHeadText}>{t('contact.h2')}</h2>
 
@@ -202,7 +206,6 @@ const Contact = ({ activeMediaQuery }) => {
               className={`${styles.formInput}`}
             />
           </label>
-
 
           <motion.button
             whileHover={{ scale: 1.1 }}

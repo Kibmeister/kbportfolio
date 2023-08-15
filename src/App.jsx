@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import React, { useRef, useState, useEffect } from 'react';
 import { projects } from './constants';
+import toast, { Toaster } from 'react-hot-toast';
 
 import './i18n';
 
@@ -25,7 +26,6 @@ const App = () => {
   const [navbarAnimate, setNavbarAnimate] = useState(false);
   const [selectedLang, setSelectedLang] = useState('en');
   const [activeMediaQuery, setActiveMediaQuery] = useState('');
-
 
   //media query hook
   useEffect(() => {
@@ -111,6 +111,20 @@ const App = () => {
               setLampToggleApp={() => setLampToggle(!lampToggle)}
               ref={heroRef}
               activeMediaQuery={activeMediaQuery}
+            />
+          </div>
+
+          {/* container for the toaster element */}
+          <div style={{ position: 'relative', zIndex: 99 }}>
+            <Toaster
+              position='bottom-center'
+              reverseOrder={false}
+              toastOptions={{
+                style: {
+                  borderRadius: 0, // Remove the border-radius
+                  text: 'garet-book'
+                },
+              }}
             />
           </div>
 

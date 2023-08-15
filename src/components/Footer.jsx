@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div
       className='absolute bottom-0 left-0 right-0 w-full bg-black text-white flex justify-center items-center text-sm p-2'
-      style={{ zIndex: '9999' }}
+      style={{ zIndex: '9' }}
     >
       <p className='garet-book'>{yourName}</p>
       <p className='garet-book ml-2'>{currentYear}</p>
