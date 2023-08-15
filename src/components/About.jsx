@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
   const iconSrc = imageMapAbout[id];
 
-  console.log("About mediaquery", activeMediaQuery);
+  // console.log("About mediaquery", activeMediaQuery);
 
   return (
     <>

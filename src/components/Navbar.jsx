@@ -10,7 +10,13 @@ import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
 import Menutoggle from './Menutoggle';
 
-const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang, activeMediaQuery }) => {
+const Navbar = ({
+  heroRef,
+  animationClass,
+  selectedLang,
+  setSelectedLang,
+  activeMediaQuery,
+}) => {
   const [clickActive, setClickActive] = useState(null);
   const [activeLink, setActiveLink] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -43,7 +49,7 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang, active
         if (entry.target === heroRef.current) {
           setActiveLink(null);
         } else {
-          console.log('Entry is intersecting', entry.target.id);
+          // console.log('Entry is intersecting', entry.target.id);
 
           if (clickActive === null) {
             setActiveLink(entry.target.id);
@@ -119,7 +125,13 @@ const Navbar = ({ heroRef, animationClass, selectedLang, setSelectedLang, active
                 setClickActive('home');
               }}
             >
-              <p className={`${styles.menubrandText}`}>KASPER BORGBJERG</p>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className={`${styles.menubrandText}`}
+              >
+                KASPER BORGBJERG
+              </motion.button>
             </ScrollLink>
             <ul className='list-none hidden md:flex flex-row gap-4 ml-4 lg:gap-6 xl:gap-10'>
               {t('navBar.links', { returnObjects: true }).map((link, index) => (

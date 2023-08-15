@@ -274,7 +274,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   // 1. Set the background color to dark, 70% opaque
   // 2. Disseminate the thoughts tags throughout the hero section
   const lampPress = () => {
-    console.log(' Hero.jsx lampPress called ', lampToggle);
+    // console.log(' Hero.jsx lampPress called ', lampToggle);
     setLampToggle(!lampToggle); // Toggle tags visibility
     setLampToggleApp(); // propagate the toggle to parent component
   };

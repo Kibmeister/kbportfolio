@@ -21,7 +21,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   const lampRef = useRef();
   const { i18n } = useTranslation();
 
-  console.log('Lamp screen width', activeMediaQuery);
+  // console.log('Lamp screen width', activeMediaQuery);
 
   //language hook
 
