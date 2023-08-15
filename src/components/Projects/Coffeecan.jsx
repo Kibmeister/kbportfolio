@@ -53,9 +53,9 @@ const Coffeecan = ({ feedback, onClose }) => {
               <p class={`${styles.projectSectionText} max-w-[700px]`}>
                 {t('portfolio.coffeecan.storyP')}
               </p>
-              <div class='flex flex-col content start aspect-w-16 aspect-h-9 items-start'>
+              <div class='flex flex-col aspect-w-16 aspect-h-9 items-start'>
                 <ReactPlayer
-                  className={ `${styles.projectSectionReactplayerCoffeecan}`}
+                  className={`${styles.projectCoffeecanSectionReactplayer}`}
                   url='https://vimeo.com/498087574'
                   controls
                 />

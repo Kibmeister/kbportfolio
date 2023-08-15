@@ -61,9 +61,9 @@ const Topico = ({ onClose, scenario, topicoDevice }) => {
                 {t('portfolio.topico.storyP')}
               </p>
 
-              <div className={`${styles.projectCoffeecanSubSection}`}>
+              <div className={`${styles.projectTopicoSubSection}`}>
                 <ReactPlayer
-                  className={`${styles.projectCoffeecanSectionReactplayer}`}
+                  className={`${styles.projectTopicoSectionReactcplayer}`}
                   url='https://vimeo.com/444281811'
                   controls
                 />
