@@ -201,7 +201,7 @@ const Navbar = ({
                         activeLink === link.id
                           ? 'text-black border-b-2 border-secondary'
                           : 'text-lightblack border-b-2 border-transparent hover:border-secondary'
-                      }`}
+                      } cursor-pointer`}
                     >
                       <ScrollLink
                         to={link.id}
