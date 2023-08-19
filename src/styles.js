@@ -5,9 +5,9 @@ const styles = {
   padding: 'sm:px-16 px-6 sm:py-16 py-10',
 
   heroHeadText:
-    'hero-head-text 2xl:text-[100px] xl:text-[90px] lg:text-[80px] md:text-[70px] sm:text-[60px] mobile:text-[50px]  text-[40px]  mt-2 break-words break-normal garet-book',
+    'hero-head-text 2xl:text-[100px] xl:text-[90px] lg:text-[80px] md:text-[70px] sm:text-[60px] mobile:text-[50px]  text-[40px]  mt-2 break-words break-normal ',
   heroSubText:
-    'hero-sub-text  2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[14px] sm:text-[14px] mobile:text-[14px] text-[16px] break-words break-normal garet-book',
+    'hero-sub-text  2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[14px] sm:text-[14px] mobile:text-[14px] text-[16px] break-words break-normal ',
 
   heroLinkKnob:
     '2xl:w-[36px] 2xl:h-[64px] xl:w-[34px] xl:h-[60px] lg:w-[32px] lg:h-[54px] md:w-[30px] md:h-[50px] sm:w-[28px] sm:h-[46px] mobile:w-[26px] mobile:h-[42px]  rounded-3xl  sm:border-3 mobile:border-2.5 border-4 border-tertiary flex justify-center items-start sm:p-1.5 mobile:p-1 p-2',
