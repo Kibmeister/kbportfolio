@@ -121,6 +121,14 @@ const imageMapWorks = {
     fr: RingmerkingFR,
     de: RingmerkingDE,
   },
+  ringmerkingSlideshow: {
+    en: RingmerkingEN,
+    no: RingmerkingNO,
+    es: RingmerkingES,
+    it: RingmerkingIT,
+    fr: RingmerkingFR,
+    de: RingmerkingDE,
+  },
   oldwebsite: {
     en: oldwebsite,
     no: oldwebsite,
@@ -176,90 +184,30 @@ const projects = [
   {
     name: 'Ringmerking',
     type: 'ringmerking',
-    description:
-      'Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ',
-    tags: [
-      {
-        name: 'figma',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'design remake',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'mobile',
-        color: 'pink-text-gradient',
-      },
-    ],
     image: RingmerkingEN,
-    source_code_link: 'https://github.com/',
+   
+  },
+  {
+    name: 'RingmerkingSlideshow',
+    type: 'ringmerkingSlideshow',
+    image: RingmerkingEN,
   },
   {
     name: 'Coaxer',
     type: 'coaxer',
-    description:
-      'Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
-    ],
     image: coaxerEN,
-    source_code_link: 'https://github.com/',
+    
   },
   {
     name: 'Multimodal coffeecan',
     type: 'coffeecan',
-    description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
     image: multimodalcoffeecanthumbnail,
-    source_code_link: 'https://github.com/',
+   
   },
   {
     name: 'Topico EduTech',
     type: 'topico',
-    description:
-      'A EduTech tool designed for fostering collaborative work for 6th grade students, with the aim of enhancing their vocabulary of a foreign language',
-    tags: [
-      {
-        name: 'Product design',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Design research',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'UI/UX design',
-        color: 'pink-text-gradient',
-      },
-    ],
     image: topicoThumbnailEN,
-    source_code_link: 'https://github.com/',
   },
 ];
 

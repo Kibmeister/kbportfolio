@@ -219,6 +219,7 @@
       "storyItalic": "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
     }
   },
+  
   "portfolioTiles": {
     "p": "My past work",
     "h2": "My portfolio",
@@ -228,6 +229,25 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
+        "description": "Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "design remake",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobile",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "RingmerkingSlideshow",
+        "type": "ringmerkingSlideshow",
         "description": "Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ",
         "tags": [
           {

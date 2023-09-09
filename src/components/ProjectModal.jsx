@@ -4,6 +4,7 @@ import Coffeecan from './Projects/Coffeecan';
 import Topico from './Projects/Topico';
 import Coaxer from './Projects/Coaxer';
 import Ringmerking from './Projects/Ringmerking';
+import RingmerkingSlideshow from './Projects/RingmerkingSlideshow';
 import { useTranslation } from 'react-i18next';
 import { imageMapCoaxer } from '../constants';
 import { imageMapRingmerking } from '../constants';
@@ -44,6 +45,8 @@ const ProjectModal = ({ modalProject, onClose }) => {
       onClose={onClose}
       ringmerkingBackground={ringmerkingBackground}
     ></Ringmerking>
+  ) : modalType === 'ringmerkingSlideshow' ? (
+    <RingmerkingSlideshow onClose={onClose}></RingmerkingSlideshow>
   ) : modalType === 'coaxer' ? (
     <Coaxer onClose={onClose} coaxerBackground={coaxerBackground}></Coaxer>
   ) : modalType === 'coffeecan' ? (
