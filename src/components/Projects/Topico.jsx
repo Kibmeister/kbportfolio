@@ -7,8 +7,8 @@ const Topico = ({ onClose, scenario, topicoDevice }) => {
   const { t, i18n } = useTranslation();
   return (
     <div className={`${styles.projectHigherordercomponent}`}>
-      <div class={` ${styles.projectWrapper} `}>
-        <div class={`${styles.projectContainer}`}>
+      <div className={` ${styles.projectWrapper} `}>
+        <div className={`${styles.projectContainer}`}>
           <div className='header'>
             <h1 class={`${styles.projectHeader}`}>
               {t('portfolio.topico.title')}

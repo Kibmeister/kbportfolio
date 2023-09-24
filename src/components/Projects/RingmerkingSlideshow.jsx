@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { styles } from '../../styles';
+import { designUtfall } from '../../assets';
 import { wrap } from 'popmotion';
 
 const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
@@ -67,7 +69,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
   // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
   // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const paginate = (newDirection) => {
-    const nextPage = wrap(0, 3, page + newDirection);
+    const nextPage = wrap(0, 19, page + newDirection);
     setPage([nextPage, newDirection]);
   };
 
@@ -88,8 +90,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
       <button onClick={onClose} className='z-50 absolute  top-4 right-4'>
         {t('portfolio.ringmerking.buttonclose')}
       </button>
-
-      
 
       {/* content container */}
       <div className='bg-[#ffffff] w-full h-full' onWheel={handleScroll}>
@@ -133,7 +133,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
         <AnimatePresence initial={false} custom={direction}>
           {page === 0 && (
             <motion.div
-              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              className={`${styles.projectHigherordercomponent}`}
               key={page}
               custom={direction}
               variants={variants}
@@ -157,27 +157,25 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 }
               }}
             >
-              <h1 className='text-xl'>Dette her er div nummer 1</h1>
+              <div className={` ${styles.projectWrapper} `}>
+                <div id='id-slidecontainer' className='flex flex-col gap-10 '>
+                  <h1 className='text-6xl w-[400px]font-semibold'>Ringmerking.no</h1>
 
-              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
-                  ex totam adipisci eligendi excepturi aut esse? Laudantium
-                  explicabo repudiandae illum voluptas?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
-                  ex totam adipisci eligendi excepturi aut esse? Laudantium
-                  explicabo repudiandae illum voluptas?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
-                  ex totam adipisci eligendi excepturi aut esse? Laudantium
-                  explicabo repudiandae illum voluptas?
-                </p>
+                  <div
+                    id='id-frontcover'
+                    className='flex flex-col lg:flex-row gap-10 '
+                  >
+                    <p className='lg:text-left lg:w-1/4'>
+                      En tjeneste for dem som er fugle- og naturinteresserte som
+                      vil bidra til å bevare og beskytte mangfoldet
+                    </p>
+                    <img
+                      className='w-full lg:w-2/4 h-auto'
+                      src={designUtfall}
+                      alt='Description of the image'
+                    />
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}
@@ -234,6 +232,856 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
           )}
 
           {page === 2 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 3 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 4 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 5 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 6 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 7 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 8 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 9 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 10 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 11 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 12 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 13 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 14 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 15 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 16 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 17 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 18 && (
+            <motion.div
+              className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <h1 className='text-xl'>Dette her er div nummer 3</h1>
+
+              <div className='flex flex-row justify-between align-center gap-10 mx-10'>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti, ipsa quidem cum, in dicta aliquid, magnam quos porro
+                  ex totam adipisci eligendi excepturi aut esse? Laudantium
+                  explicabo repudiandae illum voluptas?
+                </p>
+              </div>
+            </motion.div>
+          )}
+          {page === 19 && (
             <motion.div
               className='w-full h-full flex flex-col justify-evenly items-center bg-[#ffffff]'
               key={page}

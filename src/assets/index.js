@@ -57,6 +57,8 @@ import productdesignicon from './productdesignicon.png';
 import frontendicon from './frontendicon.png';
 import userresearchericon from './userresearcerhicon.png';
 
+import designUtfall from './ringmerkingslideshow/designutfall.png'
+
 export {
   logo,
   menu,
@@ -112,4 +114,5 @@ export {
   coaxerThumbnailIT,
   coaxerThumbnailFR,
   coaxerThumbnailDE,
+  designUtfall,
 };

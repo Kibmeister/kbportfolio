@@ -19,7 +19,7 @@ const styles = {
     'section-head-text  2xl:text-[70px] xl:text-[70px] lg:text-[60px] md:text-[50px] sm:text-[40px] mobile:text-[30px] text-[30px] break-words break-normal',
 
   sectionP:
-    '2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] mobile:text-[14px] garet-book mt-4 text-black leading-[30px] 2xl:max-w-full xl:max-w-full lg:max-w-full md:max-w-[750px]',
+    '2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[16px] sm:text-[14px] mobile:text-[14px] garet-book mt-4 text-black leading-[30px] 2xl:max-w-full xl:max-w-full lg:max-w-full md:max-w-[750px]',
 
   tilesHeader:
     '2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] mobile:text-[16px] garet-book  text-black break-words break-normal',
