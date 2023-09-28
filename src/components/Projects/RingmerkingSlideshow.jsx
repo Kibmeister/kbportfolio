@@ -75,18 +75,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
   return (
     <div className='fixed z-30 inset-0  flex justify-center items-center w-full h-full'>
-      {/* progress bar */}
-      <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 z-50 flex gap-2'>
-        {Array.from({ length: 19 }).map((_, idx) => (
-          <div
-            key={idx}
-            className={`h-2 w-8 ${
-              idx <= page ? 'bg-black' : 'border border-black bg-transparent'
-            }`}
-          ></div>
-        ))}
-      </div>
-
       <button onClick={onClose} className='z-50 absolute  top-4 right-4'>
         {t('portfolio.ringmerking.buttonclose')}
       </button>
@@ -94,43 +82,61 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
       {/* content container */}
       <div className='bg-[#ffffff] w-full h-full' onWheel={handleScroll}>
         {/* svg arrows */}
-        <div onClick={() => paginate(-1)}>
-          <svg
-            id='leftArrow'
-            ref={leftArrowRef}
-            className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-12'
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 100 100'
-            strokeWidth='8'
-            stroke='black'
-            fill='transparent'
-          >
-            <g strokeLinejoin='round' strokeLinecap='round'>
-              <circle r='46' cx='50' cy='50' />
-              <polyline points='60 25, 30 50, 60 75'></polyline>
-            </g>
-          </svg>
+
+        <div className='footercontrollers bg-white z-100 width-1/1 '>
+          <div onClick={() => paginate(-1)}>
+            <svg
+              id='leftArrow'
+              ref={leftArrowRef}
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-12 mobile:left-4 mobile:top-[92%]'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 100 100'
+              strokeWidth='8'
+              stroke='black'
+              fill='transparent'
+            >
+              <g strokeLinejoin='round' strokeLinecap='round'>
+                <polyline points='60 25, 30 50, 60 75'></polyline>
+              </g>
+            </svg>
+          </div>
+
+          <div onClick={() => paginate(1)}>
+            <svg
+              id='rightArrow'
+              ref={rightArrowRef}
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-12 mobile:right-4 mobile:top-[92%]'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 100 100'
+              strokeWidth='8'
+              stroke='black'
+              fill='transparent'
+            >
+              <g strokeLinejoin='round' strokeLinecap='round'>
+                <polyline points='40 25, 70 50, 40 75'></polyline>
+              </g>
+            </svg>
+          </div>
+          {/* progress bar */}
+          <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 z-50 flex gap-2 mobile:gap-1 '>
+            {Array.from({ length: 19 }).map((_, idx) => (
+              <div
+                key={idx}
+                className={`h-2 w-8 mobile:h-1 sm:h1.5 mobile:w-4 sm:w-6  ${
+                  idx <= page
+                    ? 'bg-black'
+                    : 'border border-black bg-transparent'
+                }`}
+              ></div>
+            ))}
+          </div>
         </div>
 
-        <div onClick={() => paginate(1)}>
-          <svg
-            id='rightArrow'
-            ref={rightArrowRef}
-            className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-12'
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 100 100'
-            strokeWidth='8'
-            stroke='black'
-            fill='transparent'
-          >
-            <g strokeLinejoin='round' strokeLinecap='round'>
-              <circle r='46' cx='50' cy='50' />
-              <polyline points='40 25, 70 50, 40 75'></polyline>
-            </g>
-          </svg>
-        </div>
-
-        <AnimatePresence initial={false} custom={direction}>
+        <AnimatePresence
+          initial={false}
+          custom={direction}
+          className='flex flex-col'
+        >
           {/* frontpage */}
           {page === 0 && (
             <motion.div
@@ -159,14 +165,14 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               }}
             >
               <div className={` ${styles.projectWrapper} `}>
-                <div id='id-slidecontainer' className='flex flex-col gap-20 '>
-                  <h1 className='text-6xl w-[400px] font-semibold garet-book'>
+                <div id='id-slidecontainer' className='flex flex-col gap-20'>
+                  <h1 className='text-3xl sm:text-4xl md:text-6xl max-w-full sm:w-[400px] font-semibold garet-book'>
                     Ringmerking.no
                   </h1>
 
                   <div
                     id='id-frontcover'
-                    className='flex flex-col lg:flex-row  '
+                    className='flex flex-col lg:flex-row gap-5 '
                   >
                     <p className='lg:text-left lg:w-1/4 text-xl/8 garet-book'>
                       En tjeneste for dem som er fugle- og naturinteresserte som
@@ -216,19 +222,19 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     className='flex flex-col lg:flex-row  '
                   >
                     <ul className='text-2xl space-y-4 garet-book '>
-                      <li>Case</li>
-                      <li>Mål</li>
-                      <li>Empati</li>
-                      <li>Definer</li>
-                      <li>Ideer</li>
-                      <li>Prototype</li>
-                      <li>Test</li>
-                      <li>Evaluer</li>
-                      <li>Veien videre</li>
-                      <li>En design utfordring</li>
-                      <li>Gammel og ny tjeneste</li>
-                      <li>Figma prototype</li>
-                      <li>Erfaringer</li>
+                      <li>- Case</li>
+                      <li>- Mål</li>
+                      <li>- Empati</li>
+                      <li>- Definer</li>
+                      <li>- Ideer</li>
+                      <li>- Prototype</li>
+                      <li>- Test</li>
+                      <li>- Evaluer</li>
+                      <li>- Veien videre</li>
+                      <li>- En design utfordring</li>
+                      <li>- Gammel og ny tjeneste</li>
+                      <li>- Figma prototype</li>
+                      <li>- Erfaringer</li>
                     </ul>
                   </div>
                 </div>
@@ -337,7 +343,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   </div>
 
                   {/* the three row aligned paragraph */}
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <h1 className='paragraphTitle text-2xl garet-book'>
                         Øke brukeradopsjon
@@ -424,7 +430,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='bodycontainer flex flex-row gap-10'>
+                  <div className='bodycontainer flex flex-row gap-10 mobile:flex-col'>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
@@ -558,7 +564,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <h1 className='paragraphTitle text-2xl garet-book'>
                         Letter for flere
@@ -645,9 +651,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='bodycontainer flex flex-row gap-10'>
+                  <div className='bodycontainer flex flex-row gap-10 mobile:flex-col'>
                     {/* the two col aligned paragraph */}
-                    <div className='paragraphcontainer flex flex-col gap-10'>
+                    <div className='paragraphcontainer flex flex-col gap-10 '>
                       <div className='paragraph flex flex-col gap-5 '>
                         <h1 className='paragraphTitle text-2xl garet-book'>
                           Bruker interaksjonen
@@ -718,7 +724,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='bodycontainer flex flex-row gap-10'>
+                  <div className='bodycontainer flex flex-row gap-10 mobile:flex-col'>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
@@ -802,7 +808,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='bodycontainer flex flex-row gap-10'>
+                  <div className='bodycontainer flex flex-row gap-10 mobile:flex-col'>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
@@ -887,7 +893,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='bodycontainer flex flex-row gap-10'>
+                  <div className='bodycontainer flex flex-row gap-10 mobile:flex-col'>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
@@ -973,7 +979,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     src={designUtfall}
                     alt='designutfall'
                   />
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <h1 className='paragraphTitle text-2xl garet-book'>
                         Hvem
@@ -1111,7 +1117,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <h1 className='paragraphTitle text-5xl garet-book'>1</h1>
                       <p className='garet-book opacity-60'>
@@ -1178,7 +1184,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               }}
             >
               <div className={` ${styles.projectWrapper} `}>
-                <div id='id-slidecontainer' className='flex flex-col gap-20 '>
+                <div
+                  id='id-slidecontainer'
+                  className='flex flex-col gap-20 mobile:flex-col '
+                >
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <h1 className='title text-4xl  garet-book'>
                       Veien videre etter sprinten
@@ -1194,7 +1203,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <img
                         className='w-full lg:w-2/4 h-2/4 '
@@ -1284,7 +1293,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               }}
             >
               <div className={` ${styles.projectWrapper} `}>
-                <div id='id-slidecontainer' className='flex flex-col gap-20 '>
+                <div
+                  id='id-slidecontainer'
+                  className='flex flex-col gap-20 mobile:flex-col '
+                >
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <h1 className='title text-4xl garet-book'>
                       En design utfordring
@@ -1300,50 +1312,29 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraphcol flex flex-col'>
-                      <div className='paragraph flex flex-row gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
+                      <div className='paragraph flex flex-row gap-5 mobile:flex-col'>
+                        <img
+                          className='w-full lg:w-1/4 h-2/4 mobile:order-last'
+                          src={designUtfall}
+                          alt='Description of the image'
+                        />
+                        <p className='garet-book opacity-60 sm:w-1/4 '>
                           Hvordan skal man skille mellom to fugle arter som har
                           lik farge på ring når man registrerer
                         </p>
-                        <img
-                          className='w-full lg:w-1/4 h-2/4 '
-                          src={designUtfall}
-                          alt='Description of the image'
-                        />
-                      </div>
-                      <div className='paragraph flex flex-row gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
-                          Det er også tilfellet at det kan være tre eller fler
-                          fuglearter som har samme farge på ringkoden, også med
-                          samme antall tegn i koden
-                        </p>
-                        <img
-                          className='w-full lg:w-1/4 h-2/4 '
-                          src={designUtfall}
-                          alt='Description of the image'
-                        />
                       </div>
                     </div>
-                    <div className='paragraphcol2 flex flex-col'>
-                      <div className='paragraph flex flex-row gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
+                    <div className='paragraphcol2 flex flex-col '>
+                      <div className='paragraph flex flex-row gap-5 mobile:flex-col '>
+                        <p className='garet-book opacity-60 sm:w-1/4'>
                           Måten vi løste denne designutfordringen på var ved å
                           implementere en verifiseringsmodul som det første
-                          brukeren ser etter å ha tastet inn ringnummeret.
-                        </p>
-                        <img
-                          className='w-full lg:w-1/4 h-2/4 '
-                          src={designUtfall}
-                          alt='Description of the image'
-                        />
-                      </div>
-                      <div className='paragraph flex flex-row gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
-                          Dette fungerte som en forebyggende funksjon for å
-                          forhindre feilregistreringer, noe som var en større
-                          bekymring blant ekspertbrukere
+                          brukeren ser etter å ha tastet inn ringnummeret. Dette
+                          fungerte som en forebyggende funksjon for å forhindre
+                          feilregistreringer, noe som var en større bekymring
+                          blant ekspertbrukere
                         </p>
                         <img
                           className='w-full lg:w-1/4 h-2/4 '
@@ -1401,8 +1392,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
-                    <div className='paragraphcol flex flex-col'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
+                    <div className='paragraphcol flex flex-col '>
                       <div className='paragraph flex flex-col gap-5 '>
                         <p className='garet-book opacity-60 w-1/4'>
                           Ny tjeneste
@@ -1526,7 +1517,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     <p className='garet-book'>bla bla bla</p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10'>
+                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <h1 className='paragraphTitle text-2xl garet-book'>
                         Ulike forventninger

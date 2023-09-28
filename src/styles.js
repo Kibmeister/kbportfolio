@@ -64,8 +64,10 @@ const styles = {
 
   projectHigherordercomponent: 'bg-white h-screen w-screen fixed inset-0 z-30',
 
+  // --------
   projectWrapper:
-    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto bg-white flex justify-center items-center h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
+    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto py-40 mobile:py-20 sm:py-30 px-6 bg-white flex items-start h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
+  // -----------
 
   projectContainer:
     'bg-white w-full h-full relative flex flex-col 2xl:p-10 xl:p-8 lg:p-6 md:p-6 sm:p-6 mobile:p-4',
