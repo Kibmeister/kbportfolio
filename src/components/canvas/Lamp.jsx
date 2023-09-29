@@ -53,19 +53,19 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
 
   // onpageload animation
   // update isPageLoaded when page load animation is done
-  useEffect(() => {
-    setTimeout(() => {
-      const clip = lamp.animations[0];
-      const action = mixer.clipAction(clip, lampRef.current);
-      action.reset();
-      action.setLoop(THREE.LoopOnce, 0);
-      action.clampWhenFinished = true;
-      action.play();
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const clip = lamp.animations[2];
+  //     const action = mixer.clipAction(clip, lampRef.current);
+  //     action.reset();
+  //     action.setLoop(THREE.LoopOnce, 0);
+  //     action.clampWhenFinished = true;
+  //     action.play();
 
-      setIsPageLoaded(true);
-      // add an event listener for the 'finished' event
-    }, 150);
-  }, [mixer, lamp, lampRef]);
+  //     setIsPageLoaded(true);
+  //     // add an event listener for the 'finished' event
+  //   }, 150);
+  // }, [mixer, lamp, lampRef]);
   // hover animation
   useEffect(() => {
     if (lampHover === true && !lampToggle) {

@@ -2,7 +2,22 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { styles } from '../../styles';
-import { designUtfall } from '../../assets';
+import {
+  frontpage,
+  designUtfall,
+  empathyMapEN,
+  ideGenerering,
+  denGenialeIdeen,
+  firstprototype,
+  usertesting,
+  userPrototype,
+  userResearch,
+  designExpression,
+  designChallenge,
+  designChallengeSolution,
+  oldsite,
+  prototypePlaceholder,
+} from '../../assets';
 import { wrap } from 'popmotion';
 
 const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
@@ -172,15 +187,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                   <div
                     id='id-frontcover'
-                    className='flex flex-col lg:flex-row gap-5 '
+                    className='flex flex-col lg:flex-col gap-5 '
                   >
-                    <p className='lg:text-left lg:w-1/4 text-xl/8 garet-book'>
+                    <p className='lg:text-left lg:w-2/4 text-xl mobile:text-lg garet-book'>
                       En tjeneste for dem som er fugle- og naturinteresserte som
                       vil bidra til å bevare og beskytte mangfoldet
                     </p>
                     <img
-                      className='w-full lg:w-2/3 h-auto'
-                      src={designUtfall}
+                      className='w-full lg:w-3/3 h-auto'
+                      src={frontpage}
                       alt='Description of the image'
                     />
                   </div>
@@ -217,30 +232,31 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
-                  <div
-                    id='id-frontcover'
-                    className='flex flex-col lg:flex-row  '
-                  >
-                    <ul className='text-2xl space-y-4 garet-book '>
-                      <li>- Case</li>
-                      <li>- Mål</li>
-                      <li>- Empati</li>
-                      <li>- Definer</li>
-                      <li>- Ideer</li>
-                      <li>- Prototype</li>
-                      <li>- Test</li>
-                      <li>- Evaluer</li>
-                      <li>- Veien videre</li>
-                      <li>- En design utfordring</li>
-                      <li>- Gammel og ny tjeneste</li>
-                      <li>- Figma prototype</li>
-                      <li>- Erfaringer</li>
-                    </ul>
+                  <div className='paragraph flex flex-col gap-5 '>
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Innhold
+                    </h1>
                   </div>
+                  <ul className={`${styles.projectSlideShowParagraphTitle}`}>
+                    <li>- Case</li>
+                    <li>- Mål</li>
+                    <li>- Empati</li>
+                    <li>- Definer</li>
+                    <li>- Ideer</li>
+                    <li>- Prototype</li>
+                    <li>- Test</li>
+                    <li>- Evaluer</li>
+                    <li>- Veien videre</li>
+                    <li>- En design utfordring</li>
+                    <li>- Gammel og ny tjeneste</li>
+                    <li>- Figma prototype</li>
+                    <li>- Erfaringer</li>
+                  </ul>
                 </div>
               </div>
             </motion.div>
           )}
+
           {/* caset */}
           {page === 2 && (
             <motion.div
@@ -271,10 +287,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='paragraph flex flex-col gap-5 '>
-                    <h1 className='paragraphTitle text-4xl garet-book'>
-                      Caset
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Caset 🛠️
                     </h1>
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP} `}>
                       Den norske tjenesten for ringmerking av fugler,
                       Ringmerking.no, hadde blitt meget gammel og trengte en
                       nylansering. Hvordan kan vi gi liv til en meget gammel
@@ -284,10 +300,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
                   <div className='paragraph flex flex-col gap-5 '>
-                    <h1 className='paragraphTitle text-4xl garet-book'>
-                      Min Rolle
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Min Rolle 🕴🏼
                     </h1>
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP} `}>
                       Som UX-designer i et team på to designere og fire
                       utviklere, jobbet jeg med å utføre brukerinnsiktsarbeid,
                       analysere og evaluere brukerinsikten, ideere over
@@ -331,8 +347,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl garet-book'>Målet</h1>
-                    <p className='garet-book'>
+                    <h1 className={` ${styles.projectSlideShowPageTitle}`}>
+                      Målet 🎯
+                    </h1>
+                    <p className={` ${styles.projectSlideShowP}`}>
                       Den norske tjenesten for ringmerking av fugler,
                       Ringmerking.no, hadde blitt meget gammel og trengte en
                       nylansering. Hvordan kan vi gi liv til en meget gammel
@@ -345,10 +363,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   {/* the three row aligned paragraph */}
                   <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                      <h1
+                        className={` ${styles.projectSlideShowParagraphTitle} `}
+                      >
                         Øke brukeradopsjon
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={` ${styles.projectSlideShowP} opacity-60 `}>
                         Kunden ønsket å øke antallet brukere til 10.000 på
                         nasjonalt basis, noe som ville være en 30 % økning. Økt
                         brukeradopsjon ville ha en positiv innvirkning på
@@ -356,22 +376,26 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         fuglebestanden
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                    <div className='paragraph flex flex-col gap-5 text-lg'>
+                      <h1
+                        className={` ${styles.projectSlideShowParagraphTitle} `}
+                      >
                         Mobile-first
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={` ${styles.projectSlideShowP} opacity-60 `}>
                         Den eksisterende løsningen var kun tilgjengelig på PC,
                         noe som gjør at et svært stort antall mobilbrukere blir
                         utelatt. En mobil løsning hadde muliggjort
                         ringmerkingsregistreringer på farten
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                    <div className='paragraph flex flex-col gap-5 text-lg'>
+                      <h1
+                        className={` ${styles.projectSlideShowParagraphTitle} `}
+                      >
                         Tiltrekke yngre brukere
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={` ${styles.projectSlideShowP} opacity-60 `}>
                         Som en del av ønsket om økt brukeradopsjon, ønsket
                         kunden at tjenesten skulle være mer appellerende for
                         unge brukere. Å bruke tjenesten i skolen var et ønskelig
@@ -414,13 +438,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={` ${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>Empati</h1>
+                      <h1 className={` ${styles.projectSlideShowPageTitle}`}>
+                        Empati 🙇🏼‍♂️
+                      </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       For å forstå designutfordringen er første steg å vise
                       empati for brukeren som påvirkes av problemet. Dette
                       innebar at vi intervjuet to erfarne brukere som har
@@ -434,20 +460,24 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           "Tjenesten fungerer som den skal"
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP}`}>
                           Ekspertbrukeren hadde ikke mange ønsker til siden, og
                           mente den for det meste var funksjonell og effektiv
                           for sine gjøremål
                         </p>
                       </div>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           "Vi trenger flere ringmerkere"
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP}`}>
                           Det var allikevel et opprop blant ekspertbrukerene at
                           de ønsket flere brukere og ikke minst registreringer
                           til tjenesten. De mente at initiativet og ansvaret om
@@ -459,7 +489,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                     <img
                       className='w-3/5 h-3/5'
-                      src={designUtfall}
+                      src={empathyMapEN}
                       alt='designutfall'
                     />
                   </div>
@@ -498,18 +528,18 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={` ${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl opacity-60 garet-book'>
-                        Empati
+                      <h1 className={` ${styles.projectSlideShowPageTitle}`}>
+                        Empati 🙇🏼‍♂️
                       </h1>
                     </div>
                   </div>
 
                   <div className='midtextcontainer flex flex-row gap-10'>
                     {/* the two col aligned paragraph */}
-                    <p className='text-3xl text-center garet-book'>
+                    <p className='garet-book text-center text-2xl  mobile:text-xl sm:text-2xl '>
                       Konflikt: hvordan kan man re-designe løsningen for å
                       appellere til flere nye brukere samtidig som man
                       respekterer de eksisterende praksisene til ekspert
@@ -551,13 +581,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>Definere</h1>
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Definere ✍🏼
+                      </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Basert på innsikten fra ekspert bruker-intervjuene og
                       samarbeidet med domene ekspertene og resten av teamet ble
                       tre hovedområder definert for problem rommet.
@@ -566,10 +598,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                   <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Letter for flere
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Letter for flere ✅
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Tjenesten som er i dag, er for tungvindt og vanskelig å
                         bruke, noe som gjør at den ikke appellerer til nye,
                         spesielt yngre, brukere. Den er også umulig å bruke på
@@ -578,10 +612,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Attraktiv for flere
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Attraktiv for flere 👨‍👩‍👦‍👦
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Konseptet å registrere ringmerkede fugler byr på mange
                         interaksjonsmuligheter, som å observere fuglen,
                         registrere fuglen, følge med på fuglens reise, lese
@@ -590,10 +626,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Ekspert brukere
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Ekspert brukere 👩🏼‍⚕️
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Ekspertbrukeren hadde ikke mange ønsker til tjenesten,
                         og mente den for det meste var funksjonell og effektiv
                         for deres behov."
@@ -635,15 +673,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={` ${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>
-                        Idé generering
+                      <h1 className={` ${styles.projectSlideShowPageTitle}`}>
+                        Idé generering 🧠
                       </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={` ${styles.projectSlideShowP}`}>
                       Basert på de tre hovedområdene som var definert ved
                       problemet startet idé genererings fasen som først innebar
                       å bruke overblikket som hadde dannet seg til å oppdage
@@ -655,10 +693,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10 '>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Bruker interaksjonen
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Et tematisk kart over den generelle
                           brukerinteraksjonen ble tegnet for å forstå
                           relasjonene mellom de forskjellige interaksjonsleddene
@@ -668,8 +708,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <img
-                      className='w-3/5 h-3/5'
-                      src={designUtfall}
+                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/5 md:h-3/5'
+                      src={ideGenerering}
                       alt='designutfall'
                     />
                   </div>
@@ -708,15 +748,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>
-                        Idé generering
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Idé generering 🧠
                       </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Basert på de tre hovedområdene som var definert ved
                       problemet startet idé genererings fasen som først innebar
                       å bruke overblikket som hadde dannet seg til å oppdage
@@ -728,10 +768,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Skissering
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           For å utnytte mest kreativitet og kunnskap deltok hele
                           teamet på skisserings prosessen som startet med en
                           crazy 8’s skissering på ark før vi skisserte ute en av
@@ -739,10 +781,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         </p>
                       </div>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Valg av idé
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Hver av team medlemmene gikk og vurderte hver ide og
                           skrev opp kommentarer de mente var nyttige. Til slutt
                           ble en demokratisk dot-avstemnings metode brukt for å
@@ -750,9 +794,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         </p>
                       </div>
                     </div>
-
+                    {/* //TODO: bilde karusell */}
                     <img
-                      className='w-3/5 h-3/5'
+                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/5 md:h-3/5'
                       src={designUtfall}
                       alt='designutfall'
                     />
@@ -792,15 +836,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>
-                        Den geniale ideen....
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Den geniale ideen.... 💡
                       </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Basert på de tre hovedområdene som var definert ved
                       problemet startet idé genererings fasen som først innebar
                       å bruke overblikket som hadde dannet seg til å oppdage
@@ -812,10 +856,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Hva er ringmerking (stjerne)
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           “Hva er ringmerking?” var ideen som vant og som vi
                           gikk videre med til prototype fasen. Den første
                           prototypen ble tegnet ut på en tavle slik at hele
@@ -823,10 +869,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         </p>
                       </div>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Mobile-first
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Mobile-first ble også fastslått som grunnlaget for at
                           vi designet for en mobil platform og ikke desktop
                           eller tablet. Dette valget ble tatt fordi kunden,
@@ -839,8 +887,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <img
-                      className='w-3/5 h-3/5'
-                      src={designUtfall}
+                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/5 md:h-3/5'
+                      src={denGenialeIdeen}
                       alt='designutfall'
                     />
                   </div>
@@ -879,13 +927,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>Prototype</h1>
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Prototype 🎮
+                      </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Ideen om å øke og forbedre informasjonen omkring de
                       fuglene som kunne bli ringmerket, samt å forenkle
                       registreringsprosessen, førte til at en førsteutgave av
@@ -897,16 +947,18 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <h1 className='paragraphTitle text-2xl garet-book'>
+                        <h1
+                          className={`${styles.projectSlideShowParagraphTitle}`}
+                        >
                           Første iterasjon
                         </h1>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Den første iterasjonen av prototypen var basert på
                           ideen, 'Hva er ringmerking?' Derfor var det første
                           fokusområdet å tilby mer relevant og presis
                           informasjon om ringmerking som en del av opplevelsen.
                         </p>
-                        <p className='garet-book opacity-60'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Registreringen av en fugl skulle være så enkel som
                           mulig for å gjøre det lettere for nye brukere, og
                           dette førte til at denne funksjonaliteten ble flyttet
@@ -916,8 +968,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <img
-                      className='w-3/5 h-3/5'
-                      src={designUtfall}
+                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/5 md:h-3/5'
+                      src={firstprototype}
                       alt='designutfall'
                     />
                   </div>
@@ -956,15 +1008,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>
-                        Bruker testing{' '}
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Bruker testing 🗣️
                       </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Basert på de tre hovedområdene som var definert ved
                       problemet, startet idégenereringsfasen. Den første fasen
                       innebar å bruke oversikten som hadde dannet seg for å
@@ -973,28 +1025,34 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       tilgjengelig
                     </p>
                   </div>
+                  <div className='w-full h-full flex justify-center items-center'>
+                    <img
+                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-2/4 md:w-2/5 md:h-2/5'
+                      src={usertesting}
+                      alt='designutfall'
+                    />
+                  </div>
 
-                  <img
-                    className='w-3/5 h-3/5'
-                    src={designUtfall}
-                    alt='designutfall'
-                  />
                   <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Hvem
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Hvem 👨‍👩‍👦‍👦
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Da det var viktig å fokusere på både eksisterende og nye
                         fremtidige brukere, ble personer fra begge disse
                         gruppene kalt inn til brukertesting.
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Hvordan
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Hvordan 🤔
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Eksisterende brukere ble nådd ut til via
                         interessegrupper for naturvern og fuglekikkere. Nye
                         brukere ble nådd ut til via Facebook-sider for
@@ -1002,10 +1060,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Hvor
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Hvor 📍
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Brukerne ble kalt inn til kontoret der vi jobbet, som lå
                         sentralt i Oslo. Brukerne ble også informert på forhånd
                         om hvor brukertestene ville finne sted.
@@ -1047,13 +1107,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>Resultat</h1>
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Resultat 🏁
+                      </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Den første iterasjonen av prototypen hadde blitt testet
                       med nye og eksisterende brukere
                     </p>
@@ -1098,13 +1160,15 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
-                      <h1 className='subtitle text-xl opacity-60 garet-book'>
+                      <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         Design sprint
                       </h1>
-                      <h1 className='title text-4xl  garet-book'>Resultat</h1>
+                      <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                        Resultat 🏁
+                      </h1>
                     </div>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Resultatene fra første brukertestingsrunde la grunnlaget
                       for hvilke områder av appen som burde justeres. Innsikten
                       var likevel ikke 100 prosent representativ for de to
@@ -1117,10 +1181,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
+                  <div className='paragraphcontainer flex flex-row gap-10 items-baseline mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-5xl garet-book'>1</h1>
-                      <p className='garet-book opacity-60'>
+                      <h1 className={`text-5xl mobile:text-4xl}`}>1.</h1>
+                      <p className={`${styles.projectSildeShowP} opacity-60`}>
                         Registreringssekvensen for å registrere et funn var
                         lettvint, men det var elementer under denne sekvensen
                         som kunne bli designet for å gjøre registreringen mindre
@@ -1128,24 +1192,24 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-4xl garet-book'>2</h1>
-                      <p className='garet-book opacity-60'>
+                      <h1 className={`text-4xl mobile:text-3xl}`}>2.</h1>
+                      <p className={`${styles.projectSildeShowP} opacity-60`}>
                         Brukerprofilsiden var uoversiktlig. Det var vanskelig å
                         forstå forskjellen på funn, individ og art. Det var
                         heller ikke åpenbart hva favorittfunksjonaliteten var.
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-3xl garet-book'>3</h1>
-                      <p className='garet-book opacity-60'>
+                      <h1 className={`text-3xl mobile:text-2xl}`}>3.</h1>
+                      <p className={`${styles.projectSildeShowP} opacity-60`}>
                         Kartfunksjonen, som gjorde det mulig å følge med på
                         fuglens reise, var interessant og ble oppfattet som et
                         viktig element i brukeropplevelsen.
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>4</h1>
-                      <p className='garet-book opacity-60'>
+                      <h1 className={`text-2xl mobile:text-xl}`}>4.</h1>
+                      <p className={`${styles.projectSildeShowP} opacity-60`}>
                         Informasjonssiden om hvorfor og hva ringmerking var, som
                         var implementert på første side, var nyttig for nye
                         brukere som ikke hadde kjennskap til tjenesten før
@@ -1189,11 +1253,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   className='flex flex-col gap-20 mobile:flex-col '
                 >
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl  garet-book'>
-                      Veien videre etter sprinten
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Veien videre etter sprinten 🚌
                     </h1>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Etter sprinten var prioriteringen å utvikle andre utgave
                       av Figma prototypen basert på resultatene fra bruker
                       testingen, dette var også viktig for at utviklerene kunne
@@ -1202,18 +1266,21 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       funksjoner ble implementert.{' '}
                     </p>
                   </div>
+                  {/* userPrototype, userResearch, designExpression, */}
 
-                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
+                  <div className='paragraphcontainer flex flex-row gap-10 items-baseline mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
                       <img
-                        className='w-full lg:w-2/4 h-2/4 '
-                        src={designUtfall}
+                        className='w-full lg:w-4/4 h-2/4 '
+                        src={userResearch}
                         alt='Description of the image'
                       />
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
                         Innsiktsarbeid
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Etterfulgt av design sprinten var mitt ansvar å utføre
                         mer innsiktsarbeid omkring domenet ringmerking og
                         naturvern. Det ble også avholdt flere ytterligere runder
@@ -1224,14 +1291,16 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
                       <img
-                        className='w-full lg:w-2/4 h-2/4 '
-                        src={designUtfall}
+                        className='w-full lg:w-4/4 h-2/4 '
+                        src={designExpression}
                         alt='Description of the image'
                       />
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
                         Design uttrykk
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Jeg jobbet også med å utvikle designuttrykket til
                         tjenesten. Dette var basert på innsiktsarbeidet som
                         tidligere ble utført, og ble mer viktig i takt med
@@ -1243,14 +1312,16 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
                       <img
-                        className='w-full lg:w-2/4 h-2/4 '
-                        src={designUtfall}
+                        className='w-full lg:w-3/4 h-2/4 '
+                        src={userPrototype}
                         alt='Description of the image'
                       />
-                      <h1 className='paragraphTitle text-2xl garet-book'>
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
                         Figma prototype
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Sammen med min meddesigner var mitt ansvar å jobbe med å
                         utvikle Figma-prototypen gjennom flere iterasjoner etter
                         hvert som flere funksjoner ble foreslått og testet.
@@ -1298,11 +1369,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   className='flex flex-col gap-20 mobile:flex-col '
                 >
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl garet-book'>
-                      En design utfordring
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      En design utfordring 🧐
                     </h1>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Etter sprinten var prioriteringen å utvikle andre utgave
                       av Figma prototypen basert på resultatene fra bruker
                       testingen, dette var også viktig for at utviklerene kunne
@@ -1312,23 +1383,29 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
+                  <div className='paragraphcontainer flex flex-row  gap-36 mobile:flex-col'>
                     <div className='paragraphcol flex flex-col'>
                       <div className='paragraph flex flex-row gap-5 mobile:flex-col'>
                         <img
-                          className='w-full lg:w-1/4 h-2/4 mobile:order-last'
-                          src={designUtfall}
+                          className='mobile:w-3/4 lg:w-3/4 h-3/4 mobile:order-last'
+                          src={designChallenge}
                           alt='Description of the image'
                         />
-                        <p className='garet-book opacity-60 sm:w-1/4 '>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Hvordan skal man skille mellom to fugle arter som har
                           lik farge på ring når man registrerer
                         </p>
                       </div>
                     </div>
+                    <div className='flex flex-col justify-center align-center'>
+                      <p className={`text-6xl`}>~</p>
+                    </div>
+
                     <div className='paragraphcol2 flex flex-col '>
                       <div className='paragraph flex flex-row gap-5 mobile:flex-col '>
-                        <p className='garet-book opacity-60 sm:w-1/4'>
+                        <p
+                          className={`${styles.projectSlideShowP}  sm:w-2/5 opacity-60`}
+                        >
                           Måten vi løste denne designutfordringen på var ved å
                           implementere en verifiseringsmodul som det første
                           brukeren ser etter å ha tastet inn ringnummeret. Dette
@@ -1337,8 +1414,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                           blant ekspertbrukere
                         </p>
                         <img
-                          className='w-full lg:w-1/4 h-2/4 '
-                          src={designUtfall}
+                          className='object-contain mobile:w-2/4 sm:w-2/6 '
+                          src={designChallengeSolution}
                           alt='Description of the image'
                         />
                       </div>
@@ -1378,11 +1455,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl garet-book'>
-                      Gammel og ny tjeneste
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Gammel og ny tjeneste 🎁
                     </h1>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Etter sprinten var prioriteringen å utvikle andre utgave
                       av Figma prototypen basert på resultatene fra bruker
                       testingen, dette var også viktig for at utviklerene kunne
@@ -1394,12 +1471,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                   <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraphcol flex flex-col '>
-                      <div className='paragraph flex flex-col gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
+                      <div className='paragraph flex flex-col  gap-5 '>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Ny tjeneste
                         </p>
                         <img
-                          className='w-full lg:w-3/4 h-3/4 '
+                          className='object-contain w-full lg:w-3/4 h-3/4 '
                           src={designUtfall}
                           alt='Description of the image'
                         />
@@ -1407,12 +1484,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
                     <div className='paragraphcol2 flex flex-col'>
                       <div className='paragraph flex flex-col gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
+                        <p className={`${styles.projectSlideShowP} opacity-60`}>
                           Gammel tjeneste
                         </p>
                         <img
-                          className='w-full lg:w-3/4 h-3/4 '
-                          src={designUtfall}
+                          className='object-contain w-full '
+                          src={oldsite}
                           alt='Description of the image'
                         />
                       </div>
@@ -1452,28 +1529,32 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl garet-book'>
-                      Figma prototype
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
+                      Figma prototype 🎮
                     </h1>
 
-                    <p className='garet-book'>
+                    <p className={`${styles.projectSlideShowP}`}>
                       Her er den endelig utgaven av prototypen (5) som også ble
                       utviklet som en web-app designet for mobile-first
                     </p>
                   </div>
 
                   <div className='paragraphcontainer flex flex-row gap-10'>
-                    <div className='paragraphcol flex flex-col'>
-                      <div className='paragraph flex flex-col gap-5 '>
-                        <p className='garet-book opacity-60 w-1/4'>
-                          klikk for å starte
-                        </p>
-                        <img
-                          className='w-full lg:w-3/4 h-3/4 '
-                          src={designUtfall}
-                          alt='Description of the image'
-                        />
-                      </div>
+                    <div className='paragraphcol w-full flex justify-center items-center flex-col'>
+                      <p
+                        className={`${styles.projectSlideShowP} opacity-60`}
+                      ></p>
+                      <img
+                        className='object-contain w-2/5 cursor-pointer'
+                        src={prototypePlaceholder}
+                        alt='Description of the image'
+                        onClick={() =>
+                          window.open(
+                            'https://www.figma.com/proto/luE2AxlVtZQhwBOWhaOBWJ/Final-design-sprint---Kantega?page-id=0%3A1&node-id=1-16074&viewport=696%2C112%2C0.12&scaling=scale-down&starting-point-node-id=1%3A16074',
+                            '_blank'
+                          )
+                        }
+                      />
                     </div>
                   </div>
                 </div>
@@ -1510,19 +1591,21 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
               <div className={` ${styles.projectWrapper} `}>
                 <div id='id-slidecontainer' className='flex flex-col gap-20 '>
                   <div className='titleparagraph flex flex-col gap-10 '>
-                    <h1 className='title text-4xl  garet-book'>
+                    <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       Erfaringen fra arbeidet
                     </h1>
 
-                    <p className='garet-book'>bla bla bla</p>
+                    <p className={`${styles.projectSlideShowP}`}>bla bla bla</p>
                   </div>
 
                   <div className='paragraphcontainer flex flex-row gap-10 mobile:flex-col'>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Ulike forventninger
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Ulike forventninger 🤷🏼
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Som designer er det umulig å imøtekomme alle
                         forventningene og ønskene til både kunden og brukerne. I
                         tillegg har man sine meninger om hvordan
@@ -1533,10 +1616,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Design != produkt
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Design != produkt 🥨
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Designet av en brukeropplevelse eller et
                         brukergrensesnitt er én ting, en annen ting er de
                         tekniske implementasjonene som må til for å utvikle et
@@ -1547,10 +1632,12 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                       </p>
                     </div>
                     <div className='paragraph flex flex-col gap-5 '>
-                      <h1 className='paragraphTitle text-2xl garet-book'>
-                        Viktig testing tar tid
+                      <h1
+                        className={`${styles.projectSlideShowParagraphTitle}`}
+                      >
+                        Viktig testing tar tid ⏳
                       </h1>
-                      <p className='garet-book opacity-60'>
+                      <p className={`${styles.projectSlideShowP} opacity-60`}>
                         Brukertesting av en prototype er kostbart når det
                         gjelder tid og energi. Allikevel er en prototype som
                         ikke kan brukes, bortkastet tid. Brukertesting burde

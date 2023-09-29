@@ -64,9 +64,9 @@ const styles = {
 
   projectHigherordercomponent: 'bg-white h-screen w-screen fixed inset-0 z-30',
 
-  // --------
+  // -------- mobile:py-20 sm:py-30 md:py-20 lg:py-10
   projectWrapper:
-    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto py-40 mobile:py-20 sm:py-30 px-6 bg-white flex items-start h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
+    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto py-10 px-6 bg-white flex items-center h-screen w-screen overflow-y-auto max-w-7xl mx-auto',
   // -----------
 
   projectContainer:
@@ -112,6 +112,17 @@ const styles = {
     'react-player min-w-[220px] max-w-[220px] md:order-last sm:order-last mobile:order-last',
 
   submitBtn: '   ',
+
+  //slideShow
+  projectSlideShowPageTitle:
+    ' garet-book text-4xl  mobile:text-2xl sm:text-4xl',
+  projectSlideShowPageSubTitle:
+    ' garet-book text-lg mobile:text-base opacity-60',
+
+  projectSlideShowParagraphTitle: 'garet-book text-2xl mobile:text-xl',
+
+  projectSlideShowP:
+    'garet-book text-lg mobile:text-sm sm:text-base md:text-lg',
 };
 
 export { styles };

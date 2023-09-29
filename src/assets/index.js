@@ -58,7 +58,26 @@ import frontendicon from './frontendicon.png';
 import userresearchericon from './userresearcerhicon.png';
 
 import designUtfall from './ringmerkingslideshow/designutfall.png'
+import empathyMapEN from './ringmerkingslideshow/empathyMap/empathyMapEN.png';
+import ideGenerering from './ringmerkingslideshow/ideGenerering.jpeg';
+import denGenialeIdeen from './ringmerkingslideshow/denGenialeIdeen.jpeg';
+import firstprototype from './ringmerkingslideshow/prototype.png';
+import usertesting from './ringmerkingslideshow/userTesting.png';
+import userResearch from './ringmerkingslideshow/userResearch.png';
 
+import userPrototype from './ringmerkingslideshow/userPrototype.png';
+
+import designExpression from './ringmerkingslideshow/designExpression.png';
+
+import designChallenge from './ringmerkingslideshow/designChallenge.png';
+
+import designChallengeSolution from './ringmerkingslideshow/designChallengeSolution.png'; 
+
+import oldsite from './ringmerkingslideshow/oldsite.png'
+
+import prototypePlaceholder from './ringmerkingslideshow/prototypePlaceholder.png'
+
+import frontpage from './ringmerkingslideshow/frontpage.png'
 export {
   logo,
   menu,
@@ -114,5 +133,18 @@ export {
   coaxerThumbnailIT,
   coaxerThumbnailFR,
   coaxerThumbnailDE,
+  frontpage,
   designUtfall,
+  empathyMapEN,
+  ideGenerering,
+  denGenialeIdeen,
+  firstprototype,
+  usertesting,
+  userResearch,
+  designExpression,
+  userPrototype,
+  designChallenge,
+  designChallengeSolution,
+  oldsite,
+  prototypePlaceholder,
 };
