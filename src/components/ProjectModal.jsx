@@ -3,7 +3,6 @@ import { feedback, scenario, topicoDevice } from '../assets';
 import Coffeecan from './Projects/Coffeecan';
 import Topico from './Projects/Topico';
 import Coaxer from './Projects/Coaxer';
-import Ringmerking from './Projects/Ringmerking';
 import RingmerkingSlideshow from './Projects/RingmerkingSlideshow';
 import { useTranslation } from 'react-i18next';
 import { imageMapCoaxer } from '../constants';
@@ -40,12 +39,7 @@ const ProjectModal = ({ modalProject, onClose }) => {
     };
   }, [modalProject]);
 
-  return modalType === 'ringmerking' ? (
-    <Ringmerking
-      onClose={onClose}
-      ringmerkingBackground={ringmerkingBackground}
-    ></Ringmerking>
-  ) : modalType === 'ringmerkingSlideshow' ? (
+  return modalType === 'ringmerkingSlideshow' ? (
     <RingmerkingSlideshow onClose={onClose}></RingmerkingSlideshow>
   ) : modalType === 'coaxer' ? (
     <Coaxer onClose={onClose} coaxerBackground={coaxerBackground}></Coaxer>

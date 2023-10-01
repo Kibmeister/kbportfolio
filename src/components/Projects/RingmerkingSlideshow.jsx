@@ -130,7 +130,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             <svg
               id='leftArrow'
               ref={leftArrowRef}
-              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-12 mobile:left-4 mobile:top-[92%]'
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-6 mobile:left-4 lg:left-6 mobile:top-[92%]'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 100 100'
               strokeWidth='8'
@@ -147,7 +147,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             <svg
               id='rightArrow'
               ref={rightArrowRef}
-              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-12 mobile:right-4 mobile:top-[92%]'
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-6 mobile:right-4 lg:right-6 mobile:top-[92%]'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 100 100'
               strokeWidth='8'
@@ -264,7 +264,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='paragraph flex flex-col gap-5 '>
+                  <div className={`${styles.projectSlideShowPageParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page1.title')}
                     </h1>
@@ -314,7 +314,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   className={`${styles.projectSlideShowContainer}`}
                 >
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPageTitle}`}>
                         {t('portfolio.ringmerking.page2.title1')} 🛠️
                       </h1>
@@ -322,7 +322,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page2.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPageTitle}`}>
                         {t('portfolio.ringmerking.page2.title2')} 🕴🏼
                       </h1>
@@ -367,7 +367,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page3.title')}🎯
                     </h1>
@@ -378,8 +378,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                   {/* the three row aligned paragraph */}
 
-                  <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraph flex flex-col gap-5 '>
+                  <div className={`${styles.projectSlideShowBodyContainer} `}>
+                    <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                         {t('portfolio.ringmerking.page3.p1Title')} 🚀
                       </h1>
@@ -389,7 +389,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page3.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 text-lg'>
+                    <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                         {t('portfolio.ringmerking.page3.p2Title')} 📱
                       </h1>
@@ -399,7 +399,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page3.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 text-lg'>
+                    <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                         {t('portfolio.ringmerking.page3.p3Title')} 👩‍👦
                       </h1>
@@ -446,7 +446,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={` ${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page4.subTitle')}
@@ -464,7 +464,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           " {t('portfolio.ringmerking.page4.p1Title')}"
                         </h1>
@@ -474,7 +476,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                           {t('portfolio.ringmerking.page4.p1')}
                         </p>
                       </div>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           " {t('portfolio.ringmerking.page4.p2Title')}"
                         </h1>
@@ -589,7 +593,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page6.subTitle')}
@@ -605,7 +609,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   </div>
 
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page6.p1Title')} ✅
                       </h1>
@@ -615,7 +619,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page6.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page6.p2Title')} 👨‍👩‍👦‍👦
                       </h1>
@@ -625,7 +629,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page6.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page6.p3Title')} 👩🏼‍⚕️
                       </h1>
@@ -672,7 +676,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={` ${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page7.subTitle')}
@@ -690,7 +694,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10 '>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page7.p1Title')}
                         </h1>
@@ -744,7 +750,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page8.subTitle')}
@@ -762,7 +768,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page8.p1Title')}
                         </h1>
@@ -772,7 +780,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                           {t('portfolio.ringmerking.page8.p1')}
                         </p>
                       </div>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page8.p2Title')}
                         </h1>
@@ -783,14 +793,13 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         </p>
                       </div>
                     </div>
-                    {/* //TODO: bilde karusell */}
 
                     <div className='imgcarousel flex flex-row items-center sm:w-2/3 sm:h-2/3'>
                       <div onClick={() => imgPaginate(-1)}>
                         <svg
                           id='leftArrow'
                           ref={leftArrowRef}
-                          className=' z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-12 mobile:left-4 mobile:top-[92%]'
+                          className=' z-50 top-1/2 cursor-pointer opacity-75 w-8 h-8 left-12 mobile:left-4 mobile:top-[92%]'
                           xmlns='http://www.w3.org/2000/svg'
                           viewBox='0 0 100 100'
                           strokeWidth='8'
@@ -817,7 +826,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         <svg
                           id='rightArrow'
                           ref={rightArrowRef}
-                          className='z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-12 mobile:right-4 mobile:top-[92%]'
+                          className='z-50 top-1/2 cursor-pointer opacity-75 w-8 h-8 right-12 mobile:right-4 mobile:top-[92%]'
                           xmlns='http://www.w3.org/2000/svg'
                           viewBox='0 0 100 100'
                           strokeWidth='8'
@@ -867,7 +876,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page9.subTitle')}
@@ -883,7 +892,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page9.p1Title')} 🌟
                         </h1>
@@ -893,7 +904,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                           {t('portfolio.ringmerking.page9.p1')}
                         </p>
                       </div>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page9.p2Title')} 📱
                         </h1>
@@ -947,7 +960,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page10.subTitle')}
@@ -965,7 +978,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
-                      <div className='paragraph flex flex-col gap-5 '>
+                      <div
+                        className={`${styles.projectSlideShowPageParagraph}`}
+                      >
                         <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                           {t('portfolio.ringmerking.page10.p1Title')}
                         </h1>
@@ -1024,7 +1039,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page11.subTitle')}
@@ -1047,7 +1062,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   </div>
 
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page11.p1Title')} 👨‍👩‍👦‍👦
                       </h1>
@@ -1057,7 +1072,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page11.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page11.p2Title')} 🤔
                       </h1>
@@ -1067,7 +1082,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page11.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page11.p3Title')} 📍
                       </h1>
@@ -1114,7 +1129,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page12.subTitle')}
@@ -1130,11 +1145,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   </div>
 
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraphcontainer flex flex-col gap-10'>
+                    <div className='paragraphcontainer w-full flex flex-col gap-10'>
                       <LazyLoadImage
-                        alt='example image'
-                        height='w-1/3' // Set height and width
-                        width='w-1/3'
+                        className='w-7/8 h-7/8'
+                        alt='feedback results'
                         src={imgFeedbackResults}
                       />
                     </div>
@@ -1175,7 +1189,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
                       <h1 className={`${styles.projectSlideShowPageSubTitle}`}>
                         {t('portfolio.ringmerking.page13.subTitle')}
@@ -1193,7 +1207,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div
                     className={`${styles.projectSlideShowBodyContainer} items-baseline`}
                   >
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`text-6xl garet-book mobile:text-5xl}`}>
                         1.
                       </h1>
@@ -1201,7 +1215,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page13.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`text-5xl garet-book mobile:text-4xl}`}>
                         2.
                       </h1>
@@ -1209,7 +1223,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page13.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`text-4xl garet-book mobile:text-3xl}`}>
                         3.
                       </h1>
@@ -1217,7 +1231,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page13.p3')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`text-3xl garet-book mobile:text-2xl}`}>
                         4.
                       </h1>
@@ -1262,7 +1276,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page14.title')} 🚌
                     </h1>
@@ -1276,9 +1290,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div
                     className={`${styles.projectSlideShowBodyContainer} items-baseline`}
                   >
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <LazyLoadImage
-                        className='w-full lg:w-4/4 h-2/4 '
+                        className='w-full object-contain lg:w-4/4 h-2/4 '
                         src={userResearch}
                         alt='Description of the image'
                       />
@@ -1291,9 +1305,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page14.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <LazyLoadImage
-                        className='w-full lg:w-4/4 h-2/4 '
+                        className='w-full object-contain lg:w-4/4 h-2/4 '
                         src={designExpression}
                         alt='Description of the image'
                       />
@@ -1306,10 +1320,10 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page14.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
-                      <div className='imgContainer w-full flex flex-col justify-center items-center'>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
+                      <div className='imgContainer w-full flex flex-col items-center'>
                         <LazyLoadImage
-                          className='w-full lg:w-3/4 h-2/4 '
+                          className='w-full object-contain lg:w-3/4 h-2/4 '
                           src={userPrototype}
                           alt='Description of the image'
                         />
@@ -1361,7 +1375,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page15.title')} 🧐
                     </h1>
@@ -1371,9 +1385,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className={`${styles.projectSlideShowBodyContainer}`}>
+                  <div
+                    className={`${styles.projectSlideShowBodyContainer} mobile:gap-20`}
+                  >
                     <div className='paragraphcol sm:w-2/5 flex flex-col items-center justify-center'>
-                      <div className='paragraph flex flex-col  gap-5 '>
+                      <div className='paragraph flex flex-col mobile:items-center  gap-5 '>
                         <LazyLoadImage
                           className='object-contain mobile:w-3/4 lg:w-3/4 h-3/4 mobile:order-last'
                           src={designChallenge}
@@ -1446,7 +1462,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page16.title')} 🎁
                     </h1>
@@ -1461,7 +1477,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                           {t('portfolio.ringmerking.page16.p1Title')}
                         </p>
                         <LazyLoadImage
-                          className='object-contain w-full lg:w-3/4 h-3/4 '
+                          className='object-contain w-full'
                           src={ringmerkingGammelSide}
                           alt='Description of the image'
                         />
@@ -1518,7 +1534,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page17.title')} 🎮
                     </h1>
@@ -1530,7 +1546,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
 
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     <div className='paragraphcol w-full flex justify-center items-center flex-col'>
-                 
                       <LazyLoadImage
                         className='object-contain mobile:w-3/4 sm:w-1/4 cursor-pointer'
                         src={prototypePlaceholder}
@@ -1579,7 +1594,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   id='id-slidecontainer'
                   className={`${styles.projectSlideShowContainer}`}
                 >
-                  <div className='titleparagraph flex flex-col gap-10 '>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
                       {t('portfolio.ringmerking.page18.title')}
                     </h1>
@@ -1588,7 +1603,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   </div>
 
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page18.p1Title')} 🤷🏼
                       </h1>
@@ -1598,7 +1613,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page18.p1')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page18.p2Title')} 🥨
                       </h1>
@@ -1608,7 +1623,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page18.p2')}
                       </p>
                     </div>
-                    <div className='paragraph flex flex-col gap-5 '>
+                    <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <h1 className={`${styles.projectSlideShowPagePTitle}`}>
                         {t('portfolio.ringmerking.page18.p3Title')} ⏳
                       </h1>

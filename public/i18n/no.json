@@ -107,7 +107,7 @@
       "buttonclose": "Lukk",
       "page0": {
         "title": "Ringmerking.no",
-        "subTitle": "Ein Dienst für Vogel- und Naturinteressierte, die dazu beitragen möchten, die Vielfalt zu erhalten und zu schützen."
+        "subTitle": "En tjeneste for dem som er fulge og natur interesserte som vil bidra til å bevare og beskytte mangofoldet."
       },
       "page1": {
         "title": "Innhold",
@@ -311,25 +311,6 @@
     "tiles": [
       {
         "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "Mobilapplikasjon som lar fuglekikkere registrere fuglesyn og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
-        "tags": [
-          {
-            "name": "figma",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "design remake",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "mobil",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "RingmerkingSlideshow",
         "type": "ringmerkingSlideshow",
         "description": "Mobilapplikasjon som lar fuglekikkere registrere fuglesyn og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
         "tags": [

@@ -330,25 +330,6 @@
     "tiles": [
       {
         "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "Aplicación móvil que permite a los observadores de aves registrar avistamientos de aves y hacer un seguimiento de estas aves para ver su hábitat y obtener información más específica.",
-        "tags": [
-          {
-            "name": "figma",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "rediseño de diseño",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "móvil",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "RingmerkingSlideshow",
         "type": "ringmerkingSlideshow",
         "description": "Aplicación móvil que permite a los observadores de aves registrar avistamientos de aves y hacer un seguimiento de estas aves para ver su hábitat y obtener información más específica.",
         "tags": [

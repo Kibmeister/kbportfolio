@@ -6,6 +6,7 @@ import { imageMapAbout } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { useTranslation } from 'react-i18next';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
   const iconSrc = imageMapAbout[id];
@@ -14,7 +15,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
 
   return (
     <>
-      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+      {/* {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
         <div className='mobile:w-[250px] w-[250px]'>
           <motion.div
             className='w-full shadow-card bg-white'
@@ -24,7 +25,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
               options={{ max: 45, scale: 1, speed: 450 }}
               className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
             >
-              <img
+              <LazyLoadImage
                 src={iconSrc}
                 alt={value}
                 className='w-64 h-64 object-contain'
@@ -38,7 +39,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
             </div>
           </motion.div>
         </div>
-      ) : (
+      ) : ( */}
         <Tilt className='mobile:w-[250px] w-[250px]'>
           <motion.div
             className='w-full shadow-card bg-white'
@@ -48,21 +49,18 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
               options={{ max: 45, scale: 1, speed: 450 }}
               className='bg-white- py-5 min-h-[280px] flex justify-evenly items-center flex-col'
             >
-              <img
+              <LazyLoadImage
                 src={iconSrc}
                 alt={value}
                 className='w-64 h-64 object-contain'
               />
-              <p
-                className={`${styles.tilesP} `}
-                style={{ margin: 0 }}
-              >
+              <p className={`${styles.tilesP} `} style={{ margin: 0 }}>
                 {value}
               </p>
             </div>
           </motion.div>
         </Tilt>
-      )}
+      {/* )} */}
     </>
   );
 };

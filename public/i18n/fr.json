@@ -332,25 +332,6 @@
     "tiles": [
       {
         "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "Application mobile qui permet aux ornithologues d'enregistrer les observations d'oiseaux et de suivre ces oiseaux pour voir leur habitat et obtenir des informations plus spécifiques. ",
-        "tags": [
-          {
-            "name": "figma",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "refonte de design",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "mobile",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "RingmerkingSlideshow",
         "type": "ringmerkingSlideshow",
         "description": "Application mobile qui permet aux ornithologues d'enregistrer les observations d'oiseaux et de suivre ces oiseaux pour voir leur habitat et obtenir des informations plus spécifiques. ",
         "tags": [

@@ -117,9 +117,8 @@ const styles = {
   //slideShow
 
   projectSlideShowContainer: 'flex flex-col gap-20 h-full sm:h-auto',
+  projectSlideShowTitleParagraph: 'flex flex-col gap-5',
 
-  projectSlideShowBodyContainer:
-    'flex flex-row gap-10 mobile:flex-col mobile:pb-20',
   projectSlideShowPageTitle:
     ' garet-book text-4xl  mobile:text-2xl sm:text-4xl',
   projectSlideShowPageTitleP:
@@ -127,7 +126,11 @@ const styles = {
   projectSlideShowPageSubTitle:
     ' garet-book text-lg mobile:text-base opacity-60',
 
+  projectSlideShowBodyContainer:
+    'flex flex-row gap-10 mobile:flex-col  mobile:pb-20 sm:pb-20',
   projectSlideShowPagePTitle: 'garet-book text-2xl mobile:text-xl',
+ 
+  projectSlideShowPageParagraph: 'paragraph flex flex-col gap-5 mobile:gap-3',
 
   projectSlideShowPageP:
     'garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base',

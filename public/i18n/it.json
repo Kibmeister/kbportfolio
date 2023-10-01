@@ -329,25 +329,6 @@
     "tiles": [
       {
         "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "Applicazione mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per osservarne l'habitat e informazioni più specifiche.",
-        "tags": [
-          {
-            "name": "figma",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "rimodellamento del design",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "mobile",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "RingmerkingSlideshow",
         "type": "ringmerkingSlideshow",
         "description": "Applicazione mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per osservarne l'habitat e informazioni più specifiche.",
         "tags": [

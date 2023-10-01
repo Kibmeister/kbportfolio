@@ -384,25 +384,6 @@
     "tiles": [
       {
         "name": "Ringmerking",
-        "type": "ringmerking",
-        "description": "Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ",
-        "tags": [
-          {
-            "name": "figma",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "design remake",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "mobile",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "RingmerkingSlideshow",
         "type": "ringmerkingSlideshow",
         "description": "Mobile application that enables birdwatchers to register bird sightseenigs and follow up on these birds to see their habitat and more specifc information ",
         "tags": [

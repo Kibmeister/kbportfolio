@@ -232,11 +232,6 @@ const testimonials = [
 const projects = [
   {
     name: 'Ringmerking',
-    type: 'ringmerking',
-    image: RingmerkingEN,
-  },
-  {
-    name: 'RingmerkingSlideshow',
     type: 'ringmerkingSlideshow',
     image: RingmerkingEN,
   },

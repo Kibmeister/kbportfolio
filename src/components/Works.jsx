@@ -6,6 +6,7 @@ import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import { imageMapWorks } from '../constants';
 import { useTranslation } from 'react-i18next';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ProjectCard = ({
   index,
@@ -31,7 +32,7 @@ const ProjectCard = ({
 
   return (
     <>
-      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+      {/* {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
         <div
           onClick={() => {
             onProjectClick(type);
@@ -39,7 +40,11 @@ const ProjectCard = ({
           className='bg-white p-5 mobile:w-[360px] sm:w-[360px] w-full cursor-pointer shadow-card'
         >
           <div className='relative w-full h-[230px]'>
-            <img src={thumbnailPath} alt={name} className='w-full h-full ' />
+            <LazyLoadImage
+              src={thumbnailPath}
+              alt={name}
+              className='w-full h-full '
+            />
 
             <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
           </div>
@@ -56,7 +61,7 @@ const ProjectCard = ({
             ))}
           </div>
         </div>
-      ) : (
+      ) : ( */}
         <motion.div
           onClick={() => {
             onProjectClick(type);
@@ -72,7 +77,11 @@ const ProjectCard = ({
             className='bg-white p-5 mobile:w-[360px] sm:w-[360px] w-full cursor-pointer shadow-card'
           >
             <div className='relative w-full h-[230px]'>
-              <img src={thumbnailPath} alt={name} className='w-full h-full ' />
+              <LazyLoadImage
+                src={thumbnailPath}
+                alt={name}
+                className='w-full h-full '
+              />
 
               <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
             </div>
@@ -90,7 +99,7 @@ const ProjectCard = ({
             </div>
           </Tilt>
         </motion.div>
-      )}
+      {/* )} */}
     </>
   );
 };
