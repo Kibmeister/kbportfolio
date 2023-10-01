@@ -34,38 +34,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
   const [imgEmpathyMap, setEmpathy] = useState('');
   const [imgFeedbackResults, setFeedbackResults] = useState('');
 
-  //  scroll to paginate
-  // const [lastScrollTime, setLastScrollTime] = useState(0);
-  // const handleScroll = (event) => {
-  //   const now = new Date().getTime();
-
-  //   // Throttle to prevent too quick successive calls
-  //   if (now - lastScrollTime < 800) return;
-
-  //   const scrollThreshold = 75; // Adjust this value based on your preference
-
-  //   if (Math.abs(event.deltaY) < scrollThreshold) return; // Ignore minor scrolls
-
-  //   // deltaY is positive for scroll down, negative for scroll up
-  //   if (event.deltaY > 0) {
-  //     paginate(1); // Forward
-  //   } else {
-  //     paginate(-1); // Backward
-  //   }
-
-  //   setLastScrollTime(now);
-  // };
-
   //slideshow animation
   const variants = {
-    enter: (direction) => {
-      return {
-        zIndex: 10,
-        x: direction > 0 ? 1000 : -1000,
-        opacity: 1,
-        transition: { duration: 0.08 }, // Set this to your preferred timing
-      };
-    },
+    enter: (direction) => {},
     center: {
       zIndex: 10,
       x: 0,
@@ -80,12 +51,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
       };
     },
   };
-
-  // const swipeConfidenceThreshold = 10000;
-  // const swipePower = (offset, velocity) => {
-  //   return Math.abs(offset) * velocity;
-  // };
-
   //pagination for the slides
   const paginate = (newDirection) => {
     const nextPage = wrap(0, 19, page + newDirection);
@@ -130,7 +95,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             <svg
               id='leftArrow'
               ref={leftArrowRef}
-              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 left-6 mobile:left-4 lg:left-6 mobile:top-[92%]'
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 sm:left-2 mobile:left-4 lg:left-6 mobile:top-[90%]'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 100 100'
               strokeWidth='8'
@@ -147,7 +112,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             <svg
               id='rightArrow'
               ref={rightArrowRef}
-              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-6 mobile:right-4 lg:right-6 mobile:top-[92%]'
+              className=' absolute z-50 top-1/2 cursor-pointer opacity-75 w-10 h-10 right-6 sm:right-2 mobile:right-4 lg:right-6 mobile:top-[90%]'
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 100 100'
               strokeWidth='8'
@@ -164,7 +129,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
             {Array.from({ length: 19 }).map((_, idx) => (
               <div
                 key={idx}
-                className={`h-2 w-8 mobile:h-1 sm:h1.5 mobile:w-4 sm:w-6  ${
+                className={`mobile:h-1  mobile:w-3 sm:h-1.5 sm:w-6 md:h-2 md:w-8  ${
                   idx <= page
                     ? 'bg-black'
                     : 'border border-black bg-transparent'
@@ -193,18 +158,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -246,18 +199,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -295,18 +236,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -349,18 +278,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -428,18 +345,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -520,18 +425,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -575,18 +468,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -658,18 +539,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -682,7 +551,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                         {t('portfolio.ringmerking.page7.subTitle')}
                       </h1>
                       <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                        {t('portfolio.ringmerking.page7.title')}🧠
+                        {t('portfolio.ringmerking.page7.title')} 🧠
                       </h1>
                     </div>
 
@@ -709,7 +578,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <LazyLoadImage
-                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/5 md:h-3/5'
+                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-3/4 md:w-3/5 md:h-3/5'
                       src={ideGenerering}
                       alt='designutfall'
                     />
@@ -732,23 +601,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
                   id='id-slidecontainer'
-                  className={`${styles.projectSlideShowContainer}`}
+                  className={`${styles.projectSlideShowContainer} sm:mt-44`}
                 >
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <div className='titleparagraph-sub flex flex-col gap-2'>
@@ -765,7 +622,9 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </p>
                   </div>
 
-                  <div className={`${styles.projectSlideShowBodyContainer}`}>
+                  <div
+                    className={`${styles.projectSlideShowBodyContainer} sm:flex-col md:flex-row `}
+                  >
                     {/* the two col aligned paragraph */}
                     <div className='paragraphcontainer flex flex-col gap-10'>
                       <div
@@ -858,18 +717,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -919,7 +766,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <LazyLoadImage
-                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/6 md:h-3/6'
+                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-3/4 md:w-3/6 md:h-3/6'
                       src={denGenialeIdeen}
                       alt='designutfall'
                     />
@@ -942,18 +789,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -998,7 +833,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <LazyLoadImage
-                      className='w-4/4 h-3/5 sm:w-4/4 sm:h-3/4 md:w-3/6 md:h-3/6'
+                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-3/4 md:w-3/6 md:h-3/6'
                       src={firstprototype}
                       alt='designutfall'
                     />
@@ -1021,18 +856,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1111,18 +934,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1171,18 +982,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1258,23 +1057,11 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
                   id='id-slidecontainer'
-                  className={`${styles.projectSlideShowContainer}`}
+                  className={`${styles.projectSlideShowContainer} sm:mt-44`}
                 >
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={`${styles.projectSlideShowPageTitle}`}>
@@ -1323,7 +1110,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     <div className={`${styles.projectSlideShowPageParagraph}`}>
                       <div className='imgContainer w-full flex flex-col items-center'>
                         <LazyLoadImage
-                          className='w-full object-contain lg:w-3/4 h-2/4 '
+                          className='w-full h-full sm:object-contain lg:w-3/4 '
                           src={userPrototype}
                           alt='Description of the image'
                         />
@@ -1357,18 +1144,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1444,18 +1219,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1516,18 +1279,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div
@@ -1547,7 +1298,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                   <div className={`${styles.projectSlideShowBodyContainer}`}>
                     <div className='paragraphcol w-full flex justify-center items-center flex-col'>
                       <LazyLoadImage
-                        className='object-contain mobile:w-3/4 sm:w-1/4 cursor-pointer'
+                        className='object-contain mobile:w-3/4 sm:w-2/4 md:w-2/6 cursor-pointer'
                         src={prototypePlaceholder}
                         alt='Description of the image'
                         onClick={() =>
@@ -1576,18 +1327,6 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              // drag='x'
-              // dragConstraints={{ left: 0, right: 0 }}
-              // dragElastic={1}
-              // onDragEnd={(e, { offset, velocity }) => {
-              //   const swipe = swipePower(offset.x, velocity.x);
-
-              //   if (swipe < -swipeConfidenceThreshold) {
-              //     paginate(1);
-              //   } else if (swipe > swipeConfidenceThreshold) {
-              //     paginate(-1);
-              //   }
-              // }}
             >
               <div className={` ${styles.projectWrapper} `}>
                 <div

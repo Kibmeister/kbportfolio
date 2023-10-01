@@ -66,7 +66,7 @@ const styles = {
 
   // -------- mobile:py-20 sm:py-30 md:py-20 lg:py-10
   projectWrapper:
-    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 bg-white flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
+    'fixed inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 sm:px-12 bg-white flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
 
   // -----------
 
@@ -129,7 +129,7 @@ const styles = {
   projectSlideShowBodyContainer:
     'flex flex-row gap-10 mobile:flex-col  mobile:pb-20 sm:pb-20',
   projectSlideShowPagePTitle: 'garet-book text-2xl mobile:text-xl',
- 
+
   projectSlideShowPageParagraph: 'paragraph flex flex-col gap-5 mobile:gap-3',
 
   projectSlideShowPageP:

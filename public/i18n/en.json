@@ -189,7 +189,7 @@
       },
       "page2": {
         "title1": "Case",
-        "p1": "The Norwegian bird ringing service, Ringmerking.no, had become very old and needed a relaunch. How can we breathe new life into a very old bird registration service to attract new users, increase user adoption, and ultimately achieve higher registration rates for new birds?",
+        "p1": "The Norwegian bird tracking service, Ringmerking.no, had become very old and needed a relaunch. How can we breathe new life into a very old bird registration service to attract new users, increase user adoption, and ultimately achieve higher registration rates for new birds?",
         "title2": "My Role",
         "p2": "As a UX designer in a team of two designers and four developers, I worked on conducting user research, analyzing and evaluating user insights, ideating over low-fidelity sketch prototypes and transferring them to Figma, testing prototypes with users, designing the identity of the service, developing clickable high-fidelity prototypes in Figma - as well as communicating all of this to the rest of the team."
       },
@@ -199,7 +199,7 @@
         "p1Title": "Increase User Adoption",
         "p1": "The client wanted to increase the number of users to 10,000 on a national basis, which would be a 30% increase. Increased user adoption would have a positive impact on data collection and the protection of the Norwegian bird population.",
         "p2Title": "Mobile-first",
-        "p2": "The existing solution was only available on PC, which means that a very large number of mobile users are left out. A mobile solution would have enabled bird ringing registrations on the go.",
+        "p2": "The existing solution was only available on PC, which means that a very large number of mobile users are left out. A mobile solution would have enabled bird  registrations on the go.",
         "p3Title": "Attract Younger Users",
         "p3": "As part of the desire for increased user adoption, the client wanted the service to be more appealing to young users. Using the service in school was a desirable outcome?"
       },
@@ -248,8 +248,8 @@
       "page9": {
         "subTitle": "Design Sprint",
         "title": "The Brilliant Idea...",
-        "p1Title": "What is Ringing",
-        "p1": "\"What is ringing?\" was the idea that won and that we proceeded with to the prototype phase. The first prototype was drawn on a board so that the entire team had an overview of what was to be developed.",
+        "p1Title": "What is Ringmerking",
+        "p1": "\"What is Ringmerking?\" was the idea that won and that we proceeded with to the prototype phase. The first prototype was drawn on a board so that the entire team had an overview of what was to be developed.",
         "p2Title": "Mobile-First",
         "p2": "Mobile-first was also established as the basis for designing for a mobile platform and not desktop or tablet. This choice was made because the customer, Sabima, wanted a mobile-first solution, and because there is greater potential to attract new users by creating a mobile service compared to a desktop service."
       },
@@ -258,7 +258,7 @@
         "title": "Prototype",
         "titleP": "The idea to increase and improve the information about the birds that could be ring-marked, as well as to simplify the registration process, led to the development of the first version of the Figma prototype.",
         "p1Title": "First Iteration",
-        "p1": "The first iteration of the prototype was based on the idea, 'What is Ringing?' Therefore, the first focus area was to provide more relevant and precise information about ringing as part of the experience.",
+        "p1": "The first iteration of the prototype was based on the idea, 'What is Ringmerking?' Therefore, the first focus area was to provide more relevant and precise information about Ringmerking as part of the experience.",
         "p2": "The registration of a bird should be as simple as possible to make it easier for new users, and this led to this functionality being moved to the front of the app."
       },
       "page11": {
@@ -284,13 +284,13 @@
         "p1": "The registration sequence to register a find was convenient, but there were elements under this sequence that could be designed to make the registration less confusing.",
         "p2": "The user profile page was unclear. It was difficult to understand the difference between finds, individual, and species. The favorite functionality was also not obvious.",
         "p3": "The map function, which made it possible to follow the bird's journey, was interesting and was perceived as an important element in the user experience.",
-        "p4": "The information page about why and what ringing was, which was implemented on the first page, was useful for new users who were not familiar with the service before."
+        "p4": "The information page about why and what Ringmerking was, which was implemented on the first page, was useful for new users who were not familiar with the service before."
       },
       "page14": {
         "title": "The Path After the Sprint",
         "titleP": "After the sprint, the priority was to develop the second edition of the Figma prototype based on the results from the user testing. This was also important so that developers could start with the technical side. At the same time, there was a need for further testing and interviews with users as more features were implemented.",
         "p1Title": "Insight Work",
-        "p1": "Following the design sprint, my responsibility was to conduct more insight work around the domain of ringing and conservation. Additional rounds of user testing and interviews were also held as more iterations of the prototype were developed, which I helped facilitate.",
+        "p1": "Following the design sprint, my responsibility was to conduct more insight work around the domain of ring tracking of birds and conservation. Additional rounds of user testing and interviews were also held as more iterations of the prototype were developed, which I helped facilitate.",
         "p2Title": "Design Expression",
         "p2": "I also worked on developing the design expression of the service. This was based on the insight work previously carried out, and became more important as progress was made with the Figma prototype. This responsibility included working with mood boards, exploring color profiles that could suit the service, and working with brand association.",
         "p3Title": "Figma Prototype",
