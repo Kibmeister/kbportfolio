@@ -35,26 +35,26 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
   const [imgFeedbackResults, setFeedbackResults] = useState('');
 
   //  scroll to paginate
-  const [lastScrollTime, setLastScrollTime] = useState(0);
-  const handleScroll = (event) => {
-    const now = new Date().getTime();
+  // const [lastScrollTime, setLastScrollTime] = useState(0);
+  // const handleScroll = (event) => {
+  //   const now = new Date().getTime();
 
-    // Throttle to prevent too quick successive calls
-    if (now - lastScrollTime < 800) return;
+  //   // Throttle to prevent too quick successive calls
+  //   if (now - lastScrollTime < 800) return;
 
-    const scrollThreshold = 75; // Adjust this value based on your preference
+  //   const scrollThreshold = 75; // Adjust this value based on your preference
 
-    if (Math.abs(event.deltaY) < scrollThreshold) return; // Ignore minor scrolls
+  //   if (Math.abs(event.deltaY) < scrollThreshold) return; // Ignore minor scrolls
 
-    // deltaY is positive for scroll down, negative for scroll up
-    if (event.deltaY > 0) {
-      paginate(1); // Forward
-    } else {
-      paginate(-1); // Backward
-    }
+  //   // deltaY is positive for scroll down, negative for scroll up
+  //   if (event.deltaY > 0) {
+  //     paginate(1); // Forward
+  //   } else {
+  //     paginate(-1); // Backward
+  //   }
 
-    setLastScrollTime(now);
-  };
+  //   setLastScrollTime(now);
+  // };
 
   //slideshow animation
   const variants = {
@@ -121,8 +121,8 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
         {t('portfolio.ringmerking.buttonclose')}
       </button>
 
-      {/* content container */}
-      <div className='bg-[#ffffff] w-full h-full' onWheel={handleScroll}>
+      {/* content container onWheel={handleScroll}*/}
+      <div className='bg-[#ffffff] w-full h-full'>
         {/* svg arrows */}
 
         <div className='footercontrollers bg-white z-100 width-1/1 '>
@@ -246,7 +246,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -295,7 +295,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -349,7 +349,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -428,7 +428,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -520,7 +520,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -575,7 +575,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -658,7 +658,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -732,7 +732,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -858,7 +858,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -942,7 +942,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1021,7 +1021,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1111,7 +1111,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1171,7 +1171,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1258,7 +1258,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1357,7 +1357,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1444,7 +1444,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1516,7 +1516,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
@@ -1576,7 +1576,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-          // drag='x'
+              // drag='x'
               // dragConstraints={{ left: 0, right: 0 }}
               // dragElastic={1}
               // onDragEnd={(e, { offset, velocity }) => {
