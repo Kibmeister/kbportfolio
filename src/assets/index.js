@@ -39,18 +39,18 @@ import coaxerDE from './coaxer/Coaxer de.svg';
 import coaxerThumbnailEN from './coaxer/thumbnails/coaxerthumbnail en.svg';
 import coaxerThumbnailNO from './coaxer/thumbnails/coaxerthumbnail no.svg';
 import coaxerThumbnailES from './coaxer/thumbnails/coaxerthumbnail es.svg';
-import coaxerThumbnailIT from './coaxer/thumbnails/coaxerthumbnail it.svg';
+import coaxerThumbnailIT from './coaxer/thumbnails/coaxerthumbnail it.svg';3
 import coaxerThumbnailFR from './coaxer/thumbnails/coaxerthumbnail fr.svg';
 import coaxerThumbnailDE from './coaxer/thumbnails/coaxerthumbnail de.svg';
 
 
 
-import RingmerkingNO from './ringmerkingslideshow/thumbnails/ringmerkingForsideNO.svg'
-import RingmerkingEN from './ringmerkingslideshow/thumbnails/ringmerkingForsideEN.svg';
-import RingmerkingES from './ringmerkingslideshow/thumbnails/ringmerkingForsideES.svg';
-import RingmerkingIT from './ringmerkingslideshow/thumbnails/ringmerkingForsideIT.svg';
-import RingmerkingFR from './ringmerkingslideshow/thumbnails/ringmerkingForsideFR.svg';
-import RingmerkingDE from './ringmerkingslideshow/thumbnails/ringmerkingForsideDE.svg';
+import RingmerkingNO from './ringmerkingslideshow/thumbnails/ringmerkingForsideNO.png'
+import RingmerkingEN from './ringmerkingslideshow/thumbnails/ringmerkingForsideEN.png';
+import RingmerkingES from './ringmerkingslideshow/thumbnails/ringmerkingForsideES.png';
+import RingmerkingIT from './ringmerkingslideshow/thumbnails/ringmerkingForsideIT.png';
+import RingmerkingFR from './ringmerkingslideshow/thumbnails/ringmerkingForsideFR.png';
+import RingmerkingDE from './ringmerkingslideshow/thumbnails/ringmerkingForsideDE.png';
 
 import mike from './testimonals/mike.jpeg';
 import oldwebsite from './oldwebsite/oldwebsite.png';
