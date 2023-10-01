@@ -15,7 +15,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
 
   return (
     <>
-      {/* {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
         <div className='mobile:w-[250px] w-[250px]'>
           <motion.div
             className='w-full shadow-card bg-white'
@@ -39,7 +39,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
             </div>
           </motion.div>
         </div>
-      ) : ( */}
+      ) : (
         <Tilt className='mobile:w-[250px] w-[250px]'>
           <motion.div
             className='w-full shadow-card bg-white'
@@ -60,7 +60,7 @@ const ServiceCard = ({ index, value, id, activeMediaQuery }) => {
             </div>
           </motion.div>
         </Tilt>
-      {/* )} */}
+     )} 
     </>
   );
 };

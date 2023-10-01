@@ -32,7 +32,7 @@ const ProjectCard = ({
 
   return (
     <>
-      {/* {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
+      {activeMediaQuery === 'mobile' || activeMediaQuery === 'sm' ? (
         <div
           onClick={() => {
             onProjectClick(type);
@@ -61,7 +61,7 @@ const ProjectCard = ({
             ))}
           </div>
         </div>
-      ) : ( */}
+      ) : (
         <motion.div
           onClick={() => {
             onProjectClick(type);
@@ -99,7 +99,7 @@ const ProjectCard = ({
             </div>
           </Tilt>
         </motion.div>
-      {/* )} */}
+       )} 
     </>
   );
 };
