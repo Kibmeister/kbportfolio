@@ -105,7 +105,162 @@
       "buttonclose": "Fermer"
     },
     "ringmerking": {
-      "buttonclose": "Fermer"
+      "buttonclose": "Fermer",
+      "page0": {
+        "title": "Ringmerking.no",
+        "subTitle": "Un service pour les amateurs d'oiseaux et de nature qui souhaitent contribuer à la préservation et à la protection de la diversité."
+      },
+      "page1": {
+        "title": "Contenu",
+        "list": [
+          "Cas",
+          "Objectif",
+          "Empathie",
+          "Définir",
+          "Idées",
+          "Prototype",
+          "Test",
+          "Évaluer",
+          "La voie à suivre",
+          "Un défi de conception",
+          "Ancien et nouveau service",
+          "Prototype Figma",
+          "Expériences"
+        ]
+      },
+      "page2": {
+        "title1": "Cas",
+        "p1": "Le service norvégien de baguage des oiseaux, Ringmerking.no, était devenu très vieux et avait besoin d'être relancé. Comment pouvons-nous redonner vie à un très vieux service d'enregistrement des oiseaux pour attirer de nouveaux utilisateurs, augmenter l'adoption des utilisateurs et, en fin de compte, obtenir des taux d'enregistrement plus élevés pour les nouveaux oiseaux?",
+        "title2": "MonRôle",
+        "p2": "En tant que designer UX dans une équipe de deux designers et quatre développeurs, j'ai travaillé pour effectuer des travaux de perspicacité des utilisateurs, analyser et évaluer la perspicacité des utilisateurs, idéer sur des prototypes de croquis à basse fidélité et les transférer à Figma, tester des prototypes avec des utilisateurs, concevoir l'identité du service, développer des prototypes à haute fidélité cliquables dans Figma et communiquer tout cela au reste de l'équipe"
+      },
+      "page3": {
+        "title": "L'Objectif",
+        "titleP": "Effectuer une refonte complète du service pour le rendre mobile en premier, convivial, utilisable et attrayant. Le service devrait faciliter l'enregistrement d'une observation d'oiseau, engager les utilisateurs et en même temps respecter les utilisateurs existants qui sont habitués aux pratiques et à l'utilisation actuelles.",
+        "p1Title": "Augmenter l'Adoption des Utilisateurs",
+        "p1": "Le client souhaitait augmenter le nombre d'utilisateurs à 10 000 sur une base nationale, soit une augmentation de 30%. Une augmentation de l'adoption des utilisateurs aurait un impact positif sur la collecte de données et la protection de la population d'oiseaux norvégienne.",
+        "p2Title": "Mobile d'abord",
+        "p2": "La solution existante n'était disponible que sur PC, ce qui signifie qu'un très grand nombre d'utilisateurs mobiles sont exclus. Une solution mobile aurait permis des enregistrements de baguage d'oiseaux en déplacement.",
+        "p3Title": "Attirer les Jeunes Utilisateurs",
+        "p3": "Dans le cadre du désir d'augmenter l'adoption des utilisateurs, le client voulait que le service soit plus attrayant pour les jeunes utilisateurs. Utiliser le service à l'école était un résultat souhaitable?"
+      },
+      "page4": {
+        "subTitle": "Sprint de Design",
+        "title": "Empathie",
+        "titleP": "Pour comprendre le défi de conception, la première étape consiste à montrer de l'empathie pour l'utilisateur affecté par le problème. Cela signifiait que nous avons interviewé deux utilisateurs expérimentés qui ont utilisé le service depuis son développement en 2004. De plus, deux experts de domaine de Sabima étaient présents pour fournir des informations.",
+        "p1Title": "Le service fonctionne comme il se doit",
+        "p1": "L'utilisateur expert n'avait pas beaucoup de souhaits pour la page, et croyait qu'elle était principalement fonctionnelle et efficace pour ses tâches.",
+        "p2Title": "Nous avons besoin de plus de marqueurs d'anneau",
+        "p2": "Néanmoins, il y avait un appel parmi les utilisateurs experts qu'ils voulaient plus d'utilisateurs et, surtout, d'inscriptions au service. Ils croyaient que l'initiative et la responsabilité concernant le marquage des anneaux et la gestion des oiseaux étaient importantes et devraient être plus disponibles pour beaucoup.",
+        "empathyMap": "Carte d'Empathie"
+      },
+      "page5": {
+        "subTitle": "Sprint de Design",
+        "title": "Empathie",
+        "p": "Conflit : Comment la solution peut-elle être redessinée pour séduire davantage de nouveaux utilisateurs tout en respectant les pratiques existantes des utilisateurs experts?"
+      },
+      "page6": {
+        "subTitle": "Sprint de Design",
+        "title": "Définir",
+        "titleP": "Basé sur les informations recueillies lors des entretiens avec les utilisateurs experts et la collaboration avec les experts du domaine et le reste de l'équipe, trois principaux domaines ont été définis pour l'espace du problème.",
+        "p1Title": "Plus facile pour plus",
+        "p1": "Le service tel qu'il est aujourd'hui est trop compliqué et difficile à utiliser, le rendant peu attrayant pour les nouveaux utilisateurs, en particulier les plus jeunes. Il est également impossible à utiliser sur mobile, ce qui exclut de nouveau de nombreux cas d'usage et utilisateurs.",
+        "p2Title": "Attrayant pour plus",
+        "p2": "Le concept d'enregistrement des oiseaux bagués offre de nombreuses opportunités d'interaction, telles que l'observation de l'oiseau, l'enregistrement de l'oiseau, le suivi du voyage de l'oiseau, la lecture d'informations sur l'espèce. Il devrait y avoir un meilleur flux entre ces formes d'interaction.",
+        "p3Title": "Utilisateurs Experts",
+        "p3": "L'utilisateur expert n'avait pas beaucoup de souhaits pour le service et estimait qu'il était principalement fonctionnel et efficace pour leurs besoins."
+      },
+      "page7": {
+        "subTitle": "Sprint de Design",
+        "title": "Génération d'Idées",
+        "titleP": "Basé sur les trois principaux domaines définis par le problème, la phase de génération d'idées a commencé, qui impliquait d'abord d'utiliser la vue d'ensemble qui s'était formée pour découvrir l'espace des opportunités.",
+        "p1Title": "Interaction de l'Utilisateur",
+        "p1": "Une carte thématique de l'interaction générale de l'utilisateur a été dessinée pour comprendre les relations entre les différents maillons d'interaction et comment ils sont connectés."
+      },
+      "page8": {
+        "subTitle": "Sprint de Design",
+        "title": "Génération d'Idées",
+        "titleP": "Basé sur les trois principaux domaines définis par le problème, la phase de génération d'idées a commencé, qui impliquait d'abord d'utiliser la vue d'ensemble qui s'était formée pour découvrir l'espace des opportunités.",
+        "p1Title": "Esquisser",
+        "p1": "Pour exploiter au maximum la créativité et la connaissance, toute l'équipe a participé au processus d'esquisse, qui a commencé par une esquisse folle de 8 sur papier avant que nous n'esquissions l'une des idées pendant une demi-heure.",
+        "p2Title": "Choix de l'idée",
+        "p2": "Chacun des membres de l'équipe est allé et a évalué chaque idée et a écrit des commentaires qu'ils pensaient être utiles. À la fin, une méthode de vote par points démocratique a été utilisée pour déterminer l'idée."
+      },
+      "page9": {
+        "subTitle": "Sprint de Design",
+        "title": "L'Idée Brillante...",
+        "p1Title": "Qu'est-ce que le Baguage",
+        "p1": "\"Qu'est-ce que le baguage?\" était l'idée qui a gagné et avec laquelle nous avons procédé à la phase de prototype. Le premier prototype a été dessiné sur un tableau afin que toute l'équipe ait un aperçu de ce qui devait être développé.",
+        "p2Title": "Mobile en Premier",
+        "p2": "Mobile en Premier a également été établi comme base pour la conception pour une plateforme mobile et non pour un ordinateur de bureau ou une tablette. Ce choix a été fait parce que le client, Sabima, voulait une solution Mobile en Premier, et parce qu'il y a un plus grand potentiel pour attirer de nouveaux utilisateurs en créant un service mobile par rapport à un service de bureau."
+      },
+      "page10": {
+        "subTitle": "Sprint de Design",
+        "title": "Prototype",
+        "titleP": "L'idée d'augmenter et d'améliorer les informations concernant les oiseaux qui pourraient être bagués, ainsi que de simplifier le processus d'enregistrement, a conduit au développement de la première version du prototype Figma.",
+        "p1Title": "Première Itération",
+        "p1": "La première itération du prototype était basée sur l'idée, 'Qu'est-ce que le Baguage?' Par conséquent, le premier domaine de focus était de fournir des informations plus pertinentes et précises sur le baguage en tant que partie de l'expérience.",
+        "p2": "L'enregistrement d'un oiseau devrait être aussi simple que possible pour faciliter les choses aux nouveaux utilisateurs, et cela a conduit à ce que cette fonctionnalité soit déplacée à l'avant de l'application."
+      },
+      "page11": {
+        "subTitle": "Sprint de Design",
+        "title": "Test des Utilisateurs",
+        "titleP": "Basé sur les trois domaines principaux définis par le problème, la phase de génération d'idées a commencé. La première phase impliquait d'utiliser l'aperçu qui s'était formé pour découvrir l'espace d'opportunité. Les utilisateurs ont été testés avec la première itération du prototype sur un iPhone disponible.",
+        "p1Title": "Qui",
+        "p1": "Comme il était important de se concentrer à la fois sur les utilisateurs existants et les nouveaux utilisateurs futurs, des individus des deux groupes ont été appelés pour les tests utilisateurs.",
+        "p2Title": "Comment",
+        "p2": "Les utilisateurs existants ont été contactés via des groupes d'intérêt pour la conservation de la nature et les ornithologues. Les nouveaux utilisateurs ont été contactés via les pages Facebook des universités et les groupes d'événements pour la ville.",
+        "p3Title": "Où",
+        "p3": "Les utilisateurs ont été appelés au bureau où nous travaillions, qui était situé au centre d'Oslo. Les utilisateurs ont également été informés à l'avance de l'endroit où les tests utilisateurs auraient lieu."
+      },
+      "page12": {
+        "subTitle": "Sprint de Design",
+        "title": "Résultat",
+        "titleP": "La première itération du prototype avait été testée avec de nouveaux utilisateurs et des utilisateurs existants, et voici quelques-uns des différents retours."
+      },
+      "page13": {
+        "subTitle": "Sprint de Design",
+        "title": "Résultat",
+        "titleP": "Les résultats du premier tour de tests utilisateurs ont jeté les bases des domaines de l'application qui devraient être ajustés. Cependant, les informations n'étaient pas représentatives à 100 pour cent pour les deux groupes d'utilisateurs, car seuls quatre utilisateurs ont été appelés pour les tests utilisateurs.",
+        "p1": "La séquence d'enregistrement pour enregistrer une découverte était pratique, mais il y avait des éléments sous cette séquence qui pourraient être conçus pour rendre l'enregistrement moins déroutant.",
+        "p2": "La page de profil utilisateur était peu claire. Il était difficile de comprendre la différence entre les découvertes, les individus et les espèces. La fonctionnalité favorite n'était également pas évidente.",
+        "p3": "La fonction de carte, qui permettait de suivre le voyage de l'oiseau, était intéressante et était perçue comme un élément important de l'expérience utilisateur.",
+        "p4": "La page d'information sur pourquoi et qu'est-ce que le baguage, qui était implémentée sur la première page, était utile pour les nouveaux utilisateurs qui n'étaient pas familiarisés avec le service auparavant."
+      },
+      "page14": {
+        "title": "Le Chemin Après le Sprint",
+        "titleP": "Après le sprint, la priorité était de développer la deuxième édition du prototype Figma basée sur les résultats des tests utilisateurs. C'était également important pour que les développeurs commencent le travail technique. En même temps, il était nécessaire de réaliser des tests et des entretiens supplémentaires avec les utilisateurs à mesure que d'autres fonctionnalités étaient implémentées.",
+        "p1Title": "Travail de Compréhension",
+        "p1": "Suite au sprint de design, ma responsabilité était d'effectuer davantage de travail de compréhension autour du domaine de l'anneau et de la conservation. D'autres séries de tests et d'entretiens utilisateurs ont également été réalisées au fur et à mesure du développement d'autres itérations du prototype. J'ai aidé à faciliter cela.",
+        "p2Title": "Expression de Design",
+        "p2": "J'ai également travaillé sur le développement de l'expression de design pour le service. Cela était basé sur le travail de compréhension qui avait été réalisé précédemment, et devenait de plus en plus important à mesure que des progrès étaient réalisés avec le prototype Figma. Cette responsabilité incluait de travailler avec des planches d'ambiance, d'explorer des profils de couleurs qui pourraient convenir au service et de travailler avec l'association de marque.",
+        "p3Title": "Prototype Figma",
+        "p3": "Avec mon co-designer, il était de ma responsabilité de travailler sur le développement du prototype Figma à travers plusieurs itérations à mesure que d'autres fonctionnalités étaient proposées et testées. Cela impliquait de développer des wireframes, de développer des composants clés dans le système de design, de travailler sur le parcours utilisateur, d'assembler les prototypes et de communiquer les décisions de design au reste de l'équipe."
+      },
+      "page15": {
+        "title": "Un Défi de Design",
+        "titleP": "Un défi de design significatif était les nombreuses couleurs des bagues, où une identification précise était cruciale pour éviter les erreurs. Plusieurs oiseaux partageaient la même couleur de bague, et les 15 différentes bagues avaient diverses combinaisons de lettres et de chiffres, augmentant encore la complexité.",
+        "p1": "Comment distingue-t-on entre deux espèces d'oiseaux qui ont la même couleur de bague lors de l'enregistrement?",
+        "p2": "Pour relever le défi du design, nous avons mis en place un module de vérification qui s'affiche après la saisie du numéro de bague, pour éviter activement les enregistrements incorrects, une préoccupation parmi les utilisateurs experts."
+      },
+      "page16": {
+        "title": "Ancien et Nouveau Service",
+        "p1Title": "Ancien Service",
+        "p2Title": "Nouveau Service"
+      },
+      "page17": {
+        "title": "Prototype Figma",
+        "titleP": "Voici l'édition finale et cinquième du prototype, qui a également été développée comme une application web conçue pour mobile en premier."
+      },
+      "page18": {
+        "title": "L'expérience du travail",
+        "p1Title": "Différentes attentes",
+        "p1": "En tant que designer, il est impossible de répondre à toutes les attentes et les désirs à la fois du client et des utilisateurs. De plus, on a ses propres opinions sur la façon dont l'expérience utilisateur/l'interface utilisateur devrait être. Souvent, on finit par jouer un rôle de médiateur où il est important de communiquer simplement et clairement les connaissances que l'on a sur l'utilisateur et le domaine au client.",
+        "p2Title": "Design != produit",
+        "p2": "La conception d'une expérience utilisateur ou d'une interface utilisateur est une chose, une autre est les implémentations techniques nécessaires pour développer un produit utilisable que le client peut utiliser. Le technique constitue souvent une limitation ici. Il est donc d'autant plus important d'avoir une bonne coopération et communication entre les designers et les développeurs.",
+        "p3Title": "Le test important prend du temps",
+        "p3": "Le test utilisateur d'un prototype est coûteux en termes de temps et d'énergie. Cependant, un prototype qui ne peut pas être utilisé est une perte de temps. Les tests utilisateur doivent être effectués souvent, au fur et à mesure que l'on travaille en itérations fréquentes. Si l'on n'a pas le temps d'appeler les utilisateurs pour les tests utilisateur, on peut toujours tester sur d'autres collègues ou amis."
+      }
     },
     "coffeecan": {
       "title": "Cafetière multimodale",
@@ -168,6 +323,7 @@
       "storyItalic": "Topico a été développé dans le cadre d'un projet de design de produit sur le thème de l'interaction collaborative. Mon équipe a exploré comment ce thème pourrait être pertinent pour le domaine EduTech. Par conséquent, il s'agit d'un projet de design interdisciplinaire dans lequel j'ai eu le rôle de chercheur empirique (entretiens et observation), de concepteur (compréhension, exploration, matérialisation), de développeur (la plateforme Topico pour l'enseignant), de designer d'interface utilisateur (conception de l'interface pour l'outil Topico ainsi que pour la plateforme de l'enseignant), et de blogueur (rédaction d'actualités hebdomadaires sur les progrès et les défis dans un blog fait par moi-même)."
     }
   },
+
   "portfolioTiles": {
     "p": "Mes travaux précédents",
     "h2": "Mon portfolio",
@@ -177,6 +333,25 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
+        "description": "Application mobile qui permet aux ornithologues d'enregistrer les observations d'oiseaux et de suivre ces oiseaux pour voir leur habitat et obtenir des informations plus spécifiques. ",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "refonte de design",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobile",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "RingmerkingSlideshow",
+        "type": "ringmerkingSlideshow",
         "description": "Application mobile qui permet aux ornithologues d'enregistrer les observations d'oiseaux et de suivre ces oiseaux pour voir leur habitat et obtenir des informations plus spécifiques. ",
         "tags": [
           {

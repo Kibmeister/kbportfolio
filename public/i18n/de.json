@@ -104,7 +104,162 @@
       "buttonclose": "Schließen"
     },
     "ringmerking": {
-      "buttonclose": "Schließen"
+      "buttonclose": "Schließen",
+      "page0": {
+        "title": "Ringmerking.no",
+        "subTitle": "Ein Dienst für Vogel- und Naturinteressierte, die dazu beitragen möchten, die Vielfalt zu erhalten und zu schützen."
+      },
+      "page1": {
+        "title": "Inhalt",
+        "list": [
+          "Fall",
+          "Ziel",
+          "Empathie",
+          "Definieren",
+          "Ideen",
+          "Prototyp",
+          "Test",
+          "Bewerten",
+          "Der Weg nach vorn",
+          "Eine Design-Herausforderung",
+          "Alter und neuer Dienst",
+          "Figma-Prototyp",
+          "Erfahrungen"
+        ]
+      },
+      "page2": {
+        "title1": "Fall",
+        "p1": "Der norwegische Service für die Vogelberingung, Ringmerking.no, war sehr alt geworden und brauchte einen Neustart. Wie können wir einem sehr alten Vogelregistrierungsdienst neues Leben einhauchen, um neue Benutzer anzuziehen, die Benutzerakzeptanz zu erhöhen und letztendlich höhere Registrierungsraten für neue Vögel zu erzielen?",
+        "title2": "MeineRolle",
+        "p2": "Als UX-Designerin in einem Team von zwei Designern und vier Entwicklern arbeitete ich daran, Benutzerkenntnisse zu erlangen, Benutzereinblicke zu analysieren und zu bewerten, Ideen für Skizzenprototypen mit niedriger Treue zu entwickeln und diese an Figma zu übertragen, Prototypen mit Benutzern zu testen, die Identität des Dienstes zu gestalten, klickbare Hochtreueprototypen in Figma zu entwickeln und all dies an den Rest des Teams zu kommunizieren"
+      },
+      "page3": {
+        "title": "Das Ziel",
+        "titleP": "Führen Sie ein umfassendes Redesign des Dienstes durch, um ihn mobil zuerst, benutzerfreundlich, benutzbar und attraktiv zu machen. Der Dienst sollte die Registrierung einer Vogelbeobachtung erleichtern, die Benutzer einbinden und gleichzeitig die bestehenden Benutzer respektieren, die an die aktuellen Praktiken und die Nutzung gewöhnt sind.",
+        "p1Title": "Benutzerakzeptanz erhöhen",
+        "p1": "Der Kunde wollte die Anzahl der Benutzer auf nationaler Basis auf 10.000 erhöhen, was einer Steigerung von 30% entspricht. Eine erhöhte Benutzerakzeptanz hätte einen positiven Einfluss auf die Datensammlung und den Schutz der norwegischen Vogelpopulation.",
+        "p2Title": "Mobile-first",
+        "p2": "Die bestehende Lösung war nur auf dem PC verfügbar, was bedeutet, dass eine sehr große Anzahl von Mobilbenutzern ausgeschlossen ist. Eine mobile Lösung hätte die Registrierung von Vogelringen unterwegs ermöglicht.",
+        "p3Title": "Jüngere Benutzer anziehen",
+        "p3": "Als Teil des Wunsches nach erhöhter Benutzerakzeptanz wollte der Kunde, dass der Dienst attraktiver für junge Benutzer wird. War die Nutzung des Dienstes in der Schule ein wünschenswertes Ergebnis?"
+      },
+      "page4": {
+        "subTitle": "Design-Sprint",
+        "title": "Empathie",
+        "titleP": "Um die Design-Herausforderung zu verstehen, ist der erste Schritt, Empathie für den vom Problem betroffenen Benutzer zu zeigen. Dies bedeutete, dass wir zwei erfahrene Benutzer interviewt haben, die den Dienst seit seiner Entwicklung im Jahr 2004 genutzt haben. Zusätzlich waren zwei Domänenexperten von Sabima anwesend, um Einblicke zu geben.",
+        "p1Title": "Der Dienst funktioniert wie es soll",
+        "p1": "Der Expertenbenutzer hatte nicht viele Wünsche für die Seite und glaubte, dass sie hauptsächlich funktional und effizient für ihre Aufgaben ist.",
+        "p2Title": "Wir brauchen mehr Ringmarker",
+        "p2": "Trotzdem gab es einen Aufruf unter den Expertenbenutzern, dass sie mehr Benutzer und nicht zuletzt Registrierungen für den Dienst wollten. Sie glaubten, dass die Initiative und Verantwortung bezüglich Ringmarkierung und Vogelverwaltung wichtig waren und für viele mehr verfügbar sein sollten.",
+        "empathyMap": "Empathie-Karte"
+      },
+      "page5": {
+        "subTitle": "Design-Sprint",
+        "title": "Empathie",
+        "p": "Konflikt: Wie kann die Lösung neu gestaltet werden, um mehr neuen Benutzern zu gefallen, während die bestehenden Praktiken der Expertenbenutzer respektiert werden?"
+      },
+      "page6": {
+        "subTitle": "Design-Sprint",
+        "title": "Definieren",
+        "titleP": "Basierend auf den Erkenntnissen aus den Expertenbenutzerinterviews und der Zusammenarbeit mit den Domänenexperten und dem Rest des Teams wurden drei Hauptbereiche für den Problemraum definiert.",
+        "p1Title": "Einfacher für mehr",
+        "p1": "Der Dienst, wie er heute ist, ist zu umständlich und schwer zu bedienen, was ihn für neue, insbesondere jüngere Benutzer, unattraktiv macht. Es ist auch unmöglich, ihn auf dem Handy zu nutzen, was erneut viele Anwendungsfälle und Benutzer ausschließt.",
+        "p2Title": "Attraktiv für mehr",
+        "p2": "Das Konzept der Registrierung von beringten Vögeln bietet viele Interaktionsmöglichkeiten, wie das Beobachten des Vogels, das Registrieren des Vogels, das Verfolgen der Reise des Vogels, das Lesen von Informationen über die Art. Es sollte einen besseren Fluss zwischen diesen Interaktionsformen geben.",
+        "p3Title": "Expertenbenutzer",
+        "p3": "Der Experte hatte nicht viele Wünsche für den Dienst und fand, dass er hauptsächlich funktional und effizient für ihre Bedürfnisse war."
+      },
+      "page7": {
+        "subTitle": "Design-Sprint",
+        "title": "Ideenfindung",
+        "titleP": "Basierend auf den drei Hauptbereichen, die durch das Problem definiert wurden, begann die Phase der Ideenfindung, die zunächst beinhaltete, den Überblick zu nutzen, der sich gebildet hatte, um den Raum der Möglichkeiten zu entdecken.",
+        "p1Title": "Benutzerinteraktion",
+        "p1": "Eine thematische Karte der allgemeinen Benutzerinteraktion wurde gezeichnet, um die Beziehungen zwischen den verschiedenen Interaktionsgliedern und ihrer Verbindung zu verstehen."
+      },
+      "page8": {
+        "subTitle": "Design-Sprint",
+        "title": "Ideenfindung",
+        "titleP": "Basierend auf den drei Hauptbereichen, die durch das Problem definiert wurden, begann die Phase der Ideenfindung, die zunächst beinhaltete, den Überblick zu nutzen, der sich gebildet hatte, um den Raum der Möglichkeiten zu entdecken.",
+        "p1Title": "Skizzieren",
+        "p1": "Um die größtmögliche Kreativität und Kenntnisse zu nutzen, nahm das gesamte Team am Skizzierprozess teil, der mit einem verrückten 8er-Skizzieren auf Papier begann, bevor wir eine der Ideen über eine halbe Stunde lang skizzierten.",
+        "p2Title": "Wahl der Idee",
+        "p2": "Jedes der Teammitglieder ging hin und bewertete jede Idee und schrieb Kommentare auf, die sie für nützlich hielten. Am Ende wurde eine demokratische Dot-Voting-Methode verwendet, um die Idee zu bestimmen."
+      },
+      "page9": {
+        "subTitle": "Design-Sprint",
+        "title": "Die Geniale Idee...",
+        "p1Title": "Was ist Ringmarkierung",
+        "p1": "\"Was ist Ringmarkierung?\" war die Idee, die gewonnen hat und mit der wir zur Prototyp-Phase übergegangen sind. Der erste Prototyp wurde auf einer Tafel gezeichnet, damit das gesamte Team einen Überblick darüber hatte, was entwickelt werden sollte.",
+        "p2Title": "Mobile-Zuerst",
+        "p2": "Auch Mobile-Zuerst wurde als Grundlage für das Design für eine mobile Plattform und nicht für Desktop oder Tablet festgelegt. Diese Wahl wurde getroffen, weil der Kunde, Sabima, eine Mobile-Zuerst-Lösung wollte, und weil es ein größeres Potenzial gibt, neue Benutzer anzuziehen, indem man einen mobilen Dienst im Vergleich zu einem Desktop-Dienst erstellt."
+      },
+      "page10": {
+        "subTitle": "Design-Sprint",
+        "title": "Prototyp",
+        "titleP": "Die Idee, die Informationen über die Vögel, die beringt werden könnten, zu erhöhen und zu verbessern, sowie den Registrierungsprozess zu vereinfachen, führte zur Entwicklung der ersten Version des Figma-Prototyps.",
+        "p1Title": "Erste Iteration",
+        "p1": "Die erste Iteration des Prototyps basierte auf der Idee, 'Was ist Ringmarkierung?' Daher war der erste Schwerpunktbereich, relevantere und genauere Informationen über die Ringmarkierung als Teil des Erlebnisses zu liefern.",
+        "p2": "Die Registrierung eines Vogels sollte so einfach wie möglich sein, um es neuen Benutzern zu erleichtern, und dies führte dazu, dass diese Funktionalität an den Anfang der App verschoben wurde."
+      },
+      "page11": {
+        "subTitle": "Design-Sprint",
+        "title": "Benutzertests",
+        "titleP": "Basierend auf den drei Hauptbereichen, die durch das Problem definiert wurden, begann die Ideengenerierungsphase. Die erste Phase beinhaltete die Verwendung der Übersicht, die sich gebildet hatte, um den Möglichkeitsraum zu entdecken. Die Benutzer wurden mit der ersten Iteration des Prototyps auf einem verfügbaren iPhone getestet.",
+        "p1Title": "Wer",
+        "p1": "Da es wichtig war, sich sowohl auf bestehende als auch auf neue zukünftige Benutzer zu konzentrieren, wurden Personen aus beiden Gruppen zum Benutzertest eingeladen.",
+        "p2Title": "Wie",
+        "p2": "Bestehende Benutzer wurden über Interessengruppen für Naturschutz und Vogelbeobachtung erreicht. Neue Benutzer wurden über Facebook-Seiten für Universitäten und Eventgruppen für die Stadt erreicht.",
+        "p3Title": "Wo",
+        "p3": "Die Benutzer wurden in das Büro eingeladen, in dem wir arbeiteten, das zentral in Oslo lag. Die Benutzer wurden auch im Voraus darüber informiert, wo die Benutzertests stattfinden würden."
+      },
+      "page12": {
+        "subTitle": "Design-Sprint",
+        "title": "Ergebnis",
+        "titleP": "Die erste Iteration des Prototyps war mit neuen und bestehenden Benutzern getestet worden, und dies waren einige der verschiedenen Rückmeldungen."
+      },
+      "page13": {
+        "subTitle": "Design-Sprint",
+        "title": "Ergebnis",
+        "titleP": "Die Ergebnisse aus der ersten Benutzertest-Runde legten den Grundstein dafür, welche Bereiche der App angepasst werden sollten. Die Einsicht war jedoch nicht zu 100 Prozent repräsentativ für die beiden Benutzergruppen, da nur vier Benutzer zum Benutzertest eingeladen wurden.",
+        "p1": "Die Registrierungssequenz zum Registrieren eines Fundes war bequem, aber es gab Elemente unter dieser Sequenz, die so gestaltet werden könnten, dass die Registrierung weniger verwirrend ist.",
+        "p2": "Die Benutzerprofilseite war unübersichtlich. Es war schwierig, den Unterschied zwischen Funden, Individuum und Art zu verstehen. Die Favoritenfunktion war ebenfalls nicht offensichtlich.",
+        "p3": "Die Kartenfunktion, die es ermöglichte, der Reise des Vogels zu folgen, war interessant und wurde als wichtiges Element im Benutzererlebnis wahrgenommen.",
+        "p4": "Die Informationsseite darüber, warum und was Ringmarkierung war, die auf der ersten Seite implementiert wurde, war nützlich für neue Benutzer, die vorher nicht mit dem Dienst vertraut waren."
+      },
+      "page14": {
+        "title": "Der Weg nach dem Sprint",
+        "titleP": "Nach dem Sprint bestand die Priorität darin, die zweite Ausgabe des Figma-Prototyps basierend auf den Ergebnissen der Benutzertests zu entwickeln. Dies war auch wichtig, damit die Entwickler mit der technischen Arbeit beginnen konnten. Gleichzeitig bestand die Notwendigkeit für weitere Tests und Interviews mit Benutzern, da mehr Funktionen implementiert wurden.",
+        "p1Title": "Einsichtsarbeit",
+        "p1": "Im Anschluss an den Design-Sprint lag meine Verantwortung darin, mehr Einsichtsarbeit im Bereich Ringing und Naturschutz durchzuführen. Es wurden auch weitere Runden von Benutzertests und Interviews abgehalten, während weitere Iterationen des Prototyps entwickelt wurden. Ich habe dabei geholfen, diese zu erleichtern.",
+        "p2Title": "Designausdruck",
+        "p2": "Ich habe auch daran gearbeitet, den Designausdruck für den Dienst zu entwickeln. Dies basierte auf der zuvor durchgeführten Einsichtsarbeit und wurde mit dem Fortschritt des Figma-Prototyps immer wichtiger. Diese Verantwortung umfasste die Arbeit mit Stimmungstafeln, die Erforschung von Farbprofilen, die zum Dienst passen könnten, und die Arbeit mit Markenassoziation.",
+        "p3Title": "Figma-Prototyp",
+        "p3": "Gemeinsam mit meinem Mitherausgeber war es meine Verantwortung, an der Entwicklung des Figma-Prototyps durch mehrere Iterationen zu arbeiten, während mehr Funktionen vorgeschlagen und getestet wurden. Dies beinhaltete die Entwicklung von Drahtmodellen, die Entwicklung von Schlüsselkomponenten im Designsystem, die Arbeit an der Benutzerreise, das Zusammenstellen der Prototypen und die Kommunikation von Designentscheidungen an den Rest des Teams."
+      },
+      "page15": {
+        "title": "Eine Design-Herausforderung",
+        "titleP": "Eine erhebliche Design-Herausforderung waren die vielen Farben der Ringe, wo eine genaue Identifikation entscheidend war, um Fehler zu vermeiden. Mehrere Vögel teilten dieselbe Ringfarbe, und die 15 verschiedenen Ringe hatten verschiedene Buchstaben- und Zahlenkombinationen, was die Komplexität weiter erhöhte.",
+        "p1": "Wie unterscheidet man zwischen zwei Vogelarten, die die gleiche Ringfarbe haben, bei der Registrierung?",
+        "p2": "Um die Design-Herausforderung zu bewältigen, implementierten wir ein Verifizierungsmodul, das nach der Eingabe der Ringnummer angezeigt wird, um aktiv falsche Registrierungen zu verhindern, ein Anliegen unter Expertenbenutzern."
+      },
+      "page16": {
+        "title": "Alter und Neuer Dienst",
+        "p1Title": "Alter Dienst",
+        "p2Title": "Neuer Dienst"
+      },
+      "page17": {
+        "title": "Figma-Prototyp",
+        "titleP": "Hier ist die endgültige und fünfte Ausgabe des Prototyps, der auch als Web-App entwickelt wurde, die für Mobile-First ausgelegt ist."
+      },
+      "page18": {
+        "title": "Erfahrung aus der Arbeit",
+        "p1Title": "Unterschiedliche Erwartungen",
+        "p1": "Als Designer ist es unmöglich, allen Erwartungen und Wünschen von Kunden und Benutzern gerecht zu werden. Darüber hinaus hat man seine Meinungen darüber, wie die Benutzererfahrung / das Benutzerschnittstellen-Design sein sollte. Oft endet man in einer Art Vermittlerrolle, in der es wichtig ist, das Verständnis, das man über den Benutzer und das Domänenwissen des Kunden hat, auf einfache und klare Weise zu kommunizieren.",
+        "p2Title": "Design != Produkt",
+        "p2": "Das Design einer Benutzererfahrung oder einer Benutzerschnittstelle ist eine Sache, eine andere Sache sind die technischen Implementierungen, die erforderlich sind, um ein brauchbares Produkt zu entwickeln, das der Kunde verwenden kann. Das Technische stellt hier oft eine Begrenzung dar. Daher ist es besonders wichtig, eine gute Zusammenarbeit und Kommunikation zwischen Designern und Entwicklern zu haben.",
+        "p3Title": "Wichtige Tests dauern lange",
+        "p3": "Die Benutzertestung eines Prototyps ist teuer in Bezug auf Zeit und Energie. Dennoch ist ein Prototyp, der nicht verwendet werden kann, verschwendete Zeit. Die Benutzertestung sollte häufig durchgeführt werden, im Einklang mit der Arbeit in häufigen Iterationen. Wenn man keine Zeit hat, Benutzer zur Testung einzuladen, kann man immer auf andere Kollegen oder Freunde testen."
+      }
     },
     "coffeecan": {
       "title": "Multimodale Kaffeekanne",
@@ -172,6 +327,25 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
+        "description": "Mobilanwendung, die Vogelbeobachtern ermöglicht, Vogelsichtungen zu registrieren und diese Vögel zu verfolgen, um ihren Lebensraum und spezifischere Informationen zu sehen.",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "design-Neugestaltung",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobil",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "RingmerkingSlideshow",
+        "type": "ringmerkingSlideshow",
         "description": "Mobilanwendung, die Vogelbeobachtern ermöglicht, Vogelsichtungen zu registrieren und diese Vögel zu verfolgen, um ihren Lebensraum und spezifischere Informationen zu sehen.",
         "tags": [
           {

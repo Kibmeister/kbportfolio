@@ -21,11 +21,11 @@ import {
   RingmerkingFR,
   RingmerkingDE,
   mike,
-  oldwebsite,
   uxicon,
   uiicon,
   productdesignicon,
   frontendicon,
+  oldwebsite,
   topicoThumbnailEN,
   topicoThumbnailNO,
   topicoThumbnailES,
@@ -45,11 +45,29 @@ import {
   coaxerThumbnailFR,
   coaxerThumbnailDE,
   userresearchericon,
+  blidekarusell7,
+  blidekarusell1,
+  blidekarusell2,
+  blidekarusell3,
+  blidekarusell4,
+  blidekarusell5,
+  blidekarusell6,
+  empathyMapEN,
+  empathyMapNO,
+  empathyMapES,
+  empathyMapIT,
+  empathyMapFR,
+  empathyMapDE,
+  feedbackResultsEN,
+  feedbackResultsNO,
+  feedbackResultsES,
+  feedbackResultsIT,
+  feedbackResultsFR,
+  feedbackResultsDE,
 } from '../assets';
 
 //only used for internalObserver
 export const navLinks = [
-
   {
     id: 'about',
     title: 'About',
@@ -168,11 +186,42 @@ const imageMapTestimonals = {
   one: mike,
 };
 
+const imageMapRingmerkingEmathyMap = {
+  en: empathyMapEN,
+  no: empathyMapNO,
+  es: empathyMapES,
+  it: empathyMapIT,
+  fr: empathyMapFR,
+  de: empathyMapDE,
+};
+
+const imageMapRingmerkingResultsMap = {
+  en: feedbackResultsEN,
+  no: feedbackResultsNO,
+  es: feedbackResultsES,
+  it: feedbackResultsIT,
+  fr: feedbackResultsFR,
+  de: feedbackResultsDE,
+};
+
+const imageMapImgCarousel = {
+  1: { img: blidekarusell1, name: 'Fast AF registrering ' },
+
+  2: { img: blidekarusell2, name: 'Birdfriend' },
+
+  3: { img: blidekarusell3, name: 'Poengregistrering ' },
+
+  4: { img: blidekarusell4, name: 'Weapons of mass registration ' },
+
+  5: { img: blidekarusell5, name: 'Enkel import fra minnekort ' },
+
+  6: { img: blidekarusell6, name: 'Hva er ringmerking? ' },
+
+  7: { img: blidekarusell7, name: 'WTFugl ' },
+};
 
 const testimonials = [
   {
-    testimonial:
-      'As the UX Lead at 4human, I have had the pleasure of working closely with Kasper for seven months. In that time, I have seen him develop into a talented and dedicated User Interface (UI) Designer. I wholeheartedly recommend Kasper for any future opportunities in the UI/UX design field. From the very beginning, Kasper demonstrated a keen eye for detail and a deep understanding of the nuances of effective user interface design. He was able to quickly learn and apply the principles of our design system, leading to a seamless integration into our team. His willingness to learn and grow, along with his receptiveness to feedback, made it an absolute joy to work with him. A significant contribution by Kasper during his time at 4human was his development of the foundation for our design system documentation. This has greatly improved the efficiency and consistency of our design projects, ultimately leading to a more cohesive user experience across our product suite. In addition to his technical skills, Kasper possesses excellent communication and collaboration abilities. He was always eager to share his insights and ideas with the team, which fostered a positive and creative work environment. His passion for UI/UX design is evident so I am confident that he will continue to excel in his career.Kasper is a valuable addition to any UX design team. He has not only proven his capabilities as a junior UI/UX designer but has also laid the groundwork for a successful and impactful career in the field. I have no doubt that Kasper will continue to impress and inspire those who have the privilege of working with him.',
     name: 'Mihael Gorensek',
     designation: 'Head Designer',
     company: '4Human',
@@ -185,7 +234,6 @@ const projects = [
     name: 'Ringmerking',
     type: 'ringmerking',
     image: RingmerkingEN,
-   
   },
   {
     name: 'RingmerkingSlideshow',
@@ -196,13 +244,11 @@ const projects = [
     name: 'Coaxer',
     type: 'coaxer',
     image: coaxerEN,
-    
   },
   {
     name: 'Multimodal coffeecan',
     type: 'coffeecan',
     image: multimodalcoffeecanthumbnail,
-   
   },
   {
     name: 'Topico EduTech',
@@ -306,4 +352,7 @@ export {
   imageMapRingmerking,
   imageMapTestimonals,
   modelMapTypewriter,
+  imageMapRingmerkingEmathyMap,
+  imageMapImgCarousel,
+  imageMapRingmerkingResultsMap,
 };

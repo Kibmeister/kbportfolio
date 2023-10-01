@@ -105,7 +105,162 @@
       "buttonclose": "Chiudi"
     },
     "ringmerking": {
-      "buttonclose": "Chiudi"
+      "buttonclose": "Chiudi",
+      "page0": {
+        "title": "Ringmerking.no",
+        "subTitle": "Un servizio per coloro che sono appassionati di uccelli e natura che vogliono contribuire a preservare e proteggere la diversità."
+      },
+      "page1": {
+        "title": "Contenuto",
+        "list": [
+          "Caso",
+          "Obiettivo",
+          "Empatia",
+          "Definire",
+          "Idee",
+          "Prototipo",
+          "Test",
+          "Valutare",
+          "La strada da seguire",
+          "Una sfida di design",
+          "Servizio vecchio e nuovo",
+          "Prototipo Figma",
+          "Esperienze"
+        ]
+      },
+      "page2": {
+        "title1": "Caso",
+        "p1": "Il servizio norvegese per l'anello degli uccelli, Ringmerking.no, era diventato molto vecchio e aveva bisogno di un rilancio. Come possiamo dare vita a un servizio di registrazione degli uccelli molto vecchio per attirare nuovi utenti, aumentare l'adozione degli utenti e, infine, ottenere tassi di registrazione più alti per nuovi uccelli?",
+        "title2": "MioRuolo",
+        "p2": "Come designer di UX in un team di due designer e quattro sviluppatori, ho lavorato per eseguire lavori di insight degli utenti, analizzare e valutare l'insight degli utenti, ideare su prototipi di schizzi a bassa fedeltà e trasferirli a Figma, testare i prototipi con gli utenti, progettare l'identità del servizio, sviluppare prototipi ad alta fedeltà cliccabili in Figma e comunicare tutto questo al resto del team"
+      },
+      "page3": {
+        "title": "L'Obiettivo",
+        "titleP": "Effettuare un completo redesign del servizio per renderlo mobile-first, user-friendly, usabile e attraente. Il servizio dovrebbe facilitare la registrazione di un'osservazione di uccelli, coinvolgere gli utenti e allo stesso tempo rispettare gli utenti esistenti che sono abituati alle pratiche e all'uso attuali.",
+        "p1Title": "Aumentare l'Adozione degli Utenti",
+        "p1": "Il cliente desiderava aumentare il numero di utenti a 10.000 su base nazionale, che sarebbe stato un aumento del 30%. Un aumento dell'adozione degli utenti avrebbe avuto un impatto positivo sulla raccolta dei dati e sulla protezione della popolazione di uccelli norvegesi.",
+        "p2Title": "Mobile-first",
+        "p2": "La soluzione esistente era disponibile solo su PC, il che significa che un gran numero di utenti mobili sono esclusi. Una soluzione mobile avrebbe permesso registrazioni di anellamento di uccelli in movimento.",
+        "p3Title": "Attirare Utenti più Giovani",
+        "p3": "Come parte del desiderio di aumentare l'adozione degli utenti, il cliente voleva che il servizio fosse più attraente per i giovani utenti. Usare il servizio a scuola era un risultato desiderabile?"
+      },
+      "page4": {
+        "subTitle": "Sprint di Design",
+        "title": "Empatia",
+        "titleP": "Per comprendere la sfida del design, il primo passo è mostrare empatia per l'utente colpito dal problema. Ciò ha comportato l'intervista di due utenti esperti che hanno utilizzato il servizio sin dal suo sviluppo nel 2004. Inoltre, due esperti di dominio di Sabima erano presenti per fornire informazioni.",
+        "p1Title": "Il servizio funziona come dovrebbe",
+        "p1": "L'utente esperto non aveva molti desideri per la pagina e credeva che fosse per lo più funzionale ed efficiente per i suoi compiti.",
+        "p2Title": "Abbiamo bisogno di più marcatori di anello",
+        "p2": "C'era comunque un appello tra gli utenti esperti che volevano più utenti e, non da ultimo, registrazioni al servizio. Credevano che l'iniziativa e la responsabilità riguardo la marcatura degli anelli e la gestione degli uccelli fossero importanti e dovrebbero essere più disponibili per molti.",
+        "empathyMap": "Mappa di Empatia"
+      },
+      "page5": {
+        "subTitle": "Sprint di Design",
+        "title": "Empatia",
+        "p": "Conflitto: Come può essere ridisegnata la soluzione per attirare più nuovi utenti rispettando al contempo le pratiche esistenti degli utenti esperti?"
+      },
+      "page6": {
+        "subTitle": "Sprint di Design",
+        "title": "Definire",
+        "titleP": "Basato sulle intuizioni ottenute dalle interviste agli utenti esperti e dalla collaborazione con esperti del dominio e il resto del team, sono state definite tre aree principali per lo spazio del problema.",
+        "p1Title": "Più facile per molti",
+        "p1": "Il servizio, così com'è oggi, è troppo macchinoso e difficile da usare, il che lo rende poco attraente per i nuovi, specialmente i più giovani, utenti. È anche impossibile da usare su mobile, il che esclude nuovamente molti casi d'uso e utenti.",
+        "p2Title": "Attraente per molti",
+        "p2": "Il concetto di registrazione di uccelli anellati offre molte opportunità di interazione, come osservare l'uccello, registrare l'uccello, seguire il viaggio dell'uccello, leggere informazioni sulla specie. Dovrebbe esserci un miglior flusso tra queste forme di interazione.",
+        "p3Title": "Utenti Esperti",
+        "p3": "L'utente esperto non aveva molti desideri per il servizio, e riteneva che fosse per lo più funzionale ed efficiente per le loro esigenze."
+      },
+      "page7": {
+        "subTitle": "Sprint di Design",
+        "title": "Generazione di Idee",
+        "titleP": "Basato sulle tre aree principali definite dal problema, è iniziata la fase di generazione delle idee, che prima coinvolgeva l'uso della panoramica che si era formata per scoprire lo spazio delle opportunità.",
+        "p1Title": "Interazione dell'Utente",
+        "p1": "È stata disegnata una mappa tematica dell'interazione generale dell'utente per comprendere le relazioni tra i diversi anelli di interazione e come sono collegati."
+      },
+      "page8": {
+        "subTitle": "Sprint di Design",
+        "title": "Generazione di Idee",
+        "titleP": "Basato sulle tre aree principali definite dal problema, è iniziata la fase di generazione delle idee, che prima coinvolgeva l'uso della panoramica che si era formata per scoprire lo spazio delle opportunità.",
+        "p1Title": "Schizzo",
+        "p1": "Per sfruttare al massimo la creatività e la conoscenza, tutto il team ha partecipato al processo di schizzo, che è iniziato con uno schizzo folle di 8 su carta prima di abbozzare una delle idee per mezz'ora.",
+        "p2Title": "Scelta dell'idea",
+        "p2": "Ogni membro del team è andato e ha valutato ogni idea e ha scritto commenti che pensavano fossero utili. Alla fine, è stato utilizzato un metodo di voto a punti democratico per determinare l'idea."
+      },
+      "page9": {
+        "subTitle": "Sprint di Design",
+        "title": "L'Idea Brillante...",
+        "p1Title": "Cos'è l'Anellamento",
+        "p1": "\"Cos'è l'anellamento?\" era l'idea che ha vinto e con cui siamo passati alla fase del prototipo. Il primo prototipo è stato disegnato su una lavagna in modo che tutto il team avesse una visione d'insieme di ciò che doveva essere sviluppato.",
+        "p2Title": "Mobile-Prima",
+        "p2": "Anche Mobile-Prima è stato stabilito come base per la progettazione per una piattaforma mobile e non per desktop o tablet. Questa scelta è stata fatta perché il cliente, Sabima, desiderava una soluzione mobile-prima, e perché c'è un maggiore potenziale per attirare nuovi utenti creando un servizio mobile rispetto a un servizio desktop."
+      },
+      "page10": {
+        "subTitle": "Sprint di Design",
+        "title": "Prototipo",
+        "titleP": "L'idea di aumentare e migliorare le informazioni sugli uccelli che potrebbero essere anellati, così come semplificare il processo di registrazione, ha portato allo sviluppo della prima versione del prototipo Figma.",
+        "p1Title": "Prima Iterazione",
+        "p1": "La prima iterazione del prototipo si basava sull'idea, 'Cos'è l'Anellamento?' Pertanto, la prima area di focus era fornire informazioni più rilevanti e precise sull'anellamento come parte dell'esperienza.",
+        "p2": "La registrazione di un uccello dovrebbe essere il più semplice possibile per facilitare i nuovi utenti, e ciò ha portato a spostare questa funzionalità nella parte anteriore dell'app."
+      },
+      "page11": {
+        "subTitle": "Sprint di Design",
+        "title": "Test degli Utenti",
+        "titleP": "Basato sulle tre aree principali definite dal problema, è iniziata la fase di generazione delle idee. La prima fase ha coinvolto l'uso della panoramica che si era formata per scoprire lo spazio delle opportunità. Gli utenti sono stati testati con la prima iterazione del prototipo su un iPhone disponibile.",
+        "p1Title": "Chi",
+        "p1": "Poiché era importante concentrarsi sia sugli utenti esistenti che sui nuovi utenti futuri, individui di entrambi questi gruppi sono stati chiamati per il test utente.",
+        "p2Title": "Come",
+        "p2": "Gli utenti esistenti sono stati raggiunti tramite gruppi di interesse per la conservazione della natura e birdwatchers. I nuovi utenti sono stati raggiunti tramite pagine Facebook per università e gruppi di eventi per la città.",
+        "p3Title": "Dove",
+        "p3": "Gli utenti sono stati chiamati nell'ufficio in cui lavoravamo, che era centralmente situato a Oslo. Gli utenti sono stati anche informati in anticipo su dove si sarebbero svolti i test utente."
+      },
+      "page12": {
+        "subTitle": "Sprint di Design",
+        "title": "Risultato",
+        "titleP": "La prima iterazione del prototipo era stata testata con nuovi e vecchi utenti, ed questi erano alcuni dei diversi feedback."
+      },
+      "page13": {
+        "subTitle": "Sprint di Design",
+        "title": "Risultato",
+        "titleP": "I risultati del primo round di test utente hanno posto le basi per quali aree dell'app dovrebbero essere regolate. Tuttavia, le intuizioni non erano rappresentative al 100 percento per i due gruppi di utenti, in quanto solo quattro utenti sono stati chiamati per i test utente.",
+        "p1": "La sequenza di registrazione per registrare un ritrovamento era conveniente, ma c'erano elementi sotto questa sequenza che potevano essere progettati per rendere la registrazione meno confusa.",
+        "p2": "La pagina del profilo utente era poco chiara. Era difficile capire la differenza tra ritrovamenti, individuo e specie. Anche la funzionalità preferita non era ovvia.",
+        "p3": "La funzione mappa, che permetteva di seguire il viaggio dell'uccello, era interessante e veniva percepita come un elemento importante nell'esperienza dell'utente.",
+        "p4": "La pagina di informazioni su perché e cosa era l'anello, che era stata implementata nella prima pagina, era utile per i nuovi utenti che non erano familiari con il servizio prima."
+      },
+      "page14": {
+        "title": "Il Percorso Dopo lo Sprint",
+        "titleP": "Dopo lo sprint, la priorità era sviluppare la seconda edizione del prototipo Figma basato sui risultati dei test utente. Questo era anche importante per i sviluppatori per iniziare con il lavoro tecnico. Allo stesso tempo, c'era la necessità di ulteriori test e interviste con gli utenti man mano che venivano implementate altre funzionalità.",
+        "p1Title": "Lavoro di Approfondimento",
+        "p1": "Dopo lo sprint di design, era mia responsabilità effettuare ulteriori approfondimenti sul dominio dell'anello e della conservazione. Altre sessioni di test utente e interviste sono state effettuate man mano che venivano sviluppate altre iterazioni del prototipo. Ho contribuito a facilitare queste.",
+        "p2Title": "Espressione di Design",
+        "p2": "Ho anche lavorato allo sviluppo dell'espressione di design per il servizio. Questo era basato sul lavoro di approfondimento fatto in precedenza, e diventava sempre più importante man mano che si procedeva con il prototipo Figma. Questa responsabilità includeva lavorare con moodboard, esplorare profili di colore adatti al servizio e lavorare con l'associazione di marca.",
+        "p3Title": "Prototipo Figma",
+        "p3": "Insieme al mio co-designer, era mia responsabilità lavorare allo sviluppo del prototipo Figma attraverso molteplici iterazioni man mano che venivano proposte e testate altre funzionalità. Questo coinvolgeva sviluppare wireframe, sviluppare componenti chiave nel sistema di design, lavorare sul percorso dell'utente, assemblare i prototipi e comunicare le decisioni di design al resto del team."
+      },
+      "page15": {
+        "title": "Una Sfida di Design",
+        "titleP": "Una significativa sfida di design era i molti colori degli anelli, dove l'identificazione precisa era cruciale per evitare errori. Diversi uccelli condividevano lo stesso colore dell'anello, e i 15 anelli diversi avevano varie combinazioni di lettere e numeri, aumentando ulteriormente la complessità.",
+        "p1": "Come si distingue tra due specie di uccelli che hanno lo stesso colore dell'anello quando si registra?",
+        "p2": "Per affrontare la sfida del design, abbiamo implementato un modulo di verifica che viene visualizzato dopo l'inserimento del numero dell'anello, per prevenire attivamente le registrazioni errate, una preoccupazione tra gli utenti esperti."
+      },
+      "page16": {
+        "title": "Servizio Vecchio e Nuovo",
+        "p1Title": "Vecchio Servizio",
+        "p2Title": "Nuovo Servizio"
+      },
+      "page17": {
+        "title": "Prototipo Figma",
+        "titleP": "Ecco la finale e quinta edizione del prototipo, che è stata anche sviluppata come un'app web progettata per essere mobile-first."
+      },
+      "page18": {
+        "title": "L'esperienza dal lavoro",
+        "p1Title": "Diverse aspettative",
+        "p1": "Come designer, è impossibile soddisfare tutte le aspettative e i desideri sia del cliente che degli utenti. Inoltre, ognuno ha le proprie opinioni su come dovrebbe essere l'esperienza utente/l'interfaccia utente. Spesso si finisce in una sorta di ruolo di mediatore in cui è importante comunicare la consapevolezza che si ha dell'utente e del dominio al cliente in modo semplice e diretto.",
+        "p2Title": "Design != prodotto",
+        "p2": "Il design di un'esperienza utente o di un'interfaccia utente è una cosa, un'altra cosa sono le implementazioni tecniche necessarie per sviluppare un prodotto utilizzabile che il cliente può usare. Il tecnico costituisce spesso un limite qui. Pertanto, è extra importante avere una buona cooperazione e comunicazione tra designer e sviluppatori.",
+        "p3Title": "Il testing importante richiede tempo",
+        "p3": "Il test utente di un prototipo è costoso in termini di tempo ed energia. Tuttavia, un prototipo che non può essere utilizzato è una perdita di tempo. I test utenti dovrebbero essere fatti spesso, di pari passo con il lavoro in iterazioni frequenti. Se non si ha tempo di chiamare gli utenti per i test utenti, si può sempre testare con altri colleghi o amici."
+      }
     },
     "coffeecan": {
       "title": "Caffettiera multimodale",
@@ -165,6 +320,7 @@
       "storyItalic": "Topico è stato sviluppato come parte di un progetto di design del prodotto con il tema dell'interazione collaborativa. Il mio team ha esplorato come questo tema potrebbe essere rilevante per il dominio EduTech. Quindi, questo è un progetto di design interdisciplinare in cui ho avuto il ruolo di ricercatore empirico (interviste e osservazione), designer (comprensione, esplorazione, materializzazione), sviluppatore (la piattaforma Topico per l'insegnante), designer UI (progettazione dell'interfaccia per lo strumento Topico così come per la piattaforma dell'insegnante), e blogger (scrivendo aggiornamenti settimanali sul progresso e le sfide in un blog fatto da me)."
     }
   },
+
   "portfolioTiles": {
     "p": "Il mio lavoro precedente",
     "h2": "Il mio portfolio",
@@ -174,6 +330,25 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
+        "description": "Applicazione mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per osservarne l'habitat e informazioni più specifiche.",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "rimodellamento del design",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobile",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "RingmerkingSlideshow",
+        "type": "ringmerkingSlideshow",
         "description": "Applicazione mobile che consente agli appassionati di birdwatching di registrare avvistamenti di uccelli e seguirli per osservarne l'habitat e informazioni più specifiche.",
         "tags": [
           {

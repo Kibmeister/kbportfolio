@@ -112,7 +112,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: isInitialRender ? 0.2 : 0.1, // Stagger value for h1
+              stagger: isInitialRender ? 0.1 : 0.1, // Stagger value for h1
             }
           );
 
@@ -130,7 +130,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: isInitialRender ? 0.04 : 0.02, // Stagger value for p (4 times faster than h1)
+              stagger: isInitialRender ? 0.02 : 0.02, // Stagger value for p (4 times faster than h1)
             }
           );
         });

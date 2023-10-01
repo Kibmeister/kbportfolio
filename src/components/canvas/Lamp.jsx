@@ -34,7 +34,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   useEffect(() => {
     const hoverTimeout = setTimeout(() => {
       setAllowHover(true);
-    }, 4000); // 4 seconds
+    }, 500); // 4 seconds
 
     // Cleanup the timeout when the component is unmounted
     return () => clearTimeout(hoverTimeout);

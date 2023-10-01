@@ -164,8 +164,164 @@
       "buttonclose": "Close"
     },
     "ringmerking": {
-      "buttonclose": "Close"
+      "buttonclose": "Close",
+      "page0": {
+        "title": "Ringmerking.no",
+        "subTitle": "A service for those who are bird and nature enthusiasts who want to contribute to preserving and protecting diversity."
+      },
+      "page1": {
+        "title": "Content",
+        "list": [
+          "Case",
+          "Goal",
+          "Empathy",
+          "Define",
+          "Ideas",
+          "Prototype",
+          "Test",
+          "Evaluate",
+          "The way forward",
+          "A design challenge",
+          "Old and new service",
+          "Figma prototype",
+          "Experiences"
+        ]
+      },
+      "page2": {
+        "title1": "Case",
+        "p1": "The Norwegian bird ringing service, Ringmerking.no, had become very old and needed a relaunch. How can we breathe new life into a very old bird registration service to attract new users, increase user adoption, and ultimately achieve higher registration rates for new birds?",
+        "title2": "My Role",
+        "p2": "As a UX designer in a team of two designers and four developers, I worked on conducting user research, analyzing and evaluating user insights, ideating over low-fidelity sketch prototypes and transferring them to Figma, testing prototypes with users, designing the identity of the service, developing clickable high-fidelity prototypes in Figma - as well as communicating all of this to the rest of the team."
+      },
+      "page3": {
+        "title": "The Goal",
+        "titleP": "Carry out a comprehensive redesign of the service to make it mobile-first, user-friendly, usable, and attractive. The service should make it easier to register a bird observation, engage users, and at the same time respect existing users who are accustomed to current practices and use.",
+        "p1Title": "Increase User Adoption",
+        "p1": "The client wanted to increase the number of users to 10,000 on a national basis, which would be a 30% increase. Increased user adoption would have a positive impact on data collection and the protection of the Norwegian bird population.",
+        "p2Title": "Mobile-first",
+        "p2": "The existing solution was only available on PC, which means that a very large number of mobile users are left out. A mobile solution would have enabled bird ringing registrations on the go.",
+        "p3Title": "Attract Younger Users",
+        "p3": "As part of the desire for increased user adoption, the client wanted the service to be more appealing to young users. Using the service in school was a desirable outcome?"
+      },
+      "page4": {
+        "subTitle": "Design Sprint",
+        "title": "Empathy",
+        "titleP": "To understand the design challenge, the first step is showing empathy for the user affected by the problem. This involved interviewing two experienced users who have used the service since its development in 2004. Additionally, two domain experts from Sabima were present to provide insight.",
+        "p1Title": "The service works as it should",
+        "p1": "The expert user had not many wishes for the page, and believed it was mostly functional and efficient for its tasks.",
+        "p2Title": "We need more ring markers",
+        "p2": "Nevertheless, there was a call among expert users that they wanted more users and, not least, registrations to the service. They believed that the initiative and responsibility about ring marking and bird management were important and should be more available to many.",
+        "empathyMap": "Empathy Map"
+      },
+      "page5": {
+        "subTitle": "Design Sprint",
+        "title": "Empathy",
+        "p": "Conflict: How can the solution be redesigned to appeal to more new users while respecting the existing practices of expert users?"
+      },
+      "page6": {
+        "subTitle": "Design Sprint",
+        "title": "Define",
+        "titleP": "Based on the insights from expert user interviews and collaboration with domain experts and the rest of the team, three main areas were defined for the problem space.",
+        "p1Title": "Easier for More",
+        "p1": "The service as it is today is too cumbersome and difficult to use, making it unappealing to new, especially younger, users. It is also impossible to use on mobile, which again excludes many use cases and users.",
+        "p2Title": "Attractive for More",
+        "p2": "The concept of registering ring-marked birds offers many interaction opportunities, such as observing the bird, registering the bird, following the bird's journey, reading information about the species. There should be a better flow between these forms of interaction.",
+        "p3Title": "Expert Users",
+        "p3": "The expert user did not have many wishes for the service, and felt it was mostly functional and efficient for their needs."
+      },
+      "page7": {
+        "subTitle": "Design Sprint",
+        "title": "Idea Generation",
+        "titleP": "Based on the three main areas defined by the problem, the idea generation phase started, which first involved using the overview that had formed to discover the opportunity space.",
+        "p1Title": "User Interaction",
+        "p1": "A thematic map of the general user interaction was drawn to understand the relationships between the different interaction links and how they are connected."
+      },
+      "page8": {
+        "subTitle": "Design Sprint",
+        "title": "Idea Generation",
+        "titleP": "Based on the three main areas defined by the problem, the idea generation phase started, which first involved using the overview that had formed to discover the opportunity space.",
+        "p1Title": "Sketching",
+        "p1": "To make the most of creativity and knowledge, the entire team participated in the sketching process, which started with a crazy 8's sketch on paper before we sketched one of the ideas over half an hour.",
+        "p2Title": "Choice of Idea",
+        "p2": "Each team member went and evaluated each idea and wrote up comments they thought were useful. In the end, a democratic dot-voting method was used to determine the idea."
+      },
+      "page9": {
+        "subTitle": "Design Sprint",
+        "title": "The Brilliant Idea...",
+        "p1Title": "What is Ringing",
+        "p1": "\"What is ringing?\" was the idea that won and that we proceeded with to the prototype phase. The first prototype was drawn on a board so that the entire team had an overview of what was to be developed.",
+        "p2Title": "Mobile-First",
+        "p2": "Mobile-first was also established as the basis for designing for a mobile platform and not desktop or tablet. This choice was made because the customer, Sabima, wanted a mobile-first solution, and because there is greater potential to attract new users by creating a mobile service compared to a desktop service."
+      },
+      "page10": {
+        "subTitle": "Design Sprint",
+        "title": "Prototype",
+        "titleP": "The idea to increase and improve the information about the birds that could be ring-marked, as well as to simplify the registration process, led to the development of the first version of the Figma prototype.",
+        "p1Title": "First Iteration",
+        "p1": "The first iteration of the prototype was based on the idea, 'What is Ringing?' Therefore, the first focus area was to provide more relevant and precise information about ringing as part of the experience.",
+        "p2": "The registration of a bird should be as simple as possible to make it easier for new users, and this led to this functionality being moved to the front of the app."
+      },
+      "page11": {
+        "subTitle": "Design Sprint",
+        "title": "User Testing",
+        "titleP": "Based on the three main areas defined by the problem, the idea generation phase started. The first phase involved using the overview that had formed to discover the opportunity space. Users were tested with the first iteration of the prototype on an available iPhone.",
+        "p1Title": "Who",
+        "p1": "Since it was important to focus on both existing and new future users, individuals from both these groups were called in for user testing.",
+        "p2Title": "How",
+        "p2": "Existing users were reached out to via interest groups for nature conservation and birdwatchers. New users were reached out to via Facebook pages for universities and event groups for the city.",
+        "p3Title": "Where",
+        "p3": "Users were called into the office where we worked, which was centrally located in Oslo. Users were also informed in advance about where the user tests would take place."
+      },
+      "page12": {
+        "subTitle": "Design Sprint",
+        "title": "Result",
+        "titleP": "The first iteration of the prototype had been tested with new and existing users, and these were some of the different feedback."
+      },
+      "page13": {
+        "subTitle": "Design Sprint",
+        "title": "Result",
+        "titleP": "The results from the first user testing round laid the foundation for which areas of the app should be adjusted. However, the insight was not 100 percent representative for the two user groups, as only four users were called in for user testing. This still gave us an indication of their experience and use.",
+        "p1": "The registration sequence to register a find was convenient, but there were elements under this sequence that could be designed to make the registration less confusing.",
+        "p2": "The user profile page was unclear. It was difficult to understand the difference between finds, individual, and species. The favorite functionality was also not obvious.",
+        "p3": "The map function, which made it possible to follow the bird's journey, was interesting and was perceived as an important element in the user experience.",
+        "p4": "The information page about why and what ringing was, which was implemented on the first page, was useful for new users who were not familiar with the service before."
+      },
+      "page14": {
+        "title": "The Path After the Sprint",
+        "titleP": "After the sprint, the priority was to develop the second edition of the Figma prototype based on the results from the user testing. This was also important so that developers could start with the technical side. At the same time, there was a need for further testing and interviews with users as more features were implemented.",
+        "p1Title": "Insight Work",
+        "p1": "Following the design sprint, my responsibility was to conduct more insight work around the domain of ringing and conservation. Additional rounds of user testing and interviews were also held as more iterations of the prototype were developed, which I helped facilitate.",
+        "p2Title": "Design Expression",
+        "p2": "I also worked on developing the design expression of the service. This was based on the insight work previously carried out, and became more important as progress was made with the Figma prototype. This responsibility included working with mood boards, exploring color profiles that could suit the service, and working with brand association.",
+        "p3Title": "Figma Prototype",
+        "p3": "Together with my co-designer, my responsibility was to work on developing the Figma prototype through multiple iterations as more features were proposed and tested. The responsibility included developing wireframes, developing key components in the design system, working with the user journey, assembling the prototypes, and communicating design decisions to the rest of the team."
+      },
+      "page15": {
+        "title": "A Design Challenge",
+        "titleP": "A significant design challenge was the many colors of the rings, where precise identification was critical to avoid mistakes. Several birds shared the same ring color, and the 15 different rings had various letter and number combinations, further increasing the complexity.",
+        "p1": "How to distinguish between two bird species that have the same ring color when registering?",
+        "p2": "To solve the design challenge, we implemented a verification module that is displayed after ring number entry to actively prevent incorrect registrations, a concern among expert users."
+      },
+      "page16": {
+        "title": "Old and New Service",
+        "p1Title": "Old Service",
+        "p2Title": "New Service"
+      },
+      "page17": {
+        "title": "Figma Prototype",
+        "titleP": "Here is the final and fifth edition of the prototype, which was also developed as a web-app designed for mobile-first."
+      },
+      "page18": {
+        "title": "Experience from the work",
+        "p1Title": "Different expectations",
+        "p1": "As a designer, it's impossible to meet all the expectations and desires of both the customer and the users. In addition, one has their own opinions on how the user experience/user interface should be. Often one ends up in a kind of mediator role where it's important to communicate the insight one has about the user and the domain to the customer in a simple and straightforward way.",
+        "p2Title": "Design != product",
+        "p2": "The design of a user experience or a user interface is one thing, another thing is the technical implementations that are necessary to develop a usable product that the customer can use. The technical often constitutes a limitation here. Therefore, it's extra important to have good cooperation and communication between designers and developers.",
+        "p3Title": "Important testing takes time",
+        "p3": "User testing of a prototype is costly in terms of time and energy. However, a prototype that cannot be used is a waste of time. User testing should be done often, in step with working in frequent iterations. If one does not have time to call in users for user testing, one can always test on other colleagues or friends."
+      }
     },
+
     "coffeecan": {
       "title": "Multimodal coffe can",
       "caption": ": haptic and auditory feedback for the visually impaired",
@@ -219,7 +375,7 @@
       "storyItalic": "Topico was developed as part of a product design project with the theme collaborative interaction. My team explored how this theme could be relevant for the EduTech domain. Hence, this is an interdisciplinary design project where I had the role as an empirical researcher (interviews and observation), designer (understanding, exploring, materializing), developer (the Topico platform for the teacher), UI designer (designing the interface for the Topico tool as well as the teacher platform), and blogger (writing weekly updates about progress and challenges in a self-made blog)."
     }
   },
-  
+
   "portfolioTiles": {
     "p": "My past work",
     "h2": "My portfolio",

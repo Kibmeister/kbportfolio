@@ -57,8 +57,8 @@ import productdesignicon from './productdesignicon.png';
 import frontendicon from './frontendicon.png';
 import userresearchericon from './userresearcerhicon.png';
 
-import designUtfall from './ringmerkingslideshow/designutfall.png'
-import empathyMapEN from './ringmerkingslideshow/empathyMap/empathyMapEN.png';
+import designUtfall from './ringmerkingslideshow/designutfall.png';
+
 import ideGenerering from './ringmerkingslideshow/ideGenerering.jpeg';
 import denGenialeIdeen from './ringmerkingslideshow/denGenialeIdeen.jpeg';
 import firstprototype from './ringmerkingslideshow/prototype.png';
@@ -71,13 +71,39 @@ import designExpression from './ringmerkingslideshow/designExpression.png';
 
 import designChallenge from './ringmerkingslideshow/designChallenge.png';
 
-import designChallengeSolution from './ringmerkingslideshow/designChallengeSolution.png'; 
+import designChallengeSolution from './ringmerkingslideshow/designChallengeSolution.png';
 
-import oldsite from './ringmerkingslideshow/oldsite.png'
 
-import prototypePlaceholder from './ringmerkingslideshow/prototypePlaceholder.png'
+import prototypePlaceholder from './ringmerkingslideshow/prototypePlaceholder.png';
 
-import frontpage from './ringmerkingslideshow/frontpage.png'
+import frontpage from './ringmerkingslideshow/frontpage.png';
+
+import empathyMapEN from './ringmerkingslideshow/empathyMap/empathyMapEN.png';
+import empathyMapNO from './ringmerkingslideshow/empathyMap/empathyMapNO.png';
+import empathyMapES from './ringmerkingslideshow/empathyMap/empathyMapES.png';
+import empathyMapIT from './ringmerkingslideshow/empathyMap/empathyMapIT.png';
+import empathyMapFR from './ringmerkingslideshow/empathyMap/empathyMapFR.png';
+import empathyMapDE from './ringmerkingslideshow/empathyMap/empathyMapDE.png';
+
+import feedbackResultsEN from './ringmerkingslideshow/feedbackResults/feedbackResultsEN.svg';
+import feedbackResultsNO from './ringmerkingslideshow/feedbackResults/feedbackResultsNO.svg';
+import feedbackResultsES from './ringmerkingslideshow/feedbackResults/feedbackResultsES.svg';
+import feedbackResultsIT from './ringmerkingslideshow/feedbackResults/feedbackResultsIT.svg';
+import feedbackResultsFR from './ringmerkingslideshow/feedbackResults/feedbackResultsFR.svg';
+import feedbackResultsDE from './ringmerkingslideshow/feedbackResults/feedbackResultsDE.svg';
+
+import blidekarusell1 from './ringmerkingslideshow/bildekarusell.jpeg';
+import blidekarusell2 from './ringmerkingslideshow/bildekarusell1.jpeg';
+import blidekarusell3 from './ringmerkingslideshow/bildekarusell2.jpeg';
+import blidekarusell4 from './ringmerkingslideshow/bildekarusell3.jpeg';
+import blidekarusell5 from './ringmerkingslideshow/bildekarusell4.jpeg';
+import blidekarusell6 from './ringmerkingslideshow/bildekarusell5.jpeg';
+import blidekarusell7 from './ringmerkingslideshow/bildekarusell6.jpeg';
+
+import ringmerkingGammelSide from './ringmerkingslideshow/gammelSide.png'
+import ringmerkingNySide from './ringmerkingslideshow/nySide.png'
+
+
 export {
   logo,
   menu,
@@ -135,7 +161,6 @@ export {
   coaxerThumbnailDE,
   frontpage,
   designUtfall,
-  empathyMapEN,
   ideGenerering,
   denGenialeIdeen,
   firstprototype,
@@ -145,6 +170,26 @@ export {
   userPrototype,
   designChallenge,
   designChallengeSolution,
-  oldsite,
   prototypePlaceholder,
+  blidekarusell7,
+  blidekarusell1,
+  blidekarusell2,
+  blidekarusell3,
+  blidekarusell4,
+  blidekarusell5,
+  blidekarusell6,
+  empathyMapEN,
+  empathyMapNO,
+  empathyMapES,
+  empathyMapIT,
+  empathyMapFR,
+  empathyMapDE,
+  feedbackResultsEN,
+  feedbackResultsNO,
+  feedbackResultsES,
+  feedbackResultsIT,
+  feedbackResultsFR,
+  feedbackResultsDE,
+  ringmerkingGammelSide,
+  ringmerkingNySide
 };

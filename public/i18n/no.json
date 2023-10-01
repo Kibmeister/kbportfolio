@@ -104,7 +104,150 @@
       "buttonclose": "Lukk"
     },
     "ringmerking": {
-      "buttonclose": "Lukk"
+      "buttonclose": "Lukk",
+      "page0": {
+        "title": "Ringmerking.no",
+        "subTitle": "Ein Dienst für Vogel- und Naturinteressierte, die dazu beitragen möchten, die Vielfalt zu erhalten und zu schützen."
+      },
+      "page1": {
+        "title": "Innhold",
+        "list": [ "Case", "Mål", "Empati", "Definer", "Ideer" , "Prototype", "Test", "Evaluer", "Veien videre", "En design utfordring", "Gammel og ny tjeneste", "Figma prototype", "Erfaringer" ]
+      },
+      "page2": {
+        "title1": "Caset",
+        "p1": "Den norske tjenesten for ringmerking av fugler, Ringmerking.no, hadde blitt meget gammel og trengte en nylansering. Hvordan kan vi gi liv til en meget gammel fugleregistreringstjeneste for å tiltrekke nye brukere, øke brukeradopsjonen, og til slutt oppnå høyere                    registreringsrater for nye fugler?",
+        "title2": "MinRolle",
+        "p2": " Som UX-designer i et team på to designere og fire utviklere, jobbet jeg med å utføre brukerinnsiktsarbeid, analysere og evaluere brukerinsikten, ideere over lavfidelitets skisseprototyper og overføre disse til Figma, teste prototyper med brukere, designe identiteten til tjenesten, utvikle klikkbare høyfidelitetsprototyper i Figma – samt kommunisere alt dette til resten av teamet"
+      },
+      "page3": {
+        "title": "Målet",
+        "titleP": "Gjennomfør en omfattende redesign av tjenesten for å gjøre den mobil-først, brukervennlig, brukbar og attraktiv. Tjenesten bør gjøre det enklere å registrere en fugleobservasjon, engasjere brukerne, og samtidig respektere de eksisterende brukerne som er vant til den nåværende praksisen og bruken.",
+        "p1Title": "Øke brukeradopsjon",
+        "p1": "Kunden ønsket å øke antallet brukere til 10.000 på nasjonalt basis, noe som ville være en 30 % økning. Økt brukeradopsjon ville ha en positiv innvirkning på innsamling av data og beskyttelsen av den norske fuglebestanden.",
+        "p2Title": "Mobile-first",
+        "p2": " Den eksisterende løsningen var kun tilgjengelig på PC, noe som gjør at et svært stort antall mobilbrukere blir utelatt. En mobil løsning hadde muliggjort ringmerkingsregistreringer på farten.",
+        "p3Title": "Tiltrekke yngre brukere",
+        "p3": "  Som en del av ønsket om økt brukeradopsjon, ønsket kunden at tjenesten skulle være mer appellerende for unge brukere. Å bruke tjenesten i skolen var et ønskelig utfall?"
+      },
+      "page4": {
+        "subTitle": "Design sprint",
+        "title": "Empati",
+        "titleP": "For å forstå designutfordringen er første steg å vise empati for brukeren som påvirkes av problemet. Dette innebar at vi intervjuet to erfarne brukere som har benyttet tjenesten siden den ble utviklet i 2004. I tillegg var to domeneeksperter fra Sabima med for å bidra med innsikt.",
+        "p1Title": " Tjenesten fungerer som den skal",
+        "p1": "Ekspertbrukeren hadde ikke mange ønsker til siden, og mente den for det meste var funksjonell og effektiv for sine gjøremål.",
+        "p2Title": "Vi trenger flere ringmerkere",
+        "p2": "  Det var allikevel et opprop blant ekspertbrukerene at de ønsket flere brukere og ikke minst registreringer til tjenesten. De mente at initiativet og ansvaret om ringmerking og fugle forvalting var viktig og burde være mer tilgjengelig for flere.",
+        "empathyMap": "Empathy map"
+      },
+      "page5": {
+        "subTitle": "Design sprint",
+        "title": "Empati",
+        "p": "Konflikt: hvordan kan man re-designe løsningen for å appellere til flere nye brukere samtidig som man respekterer de eksisterende praksisene til ekspert brukerene?"
+      },
+      "page6": {
+        "subTitle": "Design sprint",
+        "title": " Definere",
+        "titleP": "Basert på innsikten fra ekspert bruker-intervjuene og samarbeidet med domene ekspertene og resten av teamet ble tre hovedområder definert for problem rommet.",
+        "p1Title": "  Letter for flere",
+        "p1": " Tjenesten som er i dag, er for tungvindt og vanskelig å bruke, noe som gjør at den ikke appellerer til nye, spesielt yngre, brukere. Den er også umulig å bruke på mobil, noe som igjen utelukker mange bruksområder og brukere.",
+        "p2Title": "Attraktiv for flere",
+        "p2": "Konseptet å registrere ringmerkede fugler byr på mange interaksjonsmuligheter, som å observere fuglen, registrere fuglen, følge med på fuglens reise, lese informasjon om arten. Det burde være en bedre flyt mellom disse interaksjonsformene.",
+        "p3Title": "Ekspert brukere",
+        "p3": "Ekspertbrukeren hadde ikke mange ønsker til tjenesten, og mente den for det meste var funksjonell og effektiv for deres behov."
+      },
+      "page7": {
+        "subTitle": "Design sprint",
+        "title": " Idé generering ",
+        "titleP": "Basert på de tre hovedområdene som var definert ved problemet startet idé genererings fasen som først innebar å bruke overblikket som hadde dannet seg til å oppdage mulighets rommet.",
+        "p1Title": " Bruker interaksjonen",
+        "p1": " Et tematisk kart over den generelle brukerinteraksjonen ble tegnet for å forstå relasjonene mellom de forskjellige interaksjonsleddene og hvordan de henger sammen."
+      },
+      "page8": {
+        "subTitle": "Design sprint",
+        "title": " Idé generering ",
+        "titleP": "Basert på de tre hovedområdene som var definert ved problemet startet idé genererings fasen som først innebar å bruke overblikket som hadde dannet seg til å oppdage mulighets rommet.",
+        "p1Title": " Skissering",
+        "p1": "For å utnytte mest kreativitet og kunnskap deltok hele teamet på skisserings prosessen som startet med en crazy 8’s skissering på ark før vi skisserte ute en av ideene over en halv time.",
+        "p2Title": "Valg av idé",
+        "p2": "  Hver av team medlemmene gikk og vurderte hver ide og skrev opp kommentarer de mente var nyttige. Til slutt ble en demokratisk dot-avstemnings metode brukt for å bestemme idé."
+      },
+      "page9": {
+        "subTitle": "Design sprint",
+        "title": " Den geniale ideen....",
+        "p1Title": " Hva er ringmerking",
+        "p1": "“Hva er ringmerking?” var ideen som vant og som vi gikk videre med til prototype fasen. Den første prototypen ble tegnet ut på en tavle slik at hele                       teamet hadde overblikk over hva som skulle utvikles.",
+        "p2Title": " Mobile-first",
+        "p2": "  Mobile-first ble også fastslått som grunnlaget for at vi designet for en mobil platform og ikke desktop eller tablet. Dette valget ble tatt fordi kunden, Sabima, ønsket en mobile-first løsning, og fordi det er større potensiale å tiltrekke nye brukere ved å lage en mobil tjeneste sammenlignet med en desktop tjeneste."
+      },
+      "page10": {
+        "subTitle": "Design sprint",
+        "title": " Prototype",
+        "titleP": " Ideen om å øke og forbedre informasjonen omkring de                       fuglene som kunne bli ringmerket, samt å forenkle registreringsprosessen, førte til at en førsteutgave av Figma-prototypen ble utviklet.",
+        "p1Title": "Første iterasjon",
+        "p1": " Den første iterasjonen av prototypen var basert på ideen, 'Hva er ringmerking?' Derfor var det første fokusområdet å tilby mer relevant og presis informasjon om ringmerking som en del av opplevelsen.",
+        "p2": " Registreringen av en fugl skulle være så enkel som mulig for å gjøre det lettere for nye brukere, og dette førte til at denne funksjonaliteten ble flyttet frem til forsiden av appen."
+      },
+      "page11": {
+        "subTitle": "Design sprint",
+        "title": " Bruker testing",
+        "titleP": "  Basert på de tre hovedområdene som var definert ved problemet, startet idégenereringsfasen. Den første fasen innebar å bruke oversikten som hadde dannet seg for å oppdage mulighetsrommet. Brukerne ble testet med den første iterasjonen av prototypen på en tilgjengelig iPhone.",
+        "p1Title": "Hvem",
+        "p1": " Da det var viktig å fokusere på både eksisterende og nye fremtidige brukere, ble personer fra begge disse gruppene kalt inn til brukertesting.",
+        "p2Title": "Hvordan",
+        "p2": " Eksisterende brukere ble nådd ut til via interessegrupper for naturvern og fuglekikkere. Nye brukere ble nådd ut til via Facebook-sider for universiteter og eventgrupper for byen.",
+        "p3Title": "Hvor",
+        "p3": "Brukerne ble kalt inn til kontoret der vi jobbet, som lå sentralt i Oslo. Brukerne ble også informert på forhånd om hvor brukertestene ville finne sted."
+      },
+      "page12": {
+        "subTitle": "Design sprint",
+        "title": " Resultat",
+        "titleP": " Den første iterasjonen av prototypen hadde blitt testet med nye og eksisterende brukere, og dette var noen av de forskjellige tilbakemeldingene."
+      },
+      "page13": {
+        "subTitle": "Design sprint",
+        "title": " Resultat",
+        "titleP": "  Resultatene fra første brukertestingsrunde la grunnlaget for hvilke områder appen som burde justeres. Innsikten var likevel ikke 100 prosent representativ for de to brukergruppene, da det totalt var kun fire brukere som ble innkalt til brukertesting. Dette ga oss likevel en indikasjon på deres opplevelse og bruk. Antallet brukere innkalt til brukertesting burde vært høyere, men brukertesting er tidskrevende, og dette var kun en første iterasjonsprototype.",
+        "p1": "Registreringssekvensen for å registrere et funn var lettvint, men det var elementer under denne sekvensen som kunne bli designet for å gjøre registreringen mindre forvirrende.",
+        "p2": "Brukerprofilsiden var uoversiktlig. Det var vanskelig å forstå forskjellen på funn, individ og art. Det var heller ikke åpenbart hva favorittfunksjonaliteten var.",
+        "p3": "Kartfunksjonen, som gjorde det mulig å følge med på fuglens reise, var interessant og ble oppfattet som et viktig element i brukeropplevelsen.",
+        "p4": "Informasjonssiden om hvorfor og hva ringmerking var, som var implementert på første side, var nyttig for nye brukere som ikke hadde kjennskap til tjenesten før."
+      },
+      "page14": {
+        "title": " Veien etter sprinten",
+        "titleP": "  Etter sprinten var prioriteringen å utvikle andre utgave av Figma prototypen  basert på resultatene fra bruker testingen, dette var også viktig for at utviklerene kunne starte med det tekniske. Samtidig var det behov for ytterlig testing og  intervjuer med brukere ettersom flere funksjoner ble implementert.",
+        "p1Title": "Innsiktsarbeid",
+        "p1": "Etterfulgt av design sprinten var mitt ansvar å utføre mer innsiktsarbeid omkring domenet ringmerking og naturvern. Det ble også avholdt flere ytterligere runder med brukertesting og intervjuer etter hvert som det ble utviklet flere iterasjoner av prototypen. Disse var jeg med på å fasilitere.",
+        "p2Title": "Design uttrykk",
+        "p2": "Jeg jobbet også med å utvikle designuttrykket til tjenesten. Dette var basert på innsiktsarbeidet som tidligere ble utført, og ble mer viktig i takt med fremgangen med Figma-prototypen. Dette ansvaret inkluderte å jobbe med moodboards, utforske fargeprofiler som kunne passe tjenesten, og jobbe med merkevareassosiasjon.",
+        "p3Title": "Figma prototype",
+        "p3": "Sammen med min meddesigner var mitt ansvar å jobbe med å utvikle Figma-prototypen gjennom flere iterasjoner etter hvert som flere funksjoner ble foreslått og testet. Ansvaret innebar å utvikle trådskisser, utvikle viktige komponenter i designsystemet, jobbe med brukerreisen, sette sammen prototypene, og kommunisere designavgjørelser til resten av teamet"
+      },
+      "page15": {
+        "title": "  En design utfordring",
+        "titleP": "  En betydelig designutfordring var ringenes mange farger, hvor nøyaktig identifikasjon var kritisk for å unngå feil. Flere fugler delte samme ringfarge, og de 15 ulike ringene hadde diverse bokstav- og tallkombinasjoner, noe som ytterligere økte kompleksiteten.",
+        "p1": "Hvordan skal man skille mellom to fugle arter som har lik farge på ring når man registrerer?",
+        "p2": " For å løse designutfordringen implementerte vi en verifiseringsmodul som vises etter ringnummerinntasting, for å aktivt forhindre feilregistreringer, en bekymring blant ekspertbrukere."
+      },
+      "page16": {
+        "title": "Gammel og ny tjeneste",
+        
+        "p1Title": "Gammel tjeneste",
+        "p2Title": "Ny tjeneste"
+        
+      },
+      "page17": {
+        "title": "Figma prototype",
+        "titleP": " Her er den endelig og femte utgaven av prototypen, som også ble utviklet som en web-app designet for mobile-first."
+      },
+      "page18": {
+        "title": "Erfaringen fra arbeidet",
+        "p1Title": "Ulike forventninger",
+        "p1": "Som designer er det umulig å imøtekomme alle forventningene og ønskene til både kunden og brukerne. I tillegg har man sine meninger om hvordan brukeropplevelsen/brukergrensesnittet burde være. Ofte ender man opp i en slags meklerrolle der det er viktig å kommunisere den innsikten man har om brukeren og domenet til kunden på en enkel og grei måte.",
+        "p2Title": "Design != produkt",
+        "p2": "Designet av en brukeropplevelse eller et brukergrensesnitt er én ting, en annen ting er de tekniske implementasjonene som må til for å utvikle et brukbart produkt som kunden kan bruke. Det tekniske utgjør ofte en begrensning her. Derfor er det ekstra viktig å ha et godt samarbeid og kommunikasjon mellom designere og utviklere.",
+        "p3Title": "Viktig testing tar tid ",
+        "p3": "Brukertesting av en prototype er kostbart når det gjelder tid og energi. Allikevel er en prototype som ikke kan brukes, bortkastet tid. Brukertesting burde gjøres ofte, i takt med å jobbe i hyppige iterasjoner. Hvis man ikke har tid til å kalle inn brukere til  brukertesting, kan man alltids teste på andre kolleger eller venner."
+      }
     },
     "coffeecan": {
       "title": "Multimodal kaffekanne",
@@ -169,6 +312,25 @@
       {
         "name": "Ringmerking",
         "type": "ringmerking",
+        "description": "Mobilapplikasjon som lar fuglekikkere registrere fuglesyn og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
+        "tags": [
+          {
+            "name": "figma",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "design remake",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "mobil",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "RingmerkingSlideshow",
+        "type": "ringmerkingSlideshow",
         "description": "Mobilapplikasjon som lar fuglekikkere registrere fuglesyn og følge opp disse fuglene for å se deres habitat og mer spesifikk informasjon.",
         "tags": [
           {
