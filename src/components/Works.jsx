@@ -43,7 +43,7 @@ const ProjectCard = ({
             <LazyLoadImage
               src={thumbnailPath}
               alt={name}
-              className='w-full h-full '
+              className='object-contain w-full h-full '
             />
 
             <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
@@ -80,7 +80,7 @@ const ProjectCard = ({
               <LazyLoadImage
                 src={thumbnailPath}
                 alt={name}
-                className='w-full h-full '
+                className='object-contain w-full h-full '
               />
 
               <div className='absolute inset-0 flex justify-end m-3 card-img-hover'></div>
@@ -99,7 +99,7 @@ const ProjectCard = ({
             </div>
           </Tilt>
         </motion.div>
-       )} 
+      )}
     </>
   );
 };

@@ -127,7 +127,7 @@ const styles = {
     ' garet-book text-lg mobile:text-base opacity-60',
 
   projectSlideShowBodyContainer:
-    'flex flex-row gap-10 mobile:flex-col  mobile:pb-20 sm:pb-20',
+    'flex flex-row gap-10 mobile:flex-col  mobile:pb-40 sm:pb-20',
   projectSlideShowPagePTitle: 'garet-book text-2xl mobile:text-xl',
 
   projectSlideShowPageParagraph: 'paragraph flex flex-col gap-5 mobile:gap-3',
