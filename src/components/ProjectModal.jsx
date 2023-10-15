@@ -4,6 +4,7 @@ import Coffeecan from './Projects/Coffeecan';
 import Topico from './Projects/Topico';
 import Coaxer from './Projects/Coaxer';
 import RingmerkingSlideshow from './Projects/RingmerkingSlideshow';
+import CoaxerScroll from './Projects/CoaxerScroll';
 import { useTranslation } from 'react-i18next';
 import { imageMapCoaxer } from '../constants';
 import { imageMapRingmerking } from '../constants';
@@ -25,7 +26,7 @@ const ProjectModal = ({ modalProject, onClose }) => {
   }, [t, i18n]);
 
   useEffect(() => {
-     setModalType(modalProject.type);
+    setModalType(modalProject.type);
 
     console.log('This is the pressed modal type');
     console.log(modalProject.type);
@@ -45,6 +46,8 @@ const ProjectModal = ({ modalProject, onClose }) => {
     <Coaxer onClose={onClose} coaxerBackground={coaxerBackground}></Coaxer>
   ) : modalType === 'coffeecan' ? (
     <Coffeecan feedback={feedback} onClose={onClose} />
+  ) : modalType === 'coaxerScroll' ? (
+    <CoaxerScroll onClose={onClose} />
   ) : modalType === 'topico' ? (
     <Topico
       onClose={onClose}

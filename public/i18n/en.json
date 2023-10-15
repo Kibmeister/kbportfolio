@@ -321,7 +321,6 @@
         "p3": "User testing of a prototype is costly in terms of time and energy. However, a prototype that cannot be used is a waste of time. User testing should be done often, in step with working in frequent iterations. If one does not have time to call in users for user testing, one can always test on other colleagues or friends."
       }
     },
-
     "coffeecan": {
       "title": "Multimodal coffe can",
       "caption": ": haptic and auditory feedback for the visually impaired",
@@ -346,6 +345,7 @@
       "storyT": "Story",
       "storyP": "This is a prototype of a multimodal coffee can, that is designed to assist and aid the visually impaired. Coffee can be poured, just as with a regular coffee can, though here it is implemented vibrotactile and auditory feedback to further exploit the perception capacity available for user. Thus, the theme for this project is multimodal interaction, which is how systems can be designed to utilize input and output through different channels of perception, available for the user. By heightening the level of tactile and auditory feedback, the goal was to see if it is possible for visually impaired people to make fewer errors when pouring, as well as shortening the pouring time. Also, how will the user make sense of the feedback when exposed to it, will the assessment of the emitted feedback be significant enough to be higher regarded than their own practiced techniques, or will it be complementary."
     },
+
     "topico": {
       "title": "Topico - Interactive EduTech tool",
       "caption": " : enhance collaboration and verbal skills with Topico's Game-Based Approach",
@@ -404,6 +404,25 @@
       {
         "name": "Coaxer",
         "type": "coaxer",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
         "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
         "tags": [
           {

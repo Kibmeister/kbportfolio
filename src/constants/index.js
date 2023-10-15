@@ -131,6 +131,14 @@ const imageMapWorks = {
     fr: coaxerThumbnailFR,
     de: coaxerThumbnailDE,
   },
+  coaxerScroll: {
+    en: coaxerThumbnailEN,
+    no: coaxerThumbnailNO,
+    es: coaxerThumbnailES,
+    it: coaxerThumbnailIT,
+    fr: coaxerThumbnailFR,
+    de: coaxerThumbnailDE,
+  },
   ringmerking: {
     en: RingmerkingEN,
     no: RingmerkingNO,
@@ -164,14 +172,6 @@ const imageMapCoaxer = {
   it: coaxerIT,
   fr: coaxerFR,
   de: coaxerDE,
-};
-const modelMapTypewriter = {
-  // en: typewriterEn,
-  // no: typewriterNo,
-  // es: typewriterEs,
-  // it: typewriterIt,
-  // fr: typewriterFr,
-  // de: typewriterDe,
 };
 const imageMapRingmerking = {
   en: RingmerkingEN,
@@ -238,6 +238,11 @@ const projects = [
   {
     name: 'Coaxer',
     type: 'coaxer',
+    image: coaxerEN,
+  },
+  {
+    name: 'CoaxerScroll',
+    type: 'coaxerScroll',
     image: coaxerEN,
   },
   {
@@ -346,7 +351,6 @@ export {
   imageMapCoaxer,
   imageMapRingmerking,
   imageMapTestimonals,
-  modelMapTypewriter,
   imageMapRingmerkingEmathyMap,
   imageMapImgCarousel,
   imageMapRingmerkingResultsMap,

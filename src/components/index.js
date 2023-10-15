@@ -9,6 +9,7 @@ import ProjectModal from './ProjectModal';
 import Contact from './Contact';
 import CanvasLoader from './Loader';
 import Coffeecan from './Projects/Coffeecan';
+import CoaxerScroll from './Projects/CoaxerScroll';
 import CustomDropdown from './CustomDropdown';
 import Footer from './Footer';
 import MenuToggle from './Menutoggle';
@@ -30,4 +31,5 @@ export {
   CustomDropdown,
   Footer,
   MenuToggle,
+  CoaxerScroll,
 };

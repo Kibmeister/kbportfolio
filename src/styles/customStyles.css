@@ -90,6 +90,7 @@ body.lamp-off {
 .hover-underline:hover:after {
   width: 100%;
 }
-
-
-
+/* coaxerScroll */
+.scroll-snap {
+    scroll-snap-type: y mandatory;
+}

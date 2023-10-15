@@ -106,6 +106,17 @@ import blidekarusell7 from './ringmerkingslideshow/bildekarusell6.jpeg';
 import ringmerkingGammelSide from './ringmerkingslideshow/gammelSide.png'
 import ringmerkingNySide from './ringmerkingslideshow/nySide.png'
 
+import coaxerFrontCover from './coaxer/coaxerFrontCover.png';
+
+import introductionImg from './coaxer/introductionImg.png';
+
+import doubleDiamond from './coaxer/doubleDiamond.png';
+
+import ouruserChristian from './coaxer/ouruserChristian.png';
+
+import contactChristian from './coaxer/contactChristian.png';
+
+import ultraPerosnalizedDesign from './coaxer/ultraPersonalizedDesign.png'
 
 export {
   logo,
@@ -194,5 +205,11 @@ export {
   feedbackResultsFR,
   feedbackResultsDE,
   ringmerkingGammelSide,
-  ringmerkingNySide
+  ringmerkingNySide,
+  coaxerFrontCover,
+  introductionImg,
+  doubleDiamond,
+  ouruserChristian,
+  contactChristian,
+  ultraPerosnalizedDesign,
 };

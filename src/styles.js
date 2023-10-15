@@ -134,6 +134,18 @@ const styles = {
 
   projectSlideShowPageP:
     'garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base',
+
+  //coaxerScroll
+  coaxerScrollControls:
+    'bg-transparent garet-book z-40 controls fixed bottom-10 right-10 text-4xl  flex flex-wrap gap-1',
+  coaxerScrolControlsA:
+    'block bg-black z-40 w-16 h-16 leading-9 rounded-full text-center first:-mr-2',
+  coaxerScrollPanels:
+    'bg-white h-screen w-screen fixed inset-0 z-30 overflow-scroll scroll-snap',
+  coaxerScrollPanel:
+    ' inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 sm:px-12 bg-white flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
+  coaxerScrollClip:
+    'clip sticky h-0 w-full top-0 mb-0 flex flex-col gap-20 h-full sm:h-auto',
 };
 
 export { styles };
