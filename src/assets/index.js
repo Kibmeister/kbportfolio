@@ -118,6 +118,55 @@ import contactChristian from './coaxer/contactChristian.png';
 
 import ultraPerosnalizedDesign from './coaxer/ultraPersonalizedDesign.png'
 
+import pact from './coaxer/pact.png';
+
+import forskere from './coaxer/forskere.png';
+
+import sonification from './coaxer/sonification.png';
+
+import nudging from './coaxer/nudging.png';
+
+import addressinganidea from './coaxer/addressinganidea.png';
+
+import earcon from './coaxer/earcon.png';
+
+import auditoryicon from './coaxer/auditoryicons.png';
+
+import musiccons from './coaxer/musiccons.png'
+
+import focuskeeper from './coaxer/focuskeeper.png';
+
+import iphonereminders from './coaxer/iphonereminders.png';
+
+import microsofttodo from './coaxer/microsofttodo.png';
+
+import doublediamondDefine from './coaxer/doublediamond-define.png';
+
+import coaxerscenario from './coaxer/coaxerscenario.png'
+
+import meeting1 from './coaxer/meeting1.png';
+
+import meeting2 from './coaxer/meeting2.png'; 
+
+import meeting3 from './coaxer/meeting3.png';
+
+import calendarIntegration from './coaxer/calendarIntegration.png'
+
+import coaxerFrontPage from './coaxer/coaxer-frontpage.png';
+
+import evaluationImpact from './coaxer/evaluationImpact.png';
+
+import intersectionNO from './coaxer/alleredeFunnetUt/intersectNO.svg'
+
+import doublediamondDiscover from './coaxer/doublediamond-discover.svg'
+
+import relevantPunkterNO from './coaxer/relevantPunkterNO.svg'
+
+import uppd from './coaxer/uppd.svg'
+
+import uppdChristian from './coaxer/uppdChristian.svg'
+
+
 export {
   logo,
   menu,
@@ -212,4 +261,28 @@ export {
   ouruserChristian,
   contactChristian,
   ultraPerosnalizedDesign,
+  pact,
+  forskere,
+  sonification,
+  nudging,
+  addressinganidea,
+  earcon,
+  auditoryicon,
+  musiccons,
+  focuskeeper,
+  iphonereminders,
+  microsofttodo,
+  doublediamondDefine,
+  coaxerscenario,
+  meeting1,
+  meeting2,
+  meeting3,
+  calendarIntegration,
+  coaxerFrontPage,
+  evaluationImpact,
+  intersectionNO,
+  doublediamondDiscover,
+  relevantPunkterNO,
+  uppd,
+  uppdChristian,
 };
