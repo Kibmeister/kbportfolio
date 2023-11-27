@@ -140,8 +140,6 @@ import iphonereminders from './coaxer/iphonereminders.png';
 
 import microsofttodo from './coaxer/microsofttodo.png';
 
-import doublediamondDefine from './coaxer/doublediamond-define.png';
-
 import coaxerscenario from './coaxer/coaxerscenario.png'
 
 import meeting1 from './coaxer/meeting1.png';
@@ -160,11 +158,20 @@ import intersectionNO from './coaxer/alleredeFunnetUt/intersectNO.svg'
 
 import doublediamondDiscover from './coaxer/doublediamond-discover.svg'
 
+import doublediamondDefine  from './coaxer/doublediamond-define.svg';
+
+
 import relevantPunkterNO from './coaxer/relevantPunkterNO.svg'
 
 import uppd from './coaxer/uppd.svg'
 
 import uppdChristian from './coaxer/uppdChristian.svg'
+
+import academic from './coaxer/sounds/academic.wav';
+import practical from './coaxer/sounds/practical.wav';
+import leisure from './coaxer/sounds/leisure.wav';
+
+
 
 
 export {
@@ -285,4 +292,7 @@ export {
   relevantPunkterNO,
   uppd,
   uppdChristian,
+  academic,
+  practical,
+  leisure
 };

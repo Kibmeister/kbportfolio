@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { styles } from '../../styles';
 import {
@@ -37,6 +36,9 @@ import {
   relevantPunkterNO,
   uppd,
   uppdChristian,
+  academic,
+  leisure,
+  practical,
 } from '../../assets';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -165,6 +167,22 @@ const CoaxerScroll = ({ onClose }) => {
     };
   }, []);
 
+  const playSound = (audioFile) => {
+    console.log('The audio file played: ', audioFile)
+
+    if (audioFile === 'academic') {
+      const sound = new Audio(academic);
+      sound.play();
+    } else if (audioFile === 'practical') {
+      const sound = new Audio(practical);
+      sound.play();
+    } else if (audioFile === 'leisure') {
+      const sound = new Audio(leisure);
+      sound.play();
+    }
+     
+   };
+
   return (
     <div className='fixed z-30 inset-0  flex justify-center items-center w-full h-full'>
       <button onClick={onClose} className='z-50 absolute  top-4 right-4'>
@@ -263,7 +281,7 @@ const CoaxerScroll = ({ onClose }) => {
                     tjenesten Coaxer ble utviklet som en ultra-personlig tids
                     planlegger med henblikk på å forbedre mentalt helse og
                     redusere generell stress. De følgende sidene vil handle om
-                    hvordan denne tjenesten ble unfanget.
+                    design prosessen bak Coaxer.
                   </p>
                 </div>
                 <LazyLoadImage
@@ -292,7 +310,7 @@ const CoaxerScroll = ({ onClose }) => {
                     Min rolle
                   </h1>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
-                    Under prosjektet jobbet jeg i første omgang med å drive
+                    Under prosjektet jobbet jeg i første omgang med å utføre
                     innsiktsarbeid om domenet som var valgt. Etter at ideen om
                     Coaxer ble unfanget, ble jeg hoveddesigner og utvikler for
                     prosjektet. I praksis vil det si at jeg har designet og
@@ -306,11 +324,11 @@ const CoaxerScroll = ({ onClose }) => {
                   </h1>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
                     I løpet av innsiktsarbeidet samt design og utvikling var jeg
-                    ansvarlig for å formidle ny viten om oppgaven til resten av
-                    gruppen. Jeg var også ansvarlig for å oppdatere og
+                    ansvarlig for å formidle ny kunnskap om oppgaven til resten
+                    av gruppen. Jeg var også ansvarlig for å oppdatere og
                     samarbeide med resten av design gruppen om hvilke endringer
                     som ble gjort og hvilke nye funksjoner det var verdt å
-                    eksperimentere med.
+                    utforske.
                   </p>
                 </div>
               </div>
@@ -369,7 +387,7 @@ const CoaxerScroll = ({ onClose }) => {
                   Formulering av design spørsmålet ⁉️
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Basert på litteratur søket og vår interesse valgte vi å få
+                  Basert på litteratur søket og vår interesse valgte vi å gå
                   videre med hvordan tidsplanlegging kan brukes preventivt for
                   yngre voksne som føler stress.
                 </p>
@@ -403,8 +421,8 @@ const CoaxerScroll = ({ onClose }) => {
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   På grunn av den brede formuleringen av design spørsmålet ble
-                  vi nødt til å snevre det inn ved å stille spørsmål om hva som
-                  kunne være meste interessant å ta for seg.
+                  vi nødt til å snevre det inn ved å stille spørsmål om hva vi
+                  mente var mest interessant.
                 </p>
               </div>
 
@@ -464,23 +482,23 @@ const CoaxerScroll = ({ onClose }) => {
                     <ul className='garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base'>
                       <li>
                         - Gitarist som elsker musikk og har spilt i band i flere
-                        år.
+                        år
                       </li>
                       <li>
-                        - Fortiden journaliststudent på Aarhus Universitet.
+                        - Fortiden journaliststudent på Aarhus Universitet
                       </li>
                       <li>
-                        - Kjæreste med sitt videregående crush som han brukte
-                        mye tid med.
+                        - Kjæreste med sitt videregående crush som han bruker
+                        mye tid med
                       </li>
                       <li>
                         - Deltids ansatt på det lokale supermarkedet hvor han
-                        jobbet ettermiddager.
+                        jobbet ettermiddager
                       </li>
                       <li>- Spilte ofte squash med kompiser etter skole.</li>
                       <li>
                         - Glad hundeier og satte pris på en god tur i parken når
-                        tiden tillot det.
+                        tiden tillot det
                       </li>
                     </ul>
                     <p
@@ -533,11 +551,10 @@ const CoaxerScroll = ({ onClose }) => {
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
                       Frederik nevnte i tillegg til temaene om digital helse og
-                      stress mestring konseptet om universelt design og hva det
-                      innebar. Utover å høre med Christian om han var
-                      interessert i å samarbeide, var et av formålene å
-                      kartlegge hvilke områder man kunne inkorporerer ultra
-                      personlig design for Christian.{' '}
+                      stress mestring konseptet om tidsplanlegging. Utover å
+                      høre med Christian om han var interessert et samarbeid,
+                      var et av formålene å kartlegge hvilke områder man kunne
+                      inkorporerer ultra personlig design for Christian.
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Christian
@@ -649,15 +666,15 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  The perfect match 👌🏻
+                  The perfect match
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   The fit between Christian (who we had in our minds from
                   earlier) and the novel and unfamiliar yet exiting design
                   methodology of ultra-personalized design, set the stage for
                   the configuration of the design process. Our idea was to
-                  combine the two pieces and explore if Christian was interested
-                  in partaking in such a project.
+                  combine the two and explore if Christian was interested in
+                  partaking in such a project.
                 </p>
               </div>
 
@@ -807,9 +824,12 @@ const CoaxerScroll = ({ onClose }) => {
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på Frederiks første intervju med Christian startet vi
-                  med å peke ut hva som var særegent med Christian, hva det var
-                  potensiale å bygge videre på, og hvilke forbehold vi måtte ha
-                  i mente.
+                  med å peke ut hva som var særegent med Christian, hvilket
+                  potensiale vi ville ta tak i, og hvilke forbehold vi måtte ha
+                  i mente.Basert på Frederiks første intervju med Christian
+                  startet vi med å peke ut hva som var særegent med Christian,
+                  hvilket potensiale vi ville ta tak i, og hvilke forbehold vi
+                  måtte ha i mente.
                 </p>
               </div>
               {/* the three row aligned paragraph */}
@@ -838,8 +858,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Sonification and nudging emerged as concepts during the
                   literature search, and at a second glance, seemed relevant to
-                  what we knew about Christian as a musician, and his life as a
-                  busy musician and student.
+                  what we knew about Christian as a busy student and musician.
                 </p>
               </div>
 
@@ -931,10 +950,15 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div
-                className={`${styles.projectSlideShowBodyContainer} flex-col `}
+                className={`${styles.projectSlideShowBodyContainer} flex-col items-center `}
               >
+                <LazyLoadImage
+                  className='w-full lg:w-2/4 h-auto object-contain'
+                  src={addressinganidea}
+                  alt='addressing an idea'
+                />
                 <div className='flex flex-row'>
-                  <div
+                  {/* <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
@@ -943,11 +967,11 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     ></p>
-                  </div>
+                  </div> */}
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
+                    {/* <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       the meeting that took place
                     </h1>
                     <p
@@ -961,14 +985,9 @@ const CoaxerScroll = ({ onClose }) => {
                       Self-nudging is a specific type of nudging that involves
                       modifying an individual's external world, both mentally
                       and physically, to counteract a lack of self-control.
-                    </p>
-                    <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
-                      src={addressinganidea}
-                      alt='addressing an idea'
-                    />
+                    </p> */}
                   </div>
-                  <div
+                  {/* <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
@@ -977,7 +996,7 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     ></p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -1002,7 +1021,7 @@ const CoaxerScroll = ({ onClose }) => {
                   sound as informative guidance. Sonification is composed of
                   three different types of auditory cues, and of these, we had
                   to figure out which would fit Christian the best, following an
-                  ultra personalized design practice.
+                  ultra-personalized design practice.
                 </p>
               </div>
 
@@ -1011,7 +1030,7 @@ const CoaxerScroll = ({ onClose }) => {
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
               >
-                <div className='flex flex-row'>
+                <div className='flex flex-row gap-10'>
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
@@ -1094,13 +1113,13 @@ const CoaxerScroll = ({ onClose }) => {
                   Ultra personlig tidsplanlegger
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  An ultra-personalized time planner is a time management tool
-                  that is specifically designed for an individual user. It takes
-                  into account the unique needs, preferences, and behaviors of
-                  the user to create a personalized experience. The planner
-                  gathers data on the user's activities, schedules, and
-                  priorities, and adapts its design and functionality
-                  accordingly
+                  Et ultrapersonalisert tidsplanleggingsverktøy er et verktøy
+                  for tidsstyring som er spesielt designet for en individuell
+                  bruker. Det tar hensyn til brukerens unike behov, preferanser
+                  og atferd for å skape en personlig opplevelse. Planleggeren
+                  samler inn data om brukerens aktiviteter, tidsplaner og
+                  prioriteringer, og tilpasser sitt design og funksjonalitet
+                  deretter.
                 </p>
               </div>
 
@@ -1111,7 +1130,7 @@ const CoaxerScroll = ({ onClose }) => {
               >
                 <div className='flex flex-row'>
                   <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
+                    className={`${styles.projectSlideShowTitleParagraph} w-1/3 gap-10`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Focus keeper
@@ -1119,10 +1138,11 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Earcons are abstract small messages that communicate an
-                      event. They are constructed by motives, which are short
-                      rhythmic sequences varying in pitch. Earcons have a longer
-                      learning curve compared to auditory icons.
+                      Spesialiserer seg på Pomodoro-teknikken, som fremmer
+                      fokuserte arbeidsøkter med korte pauser. Styrken ligger i
+                      å hjelpe med å opprettholde konsentrasjonen og unngå
+                      utbrenthet. Imidlertid er den kanskje ikke ideell for
+                      oppgaver som krever lange, uavbrutte perioder.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1139,12 +1159,11 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Auditory icons are sounds that represent specific actions
-                      or events in a more concrete manner. For example, when a
-                      user clicks on an object, they may hear a hitting sound
-                      from a source like wood or metal. Auditory icons aim to
-                      mimic real-world sounds and are easier to recognize and
-                      understand compared to earcons.
+                      Integreres sømløst med iOS og tilbyr enkelhet og
+                      brukervennlighet. Styrken er i den greie, ukompliserte
+                      tilnærmingen til å sette påminnelser og oppgaver, med
+                      stedsbaserte varslinger. Men den mangler avanserte
+                      funksjoner som prosjektstyring eller detaljert sporing.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1161,11 +1180,12 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Musicons are another form of sonification that involves
-                      using short musical sequences or songs to convey
-                      information. Musicons are derived from existing songs and
-                      are cut into short segments. They can be used to represent
-                      different types of events or actions
+                      Tilbyr omfattende oppgavestyringsfunksjoner, inkludert
+                      deloppgaver, frister og filvedlegg. Den passer godt for
+                      detaljert prosjektplanlegging og samarbeidsarbeid.
+                      Imidlertid kan kompleksiteten være overveldende for
+                      brukere som søker en enklere, minimalistisk
+                      oppgavebehandler.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1264,7 +1284,7 @@ const CoaxerScroll = ({ onClose }) => {
             </div>
           </div>
           {/* panel 18*/}
-          <div
+          {/* <div
             id='panel_18'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
@@ -1280,7 +1300,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
 
-              {/* the three row aligned paragraph */}
+             }
 
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
@@ -1289,7 +1309,7 @@ const CoaxerScroll = ({ onClose }) => {
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
-                    {/* day 1 */}
+                  
                     <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Day 1:
                     </h3>
@@ -1311,7 +1331,7 @@ const CoaxerScroll = ({ onClose }) => {
                         adds as an academic task with two iterations
                       </li>
                     </ul>
-                    {/* day 2 */}
+                    
                     <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Day 2:
                     </h3>
@@ -1341,7 +1361,7 @@ const CoaxerScroll = ({ onClose }) => {
                         rehearsal of music homework.
                       </li>
                     </ul>
-                    {/* day 3 */}
+                   
                     <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Day 3:
                     </h3>
@@ -1375,7 +1395,7 @@ const CoaxerScroll = ({ onClose }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* panel 19 */}
           <div
             id='panel_19'
@@ -1388,14 +1408,14 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Meeting nr 1 with Christian
+                  Første møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  The development of Coaxer started with urge to create
-                  something truly personalized for Christian. We therefore
-                  needed to know more about how he plans his time and what is
-                  worth planning. In regard to Sonification, we also needed to
-                  know what sounds would be most personal to him.
+                  Utviklingen av Coaxer startet med et ønske om å skape noe
+                  virkelig personlig for Christian. Vi måtte derfor vite mer om
+                  hvordan han planlegger tiden sin og hva som er verdt å
+                  planlegge. Når det gjelder sonifisering, måtte vi også vite
+                  hvilke lyder som ville være mest personlige for ham.
                 </p>
               </div>
 
@@ -1405,20 +1425,21 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      What he plans for?
+                      Hva planlegger han for?
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      He mentioned that academic tasks were important for him to
-                      structure, but also acknowledged the importance of leisure
-                      and practical tasks. Based on this information, the design
-                      concept was developed to embrace these three categories
-                      (academic, leisure, and practical) for time structuring.
+                      Han nevnte at akademiske oppgaver var viktige for ham å
+                      strukturere, men anerkjente også viktigheten av fritid og
+                      praktiske oppgaver. Basert på denne informasjonen ble
+                      designkonseptet utviklet for å omfavne disse tre
+                      kategoriene (akademisk, fritid og praktisk) for
+                      tidsstrukturering.
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Home made sounds
+                      Egen-lagde lyder
                     </h1>
 
                     <p
@@ -1453,7 +1474,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Integration with personal calendar
+                  Integrasjon med personlig kalender
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1467,7 +1488,7 @@ const CoaxerScroll = ({ onClose }) => {
                       className={` ${styles.projectSlideShowPagePTitle} `}
                     ></h1>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-full h-auto object-contain'
                       src={calendarIntegration}
                       alt='calendar integration'
                     />
@@ -1475,12 +1496,12 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer integrates with Christian's personal calendar by
-                      querying a complete schedule of Christian's week from his
-                      Google Calendar. This schedule is synced with the Coaxer
-                      app, allowing the app to consider Christian's personal
-                      schedule when determining when to play the sonification
-                      sounds.
+                      Coaxer integrerer med Christians personlige kalender ved å
+                      hente en komplett tidsplan for Christians uke fra hans
+                      Google Kalender. Denne tidsplanen synkroniseres med
+                      Coaxer-appen, noe som gjør det mulig for appen å ta hensyn
+                      til Christians personlige tidsplan når den bestemmer når
+                      den skal spille sonifiseringslydene.
                     </p>
                   </div>
                 </div>
@@ -1499,14 +1520,14 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Meeting nr 2 with Christian
+                  Andre møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Based on the earcons that Christian had designed and
-                  developed, we put him to the test to see what his recognition
-                  rate of these was compared to other auditory icons and
-                  musicons. A rough lo-fi prototype of what would come to be the
-                  user interface was also presented to him.
+                  Basert på øreikonene som Christian hadde designet og utviklet,
+                  satte vi ham på prøve for å se hva hans gjenkjennelsesrate for
+                  disse var sammenlignet med andre auditive ikoner og musikoner.
+                  En grov lo-fi prototype av det som skulle bli
+                  brukergrensesnittet ble også presentert for ham.
                 </p>
               </div>
 
@@ -1516,16 +1537,17 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Full recognition of personal earcons
+                      Full gjenkjennelse av personlige øreikoner
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      The earcons that Christian had developed where tested up
-                      against a set of musicons in terms of recognition speed.
-                      Based on three test iterations it was obvious that the
-                      self-designed earcons was in terms of recognition.
+                      Øreikonene som Christian hadde utviklet ble testet opp mot
+                      et sett med musikoner med tanke på
+                      gjenkjennelseshastighet. Basert på tre testiterasjoner var
+                      det tydelig at de selvdesignede øreikonene var overlegne
+                      når det gjaldt gjenkjennelse.
                     </p>
                   </div>
 
@@ -1550,14 +1572,14 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Meeting nr 3 with Christian
+                  Tredje møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  This meeting focused on how Christian would navigate the user
-                  interface of the proposed app. At this time we also had an
-                  prototype built with React Native and Expo, that we could in
-                  real time see how Christian used, and change the design
-                  thereafter.
+                  Dette møtet fokuserte på hvordan Christian ville navigere i
+                  brukergrensesnittet til den foreslåtte appen. På dette
+                  tidspunktet hadde vi også en prototype bygget med React Native
+                  og Expo, slik at vi i sanntid kunne se hvordan Christian
+                  brukte den, og deretter endre designet.
                 </p>
               </div>
 
@@ -1567,18 +1589,19 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Real time development
+                      Sanntids utvikling
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Christian would use the app and check the flow of the
-                      navigation. He would also create a couple of dummy events
-                      to prioritize. He came with personal preferences on the
-                      styling of the events in the list, as well as the
-                      prioritization graph. This activity is related to ultra
-                      personalized design practice of designing during use.
+                      Christian ville bruke appen og sjekke flyten av
+                      navigasjonen. Han ville også opprette et par
+                      dummy-hendelser for å prioritere. Han kom med personlige
+                      preferanser om stilen på hendelsene i listen, samt
+                      prioriteringsgrafikken. Denne aktiviteten er relatert til
+                      den ultrapersonaliserte designpraksisen med å designe
+                      under bruk.
                     </p>
                   </div>
 
@@ -1603,15 +1626,15 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Deploying the app to Christian’s personal phone
+                  Lansering av appen på Christians telefon
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  The app was deployed on Christian's personal phone by
-                  incorporating the concept into an app that could be installed
-                  on his phone. Christian used the app on his personal phone for
-                  approximately half a week during the initial period. To
-                  evaluate if the app was truly personal to him, the app would
-                  also be used by Frederik as a test subject
+                  Appen ble installert på Christians personlige telefon ved å
+                  integrere konseptet i en app som kunne installeres på
+                  telefonen hans. Christian brukte appen i omtrent en halv uke i
+                  den innledende perioden. For å evaluere om appen virkelig var
+                  personlig for ham, skulle appen også brukes av Frederik som
+                  testsubjekt.
                 </p>
               </div>
 
@@ -1626,15 +1649,33 @@ const CoaxerScroll = ({ onClose }) => {
                       alt='coaxer front page'
                     />
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      The app that was deployed on Christian’s personal phone
+                      Appen var lansert på Christians personlige telefon
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <button>Academic</button>
-                    <button>Practical</button>
-                    <button>Leisure</button>
+                    <button
+                      class='flex items-center justify-center bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white p-4 border border-green-500 hover:border-transparent shadow-md'
+                      onClick={() => playSound('practical')}
+                    >
+                      ♪ Practical
+                    </button>
+
+                    <button
+                      class='flex items-center justify-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white p-4 border border-blue-500 hover:border-transparent shadow-md'
+                      onClick={() => playSound('leisure')}
+                    >
+                      ♪ Leisure
+                    </button>
+
+                    <button
+                      class='flex items-center justify-center bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white p-4 border border-red-500 hover:border-transparent shadow-md'
+                      onClick={() => playSound('academic')}
+                    >
+                      ♪ Academic
+                    </button>
+
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      The three personal earcons that he developed
+                      De tre personlige øreikonene som han utviklet
                     </p>
                   </div>
                 </div>

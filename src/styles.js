@@ -119,7 +119,7 @@ const styles = {
   projectSlideShowContainer: 'flex flex-col gap-20 h-full sm:h-auto',
   projectSlideShowTitleParagraph: 'flex flex-col gap-5',
 
-  projectSlideShowPageTitle:
+  projectSlideShowPageTitle: 
     ' garet-book text-4xl  mobile:text-2xl sm:text-4xl',
   projectSlideShowPageTitleP:
     'garet-book opacity-60 text-lg mobile:text-sm sm:text-base md:text-lg',
