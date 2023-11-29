@@ -118,7 +118,7 @@ import contactChristian from './coaxer/contactChristian.png';
 
 import ultraPerosnalizedDesign from './coaxer/ultraPersonalizedDesign.png'
 
-import pact from './coaxer/pact.png';
+import pact from './coaxer/pact.svg';
 
 import forskere from './coaxer/forskere.png';
 
@@ -150,7 +150,7 @@ import meeting3 from './coaxer/meeting3.png';
 
 import calendarIntegration from './coaxer/calendarIntegration.png'
 
-import coaxerFrontPage from './coaxer/coaxer-frontpage.png';
+import coaxerFrontPage from './coaxer/coaxer-frontpage.svg';
 
 import evaluationImpact from './coaxer/evaluationImpact.png';
 

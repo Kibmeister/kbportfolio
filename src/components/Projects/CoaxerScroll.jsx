@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
+import ReactPlayer from 'react-player';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -168,7 +169,7 @@ const CoaxerScroll = ({ onClose }) => {
   }, []);
 
   const playSound = (audioFile) => {
-    console.log('The audio file played: ', audioFile)
+    console.log('The audio file played: ', audioFile);
 
     if (audioFile === 'academic') {
       const sound = new Audio(academic);
@@ -180,8 +181,7 @@ const CoaxerScroll = ({ onClose }) => {
       const sound = new Audio(leisure);
       sound.play();
     }
-     
-   };
+  };
 
   return (
     <div className='fixed z-30 inset-0  flex justify-center items-center w-full h-full'>
@@ -527,7 +527,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Getting in contact with Christian
+                  Første kontakt med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Kontakten med Christian ble etablert gjennom et første
@@ -606,42 +606,43 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Gathering data from the end user
+                      På nogenlunde samme tidspunkt oppdaget vi også konseptet
+                      om
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Ultra-personalized design involves collecting data from
-                      the user before and during the use and development of the
-                      product. This data helps in understanding the user's
-                      preferences, needs, and behaviors.
+                      Ultra-personlig design involverer innsamling av data fra
+                      brukeren både før og under bruk og utvikling av produktet.
+                      Disse dataene hjelper til med å forstå brukerens
+                      preferanser, behov og atferd.
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Design decisions based on user data
+                      Designbeslutninger basert på brukerdata
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      The design decisions in an ultra-personalized approach are
-                      based on the data gathered from the user. These decisions
-                      are tailored specifically to the individual user, taking
-                      into account their unique requirements and preferences.
+                      Designbeslutningene i en ultra-personlig tilnærming er
+                      basert på data samlet inn fra brukeren. Disse
+                      beslutningene er skreddersydd spesielt for den enkelte
+                      bruker, med tanke på deres unike krav og preferanser.
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Customization and personalization
+                      Tilpasning og personliggjøring
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Ultra-personalized design goes beyond generic
-                      customization options. It aims to create a product that is
-                      fully personalized and customized to fit the user's
-                      specific needs and preferences. This level of
-                      customization allows for a more seamless and intuitive
-                      user experience.
+                      Ultra-personlig design går utover generiske
+                      tilpasningsmuligheter. Målet er å skape et produkt som er
+                      fullstendig personlig tilpasset og skreddersydd for å
+                      passe brukerens spesifikke behov og preferanser. Dette
+                      nivået av tilpasning tillater en mer sømløs og intuitiv
+                      brukeropplevelse.
                     </p>
                   </div>
 
@@ -666,15 +667,14 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  The perfect match
+                  Den perfekte matchen
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  The fit between Christian (who we had in our minds from
-                  earlier) and the novel and unfamiliar yet exiting design
-                  methodology of ultra-personalized design, set the stage for
-                  the configuration of the design process. Our idea was to
-                  combine the two and explore if Christian was interested in
-                  partaking in such a project.
+                  Samsvar mellom Christian (som vi hadde i tankene fra før) og
+                  den nye, ukjente, men spennende designmetodikken for
+                  ultra-personlig design, la grunnlaget for konfigurasjonen av
+                  designprosessen. Vår idé var å kombinere de to og undersøke om
+                  Christian var interessert i å delta i et slikt prosjekt.
                 </p>
               </div>
 
@@ -691,11 +691,10 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Christian as a busy student and musician lived a life with
-                      multiple responsibilities and events that called for this
-                      time. Could we utilized design thinking and digital
-                      technology to have a positive influence on Christian’s
-                      well being ?
+                      Christian, som en travel student og musiker, levde et liv
+                      med mange ansvarsområder og hendelser som krevde hans tid.
+                      Kunne vi utnytte design tenkning og digital teknologi til
+                      å ha en positiv innflytelse på Christians velvære?
                     </p>
                   </div>
                   <div
@@ -710,11 +709,10 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Was ultra personalized design the right design concept for
-                      Christian as our end-user? This was a design concept
-                      similar to user-centered design and participatory design
-                      but with a greater emphasis on continuously design
-                      development.
+                      Var ultra-personlig design det riktige designkonseptet for
+                      Christian som vår sluttbruker? Dette var et designkonsept
+                      lik brukersentrert design og deltakende design, men med
+                      større vekt på kontinuerlig designutvikling.
                     </p>
                   </div>
                 </div>
@@ -820,7 +818,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Ultra personlig design for Christain
+                  Ultra personlig design for Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på Frederiks første intervju med Christian startet vi
@@ -853,12 +851,12 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Sonification and nudging
+                  Sonifisering og nudging
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Sonification and nudging emerged as concepts during the
-                  literature search, and at a second glance, seemed relevant to
-                  what we knew about Christian as a busy student and musician.
+                  Sonifisering og nudging dukket opp som konsepter under
+                  litteratursøket, og ved nærmere ettersyn virket relevante for
+                  det vi visste om Christian som en travel student og musiker.
                 </p>
               </div>
 
@@ -870,19 +868,19 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Sonification
+                      Sonifisering
                     </h1>
                     <div className='flex flex-col md:flex-row gap-10'>
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60  `}
                       >
-                        Soniﬁcation is the process of mapping data relations to
-                        relations between sound parameters and presenting this
-                        non-speech sound as informative guidance. It involves
-                        using sound to convey information or communicate events.
-                        Soniﬁcation can take the form of earcons, which are
-                        abstract or concrete representations of events, or
-                        musicons, which are musical sounds.
+                        Sonifisering er prosessen med å kartlegge datarelasjoner
+                        til relasjoner mellom lydparametere og presentere denne
+                        ikke-talelyden som informativ veiledning. Det innebærer
+                        å bruke lyd til å formidle informasjon eller kommunisere
+                        hendelser. Sonifisering kan ta form av earcons, som er
+                        abstrakte eller konkrete representasjoner av hendelser,
+                        eller musicons, som er musikalske lyder.
                       </p>
                       <LazyLoadImage
                         className='w-2/3 md:w-1/3 h-auto object-contain'
@@ -898,18 +896,18 @@ const CoaxerScroll = ({ onClose }) => {
                       Nudging
                     </h1>
                     <div className='flex flex-col md:flex-row gap-10'>
-                      {' '}
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60 `}
                       >
-                        Nudging, on the other hand, is an approach to motivate
-                        individuals to make certain choices or take specific
-                        actions. It involves using subtle cues or prompts to
-                        influence decision-making and behavior. Nudges can be
-                        graphical, auditory, physical, or lyrical in nature.
-                        Self-nudging is a specific type of nudging that involves
-                        modifying an individual's external world, both mentally
-                        and physically, to counteract a lack of self-control.
+                        Nudging, på den andre siden, er en tilnærming for å
+                        motivere individer til å gjøre visse valg eller ta
+                        spesifikke handlinger. Det innebærer å bruke subtile
+                        hint eller påminnelser for å påvirke beslutningstaking
+                        og atferd. Nudges kan være grafiske, auditive, fysiske
+                        eller lyriske. Selv-nudging er en spesifikk type nudging
+                        som innebærer å endre en persons eksterne verden, både
+                        mentalt og fysisk, for å motvirke mangel på
+                        selvkontroll.
                       </p>
                       <LazyLoadImage
                         className='w-2/3 md:w-1/3 h-auto object-contain'
@@ -934,16 +932,16 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Addressing an idea with Christian
+                  Presentasjon av ideen til Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  The previous enquiry into the fields of Sonification, Nudging
-                  and time management conceived an idea based on what we knew
-                  about Christian. Frederik (co-designer) initiated a new
-                  meeting with Christian and proposed our idea of designing an
-                  ultra personalized time management app that utilizes personal
-                  earcons (Sonification) as a means to nudge him to complete
-                  planned according to his prioritization.
+                  Den tidligere undersøkelsen av feltene sonifisering, nudging
+                  og tidsstyring førte til en idé basert på det vi visste om
+                  Christian. Frederik (meddesigner) initierte et nytt møte med
+                  Christian og foreslo vår idé om å designe en ultra-personlig
+                  tidsstyringsapp som bruker personlige earcons (sonifisering)
+                  som et middel for å nudge ham til å fullføre planlagte
+                  oppgaver i henhold til hans prioritering.
                 </p>
               </div>
 
@@ -1013,15 +1011,15 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Sonification.. hvordan?
+                  Sonifisering.. hvordan?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Soniﬁcation is the method of mapping data relations to
-                  relations of sound parameters and presenting this non-speech
-                  sound as informative guidance. Sonification is composed of
-                  three different types of auditory cues, and of these, we had
-                  to figure out which would fit Christian the best, following an
-                  ultra-personalized design practice.
+                  Sonifisering er metoden for å kartlegge datarelasjoner til
+                  lydparametres relasjoner og presentere denne ikke-talelyden
+                  som informativ veiledning. Sonifisering består av tre
+                  forskjellige typer lydsignal, og av disse måtte vi finne ut
+                  hvilken som ville passe best for Christian, i tråd med en
+                  ultra-personlig designpraksis.
                 </p>
               </div>
 
@@ -1040,10 +1038,10 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Earcons are abstract small messages that communicate an
-                      event. They are constructed by motives, which are short
-                      rhythmic sequences varying in pitch. Earcons have a longer
-                      learning curve compared to auditory icons.
+                      Earcons er abstrakte små meldinger som kommuniserer en
+                      hendelse. De er konstruert av motiver, som er korte
+                      rytmiske sekvenser som varierer i tonehøyde. Earcons har
+                      en lengre læringskurve sammenlignet med auditive ikoner.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1055,17 +1053,18 @@ const CoaxerScroll = ({ onClose }) => {
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Auditory icons
+                      Auditive ikoner
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Auditory icons are sounds that represent specific actions
-                      or events in a more concrete manner. For example, when a
-                      user clicks on an object, they may hear a hitting sound
-                      from a source like wood or metal. Auditory icons aim to
-                      mimic real-world sounds and are easier to recognize and
-                      understand compared to earcons.
+                      Auditive ikoner er lyder som representerer spesifikke
+                      handlinger eller hendelser på en mer konkret måte. For
+                      eksempel kan en bruker som klikker på et objekt, høre en
+                      slaglyd fra en kilde som tre eller metall. Auditive ikoner
+                      har som mål å etterligne lyder fra den virkelige verden og
+                      er lettere å gjenkjenne og forstå sammenlignet med
+                      earcons.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1082,11 +1081,12 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Musicons are another form of sonification that involves
-                      using short musical sequences or songs to convey
-                      information. Musicons are derived from existing songs and
-                      are cut into short segments. They can be used to represent
-                      different types of events or actions
+                      Musicons er en annen form for sonifisering som innebærer
+                      bruk av korte musikalsekvenser eller sanger for å formidle
+                      informasjon. Musicons er hentet fra eksisterende sanger og
+                      er kuttet opp i korte segmenter. De kan brukes til å
+                      representere forskjellige typer hendelser eller
+                      handlinger.
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1110,16 +1110,14 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Ultra personlig tidsplanlegger
+                  Hvilke digitale tidsplanleggings apper finnes?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Et ultrapersonalisert tidsplanleggingsverktøy er et verktøy
-                  for tidsstyring som er spesielt designet for en individuell
-                  bruker. Det tar hensyn til brukerens unike behov, preferanser
-                  og atferd for å skape en personlig opplevelse. Planleggeren
-                  samler inn data om brukerens aktiviteter, tidsplaner og
-                  prioriteringer, og tilpasser sitt design og funksjonalitet
-                  deretter.
+                  En analyse av de tre tidsplanleggingsappene som var mest brukt
+                  på mobile platformer ble utført for å vurdere hvilke av deres
+                  elementer som ville være relevant å ta med seg videre i
+                  prosessen om å designe et ultrapersonalisert
+                  tidsplanleggingsverktøy for Christian.
                 </p>
               </div>
 
@@ -1212,11 +1210,11 @@ const CoaxerScroll = ({ onClose }) => {
                   Unfangelsen av Coaxer
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Coaxer is a task management app designed to improve time
-                  management and reduce stress levels. It uses sonification
-                  sounds as gentle reminders to prioritize and complete tasks in
-                  three categories. The three categories are based on what is
-                  most personal and important to the user.
+                  Coaxer er en oppgavehåndteringsapp designet for å forbedre
+                  tidsstyring og redusere stressnivåer. Den bruker
+                  sonifiseringslyder som milde påminnelser for å prioritere og
+                  fullføre oppgaver i tre kategorier. De tre kategoriene er
+                  basert på hva som er mest personlig og viktig for brukeren.
                 </p>
               </div>
 
@@ -1230,46 +1228,47 @@ const CoaxerScroll = ({ onClose }) => {
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Designed to fit Christian
+                      Designet for å passe til Christian
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer is specifically designed to fit Christian’s
-                      personal life and existing routines. The app and the
-                      concept will be designed and develop in tandem with
-                      Christians feedback and use.
+                      Coaxer er spesifikt designet for å passe til Christians
+                      personlige liv og eksisterende rutiner. Appen og konseptet
+                      vil bli designet og utviklet i samspill med Christians
+                      tilbakemeldinger og bruk.
                     </p>
                   </div>
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Prioritization
+                      Prioritering
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer utilizes a prioritization algorithm to nudge
-                      Christian to do the taks he has specified, in accordance
-                      to the level of prioritization of these tasks has. This
-                      entails that tasks of higher prioritization will be
-                      notified more often.
+                      Coaxer benytter en prioritetsalgoritme for å nudge
+                      Christian til å utføre de oppgavene han har spesifisert, i
+                      henhold til prioriteringsnivået disse oppgavene har. Dette
+                      innebærer at oppgaver med høyere prioritet vil bli varslet
+                      oftere.
                     </p>
                   </div>
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Genres of tasks
+                      Sjangre av oppgaver
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer defines tasks within three general categories,
-                      these are based on what is most important for Christian.
-                      Each of these categories has their own distinct earcon
-                      sound which makes them easier to recognize.
+                      Coaxer definerer oppgaver innenfor tre generelle
+                      kategorier, disse er basert på hva som er viktigst for
+                      Christian. Hver av disse kategoriene har sin egen
+                      distinkte earcon-lyd, noe som gjør dem lettere å
+                      gjenkjenne.
                     </p>
                   </div>
                 </div>
@@ -1445,11 +1444,11 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      As Christian is a musician, the idea sparked to let
-                      Christian design his own earcons. Christian would in his
-                      home studio record three different sounds that he played
-                      on his guitar. He would compose the three sounds in
-                      accordance with the three categories for time management.
+                      Siden Christian er musiker, oppsto ideen om å la Christian
+                      designe sine egne earcons. Christian ville i sitt
+                      hjemmestudio spille inn tre forskjellige lyder som han
+                      spilte på gitaren sin. Han ville komponere de tre lydene i
+                      samsvar med de tre kategoriene for tidsstyring.
                     </p>
                   </div>
 
@@ -1629,50 +1628,54 @@ const CoaxerScroll = ({ onClose }) => {
                   Lansering av appen på Christians telefon
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Appen ble installert på Christians personlige telefon ved å
-                  integrere konseptet i en app som kunne installeres på
-                  telefonen hans. Christian brukte appen i omtrent en halv uke i
-                  den innledende perioden. For å evaluere om appen virkelig var
-                  personlig for ham, skulle appen også brukes av Frederik som
-                  testsubjekt.
+                  Coaxer, en oppgavehåndteringsapp utviklet gjennom å anvende en
+                  ultrapersonlig designprosess, var nå klar for å installeres på
+                  Christians personlige telefon. Christian brukte appen i
+                  omtrent en halv uke i den innledende perioden. For å evaluere
+                  om appen virkelig var personlig for ham, skulle appen også
+                  brukes av Frederik som testsubjekt.
                 </p>
               </div>
 
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
+                <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <LazyLoadImage
-                      className='w-2/4 lg:w-2/4 h-auto object-contain'
+                      className='w-3/4 lg:w-3/4 h-auto object-contain'
                       src={coaxerFrontPage}
                       alt='coaxer front page'
                     />
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      Appen var lansert på Christians personlige telefon
+                      Christians telefon med Coaxer appen 
                     </p>
                   </div>
-                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <button
-                      class='flex items-center justify-center bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white p-4 border border-green-500 hover:border-transparent shadow-md'
-                      onClick={() => playSound('practical')}
-                    >
-                      ♪ Practical
-                    </button>
+                  {/* the button array and the caption */}
+                  <div classname='flex flex-col'>
+                    {/* the button array */}
+                    <div className='w-full flex flex-row flex-wrap gap-5 pb-10'>
+                      <button
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-green-500 text-green-700 font-semibold hover:text-white border border-green-500 hover:border-transparent shadow-md'
+                        onClick={() => playSound('practical')}
+                      >
+                        ♪ Practical
+                      </button>
 
-                    <button
-                      class='flex items-center justify-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white p-4 border border-blue-500 hover:border-transparent shadow-md'
-                      onClick={() => playSound('leisure')}
-                    >
-                      ♪ Leisure
-                    </button>
+                      <button
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white border border-blue-500 hover:border-transparent shadow-md'
+                        onClick={() => playSound('leisure')}
+                      >
+                        ♪ Leisure
+                      </button>
 
-                    <button
-                      class='flex items-center justify-center bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white p-4 border border-red-500 hover:border-transparent shadow-md'
-                      onClick={() => playSound('academic')}
-                    >
-                      ♪ Academic
-                    </button>
+                      <button
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-red-500 text-red-700 font-semibold hover:text-white border border-red-500 hover:border-transparent shadow-md'
+                        onClick={() => playSound('academic')}
+                      >
+                        ♪ Academic
+                      </button>
+                    </div>
 
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
                       De tre personlige øreikonene som han utviklet
@@ -1686,17 +1689,22 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_24'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#87acaf]`}
           >
             <div
               id='id-slidecontainer'
-              className={`${styles.projectSlideShowContainer}`}
+              className={`${styles.projectSlideShowContainer} w-full`}
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Video demo of the concept
+                  Video demo av konseptet -
+                  {/* denne tittelen må være tvunget
+                  venstrestilt i desktop mode */}
                 </h1>
-                <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
+                <p className={` ${styles.projectSlideShowPageTitleP}`}>
+                  Her er en video som viser konseptet og funksjonen til
+                  applikasjone slik som den ble designet.
+                </p>
               </div>
 
               {/* the three row aligned paragraph */}
@@ -1704,15 +1712,12 @@ const CoaxerScroll = ({ onClose }) => {
               <div className={`${styles.projectSlideShowBodyContainer} `}>
                 <div className='flex flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <LazyLoadImage
-                      className='w-1/4 lg:w-2/4 h-auto object-contain'
-                      src={coaxerFrontPage}
-                      alt='coaxer front page'
+                    <ReactPlayer
+                      className=''
+                      width='vw'
+                      url='https://vimeo.com/889628233?share=copy'
+                      controls
                     />
-                    <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      above is a video showcasing the concept and function of
-                      the application as it was designed
-                    </p>
                   </div>
                 </div>
               </div>
@@ -1722,7 +1727,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_25'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel}`}
           >
             <div
               id='id-slidecontainer'
@@ -1730,51 +1735,54 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Evaluation and impact
+                  Evaluering og innvirkning
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
 
               {/* the three row aligned paragraph */}
 
-              <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-col'>
+              <div
+                className={`${styles.projectSlideShowBodyContainer} flex-col md:flex-row`}
+              >
+                <div className='flex flex-col gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christian’s well-being
+                      Christians velvære
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer had a positive impact on the well-being of
-                      Christian. He found the application useful in managing his
-                      time and tasks, and it helped him feel more in control of
-                      his day. The application's functionality, such as the
-                      ability to prioritize tasks and include tasks of his own
-                      preferences, was also appreciated by Christian
+                      Coaxer hadde en positiv innvirkning på velværet til
+                      Christian. Han fant applikasjonen nyttig i å håndtere sin
+                      tid og oppgaver, og den hjalp ham til å føle seg mer i
+                      kontroll over dagen sin. Applikasjonens funksjonalitet,
+                      som muligheten til å prioritere oppgaver og inkludere
+                      oppgaver etter egne preferanser, ble også satt pris på av
+                      Christian.
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Audio feature(Sonification)
+                      Lyd-funksjon (Sonifisering)
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      One significant finding was the impact of the audio
-                      feature in the application. When the sound was activated,
-                      Christian had a more positive experience with the
-                      application and found it helpful in reminding him of
-                      tasks, especially for academic purposes. The sounds had a
-                      significant effect on his choice of action and improved
-                      his engagement with the tasks.
+                      En betydelig oppdagelse var effekten av lydfunksjonen i
+                      applikasjonen. Når lyden var aktivert, hadde Christian en
+                      mer positiv opplevelse med applikasjonen og fant den
+                      hjelpsom i å minne ham om oppgaver, spesielt for
+                      akademiske formål. Lydene hadde en betydelig effekt på
+                      hans valg av handling og forbedret hans engasjement i
+                      oppgavene.
                     </p>
                   </div>
                 </div>
                 <LazyLoadImage
-                  className='w-1/4 lg:w-2/4 h-auto object-contain'
+                  className='w-full sm:w-3/4 lg:w-2/4 h-auto object-contain'
                   src={evaluationImpact}
                   alt='evaluation and impact'
                 />
@@ -1785,15 +1793,17 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_26'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#000000]`}
           >
             <div
               id='id-slidecontainer'
               className={`${styles.projectSlideShowContainer}`}
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Final remarks
+                <h1
+                  className={` ${styles.projectSlideShowPageTitle} text-white`}
+                >
+                  Avsluttende tanker
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1801,54 +1811,60 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
+                <div className='flex flex-col gap-10 md:flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Sound and nudging
+                    <h1
+                      className={` ${styles.projectSlideShowPagePTitle} text-white`}
+                    >
+                      Lyd og nudging
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
+                      className={` ${styles.projectSlideShowPageP} opacity-60 text-white`}
                     >
-                      In terms of audio, the project found that the presence of
-                      sound had a significant effect on Christian's experience
-                      with the application. The use of earcons and musicons as
-                      self-nudging tools proved to be effective in influencing
-                      Christian's actions and choices.
+                      Når det gjelder lyd, fant prosjektet at tilstedeværelsen
+                      av lyd hadde en betydelig effekt på Christians opplevelse
+                      med applikasjonen. Bruken av øreikonene og musicons som
+                      selv-nudging-verktøy viste seg å være effektive i å
+                      påvirke Christians handlinger og valg.
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Duo-ethnography
+                    <h1
+                      className={` ${styles.projectSlideShowPagePTitle} text-white `}
+                    >
+                      Duo-etnografi
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
+                      className={` ${styles.projectSlideShowPageP} text-white opacity-60 `}
                     >
-                      It is worth mentioning that the duo-ethnographic approach
-                      may have influenced Christian's opinions and answers, as
-                      Frederik had some influence on him during the design
-                      process. However, this collaborative approach also allowed
-                      for a more well-reflected stance and facilitated the
-                      sharing of perceptions and opinions.
+                      Det er verdt å nevne at den duo-etnografiske tilnærmingen
+                      kan ha påvirket Christians meninger og svar, ettersom
+                      Frederik hadde en viss innflytelse på ham under
+                      designprosessen. Imidlertid tillot denne
+                      samarbeidstilnærmingen også en mer velreflektert holdning
+                      og fasiliterte deling av oppfatninger og meninger.
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Personalization
+                    <h1
+                      className={` ${styles.projectSlideShowPagePTitle} text-white `}
+                    >
+                      Personliggjøring
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
+                      className={` ${styles.projectSlideShowPageP} text-white opacity-60 `}
                     >
-                      The personalization aspects of Coaxer especially comes to
-                      show regarding the earcons. During the half week of use,
-                      Christian said that he would use the app for smaller tasks
-                      during the day and that he would recognize their
-                      corresponding earcons and follow up on the tasks. To the
-                      contrary, Frederik would also use it to a certain degree,
-                      but admitted that he couldn’t distinguish between the
-                      sounds to a precise degree.
+                      De personliggjørende aspektene av Coaxer kommer spesielt
+                      til syne når det gjelder earcons. I løpet av den halve
+                      uken med bruk, sa Christian at han ville bruke appen til
+                      mindre oppgaver i løpet av dagen og at han ville
+                      gjenkjenne deres tilsvarende earcons og følge opp
+                      oppgavene. I motsetning til dette ville også Frederik
+                      bruke den til en viss grad, men innrømmet at han ikke
+                      kunne skille mellom lydene til en nøyaktig grad.
                     </p>
                   </div>
                 </div>

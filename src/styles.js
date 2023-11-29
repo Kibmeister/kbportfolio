@@ -119,7 +119,7 @@ const styles = {
   projectSlideShowContainer: 'flex flex-col gap-20 h-full sm:h-auto',
   projectSlideShowTitleParagraph: 'flex flex-col gap-5',
 
-  projectSlideShowPageTitle: 
+  projectSlideShowPageTitle:
     ' garet-book text-4xl  mobile:text-2xl sm:text-4xl',
   projectSlideShowPageTitleP:
     'garet-book opacity-60 text-lg mobile:text-sm sm:text-base md:text-lg',
@@ -143,9 +143,11 @@ const styles = {
   coaxerScrollPanels:
     'bg-white h-screen w-screen fixed inset-0 z-30 overflow-scroll scroll-snap',
   coaxerScrollPanel:
-    ' inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 sm:px-12 bg-white flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
+    ' inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 sm:px-12 flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
   coaxerScrollClip:
     'clip sticky h-0 w-full top-0 mb-0 flex flex-col gap-20 h-full sm:h-auto',
+  coaxerSectionReactcplayer:
+    'react-player min-w-3/3',
 };
 
 export { styles };
