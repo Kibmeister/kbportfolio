@@ -254,7 +254,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_2'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#e9f7b7]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -296,7 +296,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_3'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -338,7 +338,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_4'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel}bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -376,7 +376,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_5'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -384,7 +384,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Formulering av design spørsmålet ⁉️
+                  Formulering av design spørsmålet
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på litteratur søket og vår interesse valgte vi å gå
@@ -409,7 +409,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_6'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel}bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -439,7 +439,7 @@ const CoaxerScroll = ({ onClose }) => {
                   />
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto mx-auto'
+                    className='w-full md:w-3/4 h-auto mx-auto'
                     src={doublediamondDiscover}
                     alt='Description of the image'
                   />
@@ -451,7 +451,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_7'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -479,24 +479,26 @@ const CoaxerScroll = ({ onClose }) => {
                       Christian
                     </h1>
 
-                    <ul className='garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base'>
-                      <li>
+                    <ul className='garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base '>
+                      <li className='mt-2'>
                         - Gitarist som elsker musikk og har spilt i band i flere
                         år
                       </li>
-                      <li>
+                      <li className='mt-2'>
                         - Fortiden journaliststudent på Aarhus Universitet
                       </li>
-                      <li>
+                      <li className='mt-2'>
                         - Kjæreste med sitt videregående crush som han bruker
                         mye tid med
                       </li>
-                      <li>
+                      <li className='mt-2'>
                         - Deltids ansatt på det lokale supermarkedet hvor han
                         jobbet ettermiddager
                       </li>
-                      <li>- Spilte ofte squash med kompiser etter skole.</li>
-                      <li>
+                      <li className='mt-2'>
+                        - Spilte ofte squash med kompiser etter skole.
+                      </li>
+                      <li className='mt-2'>
                         - Glad hundeier og satte pris på en god tur i parken når
                         tiden tillot det
                       </li>
@@ -519,7 +521,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_8'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -583,7 +585,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_9'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -603,7 +605,7 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-col md:flex-row gap-10'>
+                <div className='flex flex-col lg:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       På nogenlunde samme tidspunkt oppdaget vi også konseptet
@@ -659,7 +661,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_10'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -723,7 +725,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_11'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -791,14 +793,14 @@ const CoaxerScroll = ({ onClose }) => {
                     </p>
                   </div>
                 </div>
-                <div className='flex flew-row gap-10'>
+                <div className='flex mobile:flex-col flew-row gap-10'>
                   <LazyLoadImage
-                    className='w-2/5 lg:w-2/5 h-auto object-contain'
+                    className=' mobile-w:full sm:w-3/6 lg:w-2/5 h-auto object-contain'
                     src={pact}
                     alt='pact analysis'
                   />
                   <LazyLoadImage
-                    className='w-2/5 lg:w-2/5 h-auto object-contain'
+                    className='mobile-w:full sm:w-3/6 lg:w-2/5 h-auto object-contain'
                     src={forskere}
                     alt='researchers illustration'
                   />
@@ -810,7 +812,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_12'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -843,7 +845,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_13'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -865,12 +867,12 @@ const CoaxerScroll = ({ onClose }) => {
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
               >
-                <div className='flex flex-col'>
+                <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Sonifisering
                     </h1>
-                    <div className='flex flex-col md:flex-row gap-10'>
+                    <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60  `}
                       >
@@ -883,7 +885,7 @@ const CoaxerScroll = ({ onClose }) => {
                         eller musicons, som er musikalske lyder.
                       </p>
                       <LazyLoadImage
-                        className='w-2/3 md:w-1/3 h-auto object-contain'
+                        className='w-2/3 md:w-4/5 h-auto object-contain'
                         src={sonification}
                         alt='sonification'
                       />
@@ -895,7 +897,7 @@ const CoaxerScroll = ({ onClose }) => {
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Nudging
                     </h1>
-                    <div className='flex flex-col md:flex-row gap-10'>
+                    <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60 `}
                       >
@@ -910,7 +912,7 @@ const CoaxerScroll = ({ onClose }) => {
                         selvkontroll.
                       </p>
                       <LazyLoadImage
-                        className='w-2/3 md:w-1/3 h-auto object-contain'
+                        className='w-2/3 md:w-4/5 h-auto object-contain'
                         src={nudging}
                         alt='nudging'
                       />
@@ -924,7 +926,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_14'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -951,50 +953,14 @@ const CoaxerScroll = ({ onClose }) => {
                 className={`${styles.projectSlideShowBodyContainer} flex-col items-center `}
               >
                 <LazyLoadImage
-                  className='w-full lg:w-2/4 h-auto object-contain'
+                  className='w-full sm:w-3/5 lg:w-2/4 h-auto object-contain'
                   src={addressinganidea}
                   alt='addressing an idea'
                 />
                 <div className='flex flex-row'>
-                  {/* <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christian as the end user
-                    </h1>
-                    <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
-                    ></p>
-                  </div> */}
                   <div
                     className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
-                    {/* <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      the meeting that took place
-                    </h1>
-                    <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
-                    >
-                      Nudging, on the other hand, is an approach to motivate
-                      individuals to make certain choices or take specific
-                      actions. It involves using subtle cues or prompts to
-                      influence decision-making and behavior. Nudges can be
-                      graphical, auditory, physical, or lyrical in nature.
-                      Self-nudging is a specific type of nudging that involves
-                      modifying an individual's external world, both mentally
-                      and physically, to counteract a lack of self-control.
-                    </p> */}
-                  </div>
-                  {/* <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
-                    <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      visualization of the idea
-                    </h1>
-                    <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 `}
-                    ></p>
-                  </div> */}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -1003,7 +969,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_15'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1028,10 +994,8 @@ const CoaxerScroll = ({ onClose }) => {
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
               >
-                <div className='flex flex-row gap-10'>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                <div className='flex flex-col md:flex-row gap-10'>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Earcons
                     </h1>
@@ -1049,9 +1013,7 @@ const CoaxerScroll = ({ onClose }) => {
                       alt='addressing an idea'
                     />
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Auditive ikoner
                     </h1>
@@ -1067,14 +1029,12 @@ const CoaxerScroll = ({ onClose }) => {
                       earcons.
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-4/5 lg:w-2/4 h-auto object-contain'
                       src={auditoryicon}
                       alt='addressing an idea'
                     />
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Musicons
                     </h1>
@@ -1102,7 +1062,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_16'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1126,10 +1086,8 @@ const CoaxerScroll = ({ onClose }) => {
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
               >
-                <div className='flex flex-row'>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3 gap-10`}
-                  >
+                <div className='flex flex-col md:flex-row gap-10'>
+                  <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Focus keeper
                     </h1>
@@ -1148,9 +1106,7 @@ const CoaxerScroll = ({ onClose }) => {
                       alt='addressing an idea'
                     />
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       iPhone reminders
                     </h1>
@@ -1169,9 +1125,7 @@ const CoaxerScroll = ({ onClose }) => {
                       alt='addressing an idea'
                     />
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Microsoft To Do
                     </h1>
@@ -1199,7 +1153,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_17'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1223,10 +1177,8 @@ const CoaxerScroll = ({ onClose }) => {
               <div
                 className={`${styles.projectSlideShowBodyContainer} flex-col `}
               >
-                <div className='flex flex-row'>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                <div className='flex flex-col md:flex-row gap-5'>
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Designet for å passe til Christian
                     </h1>
@@ -1239,9 +1191,7 @@ const CoaxerScroll = ({ onClose }) => {
                       tilbakemeldinger og bruk.
                     </p>
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Prioritering
                     </h1>
@@ -1255,9 +1205,7 @@ const CoaxerScroll = ({ onClose }) => {
                       oftere.
                     </p>
                   </div>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
+                  <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Sjangre av oppgaver
                     </h1>
@@ -1272,7 +1220,7 @@ const CoaxerScroll = ({ onClose }) => {
                     </p>
                   </div>
                 </div>
-                <div className='flex flew-row'>
+                <div className='flex flew-row w-full justify-center '>
                   <LazyLoadImage
                     className='w-full lg:w-2/4 h-auto object-contain'
                     src={doublediamondDefine}
@@ -1399,7 +1347,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_19'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1421,7 +1369,7 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
+                <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Hva planlegger han for?
@@ -1453,7 +1401,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto object-contain'
+                    className='w-full md:w-2/4 h-auto object-contain'
                     src={meeting1}
                     alt='meeting 1'
                   />
@@ -1465,7 +1413,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_20'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1511,7 +1459,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_21'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1533,7 +1481,7 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
+                <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Full gjenkjennelse av personlige øreikoner
@@ -1551,7 +1499,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto object-contain'
+                    className='w-full md:w-2/4 h-auto object-contain'
                     src={meeting2}
                     alt='meeting 2'
                   />
@@ -1563,7 +1511,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_22'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1585,7 +1533,7 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
+                <div className='flex flex-col md:flex-row gap-10 '>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
                       Sanntids utvikling
@@ -1605,7 +1553,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto object-contain'
+                    className='w-full md:w-2/4 h-auto object-contain'
                     src={meeting3}
                     alt='meeting 3'
                   />
@@ -1617,7 +1565,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_23'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1643,12 +1591,12 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <LazyLoadImage
-                      className='w-3/4 lg:w-3/4 h-auto object-contain'
+                      className='w-3/5 lg:w-3/4 h-auto object-contain'
                       src={coaxerFrontPage}
                       alt='coaxer front page'
                     />
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      Christians telefon med Coaxer appen 
+                      Christians telefon med Coaxer appen
                     </p>
                   </div>
                   {/* the button array and the caption */}
@@ -1656,21 +1604,21 @@ const CoaxerScroll = ({ onClose }) => {
                     {/* the button array */}
                     <div className='w-full flex flex-row flex-wrap gap-5 pb-10'>
                       <button
-                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-green-500 text-green-700 font-semibold hover:text-white border border-green-500 hover:border-transparent shadow-md'
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black  shadow-md'
                         onClick={() => playSound('practical')}
                       >
                         ♪ Practical
                       </button>
 
                       <button
-                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white border border-blue-500 hover:border-transparent shadow-md'
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black hover:border-transparent shadow-md'
                         onClick={() => playSound('leisure')}
                       >
                         ♪ Leisure
                       </button>
 
                       <button
-                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-red-500 text-red-700 font-semibold hover:text-white border border-red-500 hover:border-transparent shadow-md'
+                        class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black hover:border-transparent shadow-md'
                         onClick={() => playSound('academic')}
                       >
                         ♪ Academic
@@ -1689,7 +1637,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_24'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#87acaf]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1727,7 +1675,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_25'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel}`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
