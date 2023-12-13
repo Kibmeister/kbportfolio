@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import ReactPlayer from 'react-player';
@@ -9,10 +9,8 @@ import { styles } from '../../styles';
 import {
   coaxerFrontCover,
   introductionImg,
-  doubleDiamond,
   ouruserChristian,
   contactChristian,
-  ultraPerosnalizedDesign,
   pact,
   forskere,
   sonification,
@@ -25,7 +23,6 @@ import {
   iphonereminders,
   microsofttodo,
   doublediamondDefine,
-  coaxerscenario,
   meeting1,
   meeting2,
   meeting3,
@@ -51,8 +48,36 @@ const CoaxerScroll = ({ onClose }) => {
   const sectionsRefs = useRef([]);
   const activeSlideRef = useRef(null);
   const slideTotalRef = useRef(null);
+  const [currentPanel, setCurrentPanel] = useState(1);
+  const scrollTriggersRef = useRef([]);
   const upBtnRef = useRef(null);
   const downBtnRef = useRef(null);
+
+  // Event listener setup
+  useEffect(() => {
+    const upBtn = upBtnRef.current;
+    const downBtn = downBtnRef.current;
+
+    const panelDown = () => {
+      console.log('panel down is pressed');
+      setCurrentPanel((prevPanel) =>
+        Math.min(prevPanel + 1, sectionsRefs.current.length)
+      );
+    };
+
+    const panelUp = () => {
+      console.log('panel Up is pressed');
+      setCurrentPanel((prevPanel) => Math.max(prevPanel - 1, 1));
+    };
+
+    downBtn.addEventListener('click', panelDown);
+    upBtn.addEventListener('click', panelUp);
+
+    return () => {
+      downBtn.removeEventListener('click', panelDown);
+      upBtn.removeEventListener('click', panelUp);
+    };
+  }, []);
 
   // Your GSAP animations using ScrollTrigger and ScrollToPlugin go here
   useEffect(() => {
@@ -61,112 +86,56 @@ const CoaxerScroll = ({ onClose }) => {
     const slideTotal = slideTotalRef.current; // the count of slides set by the span element
     const sections = sectionsRefs.current;
     const totalSlides = sections.length;
-    const upBtn = upBtnRef.current;
-    const downBtn = downBtnRef.current;
-
-    const goToPanel = (thePanel) => {
-      console.log('goToPanel targeting: ', '#panel_' + thePanel);
-
-      gsap.to(panels, {
-        ease: 'power4.inOut',
-        duration: 0.55,
-        scrollTo: {
-          y: '#panel_' + thePanel,
-          autoKill: false,
-        },
-      });
-    };
-    const panelDown = (event) => {
-      console.log('Down button clicked');
-
-      let nextPanel = parseInt(event.target.getAttribute('data-down'), 10);
-      if (!isNaN(nextPanel) && nextPanel <= totalSlides) {
-        goToPanel(nextPanel);
-      }
-    };
-
-    const panelUp = (event) => {
-      console.log('Up button clicked');
-      let prevPanel = parseInt(event.target.getAttribute('data-up'), 10);
-      console.log('Attempting to scroll to: ', '#panel_' + prevPanel);
-      if (!isNaN(prevPanel) && prevPanel >= 1) {
-        goToPanel(prevPanel);
-      }
-    };
-
-    downBtn.addEventListener('click', panelDown);
-    upBtn.addEventListener('click', panelUp);
-
-    const updateUI = (keyIndexDown) => {
-      if (keyIndexDown > 2) {
-        upBtn.style.opacity = '1'; // Enabled
-        upBtn.style.pointerEvents = 'all'; // Make it clickable
-        upBtn.style.cursor = 'pointer'; // Make it clickable
-      } else {
-        upBtn.style.opacity = '0.5'; // Half opacity to show it's disabled
-        upBtn.style.pointerEvents = 'none'; // Make it non-clickable
-      }
-
-      if (keyIndexDown > totalSlides) {
-        downBtn.style.opacity = '0.5'; // Half opacity to show it's disabled
-        downBtn.style.pointerEvents = 'none'; // Make it non-clickable
-      } else {
-        downBtn.style.opacity = '1'; // Enabled
-        downBtn.style.pointerEvents = 'all'; // Make it clickable
-        downBtn.style.cursor = 'pointer'; // Make it clickable
-      }
-    };
 
     const slidesAll = sections.length;
     slideTotal.innerHTML = slidesAll;
-    // console.log('these are the sections', sections);
+    
+
+    if (scrollTriggersRef.current.length > 0) {
+      scrollTriggersRef.current.forEach((trigger) => trigger.kill());
+      scrollTriggersRef.current = [];
+    }
 
     sections.forEach((eachPanel, index) => {
-      const realIndex = index + 1;
+      console.log('the scroll trigger index', index);
 
-      ScrollTrigger.create({
+      const trigger = ScrollTrigger.create({
         scroller: panels,
         trigger: eachPanel,
         start: 'top 50%',
         end: 'top bottom',
         onLeave: function () {
-          eachPanel.classList.add('active');
-          activeSlide.innerHTML = realIndex;
-          let indexNext = realIndex + 1;
-          let indexPrev = realIndex - 1;
+          // eachPanel.classList.add('active');
 
-          indexNext = Math.min(indexNext, slidesAll);
-          indexPrev = Math.max(indexPrev, 1);
-          console.log('onLeave: ', indexPrev, indexNext);
-
-          downBtn.setAttribute('data-down', indexNext);
-          upBtn.setAttribute('data-up', indexPrev);
-
-          updateUI(indexNext);
+          activeSlide.innerHTML = currentPanel;
         },
         onLeaveBack: function () {
-          eachPanel.classList.remove('active');
-          let realIndexBack = realIndex - 1;
-          activeSlide.innerHTML = realIndexBack;
-          let indexNext = realIndex;
-          let indexPrev = realIndex - 2;
-
-          console.log('onLeaveBack: ', indexPrev, indexNext);
-          // Make sure to also update these buttons in your component
-          downBtn.setAttribute('data-down', indexNext); // Corrected from dnBtn
-
-          upBtn.setAttribute('data-up', indexPrev);
-          // Make sure to also implement the updateUI function, or remove this if not needed
-          updateUI(indexNext);
+          activeSlide.innerHTML = currentPanel;
         },
       });
+      scrollTriggersRef.current.push(trigger);
     });
-
     return () => {
-      upBtn.removeEventListener('click', panelUp);
-      downBtn.removeEventListener('click', panelDown);
+      scrollTriggersRef.current.forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  // Scroll to panel effect
+  useEffect(() => {
+    const panels = panelsRef.current;
+    const goToPanel = (panelNumber) => {
+      gsap.to(panels, {
+        scrollTo: {
+          y: '#panel_' + panelNumber,
+          autoKill: false,
+        },
+        duration: 0.55,
+        ease: 'power4.inOut',
+      });
+    };
+
+    goToPanel(currentPanel);
+  }, [currentPanel]);
 
   const playSound = (audioFile) => {
     console.log('The audio file played: ', audioFile);
@@ -215,7 +184,7 @@ const CoaxerScroll = ({ onClose }) => {
           </span>
           /
           <span ref={slideTotalRef} className='slideTotal'>
-            26
+            25
           </span>
         </span>
 
@@ -338,7 +307,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_4'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel}bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -409,7 +378,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_6'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel}bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1230,122 +1199,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 18*/}
-          {/* <div
-            id='panel_18'
-            ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#95dee4]`}
-          >
-            <div
-              id='id-slidecontainer'
-              className={`${styles.projectSlideShowContainer}`}
-            >
-              <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Scenario of Coaxer in practice
-                </h1>
-                <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
-              </div>
-
-             }
-
-              <div
-                className={`${styles.projectSlideShowBodyContainer} flex-col `}
-              >
-                <div className='flex flex-row'>
-                  <div
-                    className={`${styles.projectSlideShowTitleParagraph} w-1/3`}
-                  >
-                  
-                    <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Day 1:
-                    </h3>
-                    <ul>
-                      <li>
-                        Christian is at his childhood home with his parents.
-                      </li>
-                      <li>
-                        His father asks for his help in cleaning the garage, so
-                        Christian adds this task to the Coaxer app.
-                      </li>
-                      <li>
-                        Christian plans to meet his childhood friends to play
-                        tennis, so he adds this as a leisure activity in the
-                        app.
-                      </li>
-                      <li>
-                        He also has journalism homework to rehearse, which he
-                        adds as an academic task with two iterations
-                      </li>
-                    </ul>
-                    
-                    <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Day 2:
-                    </h3>
-                    <ul>
-                      <li>
-                        Christian wakes up early at 09:00 and records the
-                        earcons for each category in the Coaxer app
-                      </li>
-                      <li>
-                        He adjusts the sound of the leisure activity earcon in
-                        the equalizer to his preference.
-                      </li>
-                      <li>
-                        Christian is watching Netflix in his room when he hears
-                        the earcon for helping his dad with the garage. He
-                        recognizes the sound and decides to take a break from
-                        the show to assist his dad.
-                      </li>
-                      <li>
-                        He marks the task as done in the app after helping his
-                        dad in the garage.
-                      </li>
-                      <li>
-                        Christian's mother asks him to help her set up her
-                        iCloud profile on her new iPhone, so he adds this as a
-                        new task in the app and prioritizes it over his
-                        rehearsal of music homework.
-                      </li>
-                    </ul>
-                   
-                    <h3 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Day 3:
-                    </h3>
-                    <ul>
-                      <li>
-                        Christian wakes up and reads the newspaper when he hears
-                        the earcon for his journalism homework. He realizes that
-                        he needs to work on it and decides to change the earcon
-                        in the equalizer to a more motivating tone.
-                      </li>
-                      <li>
-                        He spends time sunbathing on the terrace when he hears
-                        the earcon for playing tennis with his friends. He
-                        remembers the task and plans to fulfill it later.
-                      </li>
-                      <li>
-                        Christian goes to bed and adds a new task to the app,
-                        which is to help his mother with her iCloud profile.
-                      </li>
-                      <li>
-                        He prioritizes this task over his rehearsal of music
-                        homework by dragging it up in the task list.
-                      </li>
-                    </ul>
-                  </div>
-                  <LazyLoadImage
-                    className='w-1/4 lg:w-3/4 h-auto object-contain'
-                    src={coaxerscenario}
-                    alt='coaxer scenario'
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* panel 19 */}
+          {/* panel 18 */}
           <div
-            id='panel_19'
+            id='panel_18'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1409,9 +1265,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 20 */}
+          {/* panel 19 */}
           <div
-            id='panel_20'
+            id='panel_19'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1455,9 +1311,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 21 */}
+          {/* panel 20 */}
           <div
-            id='panel_21'
+            id='panel_20'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1507,9 +1363,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 22 */}
+          {/* panel 21 */}
           <div
-            id='panel_22'
+            id='panel_21'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1561,9 +1417,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 23 */}
+          {/* panel 22 */}
           <div
-            id='panel_23'
+            id='panel_22'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1633,9 +1489,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 24 */}
+          {/* panel 23 */}
           <div
-            id='panel_24'
+            id='panel_23'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1671,9 +1527,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 25 */}
+          {/* panel 24 */}
           <div
-            id='panel_25'
+            id='panel_24'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
@@ -1737,9 +1593,9 @@ const CoaxerScroll = ({ onClose }) => {
               </div>
             </div>
           </div>
-          {/* panel 26 */}
+          {/* panel 25 */}
           <div
-            id='panel_26'
+            id='panel_25'
             ref={(el) => sectionsRefs.current.push(el)}
             className={`${styles.coaxerScrollPanel} bg-[#000000]`}
           >
