@@ -83,40 +83,48 @@ const CoaxerScroll = ({ onClose }) => {
   useEffect(() => {
     const panels = panelsRef.current;
     const activeSlide = activeSlideRef.current;
-    const slideTotal = slideTotalRef.current; // the count of slides set by the span element
+    const slideTotal = slideTotalRef.current;
     const sections = sectionsRefs.current;
-    const totalSlides = sections.length;
 
-    const slidesAll = sections.length;
-    slideTotal.innerHTML = slidesAll;
-    
+    slideTotal.innerHTML = sections.length;
 
     if (scrollTriggersRef.current.length > 0) {
       scrollTriggersRef.current.forEach((trigger) => trigger.kill());
       scrollTriggersRef.current = [];
     }
 
-    sections.forEach((eachPanel, index) => {
-      console.log('the scroll trigger index', index);
+    sections.forEach((panel, index) => {
+      console.log(
+        'panel index',
+        index,
+        'panel offset height',
+        panel.offsetHeight
+      );
 
       const trigger = ScrollTrigger.create({
         scroller: panels,
-        trigger: eachPanel,
-        start: 'top 50%',
-        end: 'top bottom',
-        onLeave: function () {
-          // eachPanel.classList.add('active');
-
-          activeSlide.innerHTML = currentPanel;
+        trigger: panel,
+        start: 'top bottom', // Adjusted
+        end: () => `+=${panel.offsetHeight}`,
+        markers: true,
+        toggleActions: 'play none none none',
+        onEnter: function () {
+          activeSlide.innerHTML = index + 1;
         },
-        onLeaveBack: function () {
-          activeSlide.innerHTML = currentPanel;
+        onEnterBack: function () {
+          activeSlide.innerHTML = index;
         },
       });
       scrollTriggersRef.current.push(trigger);
     });
+
+    window.addEventListener('resize', () => {
+      ScrollTrigger.refresh();
+    });
+
     return () => {
       scrollTriggersRef.current.forEach((trigger) => trigger.kill());
+      window.removeEventListener('resize', ScrollTrigger.refresh);
     };
   }, []);
 
@@ -200,7 +208,7 @@ const CoaxerScroll = ({ onClose }) => {
               className={`${styles.coaxerScrollClip}`}
             >
               <h1 className='text-4xl sm:text-4xl md:text-6xl max-w-full sm:w-[400px] font-semibold garet-book'>
-                Coaxer
+                1. Coaxer
               </h1>
 
               <div
@@ -231,7 +239,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Introduksjon
+                  2. Introduksjon
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   {/* {t('portfolio.ringmerking.page3.titleP')} */}
@@ -276,7 +284,7 @@ const CoaxerScroll = ({ onClose }) => {
               <div className={`${styles.projectSlideShowBodyContainer} `}>
                 <div className={`${styles.projectSlideShowTitleParagraph}`}>
                   <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                    Min rolle
+                    3. Min rolle
                   </h1>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
                     Under prosjektet jobbet jeg i første omgang med å utføre
@@ -315,7 +323,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Hva er allerede funnet ut?
+                  4. Hva er allerede funnet ut?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Det første vi startet med var å ta et falkeblikk over
@@ -353,7 +361,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Formulering av design spørsmålet
+                  5. Formulering av design spørsmålet
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på litteratur søket og vår interesse valgte vi å gå
@@ -386,7 +394,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Hva er mest relevant?
+                  6. Hva er mest relevant?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   På grunn av den brede formuleringen av design spørsmålet ble
@@ -428,7 +436,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Vår bruker
+                  7. Vår bruker
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Under oppdagelses fasen nevnte en av designerne at de hadde en
@@ -498,7 +506,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Første kontakt med Christian
+                  8. Første kontakt med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Kontakten med Christian ble etablert gjennom et første
@@ -562,7 +570,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Ultra personlig design
+                  9. Ultra personlig design
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   På nogenlunde samme tidspunkt oppdaget vi også konseptet om
@@ -638,7 +646,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Den perfekte matchen
+                  10. Den perfekte matchen
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Samsvar mellom Christian (som vi hadde i tankene fra før) og
@@ -702,7 +710,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Duo ethnography...(metodologi)
+                  11. Duo ethnography...(metodologi)
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Da dette var et akademisk bachelor prosjekt var den valgte
@@ -789,7 +797,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Ultra personlig design for Christian
+                  12. Ultra personlig design for Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på Frederiks første intervju med Christian startet vi
@@ -822,7 +830,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Sonifisering og nudging
+                  13. Sonifisering og nudging
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Sonifisering og nudging dukket opp som konsepter under
@@ -903,7 +911,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Presentasjon av ideen til Christian
+                  14. Presentasjon av ideen til Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Den tidligere undersøkelsen av feltene sonifisering, nudging
@@ -946,7 +954,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Sonifisering.. hvordan?
+                  15. Sonifisering.. hvordan?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Sonifisering er metoden for å kartlegge datarelasjoner til
@@ -1039,7 +1047,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Hvilke digitale tidsplanleggings apper finnes?
+                  16. Hvilke digitale tidsplanleggings apper finnes?
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   En analyse av de tre tidsplanleggingsappene som var mest brukt
@@ -1130,7 +1138,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Unfangelsen av Coaxer
+                  17. Unfangelsen av Coaxer
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Coaxer er en oppgavehåndteringsapp designet for å forbedre
@@ -1211,7 +1219,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Første møte med Christian
+                  18. Første møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Utviklingen av Coaxer startet med et ønske om å skape noe
@@ -1277,7 +1285,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Integrasjon med personlig kalender
+                  19. Integrasjon med personlig kalender
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1323,7 +1331,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Andre møte med Christian
+                  20. Andre møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Basert på øreikonene som Christian hadde designet og utviklet,
@@ -1375,7 +1383,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Tredje møte med Christian
+                  21. Tredje møte med Christian
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Dette møtet fokuserte på hvordan Christian ville navigere i
@@ -1429,7 +1437,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Lansering av appen på Christians telefon
+                  22. Lansering av appen på Christians telefon
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   Coaxer, en oppgavehåndteringsapp utviklet gjennom å anvende en
@@ -1501,7 +1509,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Video demo av konseptet -
+                  23. Video demo av konseptet -
                   {/* denne tittelen må være tvunget
                   venstrestilt i desktop mode */}
                 </h1>
@@ -1539,7 +1547,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  Evaluering og innvirkning
+                  24. Evaluering og innvirkning
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1607,7 +1615,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <h1
                   className={` ${styles.projectSlideShowPageTitle} text-white`}
                 >
-                  Avsluttende tanker
+                  25. Avsluttende tanker
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
