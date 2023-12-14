@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { motion, useScroll, useSpring, useMotionValue } from 'framer-motion';
 import { styles } from '../../styles';
 import {
   coaxerFrontCover,
@@ -46,104 +47,23 @@ const CoaxerScroll = ({ onClose }) => {
   const { t, i18n } = useTranslation();
   const panelsRef = useRef(null);
   const sectionsRefs = useRef([]);
-  const activeSlideRef = useRef(null);
-  const slideTotalRef = useRef(null);
-  const [currentPanel, setCurrentPanel] = useState(1);
-  const scrollTriggersRef = useRef([]);
-  const upBtnRef = useRef(null);
-  const downBtnRef = useRef(null);
+  const scrollProgressMotion = useMotionValue(0);
 
-  // Event listener setup
-  useEffect(() => {
-    const upBtn = upBtnRef.current;
-    const downBtn = downBtnRef.current;
+  const scaleX = useSpring(scrollProgressMotion, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
-    const panelDown = () => {
-      console.log('panel down is pressed');
-      setCurrentPanel((prevPanel) =>
-        Math.min(prevPanel + 1, sectionsRefs.current.length)
-      );
-    };
-
-    const panelUp = () => {
-      console.log('panel Up is pressed');
-      setCurrentPanel((prevPanel) => Math.max(prevPanel - 1, 1));
-    };
-
-    downBtn.addEventListener('click', panelDown);
-    upBtn.addEventListener('click', panelUp);
-
-    return () => {
-      downBtn.removeEventListener('click', panelDown);
-      upBtn.removeEventListener('click', panelUp);
-    };
-  }, []);
-
-  // Your GSAP animations using ScrollTrigger and ScrollToPlugin go here
-  useEffect(() => {
-    const panels = panelsRef.current;
-    const activeSlide = activeSlideRef.current;
-    const slideTotal = slideTotalRef.current;
-    const sections = sectionsRefs.current;
-
-    slideTotal.innerHTML = sections.length;
-
-    if (scrollTriggersRef.current.length > 0) {
-      scrollTriggersRef.current.forEach((trigger) => trigger.kill());
-      scrollTriggersRef.current = [];
+  //new scroll implementation
+  const handleScroll = () => {
+    if (panelsRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = panelsRef.current;
+      const maxScroll = scrollHeight - clientHeight;
+      const currentProgress = scrollTop / maxScroll;
+      scrollProgressMotion.set(currentProgress); // Update the motion value
     }
-
-    sections.forEach((panel, index) => {
-      console.log(
-        'panel index',
-        index,
-        'panel offset height',
-        panel.offsetHeight
-      );
-
-      const trigger = ScrollTrigger.create({
-        scroller: panels,
-        trigger: panel,
-        start: 'top bottom', // Adjusted
-        end: () => `+=${panel.offsetHeight}`,
-        markers: true,
-        toggleActions: 'play none none none',
-        onEnter: function () {
-          activeSlide.innerHTML = index + 1;
-        },
-        onEnterBack: function () {
-          activeSlide.innerHTML = index;
-        },
-      });
-      scrollTriggersRef.current.push(trigger);
-    });
-
-    window.addEventListener('resize', () => {
-      ScrollTrigger.refresh();
-    });
-
-    return () => {
-      scrollTriggersRef.current.forEach((trigger) => trigger.kill());
-      window.removeEventListener('resize', ScrollTrigger.refresh);
-    };
-  }, []);
-
-  // Scroll to panel effect
-  useEffect(() => {
-    const panels = panelsRef.current;
-    const goToPanel = (panelNumber) => {
-      gsap.to(panels, {
-        scrollTo: {
-          y: '#panel_' + panelNumber,
-          autoKill: false,
-        },
-        duration: 0.55,
-        ease: 'power4.inOut',
-      });
-    };
-
-    goToPanel(currentPanel);
-  }, [currentPanel]);
+  };
 
   const playSound = (audioFile) => {
     console.log('The audio file played: ', audioFile);
@@ -168,35 +88,15 @@ const CoaxerScroll = ({ onClose }) => {
 
       {/* content container onWheel={handleScroll}*/}
       <div className='bg-[#ffffff] w-full h-full'>
-        {/* pagination arrows */}
-        <div className={`${styles.coaxerScrollControls} `}>
-          <a
-            ref={upBtnRef}
-            className='coaxerScrolControlsA disabled opacity-50'
-            data-up='1'
-          >
-            &uarr;
-          </a>{' '}
-          <a
-            ref={downBtnRef}
-            className='coaxerScrolControlsA down cursor-pointer'
-            data-down='2'
-          >
-            &darr;
-          </a>
-        </div>
-        {/* pagination numbers */}
-        <span className='text-2xl garet-book fixed bottom-10 right-[calc(20px+100px)] z-40'>
-          <span ref={activeSlideRef} className='activeSlide'>
-            1
-          </span>
-          /
-          <span ref={slideTotalRef} className='slideTotal'>
-            25
-          </span>
-        </span>
+        {/* container for the scroll wheel */}
 
-        <div ref={panelsRef} className={`${styles.coaxerScrollPanels} `}>
+        <motion.div className='progress-bar' style={{ scaleX }} />
+
+        <div
+          ref={panelsRef}
+          onScroll={handleScroll}
+          className={`${styles.coaxerScrollPanels} `}
+        >
           {/* panel 1 */} {/* frontpage */}
           <div
             id='panel_1'
@@ -262,7 +162,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </p>
                 </div>
                 <LazyLoadImage
-                  className='w-full lg:w-2/4 md:w-2/4 sm:w-2/4 h-auto'
+                  className=' mobile:w-3/4 sm:w-3/4 md:w-2/4 h-auto object-contain'
                   src={introductionImg}
                   alt='Description of the image'
                 />
@@ -416,7 +316,7 @@ const CoaxerScroll = ({ onClose }) => {
                   />
 
                   <LazyLoadImage
-                    className='w-full md:w-3/4 h-auto mx-auto'
+                    className='w-full md:w-3/4 lg:w-2/4 h-auto mx-auto'
                     src={doublediamondDiscover}
                     alt='Description of the image'
                   />
@@ -486,7 +386,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto object-contain'
+                    className='w-full sm:w-2/4 h-auto object-contain'
                     src={ouruserChristian}
                     alt='Description of the image'
                   />
@@ -550,7 +450,7 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
 
                   <LazyLoadImage
-                    className='w-full lg:w-2/4 h-auto object-contain'
+                    className='w-full sm:w-2/4 h-auto object-contain'
                     src={contactChristian}
                     alt='Description of the image'
                   />
@@ -1605,7 +1505,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_25'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#000000]`}
+            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
           >
             <div
               id='id-slidecontainer'
@@ -1613,7 +1513,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1
-                  className={` ${styles.projectSlideShowPageTitle} text-white`}
+                  className={` ${styles.projectSlideShowPageTitle} text-black`}
                 >
                   25. Avsluttende tanker
                 </h1>
@@ -1626,13 +1526,13 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col gap-10 md:flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1
-                      className={` ${styles.projectSlideShowPagePTitle} text-white`}
+                      className={` ${styles.projectSlideShowPagePTitle} text-black`}
                     >
                       Lyd og nudging
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} opacity-60 text-white`}
+                      className={` ${styles.projectSlideShowPageP} opacity-60 text-black`}
                     >
                       Når det gjelder lyd, fant prosjektet at tilstedeværelsen
                       av lyd hadde en betydelig effekt på Christians opplevelse
@@ -1643,13 +1543,13 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1
-                      className={` ${styles.projectSlideShowPagePTitle} text-white `}
+                      className={` ${styles.projectSlideShowPagePTitle} text-black `}
                     >
                       Duo-etnografi
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} text-white opacity-60 `}
+                      className={` ${styles.projectSlideShowPageP} text-black opacity-60 `}
                     >
                       Det er verdt å nevne at den duo-etnografiske tilnærmingen
                       kan ha påvirket Christians meninger og svar, ettersom
@@ -1661,13 +1561,13 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1
-                      className={` ${styles.projectSlideShowPagePTitle} text-white `}
+                      className={` ${styles.projectSlideShowPagePTitle} text-black `}
                     >
                       Personliggjøring
                     </h1>
 
                     <p
-                      className={` ${styles.projectSlideShowPageP} text-white opacity-60 `}
+                      className={` ${styles.projectSlideShowPageP} text-black opacity-60 `}
                     >
                       De personliggjørende aspektene av Coaxer kommer spesielt
                       til syne når det gjelder earcons. I løpet av den halve

@@ -49,17 +49,17 @@
 
 /* classes for the the lamptoggle on and off */
 body {
-  transition: background-color 0.5s ease, overflow 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    overflow 0.5s ease;
 }
 body.lamp-off {
   background-color: rgba(0, 0, 0, 1);
- 
 }
 /* for the toggle of the scrollbar */
 .page-container {
   overflow: hidden;
 }
-
 
 /* for the toggle of the navbar animation */
 .navbar-animate {
@@ -82,8 +82,8 @@ body.lamp-off {
   display: block;
   width: 0;
   height: 2px;
-  background: #FF5800; /* replace with your secondary color */
-  transition: width .3s;
+  background: #ff5800; /* replace with your secondary color */
+  transition: width 0.3s;
   position: absolute;
   bottom: 0;
 }
@@ -92,5 +92,17 @@ body.lamp-off {
 }
 /* coaxerScroll */
 .scroll-snap {
-    scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+.progress-bar {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  background-color: black;
+  transform-origin: 0%;
 }

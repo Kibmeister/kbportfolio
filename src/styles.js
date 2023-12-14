@@ -141,7 +141,7 @@ const styles = {
   coaxerScrolControlsA:
     'block bg-black z-40 w-16 h-16 leading-9 rounded-full text-center first:-mr-2',
   coaxerScrollPanels:
-    'bg-white h-screen w-screen fixed inset-0 z-30 overflow-scroll scroll-snap',
+    'bg-white h-100vh w-100vw fixed inset-0 z-30 overflow-scroll scroll-snap',
   coaxerScrollPanel:
     ' inset-0 z-30 2xl:mt-10 xl:mt-8 mx:auto pt-20 pb-20 px-6 sm:px-12 flex items-center justify-center min-h-screen w-screen overflow-y-auto overscroll-y-auto max-w-7xl mx-auto',
   coaxerScrollClip:
