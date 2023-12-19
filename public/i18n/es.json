@@ -102,7 +102,180 @@
   },
   "portfolio": {
     "coaxer": {
-      "buttonclose": "Cerrar"
+      "buttonclose": "Cerrar",
+      "page1": {
+        "subTitle": "Aplicación de gestión de tareas desarrollada a través de un proceso de diseño ultrapersonalizado"
+      },
+      "page2": {
+        "title": "Introducción",
+        "titleP": "Coaxer fue un proyecto estudiantil sobre salud digital con el objetivo de explorar cómo la tecnología digital puede mejorar el bienestar de las personas. El proyecto se centró en la salud mental y el estrés en adultos jóvenes, y el servicio Coaxer se desarrolló como una aplicación de gestión de tareas ultrapersonalizada diseñada para mejorar la salud mental y reducir el estrés en general. Las siguientes páginas tratarán sobre el proceso de diseño detrás de Coaxer."
+      },
+      "page3": {
+        "subTitle": "Mi rol",
+        "subTitleP": "Durante el proyecto, inicialmente trabajé en la investigación de información en el dominio seleccionado. Después de concebir la idea de Coaxer, fui el diseñador principal y desarrollador del proyecto. En la práctica, esto significa que diseñé y programé toda la aplicación (con aportes de los demás y, por supuesto, de Christian).",
+        "subTitle1": "Mis responsabilidades",
+        "subTitle1P": "Durante la investigación, el diseño y el desarrollo, fui responsable de comunicar nuevos conocimientos sobre la tarea al resto del grupo. También tuve la responsabilidad de mantener actualizado y colaborar con el equipo de diseño en los cambios realizados y las nuevas características que valía la pena explorar."
+      },
+      "page4": {
+        "title": "¿Qué se ha descubierto hasta ahora?",
+        "titleP": "Lo primero que hicimos fue revisar la literatura sobre salud mental en adultos jóvenes y explorar algunos de los conceptos y hallazgos que consideramos importantes e interesantes para profundizar.",
+        "imgcaption": "Estos fueron los hallazgos más relevantes que encontramos"
+      },
+      "page5": {
+        "title": "Formulación de la pregunta de diseño",
+        "titleP": "Basándonos en la búsqueda de literatura y nuestro interés, decidimos avanzar en cómo la gestión de tareas puede utilizarse de manera preventiva para adultos jóvenes que experimentan estrés.",
+        "div1P": "¿Cómo podemos aprovechar el concepto de gestión de tareas estructurada relacionada con la salud digital para abordar el problema del estrés y el bienestar reducido en estudiantes como nosotros?"
+      },
+      "page6": {
+        "title": "¿Qué es más relevante?",
+        "titleP": "Debido a la formulación amplia de la pregunta de diseño, tuvimos que enfocarla haciendo preguntas sobre lo que considerábamos más interesante."
+      },
+      "page7": {
+        "title": "Nuestro usuario",
+        "titleP": "Durante la fase de descubrimiento, uno de los diseñadores mencionó que tenía un amigo que llevaba una vida muy ocupada y que podría ser un candidato relevante para la pregunta de diseño. Después de considerarlo durante un breve tiempo, decidimos avanzar con esta base y contactarlo.",
+        "div1Title": "Christian",
+        "div1List-li1": "Guitarrista amante de la música que ha estado en bandas durante varios años",
+        "div1List-li2": "Estudiante de periodismo en la Universidad de Aarhus",
+        "div1List-li3": "En una relación con su amor de la escuela secundaria, con quien pasa mucho tiempo",
+        "div1List-li4": "Empleado a tiempo parcial en el supermercado local, donde trabaja por las tardes",
+        "div1List-li5": "Juega squash a menudo con amigos después de clases",
+        "div1List-li6": "Dueño de un perro feliz que disfruta de paseos en el parque cuando tiene tiempo"
+      },
+      "page8": {
+        "title": "Primer contacto con Christian",
+        "titleP": "El contacto con Christian se estableció a través de una primera entrevista con Frederik (co-diseñador), quien es amigo de Christian. Frederik compartió información sobre Christian y sus hábitos y rutinas, lo que nos dio un punto de partida para el proceso de diseño.",
+        "div1Title": "Frederik (co-diseñador)",
+        "div1P": "Además de los temas de salud digital y gestión del estrés, Frederik mencionó el concepto de gestión de tareas. Se necesitaba investigar si este concepto era relevante para la vida cotidiana de Christian.",
+        "div2Title": "Christian",
+        "div2P": "Durante la primera reunión con Frederik, Christian mostró interés en temas como la salud digital, el bienestar mental y la gestión del estrés. Estos temas eran áreas en las que creía que tenían y podrían tener un gran impacto en su vida cotidiana."
+      },
+      "page9": {
+        "title": "Diseño ultrapersonalizado",
+        "titleP": "En ese momento, también descubrimos el concepto de diseño ultrapersonalizado, que se basa en los siguientes tres procesos.",
+        "div1Title": "Recopilación de datos a través de tres etapas",
+        "div1P": "El diseño ultrapersonalizado implica la recopilación de datos del usuario antes y durante el desarrollo del producto. Estos datos ayudan a comprender las preferencias, necesidades y comportamientos del usuario.",
+        "div2Title": "Diseño personalizado",
+        "div2P": "Las decisiones de diseño en un enfoque ultrapersonalizado se basan en los datos recopilados del usuario. Estas decisiones están diseñadas específicamente para cada usuario, teniendo en cuenta sus requisitos y preferencias únicos.",
+        "div3Title": "Personalización y adaptación",
+        "div3P": "El diseño ultrapersonalizado va más allá de las opciones de personalización genéricas. El objetivo es crear un producto completamente adaptado y personalizado para satisfacer las necesidades y preferencias específicas del usuario. Este nivel de personalización permite una experiencia de usuario más fluida y intuitiva."
+      },
+      "page10": {
+        "title": "La combinación perfecta",
+        "titleP": "La concordancia entre Christian (que ya teníamos en mente) y la nueva, pero emocionante, metodología de diseño ultrapersonalizado sentó las bases para la configuración del proceso de diseño. Nuestra idea era combinar los dos y explorar si Christian estaría interesado en participar como usuario de prueba para Coaxer.",
+        "div1P": "La metodología de diseño ultrapersonalizado se adapta perfectamente al enfoque de Coaxer, ya que el objetivo de la aplicación es proporcionar a los usuarios una experiencia de gestión de tareas altamente personalizada para mejorar su bienestar mental y reducir el estrés. La combinación de la metodología con un usuario real como Christian proporcionaría información valiosa para el desarrollo de la aplicación."
+      },
+      "page11": {
+        "title": "Comunicación con Christian",
+        "titleP": "A través de Frederik, establecimos un segundo contacto con Christian para discutir la posibilidad de que participara en nuestro proyecto como usuario de prueba. Christian estaba interesado en nuestra propuesta y accedió a colaborar con nosotros."
+      },
+      "page12": {
+        "title": "Involucrando a Christian",
+        "titleP": "El primer paso para involucrar a Christian en el proceso de diseño fue entrevistarlo en profundidad para comprender sus necesidades, deseos y expectativas. Durante esta entrevista, Christian compartió información valiosa sobre su vida diaria, rutinas y desafíos relacionados con el estrés y la gestión de tareas.",
+        "div1P": "Entrevista en profundidad con Christian",
+        "div1List-li1": "Discutir su rutina diaria, horarios y actividades",
+        "div1List-li2": "Explorar sus desafíos y fresesiones con la gestión del tiempo y las tareas",
+        "div1List-li3": "Hablar sobre su bienestar mental y cómo lo percibe",
+        "div1List-li4": "Recopilar información sobre sus preferencias de diseño y estilo",
+        "div1List-li5": "Identificar sus objetivos y expectativas para la aplicación Coaxer",
+        "div1List-li6": "Obtener una visión general de sus hábitos tecnológicos y uso de aplicaciones relacionadas con la salud",
+        "div1List-li7": "Explorar sus intereses personales y aficiones",
+        "div1List-li8": "Entender su motivación para participar en el proyecto como usuario de prueba",
+        "div1List-li9": "Recopilar sus comentarios y sugerencias iniciales sobre una posible aplicación de gestión de tareas personalizada",
+        "div2Title": "Resultados de la entrevista",
+        "div2P": "La entrevista proporcionó información valiosa que nos ayudó a definir los objetivos de diseño para la aplicación Coaxer y a comprender cómo podríamos personalizarla para satisfacer las necesidades de Christian. A partir de la entrevista, identificamos varios aspectos clave que debíamos abordar en el diseño de la aplicación:"
+      },
+      "page13": {
+        "title": "Principales desafíos y áreas de enfoque",
+        "titleP": "Después de la entrevista con Christian, identificamos los principales desafíos y áreas de enfoque para el diseño de Coaxer. Estos se basaron en sus necesidades, deseos y experiencias personales. Los principales desafíos incluyeron:",
+        "div1List-li1": "Gestión del tiempo y las tareas",
+        "div1List-li2": "Mantener un equilibrio entre la vida personal y académica",
+        "div1List-li3": "Gestión del estrés y la ansiedad",
+        "div1List-li4": "Motivación y rendimiento académico",
+        "div1List-li5": "Salud mental y bienestar general",
+        "div2Title": "Áreas de enfoque del diseño",
+        "div2List-li1": "Personalización y adaptación de la aplicación a las necesidades individuales de Christian",
+        "div2List-li2": "Integración de características de gestión del estrés y el bienestar",
+        "div2List-li3": "Facilitar la gestión de tareas y el seguimiento del progreso",
+        "div2List-li4": "Fomentar la motivación y el logro de objetivos personales",
+        "div2List-li5": "Ofrecer una experiencia de usuario intuitiva y atractiva",
+        "div2List-li6": "Mantener una comunicación efectiva y una relación de colaboración con Christian durante el proceso de diseño"
+      },
+      "page14": {
+        "title": "Creando un prototipo inicial",
+        "titleP": "Con la información recopilada de la entrevista con Christian y los resultados de la investigación, comenzamos a crear un prototipo inicial de la aplicación Coaxer. Este prototipo tenía como objetivo visualizar cómo se vería y funcionaría la aplicación, con un enfoque en la personalización y las características de gestión del estrés."
+      },
+      "page15": {
+        "title": "Iteración y mejora continua",
+        "titleP": "Una vez que tuvimos el prototipo inicial, lo presentamos a Christian para obtener sus comentarios y sugerencias. Establecimos una comunicación continua con él para iterar y mejorar la aplicación en función de sus necesidades y preferencias."
+      },
+      "page16": {
+        "title": "Pruebas con usuarios",
+        "titleP": "Además de trabajar en estrecha colaboración con Christian, realizamos pruebas con otros usuarios para obtener una variedad de perspectivas y retroalimentación. Estas pruebas nos ayudaron a identificar áreas de mejora y a refinar aún más la aplicación."
+      },
+      "page17": {
+        "title": "Resultados y conclusiones",
+        "titleP": "En última instancia, el proceso de diseño de Coaxer se centró en crear una aplicación altamente personalizada que ayudara a Christian y a otros usuarios a gestionar mejor su tiempo, tareas y estrés. Los resultados de las pruebas y la retroalimentación de los usuarios fueron en su mayoría positivos, lo que indica que Coaxer tiene el potencial de ser una herramienta valiosa para mejorar el bienestar mental y reducir el estrés en adultos jóvenes.",
+        "div1Title": "Lecciones aprendidas",
+        "div1List-li1": "La importancia de la personalización en las aplicaciones de salud digital",
+        "div1List-li2": "La colaboración cercana con los usuarios es fundamental para el éxito del diseño",
+        "div1List-li3": "La gestión del tiempo y las tareas son áreas críticas para abordar en el diseño",
+        "div2Title": "Pasos futuros",
+        "div2P": "Los pasos futuros para Coaxer incluyen la implementación de características adicionales, pruebas más amplias y la búsqueda de oportunidades para colaborar con otros grupos de usuarios."
+      },
+      "page18": {
+        "title": "Primera reunión con Christian",
+        "titleP": "El desarrollo de Coaxer comenzó con el deseo de crear algo verdaderamente personal para Christian. Por lo tanto, necesitábamos saber más sobre cómo planea sus actividades diarias y tareas. En cuanto a la sonificación, también necesitábamos saber qué sonidos serían más personales para él.",
+        "div1Title": "¿Para qué planifica?",
+        "div1P": "Mencionó que las tareas académicas eran importantes para él en términos de estructuración, pero también reconoció la importancia del tiempo libre y las tareas prácticas. Con base en esta información, se desarrolló el concepto de diseño para abarcar estas tres categorías (académicas, de ocio y prácticas) para la gestión del tiempo.",
+        "div2Title": "Sonidos personalizados",
+        "div2P": "Dado que Christian es músico, surgió la idea de permitirle diseñar sus propios íconos auditivos. Christian grabaría tres sonidos diferentes en su estudio casero que tocaría en su guitarra. Compondría los tres sonidos de acuerdo con las tres categorías para la gestión del tiempo."
+      },
+      "page19": {
+        "title": "Integración con el calendario personal",
+        "div1P": "Coaxer se integra con el calendario personal de Christian al extraer un horario completo de la semana de Christian desde su Google Calendar. Este horario se sincroniza con la aplicación Coaxer, lo que permite que la aplicación considere el horario personal de Christian al determinar cuándo reproducir los sonidos de sonificación."
+      },
+      "page20": {
+        "title": "Segunda reunión con Christian",
+        "titleP": "Basándonos en los iconos auditivos que Christian había diseñado y grabado, lo pusimos a prueba para ver cuál era su tasa de reconocimiento en comparación con otros iconos auditivos y musicales. También presentamos una versión preliminar de baja fidelidad de la interfaz de usuario que se convertiría en la aplicación.",
+        "div1Title": "Reconocimiento completo de los íconos auditivos personales",
+        "div1P": "Los íconos auditivos que Christian había desarrollado se probaron frente a un conjunto de iconos musicales en términos de velocidad de reconocimiento. Basándonos en tres iteraciones de prueba, quedó claro que los íconos auditivos auto-diseñados eran superiores en términos de reconocimiento."
+      },
+      "page21": {
+        "title": "Tercera reunión con Christian",
+        "titleP": "Esta reunión se centró en cómo Christian navegaría por la interfaz de usuario propuesta de la aplicación. En este punto, también teníamos un prototipo construido con React Native y Expo, lo que nos permitía ver en tiempo real cómo lo usaba Christian y luego ajustar el diseño.",
+        "div1Title": "Desarrollo en tiempo real",
+        "div1P": "Christian utilizó la aplicación y evaluó el flujo de navegación. También creó algunos eventos ficticios para priorizar. Aportó preferencias personales sobre el estilo de los eventos en la lista, así como sobre la gráfica de priorización. Esta actividad está relacionada con la práctica de diseño altamente personalizada de diseñar mientras se usa la aplicación."
+      },
+      "page22": {
+        "title": "Lanzamiento de la aplicación en el teléfono de Christian",
+        "titleP": "Coaxer, una aplicación de gestión de tareas desarrollada a través de un proceso de diseño altamente personalizado, estaba lista para instalarse en el teléfono personal de Christian. Christian usó la aplicación durante aproximadamente media semana en el período inicial. Para evaluar si la aplicación realmente era personal para él, también la probó Frederik como sujeto de prueba.",
+        "div1P": "El teléfono de Christian con la aplicación Coaxer",
+        "divEarcons": "Los tres íconos auditivos personales que diseñó",
+        "divEarconPractical": "Práctica",
+        "divEarconLeisure": "Ocio",
+        "divEarconAcademic": "Académica"
+      },
+      "page23": {
+        "title": "Demostración en video del concepto",
+        "titleP": "Aquí tienes un video que muestra el concepto y las funciones de la aplicación tal como se diseñó."
+      },
+      "page24": {
+        "title": "Evaluación e impacto",
+
+        "div1Title": "Bienestar de Christian",
+        "div1P": "Coaxer tuvo un impacto positivo en el bienestar de Christian. Encontró que la aplicación era útil para gestionar su tiempo y tareas, y le ayudó a sentirse más en control de su día. La funcionalidad de la aplicación, como la capacidad de priorizar tareas y agregar tareas según sus preferencias, también fue apreciada por Christian.",
+        "div2Title": "Función de sonificación",
+        "div2P": "Un descubrimiento significativo fue el efecto de la función de sonificación en la aplicación. Cuando el sonido estaba habilitado, Christian tuvo una experiencia más positiva con la aplicación y la encontró útil para recordarle las tareas, especialmente las académicas. Los sonidos tuvieron un impacto significativo en sus elecciones de acción y mejoraron su compromiso con las tareas."
+      },
+      "page25": {
+        "title": "Reflexiones finales",
+        "div1Title": "Sonido y persuasión",
+        "div1P": "En cuanto al sonido, el proyecto encontró que la presencia del sonido tuvo un impacto significativo en la experiencia de Christian con la aplicación. El uso de los íconos auditivos como herramientas de auto-persuasión resultó ser efectivo para influir en las acciones y elecciones de Christian.",
+        "div2Title": "Duo-etnografía",
+        "div2P": "Vale la pena mencionar que el enfoque de la duo-etnografía pudo haber influido en las opiniones y respuestas de Christian, ya que Frederik tuvo cierta influencia en él durante el proceso de diseño. Sin embargo, este enfoque colaborativo también permitió una actitud más reflexiva y facilitó el intercambio de opiniones y puntos de vista.",
+        "div3Title": "Personalización",
+        "div3P": "Los aspectos de personalización de Coaxer se hacen especialmente evidentes en lo que respecta a los íconos auditivos. Durante la media semana de uso, Christian mencionó que usaría la aplicación para tareas más pequeñas a lo largo del día y que reconocería sus respectivos íconos auditivos y seguiría las tareas. En contraste, Frederik también la usaría en cierta medida, pero admitió que no podía distinguir entre los sonidos con un alto grado de precisión."
+      }
     },
     "ringmerking": {
       "buttonclose": "Cerrar",
@@ -362,6 +535,25 @@
           },
           {
             "name": "diseño ultra personalizado",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

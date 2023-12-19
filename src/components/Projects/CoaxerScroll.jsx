@@ -87,7 +87,7 @@ const CoaxerScroll = ({ onClose }) => {
       </button>
 
       {/* content container onWheel={handleScroll}*/}
-      <div className='bg-[#ffffff] w-full h-full'>
+      <div className='bg-[#fcfcfc] w-full h-full'>
         {/* container for the scroll wheel */}
 
         <motion.div className='progress-bar' style={{ scaleX }} />
@@ -101,14 +101,14 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_1'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} `}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
               className={`${styles.coaxerScrollClip}`}
             >
               <h1 className='text-4xl sm:text-4xl md:text-6xl max-w-full sm:w-[400px] font-semibold garet-book'>
-                1. Coaxer
+                Coaxer
               </h1>
 
               <div
@@ -116,8 +116,7 @@ const CoaxerScroll = ({ onClose }) => {
                 className='flex flex-col lg:flex-col gap-5 '
               >
                 <p className='lg:text-left lg:w-3/4 text-xl mobile:text-lg garet-book'>
-                  Personalized task management developed through ultra
-                  personalized design
+                  {t('portfolio.coaxer.page1.subTitle')}
                 </p>
                 <LazyLoadImage
                   className='w-full lg:w-3/3 h-auto'
@@ -131,7 +130,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_2'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -139,7 +138,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  2. Introduksjon
+                  - {t('portfolio.coaxer.page2.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
                   {/* {t('portfolio.ringmerking.page3.titleP')} */}
@@ -151,14 +150,7 @@ const CoaxerScroll = ({ onClose }) => {
               <div className={`${styles.projectSlideShowBodyContainer} `}>
                 <div className={`${styles.projectSlideShowTitleParagraph}`}>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
-                    Coaxer var et student prosjekt om digital helse med et
-                    utgangspunkt om å utforske hvordan digital teknologi kan
-                    brukes for å forbedre folks velvære. Prosjektet endte med å
-                    dreie seg om mental helse og stress for yngre voksne, hvor
-                    tjenesten Coaxer ble utviklet som en ultra-personlig tids
-                    planlegger med henblikk på å forbedre mentalt helse og
-                    redusere generell stress. De følgende sidene vil handle om
-                    design prosessen bak Coaxer.
+                    {t('portfolio.coaxer.page2.titleP')}
                   </p>
                 </div>
                 <LazyLoadImage
@@ -173,7 +165,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_3'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -184,28 +176,18 @@ const CoaxerScroll = ({ onClose }) => {
               <div className={`${styles.projectSlideShowBodyContainer} `}>
                 <div className={`${styles.projectSlideShowTitleParagraph}`}>
                   <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                    3. Min rolle
+                    {t('portfolio.coaxer.page3.subTitle')}
                   </h1>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
-                    Under prosjektet jobbet jeg i første omgang med å utføre
-                    innsiktsarbeid om domenet som var valgt. Etter at ideen om
-                    Coaxer ble unfanget, ble jeg hoveddesigner og utvikler for
-                    prosjektet. I praksis vil det si at jeg har designet og
-                    kodet hele appen (med innspill fra de andre og Christian
-                    selvfølgelig)
+                    {t('portfolio.coaxer.page3.subTitleP')}
                   </p>
                 </div>
                 <div className={`${styles.projectSlideShowTitleParagraph}`}>
                   <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                    Mitt ansvar
+                    {t('portfolio.coaxer.page3.subTitle1')}
                   </h1>
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
-                    I løpet av innsiktsarbeidet samt design og utvikling var jeg
-                    ansvarlig for å formidle ny kunnskap om oppgaven til resten
-                    av gruppen. Jeg var også ansvarlig for å oppdatere og
-                    samarbeide med resten av design gruppen om hvilke endringer
-                    som ble gjort og hvilke nye funksjoner det var verdt å
-                    utforske.
+                    {t('portfolio.coaxer.page3.subTitle1P')}
                   </p>
                 </div>
               </div>
@@ -215,7 +197,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_4'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -223,13 +205,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  4. Hva er allerede funnet ut?
+                  - {t('portfolio.coaxer.page4.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Det første vi startet med var å ta et falkeblikk over
-                  litteraturen om mental helse for yngre voksne og utforske noen
-                  av de konseptene og funnene vi mente var viktige og
-                  interessante og kunne tenke oss å ta et dypere dykk i.
+                  {t('portfolio.coaxer.page4.titleP')}
                 </p>
               </div>
 
@@ -243,7 +222,7 @@ const CoaxerScroll = ({ onClose }) => {
                     alt='Description of the image'
                   />
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
-                    Dette var de mest relevante funnene vi gjorde oss
+                    {t('portfolio.coaxer.page4.imgcaption')}
                   </p>
                 </div>
               </div>
@@ -253,7 +232,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_5'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -261,12 +240,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  5. Formulering av design spørsmålet
+                  - {t('portfolio.coaxer.page5.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Basert på litteratur søket og vår interesse valgte vi å gå
-                  videre med hvordan tidsplanlegging kan brukes preventivt for
-                  yngre voksne som føler stress.
+                  {t('portfolio.coaxer.page5.titleP')}
                 </p>
               </div>
 
@@ -274,10 +251,7 @@ const CoaxerScroll = ({ onClose }) => {
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
                 <p className='garet-book text-center text-2xl  mobile:text-xl sm:text-2xl '>
-                  Hvordan kan vi utnytte konseptet om strukturert
-                  tidsplanlegging knyttet opp mot digital helse for å løse
-                  problemet om stress og nedsatt velvære for studenter som oss
-                  selv?
+                  {t('portfolio.coaxer.page5.div1P')}
                 </p>
               </div>
             </div>
@@ -286,7 +260,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_6'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -294,12 +268,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  6. Hva er mest relevant?
+                  - {t('portfolio.coaxer.page6.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  På grunn av den brede formuleringen av design spørsmålet ble
-                  vi nødt til å snevre det inn ved å stille spørsmål om hva vi
-                  mente var mest interessant.
+                  {t('portfolio.coaxer.page6.titleP')}
                 </p>
               </div>
 
@@ -328,7 +300,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_7'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -336,14 +308,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  7. Vår bruker
+                  - {t('portfolio.coaxer.page7.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Under oppdagelses fasen nevnte en av designerne at de hadde en
-                  venn som de visste levde et veldig hektisk liv og som kunne
-                  være en relevant kandidat for design spørsmålet. Etter å ha
-                  vurderte muligheten i en kort stund bestemte vi oss for å gå
-                  videre med dette utgangspunktet og kontakte ham.
+                  - {t('portfolio.coaxer.page7.titleP')}
                 </p>
               </div>
 
@@ -353,31 +321,27 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col lg:flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christian
+                      {t('portfolio.coaxer.page7.div1Title')}
                     </h1>
 
                     <ul className='garet-book opacity-60 text-lg mobile:text-xs sm:text-sm md:text-base '>
                       <li className='mt-2'>
-                        - Gitarist som elsker musikk og har spilt i band i flere
-                        år
+                        - {t('portfolio.coaxer.page7.div1List-li1')}
                       </li>
                       <li className='mt-2'>
-                        - Fortiden journaliststudent på Aarhus Universitet
+                        - {t('portfolio.coaxer.page7.div1List-li2')}
                       </li>
                       <li className='mt-2'>
-                        - Kjæreste med sitt videregående crush som han bruker
-                        mye tid med
+                        - {t('portfolio.coaxer.page7.div1List-li3')}
                       </li>
                       <li className='mt-2'>
-                        - Deltids ansatt på det lokale supermarkedet hvor han
-                        jobbet ettermiddager
+                        - {t('portfolio.coaxer.page7.div1List-li4')}
                       </li>
                       <li className='mt-2'>
-                        - Spilte ofte squash med kompiser etter skole.
+                        - {t('portfolio.coaxer.page7.div1List-li5')}
                       </li>
                       <li className='mt-2'>
-                        - Glad hundeier og satte pris på en god tur i parken når
-                        tiden tillot det
+                        - {t('portfolio.coaxer.page7.div1List-li6')}
                       </li>
                     </ul>
                     <p
@@ -398,7 +362,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_8'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -406,14 +370,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  8. Første kontakt med Christian
+                  - {t('portfolio.coaxer.page8.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Kontakten med Christian ble etablert gjennom et første
-                  intervju med Frederik (Co-designer), som er en venn av
-                  Christian. Frederik delte informasjon om Christian og deres
-                  vaner og rutiner som ga oss et utgangspunkt for hvordan vi
-                  skulle gå videre med design prosessen.
+                  {t('portfolio.coaxer.page8.titleP')}
                 </p>
               </div>
 
@@ -423,29 +383,22 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col lg:flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Frederik (Co-designer)
+                      {t('portfolio.coaxer.page8.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Frederik nevnte i tillegg til temaene om digital helse og
-                      stress mestring konseptet om tidsplanlegging. Utover å
-                      høre med Christian om han var interessert et samarbeid,
-                      var et av formålene å kartlegge hvilke områder man kunne
-                      inkorporerer ultra personlig design for Christian.
+                      {t('portfolio.coaxer.page8.div1P')}
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christian
+                      {t('portfolio.coaxer.page8.div2Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Christian var under første møte med Frederik interessert i
-                      tema om digital helse, mentalt velvære og stress mestring.
-                      Dette var temaer som han mente hadde og kunne få en stor
-                      innvirkning på hverdagen hans.
+                      {t('portfolio.coaxer.page8.div2P')}
                     </p>
                   </div>
 
@@ -462,7 +415,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_9'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -470,12 +423,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  9. Ultra personlig design
+                  - {t('portfolio.coaxer.page9.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  På nogenlunde samme tidspunkt oppdaget vi også konseptet om
-                  ultra personlig design, som handler om de tre følgende
-                  prosessene.
+                  {t('portfolio.coaxer.page9.titleP')}
                 </p>
               </div>
 
@@ -485,43 +436,31 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col lg:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      På nogenlunde samme tidspunkt oppdaget vi også konseptet
-                      om
+                      {t('portfolio.coaxer.page9.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Ultra-personlig design involverer innsamling av data fra
-                      brukeren både før og under bruk og utvikling av produktet.
-                      Disse dataene hjelper til med å forstå brukerens
-                      preferanser, behov og atferd.
+                      {t('portfolio.coaxer.page9.div1P')}
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Designbeslutninger basert på brukerdata
+                      {t('portfolio.coaxer.page9.div2Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Designbeslutningene i en ultra-personlig tilnærming er
-                      basert på data samlet inn fra brukeren. Disse
-                      beslutningene er skreddersydd spesielt for den enkelte
-                      bruker, med tanke på deres unike krav og preferanser.
+                      {t('portfolio.coaxer.page9.div2P')}
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Tilpasning og personliggjøring
+                      {t('portfolio.coaxer.page9.div3Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Ultra-personlig design går utover generiske
-                      tilpasningsmuligheter. Målet er å skape et produkt som er
-                      fullstendig personlig tilpasset og skreddersydd for å
-                      passe brukerens spesifikke behov og preferanser. Dette
-                      nivået av tilpasning tillater en mer sømløs og intuitiv
-                      brukeropplevelse.
+                      {t('portfolio.coaxer.page9.div3P')}
                     </p>
                   </div>
 
@@ -538,7 +477,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_10'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -546,14 +485,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  10. Den perfekte matchen
+                  - {t('portfolio.coaxer.page10.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Samsvar mellom Christian (som vi hadde i tankene fra før) og
-                  den nye, ukjente, men spennende designmetodikken for
-                  ultra-personlig design, la grunnlaget for konfigurasjonen av
-                  designprosessen. Vår idé var å kombinere de to og undersøke om
-                  Christian var interessert i å delta i et slikt prosjekt.
+                  {t('portfolio.coaxer.page10.titleP')}
                 </p>
               </div>
 
@@ -565,15 +500,12 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christian
+                      {t('portfolio.coaxer.page10.div1Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Christian, som en travel student og musiker, levde et liv
-                      med mange ansvarsområder og hendelser som krevde hans tid.
-                      Kunne vi utnytte design tenkning og digital teknologi til
-                      å ha en positiv innflytelse på Christians velvære?
+                      {t('portfolio.coaxer.page10.div1P')}
                     </p>
                   </div>
                   <div
@@ -583,15 +515,12 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Ultra personlig design
+                      {t('portfolio.coaxer.page10.div2Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Var ultra-personlig design det riktige designkonseptet for
-                      Christian som vår sluttbruker? Dette var et designkonsept
-                      lik brukersentrert design og deltakende design, men med
-                      større vekt på kontinuerlig designutvikling.
+                      {t('portfolio.coaxer.page10.div2P')}
                     </p>
                   </div>
                 </div>
@@ -602,7 +531,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_11'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -610,17 +539,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  11. Duo ethnography...(metodologi)
+                  - {t('portfolio.coaxer.page11.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Da dette var et akademisk bachelor prosjekt var den valgte
-                  metodologien for oppgaven viktig. Duo-etnografi ble valgt som
-                  en forskningsmetode der to eller flere forskere samarbeider om
-                  å produsere en dialogisk fortelling basert på deres egne
-                  opplevelser og perspektiver. Dataene er dermed en
-                  sammenligning av de diskuterte historiene, der forskerne har
-                  reflektert over og omkonseptualisert sine tidligere
-                  erfaringer.
+                  {t('portfolio.coaxer.page11.titleP')}
                 </p>
               </div>
 
@@ -632,45 +554,36 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Vennskap
+                      {t('portfolio.coaxer.page11.div1Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Ettersom co-designeren allerede var god venn med
-                      Christian, var dette et godt utgangspunkt for å etablere
-                      den dialogen som duo-ethnografi krever for å utveksle
-                      historier og erfaringer mellom bruker og designer.
+                      {t('portfolio.coaxer.page11.div1P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Utforske nye ideer
+                      {t('portfolio.coaxer.page11.div2Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Å dele lignende erfaringer muligjorde også
-                      re-konseptualiseringer av tidligere erfaringer og til å
-                      utforske elementene om mennesker, aktiviteter, omgivelser,
-                      og teknologi som utgjøre analyse metoden PACT.
+                      {t('portfolio.coaxer.page11.div2P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Flere forskere
+                      {t('portfolio.coaxer.page11.div3Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Det var behov for flere forskere under sesjonene i felt
-                      arbeidet for å dekryptere den sammenflettede flytende
-                      dialogen mellom co-designer og Christian ettersom denne
-                      var vanskelig å tolke på kloss hold.
+                      {t('portfolio.coaxer.page11.div3P')}
                     </p>
                   </div>
                 </div>
-                <div className='flex mobile:flex-col flew-row gap-10'>
+                <div className=' flex  mobile:flex-col flew-row w-full justify-center gap-10'>
                   <LazyLoadImage
                     className=' mobile-w:full sm:w-3/6 lg:w-2/5 h-auto object-contain'
                     src={pact}
@@ -689,7 +602,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_12'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -697,16 +610,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  12. Ultra personlig design for Christian
+                  - {t('portfolio.coaxer.page12.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Basert på Frederiks første intervju med Christian startet vi
-                  med å peke ut hva som var særegent med Christian, hvilket
-                  potensiale vi ville ta tak i, og hvilke forbehold vi måtte ha
-                  i mente.Basert på Frederiks første intervju med Christian
-                  startet vi med å peke ut hva som var særegent med Christian,
-                  hvilket potensiale vi ville ta tak i, og hvilke forbehold vi
-                  måtte ha i mente.
+                  - {t('portfolio.coaxer.page12.titleP')}
                 </p>
               </div>
               {/* the three row aligned paragraph */}
@@ -722,7 +629,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_13'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -730,12 +637,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  13. Sonifisering og nudging
+                  - {t('portfolio.coaxer.page13.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Sonifisering og nudging dukket opp som konsepter under
-                  litteratursøket, og ved nærmere ettersyn virket relevante for
-                  det vi visste om Christian som en travel student og musiker.
+                  {t('portfolio.coaxer.page13.titleP')}
                 </p>
               </div>
 
@@ -747,22 +652,16 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Sonifisering
+                      {t('portfolio.coaxer.page13.div1Title')}
                     </h1>
                     <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60  `}
                       >
-                        Sonifisering er prosessen med å kartlegge datarelasjoner
-                        til relasjoner mellom lydparametere og presentere denne
-                        ikke-talelyden som informativ veiledning. Det innebærer
-                        å bruke lyd til å formidle informasjon eller kommunisere
-                        hendelser. Sonifisering kan ta form av earcons, som er
-                        abstrakte eller konkrete representasjoner av hendelser,
-                        eller musicons, som er musikalske lyder.
+                        {t('portfolio.coaxer.page13.div1P')}
                       </p>
                       <LazyLoadImage
-                        className='w-2/3 md:w-4/5 h-auto object-contain'
+                        className=' md:w-4/5 h-auto object-contain'
                         src={sonification}
                         alt='sonification'
                       />
@@ -772,21 +671,13 @@ const CoaxerScroll = ({ onClose }) => {
                     className={`${styles.projectSlideShowTitleParagraph} flex-row`}
                   >
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Nudging
+                      {t('portfolio.coaxer.page13.div2Title')}
                     </h1>
                     <div className={`${styles.projectSlideShowTitleParagraph}`}>
                       <p
                         className={` ${styles.projectSlideShowPageP} opacity-60 `}
                       >
-                        Nudging, på den andre siden, er en tilnærming for å
-                        motivere individer til å gjøre visse valg eller ta
-                        spesifikke handlinger. Det innebærer å bruke subtile
-                        hint eller påminnelser for å påvirke beslutningstaking
-                        og atferd. Nudges kan være grafiske, auditive, fysiske
-                        eller lyriske. Selv-nudging er en spesifikk type nudging
-                        som innebærer å endre en persons eksterne verden, både
-                        mentalt og fysisk, for å motvirke mangel på
-                        selvkontroll.
+                        {t('portfolio.coaxer.page13.div2P')}
                       </p>
                       <LazyLoadImage
                         className='w-2/3 md:w-4/5 h-auto object-contain'
@@ -803,7 +694,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_14'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -811,16 +702,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  14. Presentasjon av ideen til Christian
+                  - {t('portfolio.coaxer.page14.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Den tidligere undersøkelsen av feltene sonifisering, nudging
-                  og tidsstyring førte til en idé basert på det vi visste om
-                  Christian. Frederik (meddesigner) initierte et nytt møte med
-                  Christian og foreslo vår idé om å designe en ultra-personlig
-                  tidsstyringsapp som bruker personlige earcons (sonifisering)
-                  som et middel for å nudge ham til å fullføre planlagte
-                  oppgaver i henhold til hans prioritering.
+                  {t('portfolio.coaxer.page14.titleP')}
                 </p>
               </div>
 
@@ -846,7 +731,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_15'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -854,15 +739,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  15. Sonifisering.. hvordan?
+                  - {t('portfolio.coaxer.page15.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Sonifisering er metoden for å kartlegge datarelasjoner til
-                  lydparametres relasjoner og presentere denne ikke-talelyden
-                  som informativ veiledning. Sonifisering består av tre
-                  forskjellige typer lydsignal, og av disse måtte vi finne ut
-                  hvilken som ville passe best for Christian, i tråd med en
-                  ultra-personlig designpraksis.
+                  - {t('portfolio.coaxer.page15.titleP')}
                 </p>
               </div>
 
@@ -874,59 +754,45 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Earcons
+                      {t('portfolio.coaxer.page15.div1Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Earcons er abstrakte små meldinger som kommuniserer en
-                      hendelse. De er konstruert av motiver, som er korte
-                      rytmiske sekvenser som varierer i tonehøyde. Earcons har
-                      en lengre læringskurve sammenlignet med auditive ikoner.
+                      {t('portfolio.coaxer.page15.div1P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-full md:w-60  object-contain '
                       src={earcon}
                       alt='addressing an idea'
                     />
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Auditive ikoner
+                      {t('portfolio.coaxer.page15.div2Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Auditive ikoner er lyder som representerer spesifikke
-                      handlinger eller hendelser på en mer konkret måte. For
-                      eksempel kan en bruker som klikker på et objekt, høre en
-                      slaglyd fra en kilde som tre eller metall. Auditive ikoner
-                      har som mål å etterligne lyder fra den virkelige verden og
-                      er lettere å gjenkjenne og forstå sammenlignet med
-                      earcons.
+                      {t('portfolio.coaxer.page15.div2P')}
                     </p>
                     <LazyLoadImage
-                      className='w-4/5 lg:w-2/4 h-auto object-contain'
+                      className='w-full md:w-60  object-contain'
                       src={auditoryicon}
                       alt='addressing an idea'
                     />
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Musicons
+                      {t('portfolio.coaxer.page15.div3Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Musicons er en annen form for sonifisering som innebærer
-                      bruk av korte musikalsekvenser eller sanger for å formidle
-                      informasjon. Musicons er hentet fra eksisterende sanger og
-                      er kuttet opp i korte segmenter. De kan brukes til å
-                      representere forskjellige typer hendelser eller
-                      handlinger.
+                      {t('portfolio.coaxer.page15.div3P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-full md:w-60  object-contain '
                       src={musiccons}
                       alt='addressing an idea'
                     />
@@ -939,7 +805,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_16'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -947,14 +813,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  16. Hvilke digitale tidsplanleggings apper finnes?
+                  - {t('portfolio.coaxer.page16.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  En analyse av de tre tidsplanleggingsappene som var mest brukt
-                  på mobile platformer ble utført for å vurdere hvilke av deres
-                  elementer som ville være relevant å ta med seg videre i
-                  prosessen om å designe et ultrapersonalisert
-                  tidsplanleggingsverktøy for Christian.
+                  {t('portfolio.coaxer.page16.titleP')}
                 </p>
               </div>
 
@@ -966,35 +828,27 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Focus keeper
+                      {t('portfolio.coaxer.page16.div1Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Spesialiserer seg på Pomodoro-teknikken, som fremmer
-                      fokuserte arbeidsøkter med korte pauser. Styrken ligger i
-                      å hjelpe med å opprettholde konsentrasjonen og unngå
-                      utbrenthet. Imidlertid er den kanskje ikke ideell for
-                      oppgaver som krever lange, uavbrutte perioder.
+                      {t('portfolio.coaxer.page16.div1P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className=' w-full lg:w-2/4 h-auto object-contain'
                       src={focuskeeper}
                       alt='addressing an idea'
                     />
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      iPhone reminders
+                      {t('portfolio.coaxer.page16.div2Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Integreres sømløst med iOS og tilbyr enkelhet og
-                      brukervennlighet. Styrken er i den greie, ukompliserte
-                      tilnærmingen til å sette påminnelser og oppgaver, med
-                      stedsbaserte varslinger. Men den mangler avanserte
-                      funksjoner som prosjektstyring eller detaljert sporing.
+                      {t('portfolio.coaxer.page16.div2P')}
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1004,17 +858,12 @@ const CoaxerScroll = ({ onClose }) => {
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Microsoft To Do
+                      {t('portfolio.coaxer.page16.div3Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Tilbyr omfattende oppgavestyringsfunksjoner, inkludert
-                      deloppgaver, frister og filvedlegg. Den passer godt for
-                      detaljert prosjektplanlegging og samarbeidsarbeid.
-                      Imidlertid kan kompleksiteten være overveldende for
-                      brukere som søker en enklere, minimalistisk
-                      oppgavebehandler.
+                      {t('portfolio.coaxer.page16.div3P')}
                     </p>
                     <LazyLoadImage
                       className='w-full lg:w-2/4 h-auto object-contain'
@@ -1030,7 +879,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_17'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1038,14 +887,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  17. Unfangelsen av Coaxer
+                  - {t('portfolio.coaxer.page17.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Coaxer er en oppgavehåndteringsapp designet for å forbedre
-                  tidsstyring og redusere stressnivåer. Den bruker
-                  sonifiseringslyder som milde påminnelser for å prioritere og
-                  fullføre oppgaver i tre kategorier. De tre kategoriene er
-                  basert på hva som er mest personlig og viktig for brukeren.
+                  {t('portfolio.coaxer.page17.titleP')}
                 </p>
               </div>
 
@@ -1057,43 +902,32 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-5'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Designet for å passe til Christian
+                      {t('portfolio.coaxer.page17.div1Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer er spesifikt designet for å passe til Christians
-                      personlige liv og eksisterende rutiner. Appen og konseptet
-                      vil bli designet og utviklet i samspill med Christians
-                      tilbakemeldinger og bruk.
+                      {t('portfolio.coaxer.page17.div1P')}.
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Prioritering
+                      {t('portfolio.coaxer.page17.div2Title')}.
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer benytter en prioritetsalgoritme for å nudge
-                      Christian til å utføre de oppgavene han har spesifisert, i
-                      henhold til prioriteringsnivået disse oppgavene har. Dette
-                      innebærer at oppgaver med høyere prioritet vil bli varslet
-                      oftere.
+                      {t('portfolio.coaxer.page17.div2P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph} `}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Sjangre av oppgaver
+                      {t('portfolio.coaxer.page17.div3Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer definerer oppgaver innenfor tre generelle
-                      kategorier, disse er basert på hva som er viktigst for
-                      Christian. Hver av disse kategoriene har sin egen
-                      distinkte earcon-lyd, noe som gjør dem lettere å
-                      gjenkjenne.
+                      {t('portfolio.coaxer.page17.div3P')}
                     </p>
                   </div>
                 </div>
@@ -1111,7 +945,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_18'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1119,14 +953,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  18. Første møte med Christian
+                  - {t('portfolio.coaxer.page18.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Utviklingen av Coaxer startet med et ønske om å skape noe
-                  virkelig personlig for Christian. Vi måtte derfor vite mer om
-                  hvordan han planlegger tiden sin og hva som er verdt å
-                  planlegge. Når det gjelder sonifisering, måtte vi også vite
-                  hvilke lyder som ville være mest personlige for ham.
+                  - {t('portfolio.coaxer.page18.titleP')}
                 </p>
               </div>
 
@@ -1136,31 +966,22 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Hva planlegger han for?
+                      {t('portfolio.coaxer.page18.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Han nevnte at akademiske oppgaver var viktige for ham å
-                      strukturere, men anerkjente også viktigheten av fritid og
-                      praktiske oppgaver. Basert på denne informasjonen ble
-                      designkonseptet utviklet for å omfavne disse tre
-                      kategoriene (akademisk, fritid og praktisk) for
-                      tidsstrukturering.
+                      {t('portfolio.coaxer.page18.div1P')}
                     </p>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Egen-lagde lyder
+                      {t('portfolio.coaxer.page18.div2Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Siden Christian er musiker, oppsto ideen om å la Christian
-                      designe sine egne earcons. Christian ville i sitt
-                      hjemmestudio spille inn tre forskjellige lyder som han
-                      spilte på gitaren sin. Han ville komponere de tre lydene i
-                      samsvar med de tre kategoriene for tidsstyring.
+                      {t('portfolio.coaxer.page18.div2P')}
                     </p>
                   </div>
 
@@ -1177,7 +998,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_19'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1185,7 +1006,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  19. Integrasjon med personlig kalender
+                  - {t('portfolio.coaxer.page19.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1207,12 +1028,7 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer integrerer med Christians personlige kalender ved å
-                      hente en komplett tidsplan for Christians uke fra hans
-                      Google Kalender. Denne tidsplanen synkroniseres med
-                      Coaxer-appen, noe som gjør det mulig for appen å ta hensyn
-                      til Christians personlige tidsplan når den bestemmer når
-                      den skal spille sonifiseringslydene.
+                      {t('portfolio.coaxer.page19.div1P')}
                     </p>
                   </div>
                 </div>
@@ -1223,7 +1039,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_20'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1231,14 +1047,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  20. Andre møte med Christian
+                  - {t('portfolio.coaxer.page20.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Basert på øreikonene som Christian hadde designet og utviklet,
-                  satte vi ham på prøve for å se hva hans gjenkjennelsesrate for
-                  disse var sammenlignet med andre auditive ikoner og musikoner.
-                  En grov lo-fi prototype av det som skulle bli
-                  brukergrensesnittet ble også presentert for ham.
+                  {t('portfolio.coaxer.page20.titleP')}
                 </p>
               </div>
 
@@ -1248,17 +1060,13 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Full gjenkjennelse av personlige øreikoner
+                      {t('portfolio.coaxer.page20.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Øreikonene som Christian hadde utviklet ble testet opp mot
-                      et sett med musikoner med tanke på
-                      gjenkjennelseshastighet. Basert på tre testiterasjoner var
-                      det tydelig at de selvdesignede øreikonene var overlegne
-                      når det gjaldt gjenkjennelse.
+                      {t('portfolio.coaxer.page20.div1P')}
                     </p>
                   </div>
 
@@ -1275,7 +1083,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_21'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1283,14 +1091,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  21. Tredje møte med Christian
+                  - {t('portfolio.coaxer.page21.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Dette møtet fokuserte på hvordan Christian ville navigere i
-                  brukergrensesnittet til den foreslåtte appen. På dette
-                  tidspunktet hadde vi også en prototype bygget med React Native
-                  og Expo, slik at vi i sanntid kunne se hvordan Christian
-                  brukte den, og deretter endre designet.
+                  - {t('portfolio.coaxer.page21.titleP')}
                 </p>
               </div>
 
@@ -1300,19 +1104,13 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10 '>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Sanntids utvikling
+                      {t('portfolio.coaxer.page21.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Christian ville bruke appen og sjekke flyten av
-                      navigasjonen. Han ville også opprette et par
-                      dummy-hendelser for å prioritere. Han kom med personlige
-                      preferanser om stilen på hendelsene i listen, samt
-                      prioriteringsgrafikken. Denne aktiviteten er relatert til
-                      den ultrapersonaliserte designpraksisen med å designe
-                      under bruk.
+                      {t('portfolio.coaxer.page21.div1P')}
                     </p>
                   </div>
 
@@ -1329,7 +1127,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_22'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1337,15 +1135,10 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  22. Lansering av appen på Christians telefon
+                  - {t('portfolio.coaxer.page22.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Coaxer, en oppgavehåndteringsapp utviklet gjennom å anvende en
-                  ultrapersonlig designprosess, var nå klar for å installeres på
-                  Christians personlige telefon. Christian brukte appen i
-                  omtrent en halv uke i den innledende perioden. For å evaluere
-                  om appen virkelig var personlig for ham, skulle appen også
-                  brukes av Frederik som testsubjekt.
+                  {t('portfolio.coaxer.page22.titleP')}
                 </p>
               </div>
 
@@ -1360,7 +1153,7 @@ const CoaxerScroll = ({ onClose }) => {
                       alt='coaxer front page'
                     />
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      Christians telefon med Coaxer appen
+                      {t('portfolio.coaxer.page22.div1P')}
                     </p>
                   </div>
                   {/* the button array and the caption */}
@@ -1371,26 +1164,26 @@ const CoaxerScroll = ({ onClose }) => {
                         class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black  shadow-md'
                         onClick={() => playSound('practical')}
                       >
-                        ♪ Practical
+                        ♪ {t('portfolio.coaxer.page22.divEarconPractical')}
                       </button>
 
                       <button
                         class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black hover:border-transparent shadow-md'
                         onClick={() => playSound('leisure')}
                       >
-                        ♪ Leisure
+                        ♪ {t('portfolio.coaxer.page22.divEarconLeisure')}
                       </button>
 
                       <button
                         class='flex items-center justify-center w-32 h-12 bg-white hover:bg-black text-black font-semibold hover:text-white border border-black hover:border-transparent shadow-md'
                         onClick={() => playSound('academic')}
                       >
-                        ♪ Academic
+                        ♪ {t('portfolio.coaxer.page22.divEarconAcademic')}
                       </button>
                     </div>
 
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                      De tre personlige øreikonene som han utviklet
+                      {t('portfolio.coaxer.page22.divEarcons')}
                     </p>
                   </div>
                 </div>
@@ -1401,7 +1194,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_23'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1409,13 +1202,12 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  23. Video demo av konseptet -
+                  - {t('portfolio.coaxer.page23.title')}
                   {/* denne tittelen må være tvunget
                   venstrestilt i desktop mode */}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}>
-                  Her er en video som viser konseptet og funksjonen til
-                  applikasjone slik som den ble designet.
+                  {t('portfolio.coaxer.page23.titleP')}
                 </p>
               </div>
 
@@ -1425,10 +1217,10 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-row'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <ReactPlayer
-                      className=''
-                      width='vw'
+                      width='90svw'
                       url='https://vimeo.com/889628233?share=copy'
                       controls
+                      fallback={true}
                     />
                   </div>
                 </div>
@@ -1439,7 +1231,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_24'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1447,7 +1239,7 @@ const CoaxerScroll = ({ onClose }) => {
             >
               <div className={`${styles.projectSlideShowTitleParagraph}`}>
                 <h1 className={` ${styles.projectSlideShowPageTitle}`}>
-                  24. Evaluering og innvirkning
+                  - {t('portfolio.coaxer.page24.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1460,36 +1252,24 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Christians velvære
+                      {t('portfolio.coaxer.page24.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      Coaxer hadde en positiv innvirkning på velværet til
-                      Christian. Han fant applikasjonen nyttig i å håndtere sin
-                      tid og oppgaver, og den hjalp ham til å føle seg mer i
-                      kontroll over dagen sin. Applikasjonens funksjonalitet,
-                      som muligheten til å prioritere oppgaver og inkludere
-                      oppgaver etter egne preferanser, ble også satt pris på av
-                      Christian.
+                      {t('portfolio.coaxer.page24.div1P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      Lyd-funksjon (Sonifisering)
+                      {t('portfolio.coaxer.page24.div2Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      En betydelig oppdagelse var effekten av lydfunksjonen i
-                      applikasjonen. Når lyden var aktivert, hadde Christian en
-                      mer positiv opplevelse med applikasjonen og fant den
-                      hjelpsom i å minne ham om oppgaver, spesielt for
-                      akademiske formål. Lydene hadde en betydelig effekt på
-                      hans valg av handling og forbedret hans engasjement i
-                      oppgavene.
+                      {t('portfolio.coaxer.page24.div2P')}
                     </p>
                   </div>
                 </div>
@@ -1505,7 +1285,7 @@ const CoaxerScroll = ({ onClose }) => {
           <div
             id='panel_25'
             ref={(el) => sectionsRefs.current.push(el)}
-            className={`${styles.coaxerScrollPanel} bg-[#FCFCFC]`}
+            className={`${styles.coaxerScrollPanel} bg-[#ffffff]`}
           >
             <div
               id='id-slidecontainer'
@@ -1515,7 +1295,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <h1
                   className={` ${styles.projectSlideShowPageTitle} text-black`}
                 >
-                  25. Avsluttende tanker
+                  - {t('portfolio.coaxer.page25.title')}
                 </h1>
                 <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
               </div>
@@ -1528,55 +1308,39 @@ const CoaxerScroll = ({ onClose }) => {
                     <h1
                       className={` ${styles.projectSlideShowPagePTitle} text-black`}
                     >
-                      Lyd og nudging
+                      {t('portfolio.coaxer.page25.div1Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 text-black`}
                     >
-                      Når det gjelder lyd, fant prosjektet at tilstedeværelsen
-                      av lyd hadde en betydelig effekt på Christians opplevelse
-                      med applikasjonen. Bruken av øreikonene og musicons som
-                      selv-nudging-verktøy viste seg å være effektive i å
-                      påvirke Christians handlinger og valg.
+                      {t('portfolio.coaxer.page25.div1P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1
                       className={` ${styles.projectSlideShowPagePTitle} text-black `}
                     >
-                      Duo-etnografi
+                      {t('portfolio.coaxer.page25.div2Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} text-black opacity-60 `}
                     >
-                      Det er verdt å nevne at den duo-etnografiske tilnærmingen
-                      kan ha påvirket Christians meninger og svar, ettersom
-                      Frederik hadde en viss innflytelse på ham under
-                      designprosessen. Imidlertid tillot denne
-                      samarbeidstilnærmingen også en mer velreflektert holdning
-                      og fasiliterte deling av oppfatninger og meninger.
+                      {t('portfolio.coaxer.page25.div2P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1
                       className={` ${styles.projectSlideShowPagePTitle} text-black `}
                     >
-                      Personliggjøring
+                      {t('portfolio.coaxer.page25.div3Title')}
                     </h1>
 
                     <p
                       className={` ${styles.projectSlideShowPageP} text-black opacity-60 `}
                     >
-                      De personliggjørende aspektene av Coaxer kommer spesielt
-                      til syne når det gjelder earcons. I løpet av den halve
-                      uken med bruk, sa Christian at han ville bruke appen til
-                      mindre oppgaver i løpet av dagen og at han ville
-                      gjenkjenne deres tilsvarende earcons og følge opp
-                      oppgavene. I motsetning til dette ville også Frederik
-                      bruke den til en viss grad, men innrømmet at han ikke
-                      kunne skille mellom lydene til en nøyaktig grad.
+                      {t('portfolio.coaxer.page25.div3P')}
                     </p>
                   </div>
                 </div>

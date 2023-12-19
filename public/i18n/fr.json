@@ -102,7 +102,188 @@
   },
   "portfolio": {
     "coaxer": {
-      "buttonclose": "Fermer"
+      "buttonclose": "Fermer",
+      "page1": {
+        "subTitle": "Application de gestion des tâches développée à travers un processus de conception ultra-personnalisé"
+      },
+      "page2": {
+        "title": "Introduction",
+        "titleP": "Coaxer était un projet étudiant sur la santé numérique qui visait à explorer comment la technologie numérique peut être utilisée pour améliorer le bien-être des gens. Le projet s'est finalement concentré sur la santé mentale et le stress chez les jeunes adultes, avec le service Coaxer développé comme une application de gestion de tâches ultra-personnalisée visant à améliorer la santé mentale et à réduire le stress général. Les pages suivantes traiteront du processus de conception derrière Coaxer."
+      },
+      "page3": {
+        "subTitle": "Mon rôle",
+        "subTitleP": "Pendant le projet, j'ai d'abord travaillé sur la recherche en profondeur sur le domaine choisi. Après avoir conçu l'idée de Coaxer, j'ai été le principal concepteur et développeur du projet. En pratique, cela signifie que j'ai conçu et codé l'ensemble de l'application (avec des contributions des autres et de Christian, bien sûr).",
+        "subTitle1": "Mes responsabilités",
+        "subTitle1P": "Pendant la phase de recherche et de conception, j'étais responsable de communiquer les nouvelles connaissances sur la tâche au reste de l'équipe. J'étais également responsable de mettre à jour et de collaborer avec le reste de l'équipe de conception sur les modifications apportées et les nouvelles fonctionnalités à explorer."
+      },
+      "page4": {
+        "title": "Qu'avons-nous déjà découvert ?",
+        "titleP": "La première étape a été de jeter un coup d'œil à la littérature sur la santé mentale des jeunes adultes et d'explorer certains des concepts et des conclusions que nous pensions importants et intéressants à approfondir.",
+        "imgcaption": "Voici les découvertes les plus pertinentes que nous avons trouvées"
+      },
+      "page5": {
+        "title": "Formulation de la question de conception",
+        "titleP": "Sur la base de la recherche littéraire et de notre intérêt, nous avons choisi d'explorer comment la gestion des tâches peut être utilisée de manière préventive chez les jeunes adultes confrontés au stress.",
+        "div1P": "Comment pouvons-nous exploiter le concept de gestion structurée des tâches lié à la santé numérique pour résoudre le problème du stress et du bien-être réduits chez les étudiants comme nous ?"
+      },
+      "page6": {
+        "title": "Qu'est-ce qui est le plus pertinent ?",
+        "titleP": "En raison de la formulation large de la question de conception, nous avons dû la préciser en posant des questions sur ce que nous pensions être le plus intéressant."
+      },
+      "page7": {
+        "title": "Notre utilisateur",
+        "titleP": "Au cours de la phase de découverte, l'un des designers a mentionné un ami qu'il savait vivre une vie très chargée et qui pourrait être un candidat pertinent pour la question de conception. Après avoir envisagé la possibilité pendant un court moment, nous avons décidé de poursuivre cette approche et de le contacter.",
+        "div1Title": "Christian",
+        "div1List-li1": "Guitariste passionné de musique et ayant joué dans des groupes pendant des années",
+        "div1List-li2": "Étudiant en journalisme à l'Université d'Aarhus",
+        "div1List-li3": "En couple avec son amour de lycée avec qui il passe beaucoup de temps",
+        "div1List-li4": "Employé à temps partiel dans l'épicerie locale où il travaille l'après-midi",
+        "div1List-li5": "Joue souvent au squash avec ses amis après l'école",
+        "div1List-li6": "Propriétaire heureux d'un chien qui apprécie les promenades au parc quand le temps le permet"
+      },
+      "page8": {
+        "title": "Premier contact avec Christian",
+        "titleP": "Le contact avec Christian a été établi grâce à une première entrevue avec Frederik (co-concepteur), qui est un ami de Christian. Frederik a partagé des informations sur Christian et leurs habitudes et routines, ce qui nous a donné une base pour la suite du processus de conception.",
+        "div1Title": "Frederik (co-concepteur)",
+        "div1P": "En plus des thèmes de la santé numérique et de la gestion du stress, Frederik a mentionné le concept de gestion des tâches. Il fallait enquêter pour savoir si c'était un concept pertinent pour la vie quotidienne de Christian.",
+        "div2Title": "Christian",
+        "div2P": "Lors de la première rencontre avec Frederik, Christian s'est montré intéressé par les thèmes de la santé numérique, du bien-être mental et de la gestion du stress. Ce sont des sujets qu'il pensait avoir et qui pourraient avoir un grand impact sur sa vie. Après avoir partagé notre vision du projet Coaxer avec lui, Christian a accepté d'être notre utilisateur pendant la durée du projet."
+      },
+      "page9": {
+        "title": "Exploration approfondie",
+        "titleP": "Après avoir recruté Christian en tant qu'utilisateur, nous avons mené des entretiens approfondis pour mieux comprendre sa vie quotidienne et ses expériences liées au stress. Ces entretiens nous ont permis d'explorer ses besoins et ses attentes en matière de gestion des tâches.",
+        "div1P": "Au cours de cette phase, nous avons identifié plusieurs thèmes clés liés à la gestion des tâches et au bien-être mental de Christian, notamment :",
+        "div1List-li1": "La gestion du temps et des priorités",
+        "div1List-li2": "La motivation et la procrastination",
+        "div1List-li3": "Le maintien de l'équilibre entre la vie professionnelle et la vie personnelle",
+        "div1List-li4": "L'importance de la flexibilité dans la gestion des tâches"
+      },
+      "page10": {
+        "title": "Comprendre les besoins de Christian",
+        "titleP": "En analysant les données recueillies auprès de Christian, nous avons identifié ses besoins spécifiques en matière de gestion des tâches. Il était essentiel de comprendre ces besoins pour concevoir une solution qui lui serait véritablement utile.",
+        "div1Title": "Besoins de Christian",
+        "div1List-li1": "Un moyen de gérer son temps de manière efficace pour pouvoir consacrer du temps à ses passions, comme la musique et le squash.",
+        "div1List-li2": "Une solution pour rester motivé et éviter la procrastination lorsqu'il s'agit de tâches importantes.",
+        "div1List-li3": "Un moyen de suivre ses progrès et de voir ce qu'il a accompli au fil du temps.",
+        "div1List-li4": "Un moyen de trouver un équilibre entre sa vie professionnelle et sa vie personnelle, en tenant compte de ses obligations de travail et de ses engagements sociaux."
+      },
+      "page11": {
+        "title": "L'approche de conception",
+        "titleP": "À partir des informations recueillies auprès de Christian et de nos recherches, nous avons élaboré une approche de conception centrée sur l'utilisateur pour le projet Coaxer. Notre objectif était de créer une application de gestion des tâches ultra-personnalisée qui répondrait aux besoins spécifiques de Christian en matière de gestion du stress et du bien-être mental.",
+        "div1P": "Les principaux aspects de notre approche de conception étaient les suivants :",
+        "div1List-li1": "Personnalisation : Nous voulions que l'application soit entièrement personnalisable pour répondre aux besoins individuels de chaque utilisateur.",
+        "div1List-li2": "Suivi des objectifs : Nous avons intégré des fonctionnalités pour aider les utilisateurs à suivre leurs progrès et à rester motivés.",
+        "div1List-li3": "Flexibilité : L'application devait être suffisamment flexible pour s'adapter aux changements dans la vie quotidienne de l'utilisateur.",
+        "div1List-li4": "Équilibre : Nous avons cherché à aider les utilisateurs à trouver un équilibre entre leurs obligations professionnelles et personnelles."
+      },
+      "page12": {
+        "title": "Processus de conception",
+        "titleP": "Nous avons suivi un processus de conception itératif pour développer Coaxer, en commençant par des prototypes basse fidélité et en évoluant vers des prototypes haute fidélité à mesure que nous recueillions des commentaires et des informations auprès de Christian.",
+        "div1Title": "Prototypes basse fidélité",
+        "div1P": "Nous avons commencé par créer des croquis et des maquettes papier pour visualiser les idées de conception et les fonctionnalités de base de l'application.",
+        "div2Title": "Prototypes haute fidélité",
+        "div2P": "À mesure que nous avancions dans le processus, nous avons développé des prototypes haute fidélité de l'application, en utilisant des outils de conception numérique pour créer une expérience utilisateur plus réaliste.",
+        "div3Title": "Tests utilisateur",
+        "div3P": "Nous avons régulièrement soumis les prototypes à des tests utilisateur avec Christian pour recueillir des commentaires et apporter des améliorations en fonction de ses suggestions."
+      },
+      "page13": {
+        "title": "Résultats de la conception",
+        "titleP": "Le processus de conception de Coaxer a abouti à la création d'une application de gestion des tâches entièrement personnalisable qui répond aux besoins spécifiques de Christian en matière de gestion du stress et du bien-être mental. L'application permet à Christian de gérer son temps de manière efficace, de rester motivé et de suivre ses progrès.",
+        "div1Title": "Fonctionnalités clés de l'application Coaxer",
+        "div1List-li1": "Gestion personnalisée des tâches",
+        "div1List-li2": "Suivi des objectifs",
+        "div1List-li3": "Flexibilité pour s'adapter aux changements",
+        "div1List-li4": "Équilibre entre la vie professionnelle et la vie personnelle",
+        "div2P": "Grâce à ces fonctionnalités, Christian peut désormais gérer son temps de manière plus efficace, rester motivé et trouver un équilibre entre ses différentes responsabilités et passions."
+      },
+      "page14": {
+        "title": "Conclusion",
+        "titleP": "Le projet Coaxer a été une expérience enrichissante qui nous a permis d'explorer comment la technologie numérique peut contribuer à améliorer la santé mentale des jeunes adultes confrontés au stress. Grâce à une approche de conception centrée sur l'utilisateur, nous avons développé une application de gestion des tâches ultra-personnalisée qui répond aux besoins spécifiques de notre utilisateur, Christian.",
+        "div1P": "Le projet Coaxer a également renforcé notre compréhension de la gestion des tâches et de son importance pour le bien-être mental. Nous espérons que cette application sera utile à Christian et à d'autres jeunes adultes confrontés aux défis du stress et de la gestion du temps."
+      },
+      "page15": {
+        "title": "Sonification… Comment ça marche ?",
+        "titleP": "La sonification est la méthode permettant de cartographier les relations de données aux relations de paramètres sonores et de présenter ce son non verbal comme un guide informatif. La sonification se compose de trois types différents de signaux sonores, parmi lesquels nous devions déterminer lequel conviendrait le mieux à Christian, en suivant une pratique de conception ultra-personnalisée.",
+        "div1Title": "Icônes auditives",
+        "div1P": "Les icônes auditives sont des messages abstraits qui communiquent un événement. Elles sont construites à partir de motifs, qui sont de courtes séquences rythmiques variant en hauteur. Les icônes auditives ont une courbe d'apprentissage plus longue par rapport aux icônes auriculaires.",
+        "div2Title": "Icônes auriculaires",
+        "div2P": "Les icônes auriculaires sont des sons qui représentent des actions ou des événements spécifiques de manière plus concrète. Par exemple, un utilisateur qui clique sur un objet peut entendre un son de percussion provenant d'une source telle que le bois ou le métal. Les icônes auditives visent à imiter les sons du monde réel et sont plus faciles à reconnaître et à comprendre par rapport aux icônes auriculaires.",
+        "div3Title": "Musicons",
+        "div3P": "Les musicons sont une autre forme de sonification qui implique l'utilisation de courtes séquences musicales ou de chansons pour transmettre des informations. Les musicons sont extraits de chansons existantes et sont découpés en courts segments. Ils peuvent être utilisés pour représenter différents types d'événements ou d'actions."
+      },
+      "page16": {
+        "title": "Quelles applications de gestion de tâches numériques existent-elles ?",
+        "titleP": "Une analyse des trois applications de gestion de tâches les plus utilisées sur les plateformes mobiles a été réalisée pour évaluer les éléments qui seraient pertinents à inclure dans la conception d'un outil de gestion de tâches ultra-personnalisé pour Christian.",
+        "div1Title": "Focus Keeper",
+        "div1P": "Se spécialise dans la technique Pomodoro, qui favorise des sessions de travail concentré avec de courtes pauses. Sa force réside dans l'aide à maintenir la concentration et à éviter l'épuisement professionnel. Cependant, elle n'est peut-être pas idéale pour les tâches nécessitant de longues périodes ininterrompues.",
+        "div2Title": "Rappels iPhone",
+        "div2P": "S'intègre parfaitement à iOS et offre simplicité et convivialité. Sa force réside dans l'approche simple et sans fioritures pour définir des rappels et des tâches, avec des notifications basées sur la localisation. Cependant, elle manque de fonctionnalités avancées telles que la gestion de projet ou le suivi détaillé.",
+        "div3Title": "Microsoft To Do",
+        "div3P": "Offre des fonctionnalités complètes de gestion des tâches, y compris les sous-tâches, les délais et les pièces jointes de fichiers. Elle convient bien à la planification de projets détaillée et au travail collaboratif. Cependant, sa complexité peut être intimidante pour les utilisateurs recherchant une gestion des tâches plus simple et minimaliste."
+      },
+      "page17": {
+        "title": "La conception de Coaxer",
+        "titleP": "Coaxer est une application de gestion de tâches conçue pour améliorer la gestion du temps et réduire les niveaux de stress. Elle utilise des sons de sonification comme rappels doux pour hiérarchiser et accomplir des tâches dans trois catégories. Ces trois catégories sont basées sur ce qui est le plus personnel et important pour l'utilisateur.",
+        "div1Title": "Conçu pour s'adapter à Christian",
+        "div1P": "Coaxer est spécifiquement conçu pour s'adapter à la vie personnelle de Christian et à ses routines existantes. L'application et le concept seront développés en collaboration avec les commentaires et l'utilisation de Christian.",
+        "div2Title": "Hiérarchisation",
+        "div2P": "Coaxer utilise un algorithme de priorisation pour inciter Christian à accomplir les tâches qu'il a spécifiées, en fonction du niveau de priorité de ces tâches. Cela signifie que les tâches de haute priorité seront rappelées plus fréquemment.",
+        "div3Title": "Genres de tâches",
+        "div3P": "Coaxer définit les tâches dans trois catégories générales, basées sur ce qui est le plus important pour Christian. Chacune de ces catégories a son propre son d'icône auriculaire distinct, ce qui les rend plus faciles à reconnaître."
+      },
+      "page18": {
+        "title": "Première rencontre avec Christian",
+        "titleP": "Le développement de Coaxer a commencé avec le désir de créer quelque chose de vraiment personnel pour Christian. Nous devions donc en savoir plus sur la façon dont il planifie ses activités quotidiennes et ses tâches. En ce qui concerne la sonification, nous devions également savoir quels sons seraient les plus personnels pour lui.",
+        "div1Title": "Qu'est-ce qu'il planifie ?",
+        "div1P": "Il a mentionné que les tâches académiques étaient importantes pour lui à structurer, mais a également reconnu l'importance des loisirs et des tâches pratiques. Sur la base de ces informations, le concept de conception a été développé pour englober ces trois catégories (académique, loisirs et pratiques) pour la structuration du temps.",
+        "div2Title": "Sons personnalisés",
+        "div2P": "Étant donné que Christian est musicien, l'idée est venue de lui permettre de concevoir ses propres icônes auriculaires. Christian enregistrerait trois sons différents dans son studio à domicile, joués sur sa guitare. Il composerait les trois sons en fonction des trois catégories de gestion du temps."
+      },
+      "page19": {
+        "title": "Intégration avec le calendrier personnel",
+        "div1P": "Coaxer s'intègre au calendrier personnel de Christian en récupérant un planning complet de la semaine de Christian depuis son calendrier Google. Ce planning est synchronisé avec l'application Coaxer, ce qui permet à l'application de prendre en compte la planification personnelle de Christian lors de la détermination du moment où jouer les sons de sonification."
+      },
+      "page20": {
+        "title": "Deuxième rencontre avec Christian",
+        "titleP": "Sur la base des icônes auriculaires que Christian avait conçues et enregistrées, nous l'avons mis à l'épreuve pour voir quelle était sa capacité à les reconnaître par rapport à d'autres icônes auditives et musicons. Une version prototype rudimentaire de l'interface utilisateur a également été présentée.",
+        "div1Title": "Reconnaissance totale des icônes auriculaires personnelles",
+        "div1P": "Les icônes auriculaires auto-conçues par Christian ont été testées par rapport à un ensemble d'icônes musicales en termes de vitesse de reconnaissance. Sur la base de trois itérations de test, il était clair que les icônes auriculaires auto-conçues étaient supérieures en termes de reconnaissance."
+      },
+      "page21": {
+        "title": "Troisième rencontre avec Christian",
+        "titleP": "Cette réunion était axée sur la manière dont Christian naviguerait dans l'interface utilisateur de l'application proposée. À ce stade, nous avions également une maquette construite avec React Native et Expo, ce qui nous permettait de voir en temps réel comment Christian l'utilisait et de modifier ensuite la conception.",
+        "div1Title": "Développement en temps réel",
+        "div1P": "Christian a utilisé l'application et vérifié le flux de navigation. Il a également créé quelques événements factices pour les hiérarchiser. Il a exprimé des préférences personnelles concernant le style des événements dans la liste, ainsi que la graphique de priorisation. Cette activité est liée à la pratique de conception ultra-personnalisée consistant à concevoir en fonction de l'utilisation."
+      },
+      "page22": {
+        "title": "Lancement de l'application sur le téléphone de Christian",
+        "titleP": "Coaxer, une application de gestion de tâches développée grâce à un processus de conception ultra-personnalisé, était maintenant prête à être installée sur le téléphone personnel de Christian. Christian a utilisé l'application pendant environ une demi-semaine lors de la période initiale. Pour évaluer si l'application était vraiment personnelle pour lui, elle a également été testée par Frederik en tant que sujet de test.",
+        "div1P": "Téléphone de Christian avec l'application Coaxer",
+        "divEarcons": "Les trois icônes auriculaires personnelles qu'il avait conçues",
+        "divEarconPractical": "Pratique",
+        "divEarconLeisure": "Loisirs",
+        "divEarconAcademic": "Académique"
+      },
+      "page23": {
+        "title": "Vidéo de démonstration du concept",
+        "titleP": "Voici une vidéo présentant le concept et les fonctionnalités de l'application telles qu'elles ont été conçues."
+      },
+      "page24": {
+        "title": "Évaluation et impact",
+        "div1Title": "Bien-être de Christian",
+        "div1P": "Coaxer a eu un impact positif sur le bien-être de Christian. Il a trouvé l'application utile pour gérer son temps et ses tâches, et elle l'a aidé à se sentir plus en contrôle de sa journée. Les fonctionnalités de l'application, telles que la possibilité de hiérarchiser les tâches et d'inclure des tâches selon ses préférences, ont également été appréciées par Christian.",
+        "div2Title": "Fonction sonore (Sonification)",
+        "div2P": "Une découverte significative a été l'effet de la fonction sonore de l'application. Lorsque le son était activé, Christian avait une expérience plus positive de l'application et la trouvait utile pour lui rappeler ses tâches, en particulier à des fins académiques. Les sons ont eu un impact significatif sur ses choix d'action et ont amélioré son engagement dans les tâches."
+      },
+      "page25": {
+        "title": "Réflexions finales",
+        "div1Title": "Son et incitation",
+        "div1P": "En ce qui concerne le son, le projet a constaté que la présence du son avait un impact significatif sur l'expérience de Christian avec l'application. L'utilisation des icônes auriculaires en tant qu'outils d'auto-incitation s'est avérée efficace pour influencer les actions et les choix de Christian.",
+        "div2Title": "Duo-ethnographie",
+        "div2P": "Il convient de noter que l'approche duo-ethnographique peut avoir influencé les opinions et les réponses de Christian, car Frederik avait une certaine influence sur lui pendant le processus de conception. Cependant, cette approche de collaboration a également favorisé une attitude plus réfléchie et facilité le partage d'opinions et de points de vue.",
+        "div3Title": "Personnalisation",
+        "div3P": "Les aspects de personnalisation de Coaxer se manifestent particulièrement en ce qui concerne les icônes auriculaires. Au cours de la demi-semaine d'utilisation, Christian a déclaré qu'il utiliserait l'application pour des tâches moins importantes tout au long de la journée et qu'il reconnaîtrait leurs icônes auriculaires correspondantes pour suivre les tâches. En revanche, Frederik l'utiliserait également dans une certaine mesure, mais a admis qu'il ne pouvait pas distinguer aussi précisément les sons."
+      }
     },
     "ringmerking": {
       "buttonclose": "Fermer",
@@ -364,6 +545,25 @@
           },
           {
             "name": "design ultra personnalisé",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

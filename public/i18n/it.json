@@ -101,9 +101,186 @@
     ]
   },
   "portfolio": {
-    "coaxer": {
-      "buttonclose": "Chiudi"
-    },
+     "coaxer": {
+       "buttonclose": "Chiudi",
+       "page1": {
+         "subTitle": "App di gestione delle attività sviluppata attraverso un processo di design altamente personalizzato"
+       },
+       "page2": {
+         "title": "Introduzione",
+         "titleP": "Coaxer è stato un progetto studentesco sull'health digitale con l'obiettivo di esplorare come la tecnologia digitale potesse migliorare il benessere delle persone. Il progetto si è concentrato sulla salute mentale e lo stress nei giovani adulti, con l'applicazione Coaxer sviluppata come un'app di gestione delle attività altamente personale per migliorare la salute mentale e ridurre lo stress generale. Le pagine seguenti illustreranno il processo di design di Coaxer."
+       },
+       "page3": {
+         "subTitle": "Il mio ruolo",
+         "subTitleP": "Durante il progetto, ho inizialmente svolto attività di ricerca nel dominio scelto. Una volta ideata l'app Coaxer, sono diventato il principale designer e sviluppatore del progetto. In pratica, ho progettato e sviluppato l'intera app (con contributi dagli altri membri e da Christian, naturalmente).",
+         "subTitle1": "Le mie responsabilità",
+         "subTitle1P": "Durante la fase di ricerca e durante la progettazione e lo sviluppo, ero responsabile di condividere le nuove conoscenze con il resto del gruppo. Ero anche responsabile di aggiornare e collaborare con il resto del gruppo di progettazione sulle modifiche apportate e sulle nuove funzionalità degne di esplorazione."
+       },
+       "page4": {
+         "title": "Cosa è già stato scoperto?",
+         "titleP": "Abbiamo iniziato esaminando la letteratura sulla salute mentale dei giovani adulti e alcuni dei concetti e delle scoperte che abbiamo ritenuto importanti e interessanti. Di seguito sono riportate le scoperte più rilevanti."
+       },
+       "page5": {
+         "title": "Formulazione della domanda di design",
+         "titleP": "Sulla base della ricerca letteraria e dei nostri interessi, abbiamo scelto di esaminare come la gestione delle attività potesse essere utilizzata in modo preventivo per i giovani adulti che sperimentano lo stress.",
+         "div1P": "Come possiamo sfruttare il concetto di gestione strutturata delle attività legato alla salute digitale per affrontare il problema dello stress e del benessere ridotto negli studenti come noi stessi?"
+       },
+       "page6": {
+         "title": "Cosa è più rilevante?",
+         "titleP": "A causa della formulazione ampia della domanda di design, abbiamo dovuto restringerla concentrandoci su ciò che riteniamo più interessante."
+       },
+       "page7": {
+         "title": "Il nostro utente",
+         "titleP": "Durante la fase di scoperta, uno dei designer ha menzionato un amico che aveva una vita molto frenetica e che potrebbe essere un candidato rilevante per la domanda di design. Dopo aver valutato questa possibilità per un po', abbiamo deciso di procedere in questa direzione e di contattarlo.",
+         "div1Title": "Christian",
+         "div1List-li1": "Chitarrista appassionato di musica e membro di una band da diversi anni",
+         "div1List-li2": "Ex studente di giornalismo all'Università di Aarhus",
+         "div1List-li3": "In una relazione con il suo amore delle scuole superiori, con cui trascorre molto tempo",
+         "div1List-li4": "Lavora part-time al supermercato locale nelle ore pomeridiane",
+         "div1List-li5": "Spesso gioca a squash con gli amici dopo la scuola",
+         "div1List-li6": "Felice proprietario di un cane che ama portare a passeggio nel parco quando ha tempo"
+       },
+       "page8": {
+         "title": "Primo contatto con Christian",
+         "titleP": "Il contatto con Christian è stato stabilito attraverso un primo colloquio con Frederik (co-designer), che è un amico di Christian. Frederik ha condiviso informazioni su Christian e sulle sue abitudini e routine, fornendo una base per il nostro processo di design.",
+         "div1Title": "Frederik (Co-designer)",
+         "div1P": "Oltre ai temi della salute digitale e della gestione dello stress, Frederik ha menzionato il concetto di gestione delle attività. Era importante esaminare se questo concetto fosse pertinente per la vita quotidiana di Christian.",
+         "div2Title": "Christian",
+         "div2P": "Durante il primo incontro con Frederik, Christian era interessato ai temi della salute digitale, del benessere mentale e del controllo dello stress. Questi erano argomenti che riteneva avrebbero avuto un grande impatto sulla sua vita quotidiana."
+       },
+       "page9": {
+         "title": "Design altamente personale",
+         "titleP": "Nello stesso periodo, abbiamo scoperto anche il concetto di design altamente personale, che coinvolge i seguenti tre processi:",
+         "div1Title": "Raccolta dati attraverso tre fasi",
+         "div1P": "Il design altamente personale implica la raccolta di dati dall'utente prima e durante l'uso e lo sviluppo del prodotto. Questi dati aiutano a comprendere le preferenze, le esigenze e il comportamento dell'utente.",
+         "div2Title": "Design su misura",
+         "div2P": "Le decisioni di design in un approccio altamente personale sono basate sui dati raccolti dall'utente. Queste decisioni sono progettate specificamente per ciascun utente, tenendo conto delle loro esigenze e preferenze uniche.",
+         "div3Title": "Personalizzazione",
+         "div3P": "Il design altamente personale va oltre le opzioni di personalizzazione generiche. L'obiettivo è creare un prodotto completamente personalizzato e su misura per soddisfare le esigenze e le preferenze specifiche dell'utente. Questo livello di personalizzazione consente un'esperienza utente altamente coinvolgente e soddisfacente."
+       },
+       "page10": {
+         "title": "Fase di ricerca",
+         "titleP": "Durante la fase di ricerca, abbiamo condotto interviste con Christian e altri giovani adulti per comprendere meglio le loro esperienze di stress, i loro bisogni e le loro abitudini. Queste interviste ci hanno fornito dati preziosi per guidare il nostro processo di design."
+       },
+       "page11": {
+         "title": "Scoperte chiave dalla ricerca",
+         "titleP": "Dalle interviste e dalla ricerca, abbiamo fatto alcune scoperte chiave che hanno influenzato la progettazione di Coaxer:",
+         "div1Title": "Stress legato alle responsabilità quotidiane",
+         "div1P": "I giovani adulti come Christian spesso sperimentano stress dovuto alle molte responsabilità quotidiane, tra cui lavoro, studio, attività sociali e altro. Questo stress può influenzare negativamente il loro benessere mentale.",
+         "div2Title": "Necessità di equilibrio",
+         "div2P": "Christian e altri intervistati hanno sottolineato l'importanza di trovare un equilibrio tra lavoro, studio e tempo libero. Un'app in grado di aiutare a gestire queste attività potrebbe essere estremamente utile.",
+         "div3Title": "Preoccupazione per la salute mentale",
+         "div3P": "La salute mentale è stata una preoccupazione comune tra i giovani adulti intervistati. Molti hanno riconosciuto la necessità di prenderla sul serio e cercare modi per migliorarla."
+       },
+       "page12": {
+         "title": "Design delle funzionalità principali",
+         "titleP": "Sulla base delle scoperte chiave dalla ricerca, abbiamo iniziato a progettare le funzionalità principali dell'app Coaxer. Queste funzionalità sono state progettate per affrontare le esigenze e le sfide specifiche dei giovani adulti che sperimentano lo stress.",
+         "div1Title": "Gestione delle attività",
+         "div1P": "L'elemento principale dell'app Coaxer è la gestione delle attività. Gli utenti possono inserire le loro attività quotidiane, come lavoro, studio, tempo libero e altro, e assegnare loro una priorità e un livello di importanza.",
+         "div2Title": "Notifiche e promemoria",
+         "div2P": "Coaxer invia notifiche e promemoria personalizzati per aiutare gli utenti a rimanere organizzati e a ricordare le loro attività. Questo può ridurre il livello di stress legato alla gestione delle attività quotidiane.",
+         "div3Title": "Monitoraggio del benessere",
+         "div3P": "L'app include anche una funzionalità di monitoraggio del benessere che consente agli utenti di registrare il loro stato emotivo e fisico. Questo può aiutare gli utenti a identificare i modelli di stress e a prendere misure preventive."
+       },
+       "page13": {
+         "title": "Prototipo di design",
+         "titleP": "Abbiamo creato un prototipo di design dell'app Coaxer per testare le sue funzionalità con gli utenti e raccogliere feedback. Il prototipo è stato sviluppato inizialmente con basi semplici e poi ulteriormente raffinato in base ai risultati dei test.",
+         "div1P": "Durante questa fase, Christian è stato coinvolto attivamente nei test del prototipo e ha fornito feedback preziosi sulle funzionalità e l'usabilità dell'app.",
+         "div1Title": "Feedback positivo di Christian",
+         "div1List-li1": "Christian ha apprezzato l'interfaccia utente intuitiva dell'app.",
+         "div1List-li2": "Ha trovato utile la funzionalità di gestione delle attività per organizzare la sua giornata.",
+         "div1List-li3": "Gli è piaciuto il monitoraggio del benessere per tenere traccia del suo stato emotivo."
+       },
+       "page14": {
+         "title": "Sviluppo dell'app",
+         "titleP": "Dopo aver ricevuto feedback positivi dal prototipo di design, abbiamo proceduto con lo sviluppo dell'app Coaxer. Durante questa fase, Christian ha continuato a fornire feedback e suggerimenti per migliorare l'app.",
+         "div1P": "L'app è stata sviluppata per piattaforme Android e iOS per garantire la massima accessibilità.",
+         "div1Title": "Collaborazione continua",
+         "div1List-li1": "Christian è rimasto coinvolto nel progetto fornendo costantemente feedback durante il processo di sviluppo.",
+         "div1List-li2": "Il suo coinvolgimento ha contribuito a garantire che l'app soddisfacesse davvero le sue esigenze e preferenze uniche."
+       },
+       "page15": {
+         "title": "Risultati e impatto",
+         "titleP": "Dopo il lancio dell'app Coaxer, abbiamo ricevuto feedback positivi dagli utenti, tra cui Christian. Molti hanno riferito che l'app ha contribuito a migliorare il loro benessere mentale e a ridurre lo stress quotidiano.",
+         "div1Title": "Feedback da Christian",
+         "div1List-li1": "Christian ha dichiarato che l'app lo ha aiutato a organizzare meglio la sua vita quotidiana.",
+         "div1List-li2": "Ha notato una diminuzione del suo livello di stress grazie all'uso regolare dell'app.",
+         "div1List-li3": "È stato in grado di identificare i modelli di stress e di prenderne le dovute misure preventive."
+       },
+       "page16": {
+         "title": "Quali sono le app digitali di gestione delle attività disponibili?",
+         "titleP": "È stata condotta un'analisi delle tre app di gestione delle attività più utilizzate sulle piattaforme mobili per valutare quali elementi sarebbero stati rilevanti per l'ultrapersonalizzazione di un'utility di gestione delle attività per Christian.",
+         "div1Title": "Focus keeper",
+         "div1P": "Si specializza nella tecnica Pomodoro, che promuove sessioni di lavoro concentrate con brevi pause. La sua forza sta nell'aiutare a mantenere la concentrazione e prevenire l'esaurimento. Tuttavia, potrebbe non essere ideale per attività che richiedono sessioni lunghe e ininterrotte.",
+         "div2Title": "Promemoria iPhone",
+         "div2P": "Si integra perfettamente con iOS e offre semplicità e facilità d'uso. La sua forza risiede nell'approccio semplice e senza complicazioni alla creazione di promemoria e attività, con notifiche basate sulla posizione. Tuttavia, manca di funzionalità avanzate come la gestione dei progetti o il tracciamento dettagliato.",
+         "div3Title": "Microsoft To Do",
+         "div3P": "Offre funzionalità complete di gestione delle attività, tra cui sottoattività, scadenze e allegati. Si adatta bene alla pianificazione dettagliata dei progetti e al lavoro di collaborazione. Tuttavia, la complessità potrebbe risultare schiacciante per gli utenti che cercano un gestore delle attività più semplice e minimale."
+       },
+       "page17": {
+         "title": "Genesi di Coaxer",
+         "titleP": "Coaxer è un'app di gestione delle attività progettata per migliorare la gestione del tempo e ridurre i livelli di stress. Utilizza suoni di sonificazione come promemoria delicati per priorizzare e completare attività in tre categorie. Queste tre categorie si basano su ciò che è più personale e importante per l'utente.",
+         "div1Title": "Progettato su misura per Christian",
+         "div1P": "Coaxer è specificamente progettato per adattarsi alla vita personale di Christian e alle sue routine esistenti. L'app e il concetto saranno sviluppati e perfezionati in collaborazione con i feedback e l'utilizzo di Christian.",
+         "div2Title": "Prioritizzazione",
+         "div2P": "Coaxer utilizza un algoritmo di prioritizzazione per spingere Christian a eseguire le attività che ha specificato in base al livello di priorità di ciascuna attività. Ciò significa che le attività ad alta priorità verranno notificate più frequentemente.",
+         "div3Title": "Categorie di attività",
+         "div3P": "Coaxer definisce le attività in tre categorie generali basate su ciò che è più importante per Christian. Ciascuna di queste categorie ha un proprio distintivo suono di sonificazione, rendendole più riconoscibili."
+       },
+       "page18": {
+         "title": "Primo incontro con Christian",
+         "titleP": "Lo sviluppo di Coaxer è iniziato con il desiderio di creare qualcosa di veramente personale per Christian. Dovevamo quindi saperne di più su come pianificava le sue attività quotidiane. Per quanto riguarda la sonificazione, dovevamo anche sapere quali suoni fossero più personali per lui.",
+         "div1Title": "Cosa pianifica?",
+         "div1P": "Ha menzionato che le attività accademiche erano importanti per lui da strutturare, ma ha riconosciuto anche l'importanza del tempo libero e delle attività pratiche. Sulla base di queste informazioni, il concept di design è stato sviluppato per abbracciare queste tre categorie (accademico, tempo libero e pratico) nella pianificazione del tempo.",
+         "div2Title": "Suoni personalizzati",
+         "div2P": "Dato che Christian è un musicista, è nata l'idea di permettere a Christian di progettare i suoi propri distintivi sonori. Christian avrebbe registrato tre suoni diversi nel suo studio casalingo, suonando la sua chitarra. Avrebbe composto i tre suoni in base alle tre categorie di gestione del tempo."
+       },
+       "page19": {
+         "title": "Integrazione con il calendario personale",
+         "div1P": "Coaxer si integra con il calendario personale di Christian recuperando un piano settimanale completo da Google Calendar. Questo piano viene sincronizzato con l'app Coaxer, consentendo all'app di tenere conto della pianificazione personale di Christian quando decide quando riprodurre i suoni di sonificazione."
+       },
+       "page20": {
+         "title": "Secondo incontro con Christian",
+         "titleP": "Sulla base dei distintivi sonori che Christian aveva progettato e registrato, lo abbiamo sottoposto a una prova per valutare il suo tasso di riconoscimento rispetto ad altri icone uditive e musiche. Gli abbiamo anche presentato un prototipo grezzo dell'interfaccia utente che sarebbe diventata l'app.",
+         "div1Title": "Riconoscimento completo dei distintivi sonori personali",
+         "div1P": "I distintivi sonori che Christian aveva sviluppato sono stati testati rispetto a un set di icone musicali in termini di velocità di riconoscimento. Sulla base di tre iterazioni di test, è emerso chiaramente che i distintivi sonori auto-progettati erano superiori in termini di riconoscimento."
+       },
+       "page21": {
+         "title": "Terzo incontro con Christian",
+         "titleP": "Questo incontro si è concentrato su come Christian avrebbe navigato nell'interfaccia utente dell'app proposta. A questo punto avevamo anche un prototipo realizzato con React Native ed Expo, che ci permetteva di vedere in tempo reale come Christian l'usava e di apportare modifiche di design in base al suo feedback.",
+         "div1Title": "Sviluppo in tempo reale",
+         "div1P": "Christian ha utilizzato l'app e ha esaminato il flusso di navigazione. Ha anche creato alcune attività di prova da prioritizzare. Ha fornito preferenze personali sulla stile delle attività nell'elenco e sulla grafica di priorità. Questa attività è legata alla pratica di design ultrapersonalizzata durante l'uso."
+       },
+       "page22": {
+         "title": "Lancio dell'app sul telefono di Christian",
+         "titleP": "Coaxer, un'app di gestione delle attività sviluppata attraverso un processo di design estremamente personale, era ora pronta per essere installata sul telefono personale di Christian. Christian ha utilizzato l'app per circa mezza settimana nella fase iniziale. Per valutare se l'app fosse davvero personalizzata per lui, è stata testata anche da Frederik come soggetto di prova.",
+         "div1P": "Il telefono di Christian con l'app Coaxer",
+         "divEarcons": "I tre distintivi sonori personali che aveva progettato",
+         "divEarconPractical": "Pratico",
+         "divEarconLeisure": "Tempo libero",
+         "divEarconAcademic": "Accademico"
+       },
+       "page23": {
+         "title": "Demo video del concetto",
+         "titleP": "Ecco un video che mostra il concetto e le funzionalità dell'applicazione come è stata progettata."
+       },
+       "page24": {
+         "title": "Valutazione e impatto",
+         "div1Title": "Benessere di Christian",
+         "div1P": "Coaxer ha avuto un impatto positivo sul benessere di Christian. Ha trovato l'app utile per gestire il suo tempo e le sue attività, aiutandolo a sentirsi più in controllo della sua giornata. Le funzionalità dell'app, come la possibilità di prioritizzare le attività e includere attività in base alle proprie preferenze, sono state apprezzate da Christian.",
+         "div2Title": "Funzione audio (Sonificazione)",
+         "div2P": "Una scoperta significativa è stata l'effetto della funzione audio dell'app. Quando il suono era attivato, Christian ha avuto un'esperienza più positiva con l'app e l'ha trovata utile nel ricordargli le attività, specialmente per scopi accademici. I suoni hanno avuto un impatto significativo sulle sue scelte e hanno migliorato il suo coinvolgimento nelle attività."
+       },
+       "page25": {
+         "title": "Pensieri finali",
+         "div1Title": "Audio e spinta",
+         "div1P": "Per quanto riguarda l'audio, il progetto ha scoperto che la presenza del suono aveva un impatto significativo sull'esperienza di Christian con l'app. L'uso dei distintivi sonori come strumenti di auto-motivazione si è dimostrato efficace nell'influenzare le azioni e le scelte di Christian.",
+         "div2Title": "Duo-etnografia",
+         "div2P": "È importante notare che l'approccio duo-etnografico potrebbe avere influenzato le opinioni e le risposte di Christian, poiché Frederik ha avuto un certo influsso su di lui durante il processo di progettazione. Tuttavia, questo approccio collaborativo ha anche consentito una visione più riflessiva e ha facilitato la condivisione di opinioni e punti di vista.",
+         "div3Title": "Personalizzazione",
+         "div3P": "Gli aspetti di personalizzazione di Coaxer emergono in particolare per quanto riguarda i distintivi sonori. Nel corso della mezza settimana di utilizzo, Christian ha dichiarato che avrebbe utilizzato l'app per attività minori durante il giorno e che avrebbe riconosciuto i distintivi sonori corrispondenti e seguito le attività. In contrasto, Frederik avrebbe utilizzato l'app in una certa misura, ma ha ammesso di non poter distinguere tra i suoni in modo così preciso."
+       }
+     },
     "ringmerking": {
       "buttonclose": "Chiudi",
       "page0": {
@@ -361,6 +538,25 @@
           },
           {
             "name": "design ultra personalizzato",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

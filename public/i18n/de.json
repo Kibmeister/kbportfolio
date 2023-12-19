@@ -101,7 +101,174 @@
   },
   "portfolio": {
     "coaxer": {
-      "buttonclose": "Schließen"
+      "buttonclose": "Schließen",
+      "page1": {
+        "subTitle": "Eine Aufgabenmanagement-App, entwickelt im Rahmen eines äußerst persönlichen Designprozesses"
+      },
+      "page2": {
+        "title": "Einführung",
+        "titleP": "Coaxer war ein studentisches Projekt im Bereich digitaler Gesundheit mit dem Ziel, zu erforschen, wie digitale Technologie zur Verbesserung des Wohlbefindens der Menschen eingesetzt werden kann. Das Projekt konzentrierte sich auf die mentale Gesundheit und den Stress bei jüngeren Erwachsenen, bei dem der Dienst Coaxer als eine äußerst persönliche Aufgabenmanagement-App entwickelt wurde, um die mentale Gesundheit zu verbessern und den allgemeinen Stress zu reduzieren. Die folgenden Seiten werden den Designprozess hinter Coaxer behandeln."
+      },
+      "page3": {
+        "subTitle": "Meine Rolle",
+        "subTitleP": "Während des Projekts war ich zunächst damit beschäftigt, Einblicke in das gewählte Thema zu gewinnen. Nach der Ideenfindung für Coaxer wurde ich zum Hauptdesigner und Entwickler des Projekts. In der Praxis bedeutet dies, dass ich die gesamte App gestaltet und programmiert habe (mit Input von anderen und natürlich Christian).",
+        "subTitle1": "Meine Verantwortung",
+        "subTitle1P": "Während der Insight-Phase sowie beim Design und der Entwicklung war ich verantwortlich für die Vermittlung neuer Erkenntnisse an den Rest des Teams. Ich war auch dafür verantwortlich, die restliche Designgruppe über vorgenommene Änderungen und neue Funktionen auf dem Laufenden zu halten."
+      },
+      "page4": {
+        "title": "Was wurde bereits herausgefunden?",
+        "titleP": "Wir begannen zunächst damit, einen Überblick über die Literatur zur mentalen Gesundheit bei jüngeren Erwachsenen zu erhalten und einige der Konzepte und Erkenntnisse zu erkunden, die wir für wichtig und interessant hielten und näher untersuchen wollten.",
+        "imgcaption": "Dies waren die relevantesten Erkenntnisse, die wir gefunden haben"
+      },
+      "page5": {
+        "title": "Formulierung der Designfrage",
+        "titleP": "Basierend auf der Literaturrecherche und unserem Interesse entschieden wir uns dafür, wie das Konzept des strukturierten Aufgabenmanagements im Zusammenhang mit digitaler Gesundheit genutzt werden kann, um das Problem von Stress und reduziertem Wohlbefinden bei Studenten wie uns zu lösen.",
+        "div1P": "Wie können wir das Konzept des strukturierten Aufgabenmanagements im Zusammenhang mit digitaler Gesundheit nutzen, um das Problem von Stress und reduziertem Wohlbefinden bei Studenten wie uns zu lösen?"
+      },
+      "page6": {
+        "title": "Was ist am relevantesten?",
+        "titleP": "Aufgrund der breiten Formulierung der Designfrage mussten wir uns fragen, was wir für am interessantesten hielten."
+      },
+      "page7": {
+        "title": "Unsere Benutzer",
+        "titleP": "Während der Entdeckungsphase erwähnte einer der Designer, dass er einen Freund hatte, von dem er wusste, dass er ein sehr hektisches Leben führte und möglicherweise ein relevanter Kandidat für die Designfrage sein könnte. Nachdem wir die Möglichkeit kurz in Betracht gezogen hatten, entschieden wir uns dafür, von diesem Ansatz aus weiterzuarbeiten und ihn zu kontaktieren.",
+        "div1Title": "Christian",
+        "div1List-li1": "Gitarrist, der Musik liebt und jahrelang in Bands gespielt hat",
+        "div1List-li2": "Derzeit Student für Journalismus an der Universität Aarhus",
+        "div1List-li3": "In einer Beziehung mit seiner Highschool-Liebe, mit der er viel Zeit verbringt",
+        "div1List-li4": "Teilzeitbeschäftigter im örtlichen Supermarkt, wo er nachmittags arbeitet",
+        "div1List-li5": "Spielt oft Squash mit Freunden nach der Schule",
+        "div1List-li6": "Stolzer Hundebesitzer, der lange Spaziergänge im Park schätzt, wenn die Zeit es erlaubt"
+      },
+      "page8": {
+        "title": "Erster Kontakt mit Christian",
+        "titleP": "Der Kontakt zu Christian wurde durch ein erstes Interview mit Frederik (Mitdesigner), einem Freund von Christian, hergestellt. Frederik teilte Informationen über Christian und seine Gewohnheiten, die uns einen Ausgangspunkt für den weiteren Designprozess lieferten.",
+        "div1Title": "Frederik (Mitdesigner)",
+        "div1P": "Frederik erwähnte neben den Themen digitale Gesundheit und Stressbewältigung auch das Konzept des Aufgabenmanagements. Es musste untersucht werden, ob dies ein Konzept war, das für Christians Alltag relevant war.",
+        "div2Title": "Christian",
+        "div2P": "Während des ersten Treffens mit Frederik interessierte sich Christian für die Themen digitale Gesundheit, mentales Wohlbefinden und Stressbewältigung. Dies waren Themen, von denen er glaubte, dass sie einen großen Einfluss auf seinen Alltag hatten und haben könnten."
+      },
+      "page9": {
+        "title": "Äußerst persönliches Design",
+        "titleP": "Zu ungefähr derselben Zeit entdeckten wir auch das Konzept des äußerst persönlichen Designs, das sich mit den folgenden drei Prozessen befasst.",
+        "div1Title": "Datensammlung in drei Stufen",
+        "div1P": "Das äußerst persönliche Design beinhaltet die Sammlung von Daten vom Benutzer, sowohl vor als auch während der Nutzung und Entwicklung des Produkts. Diese Daten helfen dabei, die Vorlieben, Bedürfnisse und Verhaltensweisen des Benutzers zu verstehen.",
+        "div2Title": "Maßgeschneidertes Design",
+        "div2P": "Die Designentscheidungen in einem äußerst persönlichen Ansatz basieren auf den vom Benutzer gesammelten Daten. Diese Entscheidungen sind speziell auf den einzelnen Benutzer zugeschnitten und berücksichtigen ihre individuellen Anforderungen und Vorlieben.",
+        "div3Title": "Iteratives Design und Entwicklung",
+        "div3P": "Ein äußerst persönlicher Ansatz beinhaltet eine kontinuierliche Iteration und Anpassung des Designs und der Entwicklung, um sicherzustellen, dass das Produkt den sich ändernden Bedürfnissen des Benutzers gerecht wird."
+      },
+      "page10": {
+        "title": "Christians Bedürfnisse",
+        "titleP": "Nachdem wir einige grundlegende Informationen über Christian gesammelt hatten, begannen wir, seine Bedürfnisse und Präferenzen zu ermitteln, um ein tiefes Verständnis für seine Situation zu entwickeln.",
+        "div1Title": "Christians Ziele",
+        "div1P": "Christian hatte mehrere Ziele, darunter die Verbesserung seines mentalen Wohlbefindens, die Verringerung von Stress und die effektive Bewältigung seiner täglichen Aufgaben.",
+        "div2Title": "Herausforderungen",
+        "div2P": "Wir erkannten auch einige Herausforderungen, denen Christian gegenüberstand, wie die Schwierigkeit, den Überblick über seine Aufgaben zu behalten und einen ausgewogenen Lebensstil zwischen Studium, Arbeit, Musik und Beziehung zu führen."
+      },
+      "page11": {
+        "title": "User Journey Mapping",
+        "titleP": "Um ein besseres Verständnis für Christians Erfahrungen zu entwickeln, erstellten wir ein User Journey Map, das seine Interaktionen und Gefühle im Zusammenhang mit seiner mentalen Gesundheit und seinem Aufgabenmanagement darstellt.",
+        "imgcaption": "Ein Beispiel für eine User Journey Map"
+      },
+      "page12": {
+        "title": "Wichtige Erkenntnisse",
+        "titleP": "Während des Prozesses der Datensammlung, des Benutzerinterviews und des User Journey Mapping erlangten wir einige wichtige Erkenntnisse über Christian und seine Bedürfnisse.",
+        "div1Title": "Christians Bedürfnisse",
+        "div1P": "Christian benötigte Unterstützung bei der Organisation seiner Aufgaben und bei der Bewältigung von Stress, der durch einen hektischen Lebensstil verursacht wurde.",
+        "div2Title": "Vorzugsweise digitale Lösung",
+        "div2P": "Christian bevorzugte digitale Lösungen, um seine Aufgaben zu verwalten und seine mentale Gesundheit zu verbessern, da er bereits viel Zeit mit digitalen Geräten verbrachte."
+      },
+      "page13": {
+        "title": "Design- und Entwicklungsphase",
+        "titleP": "Mit den gesammelten Erkenntnissen und Daten begannen wir mit der Design- und Entwicklungsphase von Coaxer, wobei unser Hauptaugenmerk auf einer äußerst persönlichen und auf Christian zugeschnittenen Lösung lag.",
+        "div1Title": "Feature-Entwicklung",
+        "div1P": "Wir entwickelten Funktionen, die Christians Bedürfnissen und Präferenzen entsprachen, wie die Möglichkeit, Aufgaben zu priorisieren und Erinnerungen zu setzen.",
+        "div2Title": "Benutzeroberfläche",
+        "div2P": "Die Benutzeroberfläche wurde so gestaltet, dass sie einfach zu bedienen und ansprechend war, um eine positive Benutzererfahrung zu gewährleisten."
+      },
+      "page14": {
+        "title": "Testen und Feedback",
+        "titleP": "Um sicherzustellen, dass Coaxer den Anforderungen von Christian gerecht wurde, führten wir Tests mit ihm durch und sammelten Feedback, um eventuelle Verbesserungen vorzunehmen.",
+        "div1Title": "Feedback von Christian",
+        "div1P": "Christian war zufrieden mit der Benutzeroberfläche und den Funktionen von Coaxer. Er fand, dass die App ihm half, seine Aufgaben zu organisieren und seinen Stress zu bewältigen.",
+        "div2Title": "Iterative Verbesserungen",
+        "div2P": "Wir nahmen Christians Feedback ernst und führten iterative Verbesserungen durch, um die App noch besser auf seine Bedürfnisse abzustimmen."
+      },
+      "page15": {
+        "title": "Ergebnisse",
+        "titleP": "Coaxer erwies sich als effektive Lösung für Christian, um seine Aufgaben zu organisieren und seinen Stress zu bewältigen. Er berichtete von einer verbesserten mentalen Gesundheit und einem gesteigerten Wohlbefinden.",
+        "div1Title": "Positive Auswirkungen",
+        "div1P": "Die App half Christian, den Überblick über seine Aufgaben zu behalten und sie effizienter zu erledigen. Dies führte zu einer Reduzierung seines Stresses und einer Verbesserung seiner mentalen Gesundheit.",
+        "div2Title": "Weitere Anwendungen",
+        "div2P": "Die äußerst persönliche Designmethode, die in Coaxer angewendet wurde, könnte auch in anderen Kontexten genutzt werden, um maßgeschneiderte Lösungen für individuelle Benutzerbedürfnisse zu entwickeln."
+      },
+      "page16": {
+        "title": "Fazit",
+        "titleP": "Coaxer war ein erfolgreiches Projekt, bei dem eine äußerst persönliche Aufgabenmanagement-App entwickelt wurde, um die mentale Gesundheit und den Stress bei jüngeren Erwachsenen zu verbessern. Durch die Anwendung des äußerst persönlichen Designs konnten wir eine maßgeschneiderte Lösung für Christian entwickeln, die positive Auswirkungen auf sein Leben hatte.",
+        "div1Title": "Lektionen gelernt",
+        "div1P": "Das Projekt hat gezeigt, wie wichtig es ist, die Bedürfnisse und Präferenzen des Benutzers in den Mittelpunkt des Designs zu stellen und wie eine äußerst persönliche Herangehensweise zu besseren Ergebnissen führen kann.",
+        "div2Title": "Zukünftige Entwicklungen",
+        "div2P": "In Zukunft könnten ähnliche Ansätze und Methoden verwendet werden, um personalisierte Lösungen für eine Vielzahl von Anwendungsbereichen zu entwickeln."
+      },
+      "page17": {
+        "subTitle": "Vielen Dank",
+        "subTitleP": "Vielen Dank für Ihr Interesse an unserem Projekt Coaxer. Wenn Sie weitere Informationen wünschen oder Fragen haben, zögern Sie nicht, uns zu kontaktieren."
+      },
+      "page18": {
+        "title": "Erstes Treffen mit Christian",
+        "titleP": "Die Entwicklung von Coaxer begann mit dem Wunsch, etwas wirklich Persönliches für Christian zu schaffen. Daher mussten wir mehr darüber erfahren, wie er seine täglichen Aufgaben und Aufgaben plant. Im Hinblick auf die Sonifizierung mussten wir auch wissen, welche Klänge für ihn am persönlichsten wären.",
+        "div1Title": "Was plant er?",
+        "div1P": "Er erwähnte, dass akademische Aufgaben für ihn wichtig sind, aber er erkannte auch die Bedeutung von Freizeit und praktischen Aufgaben an. Basierend auf diesen Informationen wurde das Designkonzept entwickelt, um diese drei Kategorien (akademisch, Freizeit und praktisch) für die Zeitplanung zu berücksichtigen.",
+        "div2Title": "Selbstgestaltete Klänge",
+        "div2P": "Da Christian Musiker ist, entstand die Idee, Christian seine eigenen Ohrsymbole entwerfen zu lassen. Christian würde in seinem Heimstudio drei verschiedene Klänge aufnehmen, die er auf seiner Gitarre spielte. Er würde die drei Klänge entsprechend den drei Kategorien zur Zeitplanung komponieren."
+      },
+      "page19": {
+        "title": "Integration mit persönlichem Kalender",
+        "div1P": "Coaxer integriert sich in Christians persönlichen Kalender, indem es einen vollständigen Zeitplan für Christians Woche aus seinem Google Kalender abruft. Dieser Zeitplan wird mit der Coaxer-App synchronisiert, sodass die App Christians persönlichen Zeitplan berücksichtigen kann, wenn sie entscheidet, wann sie Sonifizierungsklänge abspielen soll."
+      },
+      "page20": {
+        "title": "Zweites Treffen mit Christian",
+        "titleP": "Basierend auf den von Christian entworfenen und aufgenommenen Ohrsymbolen haben wir ihn daraufhin getestet, wie hoch seine Erkennungsrate im Vergleich zu anderen auditiven Symbolen und Musiksymbolen ist. Es wurde ihm auch eine grobe Lo-Fi-Prototyp des geplanten Benutzeroberfläche vorgestellt.",
+        "div1Title": "Vollständige Erkennung der persönlichen Ohrsymbole",
+        "div1P": "Die von Christian entwickelten Ohrsymbole wurden auf ihre Erkennungsgeschwindigkeit hin getestet. Basierend auf drei Testdurchläufen war klar, dass die selbstgestalteten Ohrsymbole bei der Erkennung überlegen waren."
+      },
+      "page21": {
+        "title": "Drittes Treffen mit Christian",
+        "titleP": "Dieses Treffen konzentrierte sich darauf, wie Christian die Benutzeroberfläche der vorgeschlagenen App nutzen würde. Zu diesem Zeitpunkt hatten wir auch einen Prototypen mit React Native und Expo erstellt, sodass wir in Echtzeit sehen konnten, wie Christian die App verwendete, und dann das Design anpassen konnten.",
+        "div1Title": "Echtzeit-Entwicklung",
+        "div1P": "Christian verwendete die App und überprüfte den Navigationsfluss. Er wollte auch einige Dummy-Ereignisse erstellen, um Prioritäten zu setzen. Er äußerte persönliche Vorlieben hinsichtlich des Stils der Ereignisse in der Liste sowie der Prioritätsgrafiken. Diese Aktivität steht im Zusammenhang mit der äußerst personalisierten Designpraxis des Designs während der Nutzung."
+      },
+      "page22": {
+        "title": "Einführung der App auf Christians Telefon",
+        "titleP": "Coaxer, eine Aufgabenverwaltungs-App, die durch einen äußerst persönlichen Designprozess entwickelt wurde, war nun bereit, auf Christians persönlichem Telefon installiert zu werden. Christian verwendete die App etwa eine halbe Woche lang in der Anfangsphase. Um zu bewerten, ob die App wirklich persönlich für ihn war, wurde die App auch von Frederik als Testperson getestet.",
+        "div1P": "Christians Telefon mit der Coaxer-App",
+        "divEarcons": "Die drei persönlichen Ohrsymbole, die er entwickelt hat",
+        "divEarconPractical": "Praktisch",
+        "divEarconLeisure": "Freizeit",
+        "divEarconAkademic": "Akademisch"
+      },
+      "page23": {
+        "title": "Video-Demo des Konzepts",
+        "titleP": "Hier ist ein Video, das das Konzept und die Funktion der Anwendung zeigt, wie sie entworfen wurde."
+      },
+      "page24": {
+        "title": "Bewertung und Auswirkungen",
+
+        "div1Title": "Christians Wohlbefinden",
+        "div1P": "Coaxer hatte einen positiven Einfluss auf Christians Wohlbefinden. Er fand die Anwendung nützlich bei der Bewältigung seiner Zeit und Aufgaben, und sie half ihm, sich mehr in Kontrolle über seinen Tag zu fühlen. Die Funktionen der Anwendung, wie die Möglichkeit, Aufgaben zu priorisieren und Aufgaben nach eigenen Vorlieben einzubeziehen, wurden auch von Christian geschätzt.",
+        "div2Title": "Audio-Funktion (Sonifizierung)",
+        "div2P": "Eine bedeutende Erkenntnis war die Wirkung der Audio-Funktion in der Anwendung. Wenn der Ton aktiviert war, hatte Christian eine positivere Erfahrung mit der Anwendung und fand sie hilfreich, um sich an Aufgaben zu erinnern, insbesondere für akademische Zwecke. Die Klänge hatten einen signifikanten Einfluss auf seine Handlungsentscheidungen und steigerten sein Engagement für die Aufgaben."
+      },
+      "page25": {
+        "title": "Abschließende Gedanken",
+        "div1Title": "Audio und Anstoßen",
+        "div1P": "In Bezug auf den Ton ergab das Projekt, dass die Anwesenheit von Audio einen signifikanten Einfluss auf Christians Erfahrung mit der Anwendung hatte. Die Verwendung von Ohrsymbolen als Selbstanstoßungswerkzeuge erwies sich als effektiv bei der Beeinflussung von Christians Handlungen und Entscheidungen.",
+        "div2Title": "Duo-Ethnografie",
+        "div2P": "Es ist erwähnenswert, dass der Duo-Ethnografie-Ansatz Christians Meinungen und Antworten beeinflusst haben könnte, da Frederik während des Designprozesses einen gewissen Einfluss auf ihn hatte. Dieser kooperative Ansatz ermöglichte jedoch auch eine reflektiertere Haltung und die gemeinsame Weitergabe von Einsichten und Meinungen.",
+        "div3Title": "Personalisierung",
+        "div3P": "Die personalisierten Aspekte von Coaxer kommen besonders in Bezug auf die Ohrsymbole zum Ausdruck. Während der halben Woche, in der er die App benutzte, gab Christian an, dass er die App für kleinere Aufgaben im Laufe des Tages verwenden würde und dass er die entsprechenden Ohrsymbole erkennen und den Aufgaben nachgehen würde. Im Gegensatz dazu würde auch Frederik die App in gewissem Maße verwenden, gab jedoch zu, dass er die Klänge nicht so genau unterscheiden konnte."
+      }
     },
     "ringmerking": {
       "buttonclose": "Schließen",
@@ -358,6 +525,25 @@
           },
           {
             "name": "ultrapersonalisiertes design",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

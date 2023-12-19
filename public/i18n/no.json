@@ -101,7 +101,181 @@
   },
   "portfolio": {
     "coaxer": {
-      "buttonclose": "Lukk"
+      "buttonclose": "Lukk",
+      "page1": {
+        "subTitle": "Oppgavehåndterings app utviklet gjennom en ultra personlig design process"
+      },
+      "page2": {
+        "title": "Introduksjon",
+        "titleP": "Coaxer var et student prosjekt om digital helse med et utgangspunkt om å utforske hvordan digital teknologi kan brukes for å forbedre folks velvære. Prosjektet endte med å dreie seg om mental helse og stress for yngre voksne, hvor tjenesten Coaxer ble utviklet som en ultra-personlig oppgavehåndterings app med henblikk på å forbedre mentalt helse og redusere generell stress. De følgende sidene vil handle om design prosessen bak Coaxer."
+      },
+      "page3": {
+        "subTitle": "Min rolle",
+        "subTitleP": "Under prosjektet jobbet jeg i første omgang med å utføre innsiktsarbeid om domenet som var valgt. Etter at ideen om Coaxer ble unfanget, ble jeg hoveddesigner og utvikler for prosjektet. I praksis vil det si at jeg har designet og kodet hele appen (med innspill fra de andre og Christian selvfølgelig).",
+        "subTitle1": "Mitt ansvar",
+        "subTitle1P": "I løpet av innsiktsarbeidet samt design og utvikling var jeg ansvarlig for å formidle ny kunnskap om oppgaven til resten av gruppen. Jeg var også ansvarlig for å oppdatere og samarbeide med resten av design gruppen om hvilke endringer som ble gjort og hvilke nye funksjoner det var verdt å utforske."
+      },
+      "page4": {
+        "title": "Hva er allerede funnet ut?",
+        "titleP": "Det første vi startet med var å ta et falkeblikk over litteraturen om mental helse for yngre voksne og utforske noen av de konseptene og funnene vi mente var viktige og interessante og kunne tenke oss å ta et dypere dykk i.",
+        "imgcaption": "Dette var de mest relevante funnene vi fant"
+      },
+      "page5": {
+        "title": "Formulering av design spørsmålet",
+        "titleP": "Basert på litteratur søket og vår interesse valgte vi å gå videre med hvordan oppgavehåndtering kan brukes preventivt for yngre voksne som føler stress.",
+        "div1P": "Hvordan kan vi utnytte konseptet om strukturert oppgavehåndtering knyttet opp mot digital helse for å løse problemet om stress og nedsatt velvære for studenter som oss selv?"
+      },
+      "page6": {
+        "title": "Hva er mest relevant?",
+        "titleP": "På grunn av den brede formuleringen av design spørsmålet ble vi nødt til å snevre det inn ved å stille spørsmål om hva vi mente var mest interessant."
+      },
+      "page7": {
+        "title": "Vår bruker",
+        "titleP": "Under oppdagelses fasen nevnte en av designerne at de hadde en venn som de visste levde et veldig hektisk liv og som kunne være en relevant kandidat for design spørsmålet. Etter å ha vurderte muligheten i en kort stund bestemte vi oss for å gå videre med dette utgangspunktet og kontakte ham.",
+        "div1Title": "Christian",
+        "div1List-li1": "Gitarist som elsker musikk og har spilt i band i flere år",
+        "div1List-li2": "Fortiden journaliststudent på Aarhus Universitet",
+        "div1List-li3": "Kjæreste med sitt videregående crush som han bruker mye tid med",
+        "div1List-li4": "Deltids ansatt på det lokale supermarkedet hvor han jobbet ettermiddager",
+        "div1List-li5": "Spiller ofte squash med kompiser etter skole",
+        "div1List-li6": "Glad hundeier som setter pris på en god tur i parken når tiden tillater det"
+      },
+      "page8": {
+        "title": "Første kontakt med Christian",
+        "titleP": "Kontakten med Christian ble etablert gjennom et første intervju med Frederik (Co-designer), som er en venn av Christian. Frederik delte informasjon om Christian og deres vaner og rutiner som ga oss et utgangspunkt for hvordan vi skulle gå videre med design prosessen.",
+        "div1Title": "Frederik (Co-designer)",
+        "div1P": "Frederik nevnte i tillegg til temaene om digital helse og stress mestring konseptet om oppgavehåndering. Det måtte undersøkes om dette var et konsept som var relevant for Christians hverdag.",
+        "div2Title": "Christian",
+        "div2P": "Christian var under første møte med Frederik interessert i tema om digital helse, mentalt velvære og stress mestring. Dette var temaer som han mente hadde og kunne få en stor innvirkning på hverdagen hans."
+      },
+      "page9": {
+        "title": "Ultra personlig design",
+        "titleP": "På nogenlunde samme tidspunkt oppdaget vi også konseptet om ultra personlig design, som handler om de tre følgende prosessene.",
+        "div1Title": "Data innsamling gjennom tre stadier",
+        "div1P": "Ultra-personlig design involverer innsamling av data fra brukeren både før og under bruk og utvikling av produktet. Disse dataene hjelper til med å forstå brukerens preferanser, behov og atferd.",
+        "div2Title": "Skreddersydd design",
+        "div2P": "Designbeslutningene i en ultra-personlig tilnærming er basert på data samlet inn fra brukeren. Disse beslutningene er skreddersydd spesielt for den enkelte bruker, med tanke på deres unike krav og preferanser.",
+        "div3Title": "Tilpasning og personliggjøring",
+        "div3P": "Ultra-personlig design går utover generiske tilpasningsmuligheter. Målet er å skape et produkt som er fullstendig personlig tilpasset og skreddersydd for å passe brukerens spesifikke behov og preferanser. Dette nivået av tilpasning tillater en mer sømløs og intuitiv brukeropplevelse."
+      },
+      "page10": {
+        "title": "Den perfekte matchen",
+        "titleP": "Samsvar mellom Christian (som vi hadde i tankene fra før) og den nye, ukjente, men spennende designmetodikken for ultra-personlig design, la grunnlaget for konfigurasjonen av designprosessen. Vår idé var å kombinere de to og undersøke om Christian var interessert i å delta i et slikt prosjekt.",
+        "div1Title": "Christian",
+        "div1P": "Christian, som en travel student og musiker, levde et liv med mange ansvarsområder og hendelser som krevde hans tid. Kunne vi utnytte design tenkning og digital teknologi til å ha en positiv innflytelse på Christians velvære?",
+        "div2Title": "Ultra personlig design",
+        "div2P": "Var ultra-personlig design det riktige designkonseptet for Christian som vår sluttbruker? Dette var et designkonsept lik brukersentrert design og deltakende design, men med større vekt på kontinuerlig designutvikling."
+      },
+      "page11": {
+        "title": "Duo ethnography...(metodologi)",
+        "titleP": "Da dette var et akademisk bachelor prosjekt var den valgte metodologien for oppgaven viktig. Duo-etnografi ble valgt som en forskningsmetode der to eller flere forskere samarbeider om å produsere en dialogisk fortelling basert på deres egne opplevelser og perspektiver. Dataene er dermed en sammenligning av de diskuterte historiene, der forskerne har reflektert over og omkonseptualisert sine tidligere erfaringer.",
+        "div1Title": "Vennskap",
+        "div1P": "Ettersom co-designeren allerede var god venn med Christian, var dette et godt utgangspunkt for å etablere den dialogen som duo-ethnografi krever for å utveksle historier og erfaringer mellom bruker og designer.",
+        "div2Title": "Utforske nye ideer",
+        "div2P": "Å dele lignende erfaringer muligjorde også re-konseptualiseringer av tidligere erfaringer og til å utforske elementene om mennesker, aktiviteter, omgivelser, og teknologi som utgjøre analyse metoden PACT.",
+        "div3Title": "Flere forskere",
+        "div3P": "Det var behov for flere forskere under sesjonene i felt arbeidet for å dekryptere den sammenflettede flytende dialogen mellom co-designer og Christian ettersom denne var vanskelig å tolke på kloss hold."
+      },
+      "page12": {
+        "title": "Ultra personlig design for Christian",
+        "titleP": "Basert på Frederiks første intervju med Christian startet vi med å peke ut hva som var særegent med Christian, hvilket potensiale vi ville ta tak i, og hvilke forbehold vi måtte ha i mente. Basert på Frederiks første intervju med Christian startet vi med å peke ut hva som var særegent med Christian, hvilket potensiale vi ville ta tak i, og hvilke forbehold vi måtte ha i mente."
+      },
+      "page13": {
+        "title": "Sonifisering og nudging",
+        "titleP": "Sonifisering og nudging dukket opp som konsepter under litteratursøket, og ved nærmere ettersyn virket relevante for det vi visste om Christian som en travel student og musiker.",
+        "div1Title": "Sonifisering",
+        "div1P": "Sonifisering er prosessen med å kartlegge datarelasjoner til relasjoner mellom lydparametere og presentere denne ikke-talelyden som informativ veiledning. Det innebærer å bruke lyd til å formidle informasjon eller kommunisere hendelser. Sonifisering kan være øreikoner (abstrakte representasjoner av hendelser), auditive ikoner (representasjoner av spesifikke hendelser), eller musicons (korte musikalsekvenser).",
+        "div2Title": "Nudging",
+        "div2P": "Nudging, på den andre siden, er en tilnærming for å motivere individer til å gjøre visse valg eller ta spesifikke handlinger. Det innebærer å bruke subtile hint eller påminnelser for å påvirke beslutningstaking og atferd. Nudges kan være grafiske, auditive, fysiske eller lyriske. Selv-nudging er en spesifikk type nudging som innebærer å endre en persons eksterne verden, både mentalt og fysisk, for å motvirke mangel på selvkontroll."
+      },
+      "page14": {
+        "title": "Presentasjon av ideen til Christian",
+        "titleP": "Den tidligere undersøkelsen av feltene sonifisering, nudging og oppgavehåndering førte til en idé basert på det vi visste om Christian. Frederik (meddesigner) initierte et nytt møte med Christian og foreslo vår idé om å designe en ultra-personlig tidsstyringsapp som bruker personlige øreikoner (sonifisering) som et middel for å nudge ham til å fullføre planlagte oppgaver i henhold til hans prioritering."
+      },
+      "page15": {
+        "title": "Sonifisering.. hvordan?",
+        "titleP": "Sonifisering er metoden for å kartlegge datarelasjoner til lydparameters relasjoner og presentere denne ikke-talelyden som informativ veiledning. Sonifisering består av tre forskjellige typer lydsignal, og av disse måtte vi finne ut hvilken som ville passe best for Christian, i tråd med en ultra-personlig designpraksis.",
+        "div1Title": "Øreikoner",
+        "div1P": "Øreikoner er abstrakte små meldinger som kommuniserer en hendelse. De er konstruert av motiver, som er korte rytmiske sekvenser som varierer i tonehøyde. øreikoner har en lengre læringskurve sammenlignet med auditive ikoner.",
+        "div2Title": "Auditive ikoner",
+        "div2P": "Auditive ikoner er lyder som representerer spesifikke handlinger eller hendelser på en mer konkret måte. For eksempel kan en bruker som klikker på et objekt, høre en slaglyd fra en kilde som tre eller metall. Auditive ikoner har som mål å etterligne lyder fra den virkelige verden og er lettere å gjenkjenne og forstå sammenlignet med øreikoner..",
+        "div3Title": "Musicons",
+        "div3P": "Musicons er en annen form for sonifisering som innebærer bruk av korte musikalsekvenser eller sanger for å formidle informasjon. Musicons er hentet fra eksisterende sanger og er kuttet opp i korte segmenter. De kan brukes til å representere forskjellige typer hendelser eller handlinger."
+      },
+      "page16": {
+        "title": "What Digital Task Management Apps Exist?",
+        "titleP": "An analysis of the three task management apps that were most commonly used on mobile platforms was conducted to assess which elements of these apps would be relevant to incorporate into the process of designing an ultra-personalized task management tool for Christian.",
+        "div1Title": "Focus Keeper",
+        "div1P": "Specializes in the Pomodoro technique, promoting focused work sessions with short breaks. Its strength lies in helping maintain concentration and prevent burnout. However, it may not be ideal for tasks that require long, uninterrupted periods.",
+        "div2Title": "iPhone Reminders",
+        "div2P": "Seamlessly integrates with iOS, offering simplicity and user-friendliness. Its strength lies in the straightforward, uncomplicated approach to setting reminders and tasks, with location-based notifications. However, it lacks advanced features like project management or detailed tracking.",
+        "div3Title": "Microsoft To Do",
+        "div3P": "Offers comprehensive task management features, including subtasks, deadlines, and file attachments. It is well-suited for detailed project planning and collaborative work. However, its complexity may be overwhelming for users seeking a simpler, minimalist task manager."
+      },
+      "page17": {
+        "title": "Conception of Coaxer",
+        "titleP": "Coaxer is a task management app designed to improve time management and reduce stress levels. It uses sonification sounds as gentle reminders to prioritize and complete tasks in three categories. The three categories are based on what is most personal and important to the user.",
+        "div1Title": "Designed to Fit Christian",
+        "div1P": "Coaxer is specifically designed to fit into Christian's personal life and existing routines. The app and concept will be designed and developed in collaboration with Christian's feedback and usage.",
+        "div2Title": "Prioritization",
+        "div2P": "Coaxer utilizes a priority algorithm to nudge Christian to perform the tasks he has specified, based on the priority level assigned to these tasks. This means that tasks with higher priority will be reminded more frequently.",
+        "div3Title": "Categories of Tasks",
+        "div3P": "Coaxer defines tasks within three general categories, which are based on what is most important to Christian. Each of these categories has its own distinct earcon sound, making them easier to recognize."
+      },
+      "page18": {
+        "title": "First Meeting with Christian",
+        "titleP": "The development of Coaxer started with a desire to create something truly personal for Christian. We needed to learn more about how he plans daily activities and tasks. Regarding sonification, we also needed to know which sounds would be most personal to him.",
+        "div1Title": "What Does He Plan For?",
+        "div1P": "He mentioned that academic tasks were important for him to structure, but also recognized the importance of leisure and practical tasks. Based on this information, the design concept was developed to encompass these three categories (academic, leisure, and practical) for time structuring.",
+        "div2Title": "Self-Made Sounds",
+        "div2P": "Since Christian is a musician, the idea arose to let Christian design his own earcons. Christian would record three different sounds in his home studio, playing them on his guitar. He would compose the three sounds in accordance with the three categories for time management."
+      },
+      "page19": {
+        "title": "Integration with Personal Calendar",
+        "div1P": "Coaxer integrates with Christian's personal calendar by fetching a complete schedule of Christian's week from his Google Calendar. This schedule is synchronized with the Coaxer app, allowing the app to take into account Christian's personal schedule when determining when to play sonification sounds."
+      },
+      "page20": {
+        "title": "Second Meeting with Christian",
+        "titleP": "Based on the earcons that Christian had designed and recorded, we put him to the test to see what his recognition rate for these was compared to other auditory icons and musicons. A rough, lo-fi prototype of what would become the user interface was also presented to him.",
+        "div1Title": "Full Recognition of Personal Earcons",
+        "div1P": "The earcons that Christian had developed were tested against a set of musicons in terms of recognition speed. Based on three test iterations, it was clear that the self-designed earcons outperformed when it came to recognition."
+      },
+      "page21": {
+        "title": "Third Meeting with Christian",
+        "titleP": "This meeting focused on how Christian would navigate the user interface of the proposed app. At this point, we also had a prototype built with React Native and Expo, allowing us to see in real-time how Christian used it and then modify the design.",
+        "div1Title": "Real-time Development",
+        "div1P": "Christian used the app and checked the navigation flow. He also created a couple of dummy events to prioritize. He provided personal preferences regarding the style of events in the list, as well as priority graphics. This activity is related to the ultra-personalized design practice of designing during use."
+      },
+      "page22": {
+        "title": "Launching the App on Christian's Phone",
+        "titleP": "Coaxer, a task management app developed through an ultra-personal design process, was now ready to be installed on Christian's personal phone. Christian used the app for about half a week in the initial period. To evaluate whether the app was truly personal for him, the app was also tested by Frederik as a test subject.",
+        "div1P": "Christian's phone with the Coaxer app",
+        "divEarcons": "The three personal earcons that he developed",
+        "divEarconPractical": "Practical",
+        "divEarconLeisure": "Leisure",
+        "divEarconAcademic": "Academic"
+      },
+      "page23": {
+        "title": "Video Demo of the Concept",
+        "titleP": "Here is a video demonstrating the concept and functionality of the application as it was designed."
+      },
+      "page24": {
+        "title": "Evaluation and Impact",
+
+        "div1Title": "Christian's Well-being",
+        "div1P": "Coaxer had a positive impact on Christian's well-being. He found the application useful in managing his time and tasks, and it helped him feel more in control of his day. The app's functionality, such as the ability to prioritize tasks and include tasks according to personal preferences, was also appreciated by Christian.",
+        "div2Title": "Sound Feature (Sonification)",
+        "div2P": "A significant discovery was the effect of the sound feature in the application. When sound was enabled, Christian had a more positive experience with the application and found it helpful in reminding him of tasks, especially for academic purposes. The sounds had a significant effect on his choice of action and improved his engagement in tasks."
+      },
+      "page25": {
+        "title": "Final Thoughts",
+        "div1Title": "Sound and Nudging",
+        "div1P": "Regarding sound, the project found that the presence of sound had a significant impact on Christian's experience with the application. The use of earcons as self-nudging tools proved to be effective in influencing Christian's actions and choices.",
+        "div2Title": "Duo-Ethnography",
+        "div2P": "It is worth mentioning that the duo-ethnographic approach may have influenced Christian's opinions and responses, as Frederik had a certain influence on him during the design process. However, this collaborative approach also allowed for a more well-reflected attitude and facilitated the sharing of perceptions and opinions.",
+        "div3Title": "Personalization",
+        "div3P": "The personalized aspects of Coaxer come especially to light when it comes to earcons. During the half-week of use, Christian mentioned that he would use the app for minor tasks throughout the day and that he would recognize their corresponding earcons and follow up on the tasks. In contrast, Frederik would also use it to some extent but admitted that he could not distinguish between the sounds to a precise degree."
+      }
     },
     "ringmerking": {
       "buttonclose": "Lukk",
@@ -111,7 +285,21 @@
       },
       "page1": {
         "title": "Innhold",
-        "list": [ "Case", "Mål", "Empati", "Definer", "Ideer" , "Prototype", "Test", "Evaluer", "Veien videre", "En design utfordring", "Gammel og ny tjeneste", "Figma prototype", "Erfaringer" ]
+        "list": [
+          "Case",
+          "Mål",
+          "Empati",
+          "Definer",
+          "Ideer",
+          "Prototype",
+          "Test",
+          "Evaluer",
+          "Veien videre",
+          "En design utfordring",
+          "Gammel og ny tjeneste",
+          "Figma prototype",
+          "Erfaringer"
+        ]
       },
       "page2": {
         "title1": "Caset",
@@ -230,10 +418,9 @@
       },
       "page16": {
         "title": "Gammel og ny tjeneste",
-        
+
         "p1Title": "Gammel tjeneste",
         "p2Title": "Ny tjeneste"
-        
       },
       "page17": {
         "title": "Figma prototype",
@@ -343,6 +530,25 @@
           },
           {
             "name": "ultrapersonlig design",
+            "color": "pink-text-gradient"
+          }
+        ]
+      },
+      {
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
+        "tags": [
+          {
+            "name": "mobile design",
+            "color": "blue-text-gradient"
+          },
+          {
+            "name": "gamification/nudging",
+            "color": "green-text-gradient"
+          },
+          {
+            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]
