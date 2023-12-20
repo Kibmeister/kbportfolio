@@ -160,13 +160,22 @@
         "div3P": "El diseño ultrapersonalizado va más allá de las opciones de personalización genéricas. El objetivo es crear un producto completamente adaptado y personalizado para satisfacer las necesidades y preferencias específicas del usuario. Este nivel de personalización permite una experiencia de usuario más fluida y intuitiva."
       },
       "page10": {
-        "title": "La combinación perfecta",
-        "titleP": "La concordancia entre Christian (que ya teníamos en mente) y la nueva, pero emocionante, metodología de diseño ultrapersonalizado sentó las bases para la configuración del proceso de diseño. Nuestra idea era combinar los dos y explorar si Christian estaría interesado en participar como usuario de prueba para Coaxer.",
-        "div1P": "La metodología de diseño ultrapersonalizado se adapta perfectamente al enfoque de Coaxer, ya que el objetivo de la aplicación es proporcionar a los usuarios una experiencia de gestión de tareas altamente personalizada para mejorar su bienestar mental y reducir el estrés. La combinación de la metodología con un usuario real como Christian proporcionaría información valiosa para el desarrollo de la aplicación."
+        "title": "La Combinación Perfecta",
+        "titleP": "La alineación entre Christian (a quien teníamos en mente desde el principio) y la nueva, desconocida pero emocionante metodología de diseño ultra-personal sentó las bases para configurar el proceso de diseño. Nuestra idea era combinar ambas y averiguar si Christian estaba interesado en participar en un proyecto de este tipo.",
+        "div1Title": "Christian",
+        "div1P": "Como estudiante ocupado y músico, Christian llevaba una vida llena de responsabilidades y eventos que demandaban su tiempo. ¿Podríamos aprovechar el pensamiento de diseño y la tecnología digital para tener un impacto positivo en el bienestar de Christian?",
+        "div2Title": "Diseño Ultra-Personal",
+        "div2P": "¿Era el diseño ultra-personal el concepto de diseño adecuado para Christian como nuestro usuario final? Este era un concepto de diseño similar al diseño centrado en el usuario y al diseño participativo, pero con un mayor énfasis en el desarrollo continuo del diseño."
       },
       "page11": {
-        "title": "Comunicación con Christian",
-        "titleP": "A través de Frederik, establecimos un segundo contacto con Christian para discutir la posibilidad de que participara en nuestro proyecto como usuario de prueba. Christian estaba interesado en nuestra propuesta y accedió a colaborar con nosotros."
+        "title": "Duo Etnografía... (Metodología)",
+        "titleP": "Dado que este era un proyecto de licenciatura académico, la metodología elegida para la tarea fue importante. Se eligió la duo-etnografía como método de investigación en el cual dos o más investigadores colaboran para producir una narrativa dialógica basada en sus propias experiencias y perspectivas. Los datos consisten, por tanto, en una comparación de las historias discutidas, con los investigadores reflexionando y reconceptualizando sus experiencias previas.",
+        "div1Title": "Amistad",
+        "div1P": "Dado que el co-diseñador ya era un amigo cercano de Christian, esto fue un buen punto de partida para establecer el diálogo necesario para intercambiar historias y experiencias entre el usuario y el diseñador.",
+        "div2Title": "Explorando Nuevas Ideas",
+        "div2P": "Compartir experiencias similares también permitió la reconceptualización de experiencias previas y la exploración de los elementos de personas, actividades, entornos y tecnología que componen el método de análisis PACT.",
+        "div3Title": "Múltiples Investigadores",
+        "div3P": "Se necesitaron múltiples investigadores durante las sesiones de trabajo de campo para descifrar la narrativa entrelazada y fluida producida por los participantes durante el proceso."
       },
       "page12": {
         "title": "Involucrando a Christian",
@@ -205,22 +214,34 @@
         "titleP": "Con la información recopilada de la entrevista con Christian y los resultados de la investigación, comenzamos a crear un prototipo inicial de la aplicación Coaxer. Este prototipo tenía como objetivo visualizar cómo se vería y funcionaría la aplicación, con un enfoque en la personalización y las características de gestión del estrés."
       },
       "page15": {
-        "title": "Iteración y mejora continua",
-        "titleP": "Una vez que tuvimos el prototipo inicial, lo presentamos a Christian para obtener sus comentarios y sugerencias. Establecimos una comunicación continua con él para iterar y mejorar la aplicación en función de sus necesidades y preferencias."
+        "title": "Sonificación... ¿cómo?",
+        "titleP": "La sonificación es el método de mapear relaciones de datos a relaciones entre parámetros de sonido y presentar estos sonidos no lingüísticos como una guía informativa. La sonificación consta de tres tipos diferentes de señales de sonido, y tuvimos que determinar cuál se adaptaba mejor a Christian, en línea con una práctica de diseño altamente personalizada.",
+        "div1Title": "Earcons",
+        "div1P": "Los earcons son mensajes abstractos pequeños que comunican un evento. Están construidos a partir de motivos, que son secuencias rítmicas cortas con diferentes tonos. Los earcons tienen una curva de aprendizaje más pronunciada en comparación con los iconos auditivos.",
+        "div2Title": "Iconos Auditivos",
+        "div2P": "Los iconos auditivos son sonidos que representan acciones o eventos específicos de una manera más concreta. Por ejemplo, cuando un usuario hace clic en un objeto, pueden escuchar un sonido impactante procedente de una fuente como madera o metal. Los iconos auditivos buscan imitar sonidos del mundo real y son más fáciles de reconocer y entender en comparación con los earcons.",
+        "div3Title": "Musicons",
+        "div3P": "Los musicons son otra forma de sonificación que implica el uso de secuencias musicales cortas o canciones para transmitir información. Los musicons se derivan de canciones existentes y se cortan en segmentos cortos. Pueden utilizarse para representar diversos tipos de eventos o acciones."
       },
       "page16": {
-        "title": "Pruebas con usuarios",
-        "titleP": "Además de trabajar en estrecha colaboración con Christian, realizamos pruebas con otros usuarios para obtener una variedad de perspectivas y retroalimentación. Estas pruebas nos ayudaron a identificar áreas de mejora y a refinar aún más la aplicación."
+        "title": "¿Qué aplicaciones de gestión de tareas digitales existen?",
+        "titleP": "Se realizó un análisis de las tres aplicaciones de gestión de tareas más comúnmente utilizadas en plataformas móviles para evaluar qué elementos de estas aplicaciones serían relevantes para incorporar en el proceso de diseño de una herramienta de gestión de tareas ultra-personalizada para Christian.",
+        "div1Title": "Focus Keeper",
+        "div1P": "Se especializa en la técnica Pomodoro, promoviendo sesiones de trabajo enfocadas con cortos descansos. Su fortaleza radica en ayudar a mantener la concentración y prevenir el agotamiento. Sin embargo, puede no ser ideal para tareas que requieran largos períodos sin interrupciones.",
+        "div2Title": "Recordatorios de iPhone",
+        "div2P": "Se integra perfectamente con iOS, ofreciendo simplicidad y facilidad de uso. Su fortaleza radica en el enfoque directo y sin complicaciones para establecer recordatorios y tareas, con notificaciones basadas en la ubicación. Sin embargo, carece de características avanzadas como la gestión de proyectos o un seguimiento detallado.",
+        "div3Title": "Microsoft To Do",
+        "div3P": "Ofrece características completas de gestión de tareas, incluyendo subtareas, plazos y archivos adjuntos. Es adecuado para la planificación detallada de proyectos y el trabajo colaborativo. Sin embargo, su complejidad puede resultar abrumadora para usuarios que buscan un gestor de tareas más simple y minimalista."
       },
       "page17": {
-        "title": "Resultados y conclusiones",
-        "titleP": "En última instancia, el proceso de diseño de Coaxer se centró en crear una aplicación altamente personalizada que ayudara a Christian y a otros usuarios a gestionar mejor su tiempo, tareas y estrés. Los resultados de las pruebas y la retroalimentación de los usuarios fueron en su mayoría positivos, lo que indica que Coaxer tiene el potencial de ser una herramienta valiosa para mejorar el bienestar mental y reducir el estrés en adultos jóvenes.",
-        "div1Title": "Lecciones aprendidas",
-        "div1List-li1": "La importancia de la personalización en las aplicaciones de salud digital",
-        "div1List-li2": "La colaboración cercana con los usuarios es fundamental para el éxito del diseño",
-        "div1List-li3": "La gestión del tiempo y las tareas son áreas críticas para abordar en el diseño",
-        "div2Title": "Pasos futuros",
-        "div2P": "Los pasos futuros para Coaxer incluyen la implementación de características adicionales, pruebas más amplias y la búsqueda de oportunidades para colaborar con otros grupos de usuarios."
+        "title": "Concepto de Coaxer",
+        "titleP": "Coaxer es una aplicación de gestión de tareas diseñada para mejorar la gestión del tiempo y reducir los niveles de estrés. Utiliza sonidos de sonificación como recordatorios suaves para priorizar y completar tareas en tres categorías. Las tres categorías se basan en lo que es más personal e importante para el usuario.",
+        "div1Title": "Diseñado para Ajustarse a Christian",
+        "div1P": "Coaxer está específicamente diseñado para encajar en la vida personal de Christian y en sus rutinas existentes. La aplicación y el concepto se diseñarán y desarrollarán en colaboración con los comentarios y el uso de Christian.",
+        "div2Title": "Priorización",
+        "div2P": "Coaxer utiliza un algoritmo de prioridad para incentivar a Christian a realizar las tareas que ha especificado, según el nivel de prioridad asignado a estas tareas. Esto significa que las tareas con mayor prioridad se recordarán con más frecuencia.",
+        "div3Title": "Categorías de Tareas",
+        "div3P": "Coaxer define las tareas en tres categorías generales, que se basan en lo que es más importante para Christian. Cada una de estas categorías tiene su propio sonido distintivo de earcon, lo que facilita su reconocimiento."
       },
       "page18": {
         "title": "Primera reunión con Christian",
@@ -521,9 +542,9 @@
         ]
       },
       {
-        "name": "Coaxer",
-        "type": "coaxer",
-        "description": "MAplicación de gestión del tiempo móvil desarrollada a través de un proceso de diseño ultra personalizado con el objetivo de aliviar el estrés y estructurar tareas para el estudiante ocupado mediante la emisión de sonidos de notificación personalizados.",
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
+        "description": "Aplicación de gestión del tiempo móvil desarrollada a través de un proceso de diseño ultra personalizado con el objetivo de aliviar el estrés y estructurar tareas para el estudiante ocupado mediante la emisión de sonidos de notificación personalizados.",
         "tags": [
           {
             "name": "diseño móvil",
@@ -535,25 +556,6 @@
           },
           {
             "name": "diseño ultra personalizado",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "CoaxerScroll",
-        "type": "coaxerScroll",
-        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
-        "tags": [
-          {
-            "name": "mobile design",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "gamification/nudging",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

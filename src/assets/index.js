@@ -39,13 +39,12 @@ import coaxerDE from './coaxer/Coaxer de.svg';
 import coaxerThumbnailEN from './coaxer/thumbnails/coaxerthumbnail en.svg';
 import coaxerThumbnailNO from './coaxer/thumbnails/coaxerthumbnail no.svg';
 import coaxerThumbnailES from './coaxer/thumbnails/coaxerthumbnail es.svg';
-import coaxerThumbnailIT from './coaxer/thumbnails/coaxerthumbnail it.svg';3
+import coaxerThumbnailIT from './coaxer/thumbnails/coaxerthumbnail it.svg';
+3;
 import coaxerThumbnailFR from './coaxer/thumbnails/coaxerthumbnail fr.svg';
 import coaxerThumbnailDE from './coaxer/thumbnails/coaxerthumbnail de.svg';
 
-
-
-import RingmerkingNO from './ringmerkingslideshow/thumbnails/ringmerkingForsideNO.png'
+import RingmerkingNO from './ringmerkingslideshow/thumbnails/ringmerkingForsideNO.png';
 import RingmerkingEN from './ringmerkingslideshow/thumbnails/ringmerkingForsideEN.png';
 import RingmerkingES from './ringmerkingslideshow/thumbnails/ringmerkingForsideES.png';
 import RingmerkingIT from './ringmerkingslideshow/thumbnails/ringmerkingForsideIT.png';
@@ -76,7 +75,6 @@ import designChallenge from './ringmerkingslideshow/designChallenge.png';
 
 import designChallengeSolution from './ringmerkingslideshow/designChallengeSolution.png';
 
-
 import prototypePlaceholder from './ringmerkingslideshow/prototypePlaceholder.png';
 
 import frontpage from './ringmerkingslideshow/frontpage.png';
@@ -103,20 +101,20 @@ import blidekarusell5 from './ringmerkingslideshow/bildekarusell4.jpeg';
 import blidekarusell6 from './ringmerkingslideshow/bildekarusell5.jpeg';
 import blidekarusell7 from './ringmerkingslideshow/bildekarusell6.jpeg';
 
-import ringmerkingGammelSide from './ringmerkingslideshow/gammelSide.png'
-import ringmerkingNySide from './ringmerkingslideshow/nySide.png'
+import ringmerkingGammelSide from './ringmerkingslideshow/gammelSide.png';
+import ringmerkingNySide from './ringmerkingslideshow/nySide.png';
 
 import coaxerFrontCover from './coaxer/coaxerFrontCover.png';
 
 import introductionImg from './coaxer/introductionImg.png';
 
-import doubleDiamond from './coaxer/doubleDiamond.png';
+
 
 import ouruserChristian from './coaxer/ouruserChristian.png';
 
 import contactChristian from './coaxer/contactChristian.png';
 
-import ultraPerosnalizedDesign from './coaxer/ultraPersonalizedDesign.png'
+import ultraPerosnalizedDesign from './coaxer/ultraPersonalizedDesign.png';
 
 import pact from './coaxer/pact.svg';
 
@@ -132,7 +130,7 @@ import earcon from './coaxer/earcon.png';
 
 import auditoryicon from './coaxer/auditoryicons.png';
 
-import musiccons from './coaxer/musiccons.png'
+import musiccons from './coaxer/musiccons.png';
 
 import focuskeeper from './coaxer/focuskeeper.png';
 
@@ -140,37 +138,72 @@ import iphonereminders from './coaxer/iphonereminders.png';
 
 import microsofttodo from './coaxer/microsofttodo.png';
 
-import coaxerscenario from './coaxer/coaxerscenario.png'
+import coaxerscenario from './coaxer/coaxerscenario.png';
 
 import meeting1 from './coaxer/meeting1.png';
 
-import meeting2 from './coaxer/meeting2.png'; 
+import meeting2 from './coaxer/meeting2.png';
 
 import meeting3 from './coaxer/meeting3.png';
 
-import calendarIntegration from './coaxer/calendarIntegration.png'
+import calendarIntegration from './coaxer/calendarIntegration.png';
 
 import coaxerFrontPage from './coaxer/coaxer-frontpage.svg';
 
 import evaluationImpact from './coaxer/evaluationImpact.png';
 
-import intersectionNO from './coaxer/alleredeFunnetUt/intersectNO.svg'
+import relevantPunkterNO from './coaxer/relevantPunkterNO.svg';
 
-import doublediamondDiscover from './coaxer/doublediamond-discover.svg'
-
-import doublediamondDefine  from './coaxer/doublediamond-define.svg';
-
-
-import relevantPunkterNO from './coaxer/relevantPunkterNO.svg'
-
-import uppd from './coaxer/uppd.svg'
-
-import uppdChristian from './coaxer/uppdChristian.svg'
+import uppd from './coaxer/uppd.svg';
 
 import academic from './coaxer/sounds/academic.wav';
 import practical from './coaxer/sounds/practical.wav';
 import leisure from './coaxer/sounds/leisure.wav';
 
+//coaxer
+import intersectEN from './coaxer/allreadyDiscovered/intersectEN.svg';
+import intersectNO from './coaxer/allreadyDiscovered/intersectNO.svg';
+import intersectES from './coaxer/allreadyDiscovered/intersectES.svg';
+import intersectIT from './coaxer/allreadyDiscovered/intersectIT.svg';
+import intersectFR from './coaxer/allreadyDiscovered/intersectFR.svg';
+import intersectDE from './coaxer/allreadyDiscovered/intersectDE.svg';
+
+import mostrelevantEN from './coaxer/mostrelevant/mostrelevantEN.svg';
+import mostrelevantNO from './coaxer/mostrelevant/mostrelevantNO.svg';
+import mostrelevantES from './coaxer/mostrelevant/mostrelevantES.svg';
+import mostrelevantIT from './coaxer/mostrelevant/mostrelevantIT.svg';
+import mostrelevantFR from './coaxer/mostrelevant/mostrelevantFR.svg';
+import mostrelevantDE from './coaxer/mostrelevant/mostrelevantDE.svg';
+
+import doubleDiamondExploreEN from './coaxer/doublediamondExplore/doublediamond-exploreEN.svg';
+import doubleDiamondExploreNO from './coaxer/doublediamondExplore/doublediamond-exploreNO.svg';
+import doubleDiamondExploreES from './coaxer/doublediamondExplore/doublediamond-exploreES.svg';
+import doubleDiamondExploreIT from './coaxer/doublediamondExplore/doublediamond-exploreIT.svg';
+import doubleDiamondExploreFR from './coaxer/doublediamondExplore/doublediamond-exploreFR.svg';
+import doubleDiamondExploreDE from './coaxer/doublediamondExplore/doublediamond-exploreDE.svg';
+
+
+import doubleDiamondDefineEN from './coaxer/doublediamondDefine/doublediamond-defineEN.svg';
+import doubleDiamondDefineNO from './coaxer/doublediamondDefine/doublediamond-defineNO.svg';
+import doubleDiamondDefineES from './coaxer/doublediamondDefine/doublediamond-defineES.svg';
+import doubleDiamondDefineIT from './coaxer/doublediamondDefine/doublediamond-defineIT.svg';
+import doubleDiamondDefineFR from './coaxer/doublediamondDefine/doublediamond-defineFR.svg';
+import doubleDiamondDefineDE from './coaxer/doublediamondDefine/doublediamond-defineDE.svg';
+
+
+import uppdEN from './coaxer/uppd/uppdEN.svg';
+import uppdNO from './coaxer/uppd/uppdNO.svg';
+import uppdES from './coaxer/uppd/uppdES.svg';
+import uppdIT from './coaxer/uppd/uppdIT.svg';
+import uppdFR from './coaxer/uppd/uppdFR.svg';
+import uppdDE from './coaxer/uppd/uppdDE.svg';
+
+import uppdChristianEN from './coaxer/uppdChristian/uppdChristianEN.svg';
+import uppdChristianNO from './coaxer/uppdChristian/uppdChristianNO.svg';
+import uppdChristianES from './coaxer/uppdChristian/uppdChristianES.svg';
+import uppdChristianIT from './coaxer/uppdChristian/uppdChristianIT.svg';
+import uppdChristianFR from './coaxer/uppdChristian/uppdChristianFR.svg';
+import uppdChristianDE from './coaxer/uppdChristian/uppdChristianDE.svg';
 
 
 
@@ -264,7 +297,6 @@ export {
   ringmerkingNySide,
   coaxerFrontCover,
   introductionImg,
-  doubleDiamond,
   ouruserChristian,
   contactChristian,
   ultraPerosnalizedDesign,
@@ -279,7 +311,6 @@ export {
   focuskeeper,
   iphonereminders,
   microsofttodo,
-  doublediamondDefine,
   coaxerscenario,
   meeting1,
   meeting2,
@@ -287,12 +318,45 @@ export {
   calendarIntegration,
   coaxerFrontPage,
   evaluationImpact,
-  intersectionNO,
-  doublediamondDiscover,
   relevantPunkterNO,
   uppd,
-  uppdChristian,
   academic,
   practical,
-  leisure
+  leisure,
+  intersectNO,
+  intersectEN,
+  intersectES,
+  intersectIT,
+  intersectFR,
+  intersectDE,
+  mostrelevantEN,
+  mostrelevantNO,
+  mostrelevantES,
+  mostrelevantIT,
+  mostrelevantFR,
+  mostrelevantDE,
+  doubleDiamondExploreEN,
+  doubleDiamondExploreNO,
+  doubleDiamondExploreES,
+  doubleDiamondExploreIT,
+  doubleDiamondExploreFR,
+  doubleDiamondExploreDE,
+  doubleDiamondDefineEN,
+  doubleDiamondDefineNO,
+  doubleDiamondDefineES,
+  doubleDiamondDefineIT,
+  doubleDiamondDefineFR,
+  doubleDiamondDefineDE,
+  uppdEN,
+  uppdNO,
+  uppdES,
+  uppdIT,
+  uppdFR,
+  uppdDE,
+  uppdChristianEN,
+  uppdChristianNO,
+  uppdChristianES,
+  uppdChristianIT,
+  uppdChristianFR,
+  uppdChristianDE,
 };

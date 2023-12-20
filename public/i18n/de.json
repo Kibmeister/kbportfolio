@@ -167,9 +167,14 @@
         "div2P": "Wir erkannten auch einige Herausforderungen, denen Christian gegenüberstand, wie die Schwierigkeit, den Überblick über seine Aufgaben zu behalten und einen ausgewogenen Lebensstil zwischen Studium, Arbeit, Musik und Beziehung zu führen."
       },
       "page11": {
-        "title": "User Journey Mapping",
-        "titleP": "Um ein besseres Verständnis für Christians Erfahrungen zu entwickeln, erstellten wir ein User Journey Map, das seine Interaktionen und Gefühle im Zusammenhang mit seiner mentalen Gesundheit und seinem Aufgabenmanagement darstellt.",
-        "imgcaption": "Ein Beispiel für eine User Journey Map"
+        "title": "Duo-Ethnografie...(Methodologie)",
+        "titleP": "Da dies ein akademisches Bachelorprojekt war, war die gewählte Methodologie für die Aufgabe wichtig. Duo-Ethnografie wurde als Forschungsmethode ausgewählt, bei der zwei oder mehr Forscher zusammenarbeiten, um eine dialogische Erzählung auf der Grundlage ihrer eigenen Erfahrungen und Perspektiven zu erstellen. Die Daten sind daher ein Vergleich der diskutierten Geschichten, bei denen die Forscher über ihre früheren Erfahrungen reflektiert und sie neu konzipiert haben.",
+        "div1Title": "Freundschaft",
+        "div1P": "Da der Co-Designer bereits ein enger Freund von Christian war, war dies ein guter Ausgangspunkt, um den Dialog zu etablieren, den die Duo-Ethnografie erfordert, um Geschichten und Erfahrungen zwischen Benutzer und Designer auszutauschen.",
+        "div2Title": "Neue Ideen erkunden",
+        "div2P": "Das Teilen ähnlicher Erfahrungen ermöglichte auch die Neukonzeptionierung früherer Erfahrungen und die Erkundung der Elemente von Menschen, Aktivitäten, Umgebungen und Technologie, die die Analysemethode PACT ausmachen.",
+        "div3Title": "Mehrere Forscher",
+        "div3P": "Während der Feldarbeitssitzungen waren mehrere Forscher erforderlich, um den verwobenen, fließenden Dialog zwischen dem Co-Designer und Christian zu entschlüsseln, da dieser aus der Nähe schwer zu interpretieren war."
       },
       "page12": {
         "title": "Wichtige Erkenntnisse",
@@ -196,24 +201,34 @@
         "div2P": "Wir nahmen Christians Feedback ernst und führten iterative Verbesserungen durch, um die App noch besser auf seine Bedürfnisse abzustimmen."
       },
       "page15": {
-        "title": "Ergebnisse",
-        "titleP": "Coaxer erwies sich als effektive Lösung für Christian, um seine Aufgaben zu organisieren und seinen Stress zu bewältigen. Er berichtete von einer verbesserten mentalen Gesundheit und einem gesteigerten Wohlbefinden.",
-        "div1Title": "Positive Auswirkungen",
-        "div1P": "Die App half Christian, den Überblick über seine Aufgaben zu behalten und sie effizienter zu erledigen. Dies führte zu einer Reduzierung seines Stresses und einer Verbesserung seiner mentalen Gesundheit.",
-        "div2Title": "Weitere Anwendungen",
-        "div2P": "Die äußerst persönliche Designmethode, die in Coaxer angewendet wurde, könnte auch in anderen Kontexten genutzt werden, um maßgeschneiderte Lösungen für individuelle Benutzerbedürfnisse zu entwickeln."
+        "title": "Sonifikation... wie?",
+        "titleP": "Sonifikation ist die Methode, Datenbeziehungen in Beziehung zu Klangparameterbeziehungen abzubilden und diese nicht-sprachlichen Klänge als informativen Leitfaden darzustellen. Die Sonifikation besteht aus drei verschiedenen Arten von Tonsignalen, und aus diesen mussten wir herausfinden, welches am besten zu Christian passt, im Einklang mit einer hochpersonalisierten Designpraxis.",
+        "div1Title": "Ohrsymbole",
+        "div1P": "Ohrsymbole sind abstrakte kleine Nachrichten, die ein Ereignis kommunizieren. Sie werden aus Motiven konstruiert, kurzen rhythmischen Sequenzen mit unterschiedlichen Tonhöhen. Ohrsymbole haben eine steilere Lernkurve im Vergleich zu auditiven Symbolen.",
+        "div2Title": "Auditive Symbole",
+        "div2P": "Auditive Symbole sind Klänge, die bestimmte Handlungen oder Ereignisse auf eine konkretere Weise repräsentieren. Zum Beispiel kann ein Benutzer, der auf ein Objekt klickt, ein Schlaggeräusch von einer Quelle wie Holz oder Metall hören. Auditive Symbole zielen darauf ab, Klänge aus der realen Welt nachzuahmen und sind leichter zu erkennen und zu verstehen im Vergleich zu Ohrsymbolen.",
+        "div3Title": "Musicons",
+        "div3P": "Musicons sind eine andere Form der Sonifikation, bei der kurze musikalische Sequenzen oder Lieder verwendet werden, um Informationen zu vermitteln. Musicons werden aus vorhandenen Liedern entnommen und in kurze Segmente geschnitten. Sie können verwendet werden, um verschiedene Arten von Ereignissen oder Handlungen darzustellen."
       },
       "page16": {
-        "title": "Fazit",
-        "titleP": "Coaxer war ein erfolgreiches Projekt, bei dem eine äußerst persönliche Aufgabenmanagement-App entwickelt wurde, um die mentale Gesundheit und den Stress bei jüngeren Erwachsenen zu verbessern. Durch die Anwendung des äußerst persönlichen Designs konnten wir eine maßgeschneiderte Lösung für Christian entwickeln, die positive Auswirkungen auf sein Leben hatte.",
-        "div1Title": "Lektionen gelernt",
-        "div1P": "Das Projekt hat gezeigt, wie wichtig es ist, die Bedürfnisse und Präferenzen des Benutzers in den Mittelpunkt des Designs zu stellen und wie eine äußerst persönliche Herangehensweise zu besseren Ergebnissen führen kann.",
-        "div2Title": "Zukünftige Entwicklungen",
-        "div2P": "In Zukunft könnten ähnliche Ansätze und Methoden verwendet werden, um personalisierte Lösungen für eine Vielzahl von Anwendungsbereichen zu entwickeln."
+        "title": "Welche digitalen Aufgabenverwaltungs-Apps gibt es?",
+        "titleP": "Eine Analyse der drei am häufigsten verwendeten Aufgabenverwaltungs-Apps auf mobilen Plattformen wurde durchgeführt, um zu bewerten, welche Elemente dieser Apps relevant wären, um sie in den Prozess der Gestaltung eines ultra-persönlichen Aufgabenverwaltungstools für Christian einzubeziehen.",
+        "div1Title": "Focus Keeper",
+        "div1P": "Spezialisiert sich auf die Pomodoro-Technik und fördert konzentrierte Arbeitsphasen mit kurzen Pausen. Die Stärke liegt darin, die Konzentration aufrechtzuerhalten und Burnout zu verhindern. Es könnte jedoch nicht ideal für Aufgaben sein, die lange, ununterbrochene Zeiträume erfordern.",
+        "div2Title": "iPhone-Erinnerungen",
+        "div2P": "Integriert sich nahtlos in iOS und bietet Einfachheit und Benutzerfreundlichkeit. Die Stärke liegt in der einfachen Herangehensweise an das Einrichten von Erinnerungen und Aufgaben mit benachrichtigungsbasierten Standortfunktionen. Es fehlen jedoch fortgeschrittene Funktionen wie Projektmanagement oder detaillierte Verfolgung.",
+        "div3Title": "Microsoft To Do",
+        "div3P": "Bietet umfassende Aufgabenverwaltungsfunktionen, einschließlich Teilaufgaben, Fristen und Dateianhängen. Es eignet sich gut für detaillierte Projektplanung und Zusammenarbeit. Die Komplexität könnte jedoch überwältigend sein für Benutzer, die nach einer einfacheren, minimalistischen Aufgabenverwaltung suchen."
       },
       "page17": {
-        "subTitle": "Vielen Dank",
-        "subTitleP": "Vielen Dank für Ihr Interesse an unserem Projekt Coaxer. Wenn Sie weitere Informationen wünschen oder Fragen haben, zögern Sie nicht, uns zu kontaktieren."
+        "title": "Konzept von Coaxer",
+        "titleP": "Coaxer ist eine Aufgabenverwaltungs-App, die entwickelt wurde, um das Zeitmanagement zu verbessern und den Stresspegel zu reduzieren. Sie verwendet Sonifikationsklänge als sanfte Erinnerungen, um Aufgaben in drei Kategorien zu priorisieren und abzuschließen. Die drei Kategorien basieren auf dem, was für den Benutzer am persönlichsten und wichtigsten ist.",
+        "div1Title": "Entwickelt, um zu Christian zu passen",
+        "div1P": "Coaxer wurde speziell entwickelt, um in Christians persönliches Leben und bestehende Routinen zu passen. Die App und das Konzept werden in Zusammenarbeit mit Christians Feedback und Nutzung gestaltet und entwickelt.",
+        "div2Title": "Priorisierung",
+        "div2P": "Coaxer verwendet einen Priorisierungsalgorithmus, um Christian dazu zu bewegen, die von ihm festgelegten Aufgaben basierend auf der Prioritätsstufe, die diesen Aufgaben zugewiesen ist, zu erledigen. Dies bedeutet, dass Aufgaben mit höherer Priorität häufiger erinnert werden.",
+        "div3Title": "Aufgabenkategorien",
+        "div3P": "Coaxer definiert Aufgaben in drei allgemeinen Kategorien, die auf dem beruhen, was für Christian am wichtigsten ist. Jede dieser Kategorien hat ihren eigenen eindeutigen Ohrsymbol-Klang, um sie leichter erkennbar zu machen."
       },
       "page18": {
         "title": "Erstes Treffen mit Christian",
@@ -511,8 +526,8 @@
         ]
       },
       {
-        "name": "Coaxer",
-        "type": "coaxer",
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
         "description": "Mobile Zeiterfassungs-App, die im Rahmen eines ultrapersonalisierten Designprozesses entwickelt wurde, um Stress abzubauen und Aufgaben für den beschäftigten Studenten zu strukturieren, indem personalisierte Benachrichtigungstöne abgespielt werden.",
         "tags": [
           {
@@ -525,25 +540,6 @@
           },
           {
             "name": "ultrapersonalisiertes design",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "CoaxerScroll",
-        "type": "coaxerScroll",
-        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
-        "tags": [
-          {
-            "name": "mobile design",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "gamification/nudging",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

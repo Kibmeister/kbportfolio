@@ -64,6 +64,42 @@ import {
   feedbackResultsIT,
   feedbackResultsFR,
   feedbackResultsDE,
+  intersectNO,
+  intersectEN,
+  intersectES,
+  intersectIT,
+  intersectFR,
+  intersectDE,
+  mostrelevantEN,
+  mostrelevantNO,
+  mostrelevantES,
+  mostrelevantIT,
+  mostrelevantFR,
+  mostrelevantDE,
+  doubleDiamondExploreEN,
+  doubleDiamondExploreNO,
+  doubleDiamondExploreES,
+  doubleDiamondExploreIT,
+  doubleDiamondExploreFR,
+  doubleDiamondExploreDE,
+  uppdEN,
+  uppdNO,
+  uppdES,
+  uppdIT,
+  uppdFR,
+  uppdDE,
+  uppdChristianEN,
+  uppdChristianNO,
+  uppdChristianES,
+  uppdChristianIT,
+  uppdChristianFR,
+  uppdChristianDE,
+  doubleDiamondDefineEN,
+  doubleDiamondDefineNO,
+  doubleDiamondDefineES,
+  doubleDiamondDefineIT,
+  doubleDiamondDefineFR,
+  doubleDiamondDefineDE,
 } from '../assets';
 
 //only used for internalObserver
@@ -165,14 +201,6 @@ const imageMapWorks = {
   },
 };
 
-const imageMapCoaxer = {
-  en: coaxerEN,
-  no: coaxerNO,
-  es: coaxerES,
-  it: coaxerIT,
-  fr: coaxerFR,
-  de: coaxerDE,
-};
 const imageMapRingmerking = {
   en: RingmerkingEN,
   no: RingmerkingNO,
@@ -186,6 +214,7 @@ const imageMapTestimonals = {
   one: mike,
 };
 
+//ringmerking
 const imageMapRingmerkingEmathyMap = {
   en: empathyMapEN,
   no: empathyMapNO,
@@ -203,6 +232,78 @@ const imageMapRingmerkingResultsMap = {
   fr: feedbackResultsFR,
   de: feedbackResultsDE,
 };
+
+//coaxer
+const imageMapCoaxer = {
+  en: coaxerEN,
+  no: coaxerNO,
+  es: coaxerES,
+  it: coaxerIT,
+  fr: coaxerFR,
+  de: coaxerDE,
+};
+
+const coaxerAlreadyDiscoveredMap = {
+  en: intersectEN,
+  no: intersectNO,
+  es: intersectES,
+  it: intersectIT,
+  fr: intersectFR,
+  de: intersectDE,
+};
+
+const coaxerMostRelevantMap = {
+  en: mostrelevantEN,
+  no: mostrelevantNO,
+  es: mostrelevantES,
+  it: mostrelevantIT,
+  fr: mostrelevantFR,
+  de: mostrelevantDE,
+};
+
+const coaxerDoubleDiamondExploreMap = {
+  en: doubleDiamondExploreEN,
+  no: doubleDiamondExploreNO,
+  es: doubleDiamondExploreES,
+  it: doubleDiamondExploreIT,
+  fr: doubleDiamondExploreFR,
+  de: doubleDiamondExploreDE,
+};
+
+const coaxerUppdMap = {
+  en: uppdEN,
+  no: uppdNO,
+  es: uppdES,
+  it: uppdIT,
+  fr: uppdFR,
+  de: uppdDE,
+};
+
+const coaxerUppdChristianMap = {
+  en: uppdChristianEN,
+  no: uppdChristianNO,
+  es: uppdChristianES,
+  it: uppdChristianIT,
+  fr: uppdChristianFR,
+  de: uppdChristianDE,
+};
+
+const coaxerDoubleDiamondDefineMap = {
+  en: doubleDiamondDefineEN,
+  no: doubleDiamondDefineNO,
+  es: doubleDiamondDefineES,
+  it: doubleDiamondDefineIT,
+  fr: doubleDiamondDefineFR,
+  de: doubleDiamondDefineDE,
+};
+
+//
+
+
+
+
+
+
 
 const imageMapImgCarousel = {
   1: { img: blidekarusell1, name: 'Fast AF registrering ' },
@@ -354,4 +455,10 @@ export {
   imageMapRingmerkingEmathyMap,
   imageMapImgCarousel,
   imageMapRingmerkingResultsMap,
+  coaxerAlreadyDiscoveredMap,
+  coaxerMostRelevantMap,
+  coaxerDoubleDiamondExploreMap,
+  coaxerUppdMap,
+  coaxerUppdChristianMap,
+  coaxerDoubleDiamondDefineMap,
 };

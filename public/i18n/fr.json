@@ -150,31 +150,32 @@
         "div2P": "Lors de la première rencontre avec Frederik, Christian s'est montré intéressé par les thèmes de la santé numérique, du bien-être mental et de la gestion du stress. Ce sont des sujets qu'il pensait avoir et qui pourraient avoir un grand impact sur sa vie. Après avoir partagé notre vision du projet Coaxer avec lui, Christian a accepté d'être notre utilisateur pendant la durée du projet."
       },
       "page9": {
-        "title": "Exploration approfondie",
-        "titleP": "Après avoir recruté Christian en tant qu'utilisateur, nous avons mené des entretiens approfondis pour mieux comprendre sa vie quotidienne et ses expériences liées au stress. Ces entretiens nous ont permis d'explorer ses besoins et ses attentes en matière de gestion des tâches.",
-        "div1P": "Au cours de cette phase, nous avons identifié plusieurs thèmes clés liés à la gestion des tâches et au bien-être mental de Christian, notamment :",
-        "div1List-li1": "La gestion du temps et des priorités",
-        "div1List-li2": "La motivation et la procrastination",
-        "div1List-li3": "Le maintien de l'équilibre entre la vie professionnelle et la vie personnelle",
-        "div1List-li4": "L'importance de la flexibilité dans la gestion des tâches"
+        "title": "Conception Ultra-Personnalisée",
+        "titleP": "Au même moment, nous avons également découvert le concept de conception ultra-personnalisée, qui implique les trois processus suivants.",
+        "div1Title": "Collecte de Données à Trois Étapes",
+        "div1P": "La conception ultra-personnalisée consiste à collecter des données de l'utilisateur à la fois avant et pendant l'utilisation et le développement du produit. Ces données aident à comprendre les préférences, les besoins et le comportement de l'utilisateur.",
+        "div2Title": "Conception Personnalisée",
+        "div2P": "Les décisions de conception dans une approche ultra-personnalisée sont basées sur les données collectées auprès de l'utilisateur. Ces décisions sont spécifiquement adaptées à chaque utilisateur, en tenant compte de ses besoins et préférences uniques.",
+        "div3Title": "Personnalisation et Adaptation",
+        "div3P": "La conception ultra-personnalisée va au-delà des options de personnalisation génériques. L'objectif est de créer un produit entièrement personnalisé et adapté aux besoins et préférences spécifiques de l'utilisateur. Ce niveau de personnalisation permet une expérience utilisateur plus fluide et intuitive."
       },
       "page10": {
-        "title": "Comprendre les besoins de Christian",
-        "titleP": "En analysant les données recueillies auprès de Christian, nous avons identifié ses besoins spécifiques en matière de gestion des tâches. Il était essentiel de comprendre ces besoins pour concevoir une solution qui lui serait véritablement utile.",
-        "div1Title": "Besoins de Christian",
-        "div1List-li1": "Un moyen de gérer son temps de manière efficace pour pouvoir consacrer du temps à ses passions, comme la musique et le squash.",
-        "div1List-li2": "Une solution pour rester motivé et éviter la procrastination lorsqu'il s'agit de tâches importantes.",
-        "div1List-li3": "Un moyen de suivre ses progrès et de voir ce qu'il a accompli au fil du temps.",
-        "div1List-li4": "Un moyen de trouver un équilibre entre sa vie professionnelle et sa vie personnelle, en tenant compte de ses obligations de travail et de ses engagements sociaux."
+        "title": "La Correspondance Parfaite",
+        "titleP": "La concordance entre Christian (que nous avions en tête dès le départ) et la nouvelle méthodologie de conception inconnue mais passionnante de la conception ultra-personnalisée a jeté les bases de la configuration du processus de conception. Notre idée était de combiner les deux et d'enquêter pour savoir si Christian était intéressé à participer à un tel projet.",
+        "div1Title": "Christian",
+        "div1P": "En tant qu'étudiant occupé et musicien, Christian menait une vie avec de nombreuses responsabilités et événements qui exigeaient son temps. Pourrions-nous exploiter la pensée de conception et la technologie numérique pour avoir un impact positif sur le bien-être de Christian ?",
+        "div2Title": "Conception Ultra-Personnalisée",
+        "div2P": "Était-ce le bon concept de conception ultra-personnalisée pour Christian en tant qu'utilisateur final ? Il s'agissait d'un concept de conception similaire à la conception centrée sur l'utilisateur et à la conception participative, mais avec un accent plus marqué sur le développement continu de la conception."
       },
       "page11": {
-        "title": "L'approche de conception",
-        "titleP": "À partir des informations recueillies auprès de Christian et de nos recherches, nous avons élaboré une approche de conception centrée sur l'utilisateur pour le projet Coaxer. Notre objectif était de créer une application de gestion des tâches ultra-personnalisée qui répondrait aux besoins spécifiques de Christian en matière de gestion du stress et du bien-être mental.",
-        "div1P": "Les principaux aspects de notre approche de conception étaient les suivants :",
-        "div1List-li1": "Personnalisation : Nous voulions que l'application soit entièrement personnalisable pour répondre aux besoins individuels de chaque utilisateur.",
-        "div1List-li2": "Suivi des objectifs : Nous avons intégré des fonctionnalités pour aider les utilisateurs à suivre leurs progrès et à rester motivés.",
-        "div1List-li3": "Flexibilité : L'application devait être suffisamment flexible pour s'adapter aux changements dans la vie quotidienne de l'utilisateur.",
-        "div1List-li4": "Équilibre : Nous avons cherché à aider les utilisateurs à trouver un équilibre entre leurs obligations professionnelles et personnelles."
+        "title": "Duo Ethnographie... (Méthodologie)",
+        "titleP": "Étant donné qu'il s'agissait d'un projet de licence universitaire, le choix de la méthodologie pour la tâche était important. La duo-ethnographie a été choisie comme méthode de recherche dans laquelle deux chercheurs ou plus collaborent pour produire un récit dialogique basé sur leurs propres expériences et perspectives. Les données consistent donc en une comparaison des histoires discutées, avec les chercheurs réfléchissant et reconceptualisant leurs expériences antérieures.",
+        "div1Title": "Amitié",
+        "div1P": "Étant donné que le co-concepteur était déjà un ami proche de Christian, cela constituait un bon point de départ pour établir le dialogue nécessaire à l'échange d'histoires et d'expériences entre l'utilisateur et le concepteur.",
+        "div2Title": "Exploration de Nouvelles Idées",
+        "div2P": "Le partage d'expériences similaires a également permis de reconceptualiser les expériences antérieures et d'explorer les éléments des personnes, des activités, des environnements et de la technologie qui composent la méthode d'analyse PACT.",
+        "div3Title": "Multiples Chercheurs",
+        "div3P": "Plusieurs chercheurs étaient nécessaires lors des sessions de travail sur le terrain pour décrypter le récit fluide et entrelacé produit par les participants tout au long du processus."
       },
       "page12": {
         "title": "Processus de conception",
@@ -187,19 +188,22 @@
         "div3P": "Nous avons régulièrement soumis les prototypes à des tests utilisateur avec Christian pour recueillir des commentaires et apporter des améliorations en fonction de ses suggestions."
       },
       "page13": {
-        "title": "Résultats de la conception",
-        "titleP": "Le processus de conception de Coaxer a abouti à la création d'une application de gestion des tâches entièrement personnalisable qui répond aux besoins spécifiques de Christian en matière de gestion du stress et du bien-être mental. L'application permet à Christian de gérer son temps de manière efficace, de rester motivé et de suivre ses progrès.",
-        "div1Title": "Fonctionnalités clés de l'application Coaxer",
-        "div1List-li1": "Gestion personnalisée des tâches",
-        "div1List-li2": "Suivi des objectifs",
-        "div1List-li3": "Flexibilité pour s'adapter aux changements",
-        "div1List-li4": "Équilibre entre la vie professionnelle et la vie personnelle",
-        "div2P": "Grâce à ces fonctionnalités, Christian peut désormais gérer son temps de manière plus efficace, rester motivé et trouver un équilibre entre ses différentes responsabilités et passions."
+        "title": "Sonification et Poussées",
+        "titleP": "La sonification et les poussées ont émergé comme des concepts lors de la revue de la littérature, et après un examen plus approfondi, semblaient pertinents pour ce que nous savions de Christian en tant qu'étudiant occupé et musicien.",
+        "div1Title": "Sonification",
+        "div1P": "La sonification est le processus de mise en correspondance des relations de données avec les relations entre les paramètres sonores et de présenter ce son non linguistique comme un guide informatif. Elle implique l'utilisation du son pour transmettre des informations ou communiquer des événements. La sonification peut prendre la forme d'earcons (représentations abstraites d'événements), d'icônes auditives (représentations d'événements spécifiques) ou de musicons (séquences musicales courtes).",
+        "div2Title": "Poussées",
+        "div2P": "Les poussées, en revanche, sont une approche visant à motiver les individus à prendre certaines décisions ou à entreprendre des actions spécifiques. Elle implique l'utilisation de suggestions subtiles ou de rappels pour influencer la prise de décision et le comportement. Les poussées peuvent être graphiques, auditives, physiques ou lyriques. L'auto-poussée est un type spécifique de poussée qui consiste à modifier le monde extérieur d'une personne, à la fois mentalement et physiquement, pour contrer le manque d'auto-contrôle."
       },
       "page14": {
-        "title": "Conclusion",
-        "titleP": "Le projet Coaxer a été une expérience enrichissante qui nous a permis d'explorer comment la technologie numérique peut contribuer à améliorer la santé mentale des jeunes adultes confrontés au stress. Grâce à une approche de conception centrée sur l'utilisateur, nous avons développé une application de gestion des tâches ultra-personnalisée qui répond aux besoins spécifiques de notre utilisateur, Christian.",
-        "div1P": "Le projet Coaxer a également renforcé notre compréhension de la gestion des tâches et de son importance pour le bien-être mental. Nous espérons que cette application sera utile à Christian et à d'autres jeunes adultes confrontés aux défis du stress et de la gestion du temps."
+        "title": "Les Retours de Christian",
+        "titleP": "Tout au long du processus de conception, nous avons continuellement sollicité les retours de Christian pour nous assurer que l'application répondait à ses attentes et à ses besoins.",
+        "div1Title": "Séances de Retours",
+        "div1P": "Des séances régulières de retours étaient organisées avec Christian pour recueillir ses avis sur la conception, la fonctionnalité et les caractéristiques de l'application.",
+        "div2Title": "Conception Itérative",
+        "div2P": "En fonction des retours de Christian, nous avons apporté des améliorations itératives à l'application, la peaufinant pour mieux correspondre à ses préférences et à ses exigences.",
+        "div3Title": "Rôle du Co-concepteur",
+        "div3P": "Le co-concepteur a joué un rôle crucial dans la facilitation de la communication entre Christian et l'équipe de conception, garantissant que les retours de Christian étaient efficacement intégrés à la conception."
       },
       "page15": {
         "title": "Sonification… Comment ça marche ?",
@@ -531,8 +535,8 @@
         ]
       },
       {
-        "name": "Coaxer",
-        "type": "coaxer",
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
         "description": "Application de gestion du temps mobile développée grâce à un processus de conception ultra personnalisé dans le but d'alléger le stress et de structurer les tâches pour l'étudiant occupé en émettant des sons de notification personnalisés.",
         "tags": [
           {
@@ -545,25 +549,6 @@
           },
           {
             "name": "design ultra personnalisé",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "CoaxerScroll",
-        "type": "coaxerScroll",
-        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
-        "tags": [
-          {
-            "name": "mobile design",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "gamification/nudging",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

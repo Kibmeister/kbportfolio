@@ -5,8 +5,16 @@ import ReactPlayer from 'react-player';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { motion, useScroll, useSpring, useMotionValue } from 'framer-motion';
+import { motion, useSpring, useMotionValue } from 'framer-motion';
 import { styles } from '../../styles';
+import {
+  coaxerAlreadyDiscoveredMap,
+  coaxerMostRelevantMap,
+  coaxerDoubleDiamondExploreMap,
+  coaxerUppdMap,
+  coaxerUppdChristianMap,
+  coaxerDoubleDiamondDefineMap,
+} from '../../constants';
 import {
   coaxerFrontCover,
   introductionImg,
@@ -23,18 +31,12 @@ import {
   focuskeeper,
   iphonereminders,
   microsofttodo,
-  doublediamondDefine,
   meeting1,
   meeting2,
   meeting3,
   calendarIntegration,
   coaxerFrontPage,
   evaluationImpact,
-  intersectionNO,
-  doublediamondDiscover,
-  relevantPunkterNO,
-  uppd,
-  uppdChristian,
   academic,
   leisure,
   practical,
@@ -48,6 +50,32 @@ const CoaxerScroll = ({ onClose }) => {
   const panelsRef = useRef(null);
   const sectionsRefs = useRef([]);
   const scrollProgressMotion = useMotionValue(0);
+  const [coaxerAlreadyDiscoveredImg, setCoaxerAlreadyDiscoveredImg] =
+    useState('');
+  const [mostRelevantImg, setMostRelevantImg] = useState('');
+  const [doublediamondExploreImg, setDoublediamondExploreImg] = useState('');
+  const [uppdImg, setUppdImg] = useState('');
+  const [upppChristianImg, setUppdChrsitianImg] = useState('');
+  const [doubleDiamondDefineImg, setDoubleDiamondDefineImg] = useState('');
+
+  // listener for language dependent images
+  useEffect(() => {
+    const coaxerAlreadyDiscoveredImg =
+      coaxerAlreadyDiscoveredMap[i18n.language];
+    const mostRelevantImg = coaxerMostRelevantMap[i18n.language];
+    const doublediamondExploreImg =
+      coaxerDoubleDiamondExploreMap[i18n.language];
+    const uppdImg = coaxerUppdMap[i18n.language];
+    const upppdChristianImg = coaxerUppdChristianMap[i18n.language];
+    const doubleDiamondDefineImg = coaxerDoubleDiamondDefineMap[i18n.language];
+
+    setCoaxerAlreadyDiscoveredImg(coaxerAlreadyDiscoveredImg);
+    setMostRelevantImg(mostRelevantImg);
+    setDoublediamondExploreImg(doublediamondExploreImg);
+    setUppdImg(uppdImg);
+    setUppdChrsitianImg(upppdChristianImg);
+    setDoubleDiamondDefineImg(doubleDiamondDefineImg);
+  }, [t, i18n]);
 
   const scaleX = useSpring(scrollProgressMotion, {
     stiffness: 100,
@@ -218,7 +246,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='w-full h-full flex gap-10 flex-col items-center '>
                   <LazyLoadImage
                     className='w-full lg:w-2/4 md:w-2/4 sm:w-2/4 h-auto'
-                    src={intersectionNO}
+                    src={coaxerAlreadyDiscoveredImg}
                     alt='Description of the image'
                   />
                   <p className={` ${styles.projectSlideShowPageP} opacity-60 `}>
@@ -283,13 +311,13 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='w-full h-full flex flex-col gap-10 items-center'>
                   <LazyLoadImage
                     className='w-full lg:w-3/4 h-auto mx-auto'
-                    src={relevantPunkterNO}
+                    src={mostRelevantImg}
                     alt='Description of the image'
                   />
 
                   <LazyLoadImage
                     className='w-full md:w-3/4 lg:w-2/4 h-auto mx-auto'
-                    src={doublediamondDiscover}
+                    src={doublediamondExploreImg}
                     alt='Description of the image'
                   />
                 </div>
@@ -466,7 +494,7 @@ const CoaxerScroll = ({ onClose }) => {
 
                   <LazyLoadImage
                     className='w-full lg:w-3/5 h-auto object-contain'
-                    src={uppd}
+                    src={uppdImg}
                     alt='ultra personalized design'
                   />
                 </div>
@@ -620,7 +648,7 @@ const CoaxerScroll = ({ onClose }) => {
 
               <LazyLoadImage
                 className='w-full h-auto object-contain'
-                src={uppdChristian}
+                src={upppChristianImg}
                 alt='ultra personalized design christian'
               />
             </div>
@@ -907,12 +935,12 @@ const CoaxerScroll = ({ onClose }) => {
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
                     >
-                      {t('portfolio.coaxer.page17.div1P')}.
+                      {t('portfolio.coaxer.page17.div1P')}
                     </p>
                   </div>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <h1 className={` ${styles.projectSlideShowPagePTitle} `}>
-                      {t('portfolio.coaxer.page17.div2Title')}.
+                      {t('portfolio.coaxer.page17.div2Title')}
                     </h1>
                     <p
                       className={` ${styles.projectSlideShowPageP} opacity-60 `}
@@ -934,7 +962,7 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flew-row w-full justify-center '>
                   <LazyLoadImage
                     className='w-full lg:w-2/4 h-auto object-contain'
-                    src={doublediamondDefine}
+                    src={doubleDiamondDefineImg}
                     alt='doublediamond-define'
                   />
                 </div>
@@ -1214,15 +1242,13 @@ const CoaxerScroll = ({ onClose }) => {
               {/* the three row aligned paragraph */}
 
               <div className={`${styles.projectSlideShowBodyContainer} `}>
-                <div className='flex flex-row'>
-                  <div className={`${styles.projectSlideShowTitleParagraph}`}>
-                    <ReactPlayer
-                      width='90svw'
-                      url='https://vimeo.com/889628233?share=copy'
-                      controls
-                      fallback={true}
-                    />
-                  </div>
+                <div className='wrapper'>
+                  <ReactPlayer
+                    className='player'
+                    url='https://vimeo.com/889628233?share=copy'
+                    controls
+                    fallback={true}
+                  />
                 </div>
               </div>
             </div>

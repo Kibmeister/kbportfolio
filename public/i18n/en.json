@@ -247,14 +247,12 @@
         "div3P": "We also employed digital methods such as surveys and self-reporting tools to collect quantitative data on Christian's well-being and stress levels. These methods complemented the qualitative data we gathered through conversations and observations."
       },
       "page13": {
-        "title": "Designing Christian's Coaxer",
-        "titleP": "Based on the data collected during the fieldwork sessions and the analysis that followed, we began the process of designing Christian's personalized Coaxer app.",
-        "div1Title": "App Concept",
-        "div1P": "The app concept was built around the idea of helping Christian manage his daily tasks and reduce stress by providing tailored recommendations and reminders.",
-        "div2Title": "User Interface",
-        "div2P": "The user interface of the app was designed to be intuitive and user-friendly, with a focus on simplicity and ease of use.",
-        "div3Title": "Features",
-        "div3P": "The app included features such as task organization, goal setting, relaxation exercises, and music recommendations, all personalized to Christian's preferences and needs."
+        "title": "Sonification and Nudging",
+        "titleP": "Sonification and nudging emerged as concepts during the literature review, and upon closer examination, they seemed relevant to what we knew about Christian as a busy student and musician.",
+        "div1Title": "Sonification",
+        "div1P": "Sonification is the process of mapping data relationships to relationships between sound parameters and presenting this non-speech sound as informative guidance. It involves using sound to convey information or communicate events. Sonification can be earcons (abstract representations of events), auditory icons (representations of specific events), or musicons (short musical sequences).",
+        "div2Title": "Nudging",
+        "div2P": "Nudging, on the other hand, is an approach to motivate individuals to make certain choices or take specific actions. It involves using subtle hints or reminders to influence decision-making and behavior. Nudges can be graphical, auditory, physical, or lyrical. Self-nudging is a specific type of nudging that involves altering a person's external world, both mentally and physically, to counteract a lack of self-control."
       },
       "page14": {
         "title": "Christian's Feedback",
@@ -267,14 +265,14 @@
         "div3P": "The co-designer played a crucial role in facilitating communication between Christian and the design team, ensuring that Christian's feedback was effectively incorporated into the design."
       },
       "page15": {
-        "title": "Outcome",
-        "titleP": "The final outcome of the Coaxer project was a personalized task management app designed specifically for Christian to help him manage his daily tasks, reduce stress, and improve his overall well-being.",
-        "div1Title": "Positive Impact",
-        "div1P": "Christian reported a positive impact on his daily life, with the app helping him stay organized, reduce stress, and make time for his passions and hobbies.",
-        "div2Title": "Lessons Learned",
-        "div2P": "The project taught us the importance of ultra-personal design in creating tailored solutions that can have a meaningful impact on individuals' lives.",
-        "div3Title": "Future Possibilities",
-        "div3P": "The success of the Coaxer project opened up possibilities for further exploration of ultra-personal design in the context of digital health and well-being."
+        "title": "Sonification... how?",
+        "titleP": "Sonification is the method of mapping data relationships to sound parameter relationships and presenting these non-linguistic sounds as informative guidance. Sonification consists of three different types of sound signals, and we had to determine which one suited Christian best, in line with a highly personalized design practice.",
+        "div1Title": "Earcons",
+        "div1P": "Earcons are abstract small messages that communicate an event. They are constructed from motifs, which are short rhythmic sequences with different pitches. Earcons have a steeper learning curve compared to auditory icons.",
+        "div2Title": "Auditory Icons",
+        "div2P": "Auditory icons are sounds that represent specific actions or events in a more concrete manner. For example, when a user clicks on an object, they may hear a striking sound from a source like wood or metal. Auditory icons aim to mimic sounds from the real world and are easier to recognize and understand compared to earcons.",
+        "div3Title": "Musicons",
+        "div3P": "Musicons are another form of sonification that involves using short musical sequences or songs to convey information. Musicons are derived from existing songs and are cut into short segments. They can be used to represent various types of events or actions."
       },
       "page16": {
         "title": "What Digital Task Management Apps Exist?",
@@ -585,25 +583,6 @@
           },
           {
             "name": "mobile",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "Coaxer",
-        "type": "coaxer",
-        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
-        "tags": [
-          {
-            "name": "mobile design",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "gamification/nudging",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]

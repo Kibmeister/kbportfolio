@@ -193,88 +193,88 @@
         "titleP": "Den tidligere undersøkelsen av feltene sonifisering, nudging og oppgavehåndering førte til en idé basert på det vi visste om Christian. Frederik (meddesigner) initierte et nytt møte med Christian og foreslo vår idé om å designe en ultra-personlig tidsstyringsapp som bruker personlige øreikoner (sonifisering) som et middel for å nudge ham til å fullføre planlagte oppgaver i henhold til hans prioritering."
       },
       "page15": {
-        "title": "Sonifisering.. hvordan?",
-        "titleP": "Sonifisering er metoden for å kartlegge datarelasjoner til lydparameters relasjoner og presentere denne ikke-talelyden som informativ veiledning. Sonifisering består av tre forskjellige typer lydsignal, og av disse måtte vi finne ut hvilken som ville passe best for Christian, i tråd med en ultra-personlig designpraksis.",
+        "title": "Sonifisering... hvordan?",
+        "titleP": "Sonifisering er metoden for å kartlegge datarelasjoner til lydparameterrelasjoner og presentere disse ikke-språklige lydene som informativ veiledning. Sonifisering består av tre forskjellige typer lydsignaler, og vi måtte finne ut hvilken som passet best for Christian, i tråd med en svært personlig designpraksis.",
         "div1Title": "Øreikoner",
-        "div1P": "Øreikoner er abstrakte små meldinger som kommuniserer en hendelse. De er konstruert av motiver, som er korte rytmiske sekvenser som varierer i tonehøyde. øreikoner har en lengre læringskurve sammenlignet med auditive ikoner.",
-        "div2Title": "Auditive ikoner",
-        "div2P": "Auditive ikoner er lyder som representerer spesifikke handlinger eller hendelser på en mer konkret måte. For eksempel kan en bruker som klikker på et objekt, høre en slaglyd fra en kilde som tre eller metall. Auditive ikoner har som mål å etterligne lyder fra den virkelige verden og er lettere å gjenkjenne og forstå sammenlignet med øreikoner..",
+        "div1P": "Øreikoner er abstrakte små meldinger som kommuniserer en hendelse. De er konstruert av motiver, som er korte rytmiske sekvenser med ulike tonehøyder. øreikoner har en brattere læringskurve sammenlignet med auditive symboler.",
+        "div2Title": "Auditive symboler",
+        "div2P": "Auditive symboler er lyder som representerer bestemte handlinger eller hendelser på en mer konkret måte. For eksempel kan en bruker som klikker på et objekt, høre en slaglyd fra en kilde som tre eller metall. Auditive symboler har som mål å etterligne lyder fra den virkelige verden og er lettere å gjenkjenne og forstå sammenlignet med øreikoner.",
         "div3Title": "Musicons",
-        "div3P": "Musicons er en annen form for sonifisering som innebærer bruk av korte musikalsekvenser eller sanger for å formidle informasjon. Musicons er hentet fra eksisterende sanger og er kuttet opp i korte segmenter. De kan brukes til å representere forskjellige typer hendelser eller handlinger."
+        "div3P": "Musicons er en annen form for sonifisering som innebærer bruk av korte musikalsekvenser eller sanger for å formidle informasjon. Musicons hentes fra eksisterende sanger og klippes opp i korte segmenter. De kan brukes til å representere ulike typer hendelser eller handlinger."
       },
       "page16": {
-        "title": "What Digital Task Management Apps Exist?",
-        "titleP": "An analysis of the three task management apps that were most commonly used on mobile platforms was conducted to assess which elements of these apps would be relevant to incorporate into the process of designing an ultra-personalized task management tool for Christian.",
+        "title": "Hvilke digitale oppgaveadministrasjonsapper finnes?",
+        "titleP": "En analyse av de tre oppgaveadministrasjonsappene som var mest vanlig brukt på mobile plattformer ble gjennomført for å vurdere hvilke elementer av disse appene som ville være relevante å inkorporere i prosessen med å designe et ultra-personlig oppgaveadministrasjonsverktøy for Christian.",
         "div1Title": "Focus Keeper",
-        "div1P": "Specializes in the Pomodoro technique, promoting focused work sessions with short breaks. Its strength lies in helping maintain concentration and prevent burnout. However, it may not be ideal for tasks that require long, uninterrupted periods.",
-        "div2Title": "iPhone Reminders",
-        "div2P": "Seamlessly integrates with iOS, offering simplicity and user-friendliness. Its strength lies in the straightforward, uncomplicated approach to setting reminders and tasks, with location-based notifications. However, it lacks advanced features like project management or detailed tracking.",
+        "div1P": "Spesialiserer seg på Pomodoro-teknikken, fremmer fokuserte arbeidsøkter med korte pauser. Styrken ligger i å hjelpe med å opprettholde konsentrasjonen og forhindre utbrenthet. Det kan imidlertid ikke være ideelt for oppgaver som krever lange, uavbrutte perioder.",
+        "div2Title": "iPhone-påminnelser",
+        "div2P": "Integreres sømløst med iOS og tilbyr enkelhet og brukervennlighet. Styrken ligger i den enkle tilnærmingen til å sette påminnelser og oppgaver, med varsler basert på plassering. Mangler imidlertid avanserte funksjoner som prosjektadministrasjon eller detaljert sporing.",
         "div3Title": "Microsoft To Do",
-        "div3P": "Offers comprehensive task management features, including subtasks, deadlines, and file attachments. It is well-suited for detailed project planning and collaborative work. However, its complexity may be overwhelming for users seeking a simpler, minimalist task manager."
+        "div3P": "Tilbyr omfattende oppgaveadministrasjonsfunksjoner, inkludert deloppgaver, frister og filvedlegg. Det passer godt for detaljert prosjektplanlegging og samarbeidsarbeid. Imidlertid kan kompleksiteten være overveldende for brukere som søker en enklere, minimalistisk oppgavebehandler."
       },
       "page17": {
-        "title": "Conception of Coaxer",
-        "titleP": "Coaxer is a task management app designed to improve time management and reduce stress levels. It uses sonification sounds as gentle reminders to prioritize and complete tasks in three categories. The three categories are based on what is most personal and important to the user.",
-        "div1Title": "Designed to Fit Christian",
-        "div1P": "Coaxer is specifically designed to fit into Christian's personal life and existing routines. The app and concept will be designed and developed in collaboration with Christian's feedback and usage.",
-        "div2Title": "Prioritization",
-        "div2P": "Coaxer utilizes a priority algorithm to nudge Christian to perform the tasks he has specified, based on the priority level assigned to these tasks. This means that tasks with higher priority will be reminded more frequently.",
-        "div3Title": "Categories of Tasks",
-        "div3P": "Coaxer defines tasks within three general categories, which are based on what is most important to Christian. Each of these categories has its own distinct earcon sound, making them easier to recognize."
+        "title": "Konsept av Coaxer",
+        "titleP": "Coaxer er en oppgaveadministrasjonsapp designet for å forbedre tidsstyring og redusere stressnivået. Den bruker sonifikasjonslyder som milde påminnelser for å prioritere og fullføre oppgaver i tre kategorier. De tre kategoriene er basert på hva som er mest personlig og viktig for brukeren.",
+        "div1Title": "Designet for å passe til Christian",
+        "div1P": "Coaxer er spesielt designet for å passe inn i Christians personlige liv og eksisterende rutiner. Appen og konseptet vil bli designet og utviklet i samarbeid med Christians tilbakemeldinger og bruk.",
+        "div2Title": "Prioritering",
+        "div2P": "Coaxer bruker en prioriteringsalgoritme for å dytte Christian til å utføre oppgavene han har spesifisert, basert på prioriteringsnivået som er tildelt disse oppgavene. Dette betyr at oppgaver med høyere prioritet vil bli påminnet hyppigere.",
+        "div3Title": "Oppgavekategorier",
+        "div3P": "Coaxer definerer oppgaver innenfor tre generelle kategorier, som er basert på hva som er viktigst for Christian. Hver av disse kategoriene har sin egen distinkte ørekon lyd, noe som gjør dem lettere å gjenkjenne."
       },
       "page18": {
-        "title": "First Meeting with Christian",
-        "titleP": "The development of Coaxer started with a desire to create something truly personal for Christian. We needed to learn more about how he plans daily activities and tasks. Regarding sonification, we also needed to know which sounds would be most personal to him.",
-        "div1Title": "What Does He Plan For?",
-        "div1P": "He mentioned that academic tasks were important for him to structure, but also recognized the importance of leisure and practical tasks. Based on this information, the design concept was developed to encompass these three categories (academic, leisure, and practical) for time structuring.",
-        "div2Title": "Self-Made Sounds",
-        "div2P": "Since Christian is a musician, the idea arose to let Christian design his own earcons. Christian would record three different sounds in his home studio, playing them on his guitar. He would compose the three sounds in accordance with the three categories for time management."
+        "title": "Første møte med Christian",
+        "titleP": "Utviklingen av Coaxer startet med et ønske om å skape noe virkelig personlig for Christian. Vi måtte derfor vite mer om hvordan han planlegger daglige gjøremål og oppgaver. Når det gjelder sonifisering, måtte vi også vite hvilke lyder som ville være mest personlige for ham.",
+        "div1Title": "Hva planlegger han for?",
+        "div1P": "Han nevnte at akademiske oppgaver var viktige for ham å strukturere, men anerkjente også viktigheten av fritid og praktiske oppgaver. Basert på denne informasjonen ble designkonseptet utviklet for å omfavne disse tre kategoriene (akademisk, fritid og praktisk) for tidsstrukturering.",
+        "div2Title": "Egen-lagde lyder",
+        "div2P": "Siden Christian er musiker, oppsto ideen om å la Christian designe sine egne øreikoner. Christian ville i sitt hjemmestudio spille inn tre forskjellige lyder som han spilte på gitaren sin. Han ville komponere de tre lydene i samsvar med de tre kategoriene for tidsstyring."
       },
       "page19": {
-        "title": "Integration with Personal Calendar",
-        "div1P": "Coaxer integrates with Christian's personal calendar by fetching a complete schedule of Christian's week from his Google Calendar. This schedule is synchronized with the Coaxer app, allowing the app to take into account Christian's personal schedule when determining when to play sonification sounds."
+        "title": "Integrasjon med personlig kalender",
+        "div1P": "Coaxer integrerer med Christians personlige kalender ved å hente en komplett tidsplan for Christians uke fra hans Google Kalender. Denne tidsplanen synkroniseres med Coaxer-appen, noe som gjør det mulig for appen å ta hensyn til Christians personlige tidsplan når den bestemmer når den skal spille sonifiseringslydene."
       },
       "page20": {
-        "title": "Second Meeting with Christian",
-        "titleP": "Based on the earcons that Christian had designed and recorded, we put him to the test to see what his recognition rate for these was compared to other auditory icons and musicons. A rough, lo-fi prototype of what would become the user interface was also presented to him.",
-        "div1Title": "Full Recognition of Personal Earcons",
-        "div1P": "The earcons that Christian had developed were tested against a set of musicons in terms of recognition speed. Based on three test iterations, it was clear that the self-designed earcons outperformed when it came to recognition."
+        "title": "Andre møte med Christian",
+        "titleP": "Basert på øreikonene som Christian hadde designet og spilt inn, satte vi ham på prøve for å se hva hans gjenkjennelsesrate for disse var sammenlignet med andre auditive ikoner og musikoner. En grov lo-fi prototype av det som skulle bli brukergrensesnittet ble også presentert for ham.",
+        "div1Title": "Full gjenkjennelse av personlige øreikoner",
+        "div1P": "Øreikonene som Christian hadde utviklet ble testet opp mot et sett med musikoner med tanke på gjenkjennelseshastighet. Basert på tre testiterasjoner var det tydelig at de selvdesignede øreikonene var overlegne når det gjaldt gjenkjennelse."
       },
       "page21": {
-        "title": "Third Meeting with Christian",
-        "titleP": "This meeting focused on how Christian would navigate the user interface of the proposed app. At this point, we also had a prototype built with React Native and Expo, allowing us to see in real-time how Christian used it and then modify the design.",
-        "div1Title": "Real-time Development",
-        "div1P": "Christian used the app and checked the navigation flow. He also created a couple of dummy events to prioritize. He provided personal preferences regarding the style of events in the list, as well as priority graphics. This activity is related to the ultra-personalized design practice of designing during use."
+        "title": "Tredje møte med Christian",
+        "titleP": "Dette møtet fokuserte på hvordan Christian ville navigere i brukergrensesnittet til den foreslåtte appen. På dette tidspunktet hadde vi også en prototype bygget med React Native og Expo, slik at vi i sanntid kunne se hvordan Christian brukte den, og deretter endre designet.",
+        "div1Title": "Sanntids utvikling",
+        "div1P": "Christian brukte appen og sjekket navigasjons flyten. Han ville også opprette et par dummy-hendelser for å prioritere. Han kom med personlige preferanser om stilen på hendelsene i listen, samt prioriteringsgrafikken. Denne aktiviteten er relatert til den ultrapersonaliserte designpraksisen med å designe under bruk."
       },
       "page22": {
-        "title": "Launching the App on Christian's Phone",
-        "titleP": "Coaxer, a task management app developed through an ultra-personal design process, was now ready to be installed on Christian's personal phone. Christian used the app for about half a week in the initial period. To evaluate whether the app was truly personal for him, the app was also tested by Frederik as a test subject.",
-        "div1P": "Christian's phone with the Coaxer app",
-        "divEarcons": "The three personal earcons that he developed",
-        "divEarconPractical": "Practical",
-        "divEarconLeisure": "Leisure",
-        "divEarconAcademic": "Academic"
+        "title": "Lansering av appen på Christians telefon",
+        "titleP": "Coaxer, en oppgavehåndteringsapp utviklet gjennom å anvende en ultrapersonlig designprosess, var nå klar for å installeres på Christians personlige telefon. Christian brukte appen i omtrent en halv uke i den innledende perioden. For å evaluere om appen virkelig var personlig for ham, ble appen også testet av Frederik som test subjekt.",
+        "div1P": "Christians telefon med Coaxer appen",
+        "divEarcons": "De tre personlige øreikonene som han utviklet",
+        "divEarconPractical": "Praktisk",
+        "divEarconLeisure": "Fritid",
+        "divEarconAkademic": "Akademisk"
       },
       "page23": {
-        "title": "Video Demo of the Concept",
-        "titleP": "Here is a video demonstrating the concept and functionality of the application as it was designed."
+        "title": "Video demo av konseptet",
+        "titleP": "Her er en video som viser konseptet og funksjonen til applikasjone slik som den ble designet."
       },
       "page24": {
-        "title": "Evaluation and Impact",
+        "title": "Evaluering og innvirkning",
 
-        "div1Title": "Christian's Well-being",
-        "div1P": "Coaxer had a positive impact on Christian's well-being. He found the application useful in managing his time and tasks, and it helped him feel more in control of his day. The app's functionality, such as the ability to prioritize tasks and include tasks according to personal preferences, was also appreciated by Christian.",
-        "div2Title": "Sound Feature (Sonification)",
-        "div2P": "A significant discovery was the effect of the sound feature in the application. When sound was enabled, Christian had a more positive experience with the application and found it helpful in reminding him of tasks, especially for academic purposes. The sounds had a significant effect on his choice of action and improved his engagement in tasks."
+        "div1Title": "Christians velvære",
+        "div1P": "Coaxer hadde en positiv innvirkning på velværet til Christian. Han fant applikasjonen nyttig i å håndtere sin tid og oppgaver, og den hjalp ham til å føle seg mer i kontroll over dagen sin. Applikasjonens funksjonalitet, som muligheten til å prioritere oppgaver og inkludere oppgaver etter egne preferanser, ble også satt pris på av Christian.",
+        "div2Title": "Lyd-funksjon (Sonifisering)",
+        "div2P": "En betydelig oppdagelse var effekten av lydfunksjonen i applikasjonen. Når lyden var aktivert, hadde Christian en mer positiv opplevelse med applikasjonen og fant den hjelpsom i å minne ham på oppgaver, spesielt for akademiske formål. Lydene hadde en betydelig effekt på hans valg av handling og forbedret hans engasjement i oppgavene."
       },
       "page25": {
-        "title": "Final Thoughts",
-        "div1Title": "Sound and Nudging",
-        "div1P": "Regarding sound, the project found that the presence of sound had a significant impact on Christian's experience with the application. The use of earcons as self-nudging tools proved to be effective in influencing Christian's actions and choices.",
-        "div2Title": "Duo-Ethnography",
-        "div2P": "It is worth mentioning that the duo-ethnographic approach may have influenced Christian's opinions and responses, as Frederik had a certain influence on him during the design process. However, this collaborative approach also allowed for a more well-reflected attitude and facilitated the sharing of perceptions and opinions.",
-        "div3Title": "Personalization",
-        "div3P": "The personalized aspects of Coaxer come especially to light when it comes to earcons. During the half-week of use, Christian mentioned that he would use the app for minor tasks throughout the day and that he would recognize their corresponding earcons and follow up on the tasks. In contrast, Frederik would also use it to some extent but admitted that he could not distinguish between the sounds to a precise degree."
+        "title": "Avsluttende tanker",
+        "div1Title": "Lyd og nudging",
+        "div1P": "Når det gjelder lyd, fant prosjektet at tilstedeværelsen av lyd hadde en betydelig effekt på Christians opplevelse med applikasjonen. Bruken av øreikonene som selv-nudging-verktøy viste seg å være effektive i å påvirke Christians handlinger og valg.",
+        "div2Title": "Duo-etnografi",
+        "div2P": "Det er verdt å nevne at den duo-etnografiske tilnærmingen kan ha påvirket Christians meninger og svar, ettersom Frederik hadde en viss innflytelse på ham under designprosessen. Imidlertid tillot denne samarbeidstilnærmingen også en mer velreflektert holdning og fasiliterte deling av oppfatninger og meninger.",
+        "div3Title": "Personalisering",
+        "div3P": "De personaliserende aspektene av Coaxer kommer spesielt til syne når det gjelder øreikoner. I løpet av den halve uken med bruk, sa Christian at han ville bruke appen til mindre oppgaver i løpet av dagen og at han ville gjenkjenne deres tilsvarende øreikoner og følge opp oppgavene. I motsetning til dette ville også Frederik bruke den til en viss grad, men innrømmet at han ikke kunne skille mellom lydene til en nøyaktig grad."
       }
     },
     "ringmerking": {
@@ -516,8 +516,8 @@
         ]
       },
       {
-        "name": "Coaxer",
-        "type": "coaxer",
+        "name": "CoaxerScroll",
+        "type": "coaxerScroll",
         "description": "Mobil tidsstyringsapp utviklet gjennom en ultrapersonalisert designprosess med mål om å lindre stress og strukturere oppgaver for den travle studenten ved å sende ut personaliserte varselsignaler.",
         "tags": [
           {
@@ -530,25 +530,6 @@
           },
           {
             "name": "ultrapersonlig design",
-            "color": "pink-text-gradient"
-          }
-        ]
-      },
-      {
-        "name": "CoaxerScroll",
-        "type": "coaxerScroll",
-        "description": "Mobile time management app developed through an ultra-personalized design process with the aim to alleviate stress and strucure tasks for the busy studnet by emitting personalized notification sounds.",
-        "tags": [
-          {
-            "name": "mobile design",
-            "color": "blue-text-gradient"
-          },
-          {
-            "name": "gamification/nudging",
-            "color": "green-text-gradient"
-          },
-          {
-            "name": "ultrapersonal design",
             "color": "pink-text-gradient"
           }
         ]
