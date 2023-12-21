@@ -103,11 +103,11 @@
     "coaxer": {
       "buttonclose": "Lukk",
       "page1": {
-        "subTitle": "Oppgavehåndterings app utviklet gjennom en ultra personlig design process"
+        "subTitle": "Oppgavehåndteringsapp utviklet gjennom en ultra personlig design process"
       },
       "page2": {
         "title": "Introduksjon",
-        "titleP": "Coaxer var et student prosjekt om digital helse med et utgangspunkt om å utforske hvordan digital teknologi kan brukes for å forbedre folks velvære. Prosjektet endte med å dreie seg om mental helse og stress for yngre voksne, hvor tjenesten Coaxer ble utviklet som en ultra-personlig oppgavehåndterings app med henblikk på å forbedre mentalt helse og redusere generell stress. De følgende sidene vil handle om design prosessen bak Coaxer."
+        "titleP": "Coaxer var et student prosjekt om digital helse med et utgangspunkt om å utforske hvordan digital teknologi kan brukes for å forbedre folks velvære. Prosjektet endte med å dreie seg om mental helse og stress for yngre voksne, hvor tjenesten Coaxer ble utviklet som en ultra-personlig oppgavehåndteringsapp med henblikk på å forbedre mentalt helse og redusere generell stress. De følgende sidene vil handle om design prosessen bak Coaxer."
       },
       "page3": {
         "subTitle": "Min rolle",
@@ -203,14 +203,14 @@
         "div3P": "Musicons er en annen form for sonifisering som innebærer bruk av korte musikalsekvenser eller sanger for å formidle informasjon. Musicons hentes fra eksisterende sanger og klippes opp i korte segmenter. De kan brukes til å representere ulike typer hendelser eller handlinger."
       },
       "page16": {
-        "title": "Hvilke digitale oppgaveadministrasjonsapper finnes?",
-        "titleP": "En analyse av de tre oppgaveadministrasjonsappene som var mest vanlig brukt på mobile plattformer ble gjennomført for å vurdere hvilke elementer av disse appene som ville være relevante å inkorporere i prosessen med å designe et ultra-personlig oppgaveadministrasjonsverktøy for Christian.",
+        "title": "Hvilke digitale oppgaveahånderingsapper finnes?",
+        "titleP": "En analyse av de tre oppgaveahånderingsappene som var mest vanlig brukt på mobile plattformer ble gjennomført for å vurdere hvilke elementer av disse appene som ville være relevante å inkorporere i prosessen med å designe en ultra-personlig oppgaveahånderingsapp for Christian.",
         "div1Title": "Focus Keeper",
         "div1P": "Spesialiserer seg på Pomodoro-teknikken, fremmer fokuserte arbeidsøkter med korte pauser. Styrken ligger i å hjelpe med å opprettholde konsentrasjonen og forhindre utbrenthet. Det kan imidlertid ikke være ideelt for oppgaver som krever lange, uavbrutte perioder.",
         "div2Title": "iPhone-påminnelser",
         "div2P": "Integreres sømløst med iOS og tilbyr enkelhet og brukervennlighet. Styrken ligger i den enkle tilnærmingen til å sette påminnelser og oppgaver, med varsler basert på plassering. Mangler imidlertid avanserte funksjoner som prosjektadministrasjon eller detaljert sporing.",
         "div3Title": "Microsoft To Do",
-        "div3P": "Tilbyr omfattende oppgaveadministrasjonsfunksjoner, inkludert deloppgaver, frister og filvedlegg. Det passer godt for detaljert prosjektplanlegging og samarbeidsarbeid. Imidlertid kan kompleksiteten være overveldende for brukere som søker en enklere, minimalistisk oppgavebehandler."
+        "div3P": "Tilbyr omfattende oppgaveahånderingsfunksjoner, inkludert deloppgaver, frister og filvedlegg. Det passer godt for detaljert prosjektplanlegging og samarbeidsarbeid. Imidlertid kan kompleksiteten være overveldende for brukere som søker en enklere, minimalistisk oppgavebehandler."
       },
       "page17": {
         "title": "Konsept av Coaxer",

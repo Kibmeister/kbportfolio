@@ -104,7 +104,7 @@ import blidekarusell7 from './ringmerkingslideshow/bildekarusell6.jpeg';
 import ringmerkingGammelSide from './ringmerkingslideshow/gammelSide.png';
 import ringmerkingNySide from './ringmerkingslideshow/nySide.png';
 
-import coaxerFrontCover from './coaxer/coaxerFrontCover.png';
+import coaxerFrontCover from './coaxer/coaxerfrontcover.png';
 
 import introductionImg from './coaxer/introductionImg.png';
 

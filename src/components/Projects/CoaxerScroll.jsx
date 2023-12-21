@@ -143,7 +143,7 @@ const CoaxerScroll = ({ onClose }) => {
                 id='id-frontcover'
                 className='flex flex-col lg:flex-col gap-5 '
               >
-                <p className='lg:text-left lg:w-3/4 text-xl mobile:text-lg garet-book'>
+                <p className='lg:text-left lg:w-3/4  mobile:text-lg sm:text-xl md:text-2xl garet-book'>
                   {t('portfolio.coaxer.page1.subTitle')}
                 </p>
                 <LazyLoadImage
@@ -689,7 +689,7 @@ const CoaxerScroll = ({ onClose }) => {
                         {t('portfolio.coaxer.page13.div1P')}
                       </p>
                       <LazyLoadImage
-                        className=' md:w-4/5 h-auto object-contain'
+                        className=' w-2/3 md:w-4/5 h-auto object-contain'
                         src={sonification}
                         alt='sonification'
                       />
@@ -790,7 +790,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page15.div1P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full md:w-60  object-contain '
+                      className='mobile:w-3/4 w-full  md:w-60  object-contain '
                       src={earcon}
                       alt='addressing an idea'
                     />
@@ -805,7 +805,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page15.div2P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full md:w-60  object-contain'
+                      className='mobile:w-3/4 w-full md:w-60  object-contain'
                       src={auditoryicon}
                       alt='addressing an idea'
                     />
@@ -820,7 +820,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page15.div3P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full md:w-60  object-contain '
+                      className='mobile:w-3/4 w-full md:w-60  object-contain '
                       src={musiccons}
                       alt='addressing an idea'
                     />
@@ -864,7 +864,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page16.div1P')}
                     </p>
                     <LazyLoadImage
-                      className=' w-full lg:w-2/4 h-auto object-contain'
+                      className=' w-full mobile:w-3/4 lg:w-2/4 h-auto object-contain'
                       src={focuskeeper}
                       alt='addressing an idea'
                     />
@@ -879,7 +879,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page16.div2P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-full mobile:w-3/4 lg:w-2/4 h-auto object-contain'
                       src={iphonereminders}
                       alt='addressing an idea'
                     />
@@ -894,7 +894,7 @@ const CoaxerScroll = ({ onClose }) => {
                       {t('portfolio.coaxer.page16.div3P')}
                     </p>
                     <LazyLoadImage
-                      className='w-full lg:w-2/4 h-auto object-contain'
+                      className='w-full mobile:w-3/4 lg:w-2/4 h-auto object-contain'
                       src={microsofttodo}
                       alt='addressing an idea'
                     />
@@ -1323,7 +1323,7 @@ const CoaxerScroll = ({ onClose }) => {
                 >
                   - {t('portfolio.coaxer.page25.title')}
                 </h1>
-                <p className={` ${styles.projectSlideShowPageTitleP}`}></p>
+                {/* <p className={` ${styles.projectSlideShowPageTitleP}`}></p> */}
               </div>
 
               {/* the three row aligned paragraph */}
