@@ -5,8 +5,6 @@ import Topico from './Projects/Topico';
 import RingmerkingSlideshow from './Projects/RingmerkingSlideshow';
 import CoaxerScroll from './Projects/CoaxerScroll';
 import { useTranslation } from 'react-i18next';
-import { imageMapCoaxer } from '../constants';
-import { imageMapRingmerking } from '../constants';
 
 const ProjectModal = ({ modalProject, onClose }) => {
   const [modalType, setModalType] = useState('svg');

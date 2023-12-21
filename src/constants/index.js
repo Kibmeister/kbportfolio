@@ -8,12 +8,6 @@ import {
   germany,
   fourhuman,
   kantega,
-  coaxerEN,
-  coaxerNO,
-  coaxerES,
-  coaxerIT,
-  coaxerFR,
-  coaxerDE,
   RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,
@@ -234,14 +228,7 @@ const imageMapRingmerkingResultsMap = {
 };
 
 //coaxer
-const imageMapCoaxer = {
-  en: coaxerEN,
-  no: coaxerNO,
-  es: coaxerES,
-  it: coaxerIT,
-  fr: coaxerFR,
-  de: coaxerDE,
-};
+
 
 const coaxerAlreadyDiscoveredMap = {
   en: intersectEN,
@@ -299,12 +286,6 @@ const coaxerDoubleDiamondDefineMap = {
 
 //
 
-
-
-
-
-
-
 const imageMapImgCarousel = {
   1: { img: blidekarusell1, name: 'Fast AF registrering ' },
 
@@ -338,13 +319,8 @@ const projects = [
   },
   {
     name: 'Coaxer',
-    type: 'coaxer',
-    image: coaxerEN,
-  },
-  {
-    name: 'CoaxerScroll',
     type: 'coaxerScroll',
-    image: coaxerEN,
+    image: coaxerThumbnailEN,
   },
   {
     name: 'Multimodal coffeecan',
@@ -449,7 +425,6 @@ export {
   projects,
   heroTags,
   LANGUAGES,
-  imageMapCoaxer,
   imageMapRingmerking,
   imageMapTestimonals,
   imageMapRingmerkingEmathyMap,

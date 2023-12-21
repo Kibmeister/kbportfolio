@@ -30,12 +30,7 @@ import germany from './flags/germany.svg';
 import globe from './globe.svg';
 import kantega from './company/kantega.png';
 import fourhuman from './company/fourhuman.png';
-import coaxerEN from './coaxer/Coaxer en.svg';
-import coaxerNO from './coaxer/Coaxer no.svg';
-import coaxerES from './coaxer/Coaxer es.svg';
-import coaxerIT from './coaxer/Coaxer it.svg';
-import coaxerFR from './coaxer/Coaxer fr.svg';
-import coaxerDE from './coaxer/Coaxer de.svg';
+
 import coaxerThumbnailEN from './coaxer/thumbnails/coaxerthumbnail en.svg';
 import coaxerThumbnailNO from './coaxer/thumbnails/coaxerthumbnail no.svg';
 import coaxerThumbnailES from './coaxer/thumbnails/coaxerthumbnail es.svg';
@@ -107,7 +102,6 @@ import ringmerkingNySide from './ringmerkingslideshow/nySide.png';
 import coaxerFrontCover from './coaxer/coaxerfrontcover.png';
 
 import introductionImg from './coaxer/introductionImg.png';
-
 
 
 import ouruserChristian from './coaxer/ouruserChristian.png';
@@ -224,12 +218,6 @@ export {
   globe,
   kantega,
   fourhuman,
-  coaxerEN,
-  coaxerNO,
-  coaxerES,
-  coaxerIT,
-  coaxerFR,
-  coaxerDE,
   RingmerkingEN,
   RingmerkingNO,
   RingmerkingES,

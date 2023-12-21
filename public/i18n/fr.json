@@ -535,7 +535,7 @@
         ]
       },
       {
-        "name": "CoaxerScroll",
+        "name": "Coaxer",
         "type": "coaxerScroll",
         "description": "Application de gestion du temps mobile développée grâce à un processus de conception ultra personnalisé dans le but d'alléger le stress et de structurer les tâches pour l'étudiant occupé en émettant des sons de notification personnalisés.",
         "tags": [
