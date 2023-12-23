@@ -1176,9 +1176,14 @@ const CoaxerScroll = ({ onClose }) => {
                 <div className='flex flex-col md:flex-row gap-10'>
                   <div className={`${styles.projectSlideShowTitleParagraph}`}>
                     <LazyLoadImage
-                      className='w-3/5 lg:w-3/4 h-auto object-contain'
+                      className='w-3/5 lg:w-3/4 h-auto object-contain cursor-pointer'
                       src={coaxerFrontPage}
                       alt='coaxer front page'
+                      onClick={() =>
+                        window.open(
+                          'https://www.figma.com/proto/VV2pmxTkpHyAONnmwdfDUM/Coaxer?type=design&node-id=1-853&t=a4YHfvtiHzMJ3XdK-1&scaling=scale-down&page-id=1%3A2&starting-point-node-id=1%3A853&mode=design'
+                        )
+                      }
                     />
                     <p className={` ${styles.projectSlideShowPageTitleP}`}>
                       {t('portfolio.coaxer.page22.div1P')}
