@@ -350,7 +350,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
             >
               {/* t('hero.header')} */}
               <h1 id={'id_header'} className={`${styles.heroHeadText} `}>
-                  {isInitialRender ? "Hello, I'm Kasper " : t('hero.header')}
+                  {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>
                 <p
@@ -358,9 +358,8 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
                   className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg mobile:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
                   {/* t('hero.subHeader')} */}
-                  {isInitialRender
-                    ? "I'm an interaction designer specialized in UI and UX design. My work are interdisciplinary in form and fucntion"
-                    : t('hero.subHeader')}
+                 
+                   {t('hero.subHeader')}
                 </p>
               </div>
             </div>
