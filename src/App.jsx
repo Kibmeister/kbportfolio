@@ -146,7 +146,7 @@ const App = () => {
 
           <div className='relative z-0'>
             <Contact activeMediaQuery={activeMediaQuery} />
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
           </div>
           <Footer />
         </div>

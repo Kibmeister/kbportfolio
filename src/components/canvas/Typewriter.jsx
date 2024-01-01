@@ -85,7 +85,7 @@ const Typewriter = ({ mailStatus, activeMediaQuery }) => {
             : 1
         }
         position-y={-0.4}
-        rotation={[0, 4.7, 0]}
+        rotation={[0, 0.7, 0]}
       />
     )
   );
@@ -109,7 +109,7 @@ const TypewriterCanvas = ({ mailStatus }) => {
       <ambientLight intensity={1} />
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate
+          
           autoRotateSpeed={1}
           enableZoom={false}
           enablePan={false}

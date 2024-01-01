@@ -6,7 +6,7 @@ import { TypewriterCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Contact = ({ activeMediaQuery }) => {
   const formRef = useRef();
