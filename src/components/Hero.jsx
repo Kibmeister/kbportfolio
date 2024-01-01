@@ -380,7 +380,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
         {/* interactive lamp object  */}
       </div>
       {/* The little knob that transitions the website down to the about section */}
-      {!lampToggle ? (
+      {/* {!lampToggle ? (
         <div
           className={`absolute ${
             i18n.language === 'en' && activeMediaQuery === 'mobile'
@@ -429,7 +429,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
         </div>
       ) : (
         ''
-      )}
+      )} */}
     </section>
   );
 });
