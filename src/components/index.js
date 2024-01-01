@@ -1,4 +1,4 @@
-import { LampCanvas, StarsCanvas, TypewriterCanvas } from './canvas';
+import { LampCanvas, TypewriterCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -24,7 +24,6 @@ export {
   Contact,
   ProjectModal,
   CanvasLoader,
-  StarsCanvas,
   TypewriterCanvas,
   LampCanvas,
   Coffeecan,

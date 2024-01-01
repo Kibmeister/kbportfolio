@@ -434,4 +434,12 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   );
 });
 
-export default Hero;
+export default React.memo(Hero, (prevProps, nextProps) => {
+  // Optional: Implement a custom comparison function if needed
+  // Return true if passing nextProps to render would return
+  // the same result as passing prevProps, otherwise return false
+  return (
+    prevProps.activeMediaQuery === nextProps.activeMediaQuery &&
+    prevProps.setLampToggleApp === nextProps.setLampToggleApp
+  );
+});

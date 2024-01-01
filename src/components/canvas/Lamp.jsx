@@ -66,6 +66,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   //     // add an event listener for the 'finished' event
   //   }, 150);
   // }, [mixer, lamp, lampRef]);
+
   // hover animation
   useEffect(() => {
     if (lampHover === true && !lampToggle) {
@@ -108,6 +109,14 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
       mixer.update(delta);
     }
   });
+
+
+  useEffect(() => {
+    return () => {
+      // Perform any necessary cleanup
+      mixer?.stopAllAction(); // Example cleanup
+    };
+  }, [mixer]);
 
   const handlePointerEnter = () => {
     if (!allowHover) return; // Don't execute if hover is not allowed

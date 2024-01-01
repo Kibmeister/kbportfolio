@@ -13,7 +13,6 @@ import {
   Hero,
   Navbar,
   Works,
-  StarsCanvas,
   ProjectModal,
   Footer,
 } from './components';
