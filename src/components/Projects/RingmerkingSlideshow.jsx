@@ -833,7 +833,7 @@ const RingmerkingSlideshow = ({ onClose, ringmerkingBackground }) => {
                     </div>
 
                     <LazyLoadImage
-                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-3/4 md:w-3/6 md:h-3/6'
+                      className='w-4/4 h-3/5 sm:w-2/4 sm:h-3/4 md:w-3/6 md:h-3/6 object-contain'
                       src={firstprototype}
                       alt='designutfall'
                     />

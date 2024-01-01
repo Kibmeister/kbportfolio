@@ -65,7 +65,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   // hook for the proxy div
   useEffect(() => {
     if (isInitialRender) {
-      setIsInitialRender(false);
+      // setIsInitialRender(false);
     } else {
       setTimeout(() => {
         const updateDimensions = () => {
@@ -92,6 +92,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
 
   // header animation hook
   const useSplittingAnimation = () => {
+    console.log("This is the initial render", isInitialRender);
     useLayoutEffect(() => {
       const animateTitles = (fx1Titles) => {
         fx1Titles.forEach((title) => {
@@ -112,7 +113,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: isInitialRender ? 0.1 : 0.1, // Stagger value for h1
+              stagger: 0.1,
             }
           );
 
@@ -130,11 +131,16 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               opacity: 1,
               scale: 1,
               rotation: 0,
-              stagger: isInitialRender ? 0.02 : 0.02, // Stagger value for p (4 times faster than h1)
+              stagger: 0.02 
             }
           );
         });
       };
+
+        setTimeout(() => {
+          setIsInitialRender(false);
+        }, 3000);
+      
       const handleSplittingAnimation = () => {
         const fx1Titles = [
           ...document.querySelectorAll(
@@ -342,15 +348,19 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
               data-splitting
               data-effect1
             >
+              {/* t('hero.header')} */}
               <h1 id={'id_header'} className={`${styles.heroHeadText} `}>
-                {t('hero.header')}
+                  {isInitialRender ? "Hello, I'm Kasper " : t('hero.header')}
               </h1>
               <div data-splitting data-effect1>
                 <p
                   id={'id_subHeader'}
                   className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg mobile:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
-                  {t('hero.subHeader')}
+                  {/* t('hero.subHeader')} */}
+                  {isInitialRender
+                    ? "I'm an interaction designer specialized in UI and UX design. My work are interdisciplinary in form and fucntion"
+                    : t('hero.subHeader')}
                 </p>
               </div>
             </div>
