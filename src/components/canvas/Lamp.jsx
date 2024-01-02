@@ -155,7 +155,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
       <primitive
         ref={lampRef}
         onClick={
-          activeMediaQuery === 'mobile' || "sm"
+          activeMediaQuery === ('mobile' || "sm")
             ? null
             : () => setLampToggle(!lampToggle)
         }

@@ -92,6 +92,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
 
   // header animation hook
 const useSplittingAnimation = () => {
+  // console.log("This is the initial render", isInitialRender);
   useLayoutEffect(() => {
     const animateTitles = (fx1Titles) => {
       fx1Titles.forEach((title) => {
@@ -136,6 +137,10 @@ const useSplittingAnimation = () => {
       });
     };
 
+    setTimeout(() => {
+      setIsInitialRender(false);
+    }, 3000);
+
     const handleSplittingAnimation = () => {
       const fx1Titles = [
         ...document.querySelectorAll(
@@ -147,30 +152,17 @@ const useSplittingAnimation = () => {
 
       requestAnimationFrame(() => {
         if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
+          // console.log('header animation called');
           animateTitles(fx1Titles);
           hasAnimatedRef.current = true;
         }
       });
     };
-
-    const startAnimation = () => {
+    if (document.readyState === 'complete' || componentMountedRef.current) {
       handleSplittingAnimation();
-      setIsInitialRender(false);
-    };
-
-    if (document.readyState === 'complete') {
-      startAnimation();
-    } else {
-      window.addEventListener('load', startAnimation);
     }
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('load', startAnimation);
-    };
   }, [lampToggle]);
 };
-
   useSplittingAnimation();
 
   // listener for lampToggle
