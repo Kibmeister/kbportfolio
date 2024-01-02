@@ -91,78 +91,85 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
   }, [isInitialRender, t]);
 
   // header animation hook
-  const useSplittingAnimation = () => {
-    // console.log("This is the initial render", isInitialRender);
-    useLayoutEffect(() => {
-      const animateTitles = (fx1Titles) => {
-        fx1Titles.forEach((title) => {
-          const h1Chars = title.querySelectorAll('h1 .char');
-          const pChars = title.querySelectorAll('p .char');
+const useSplittingAnimation = () => {
+  useLayoutEffect(() => {
+    const animateTitles = (fx1Titles) => {
+      fx1Titles.forEach((title) => {
+        const h1Chars = title.querySelectorAll('h1 .char');
+        const pChars = title.querySelectorAll('p .char');
 
-          // Animate h1 chars
-          gsap.fromTo(
-            h1Chars,
-            {
-              'will-change': 'transform',
-              opacity: 0,
-              scale: 0.6,
-              rotationZ: () => gsap.utils.random(-20, 20),
-            },
-            {
-              ease: 'power4',
-              opacity: 1,
-              scale: 1,
-              rotation: 0,
-              stagger: 0.1,
-            }
-          );
-
-          // Animate p chars
-          gsap.fromTo(
-            pChars,
-            {
-              'will-change': 'transform',
-              opacity: 0,
-              scale: 0.6,
-              rotationZ: () => gsap.utils.random(-20, 20),
-            },
-            {
-              ease: 'power4',
-              opacity: 1,
-              scale: 1,
-              rotation: 0,
-              stagger: 0.02 
-            }
-          );
-        });
-      };
-
-        setTimeout(() => {
-          setIsInitialRender(false);
-        }, 3000);
-      
-      const handleSplittingAnimation = () => {
-        const fx1Titles = [
-          ...document.querySelectorAll(
-            '.content__title[data-splitting][data-effect1]'
-          ),
-        ];
-
-        Splitting({ target: '#id_header, #id_subHeader', by: 'chars' });
-
-        requestAnimationFrame(() => {
-          if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
-            // console.log('header animation called');
-            animateTitles(fx1Titles);
-            hasAnimatedRef.current = true;
+        // Animate h1 chars
+        gsap.fromTo(
+          h1Chars,
+          {
+            'will-change': 'transform',
+            opacity: 0,
+            scale: 0.6,
+            rotationZ: () => gsap.utils.random(-20, 20),
+          },
+          {
+            ease: 'power4',
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            stagger: 0.1,
           }
-        });
-      };
-      if (document.readyState === 'complete' || componentMountedRef.current) {
-        handleSplittingAnimation();
-      }
-    }, [lampToggle]);
-  };
+        );
+
+        // Animate p chars
+        gsap.fromTo(
+          pChars,
+          {
+            'will-change': 'transform',
+            opacity: 0,
+            scale: 0.6,
+            rotationZ: () => gsap.utils.random(-20, 20),
+          },
+          {
+            ease: 'power4',
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            stagger: 0.02,
+          }
+        );
+      });
+    };
+
+    const handleSplittingAnimation = () => {
+      const fx1Titles = [
+        ...document.querySelectorAll(
+          '.content__title[data-splitting][data-effect1]'
+        ),
+      ];
+
+      Splitting({ target: '#id_header, #id_subHeader', by: 'chars' });
+
+      requestAnimationFrame(() => {
+        if (fx1Titles.length !== 0 && !hasAnimatedRef.current) {
+          animateTitles(fx1Titles);
+          hasAnimatedRef.current = true;
+        }
+      });
+    };
+
+    const startAnimation = () => {
+      handleSplittingAnimation();
+      setIsInitialRender(false);
+    };
+
+    if (document.readyState === 'complete') {
+      startAnimation();
+    } else {
+      window.addEventListener('load', startAnimation);
+    }
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('load', startAnimation);
+    };
+  }, [lampToggle]);
+};
 
   useSplittingAnimation();
 
@@ -350,7 +357,7 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
             >
               {/* t('hero.header')} */}
               <h1 id={'id_header'} className={`${styles.heroHeadText} `}>
-                  {t('hero.header')}
+                {t('hero.header')}
               </h1>
               <div data-splitting data-effect1>
                 <p
@@ -358,8 +365,8 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
                   className={`${styles.heroSubText} sm:text-sm sm:leading-normal md:text-lg mobile:max-w-[80vw] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[50vw]`}
                 >
                   {/* t('hero.subHeader')} */}
-                 
-                   {t('hero.subHeader')}
+
+                  {t('hero.subHeader')}
                 </p>
               </div>
             </div>
@@ -371,11 +378,15 @@ const Hero = React.forwardRef(({ setLampToggleApp, activeMediaQuery }, ref) => {
           id='id_lampContainer'
           className='lampContainer w-full h-full '
         >
-          <LampCanvas
-            setLamptoggle={(press) => lampPress(press)}
-            setMouseHover={(hovering) => setLampHovering(hovering)}
-            activeMediaQuery={activeMediaQuery}
-          />
+
+          {/* don't load the lamp canvas in mobile or sm mode */}
+          {activeMediaQuery !== ('mobile' || 'sm') ? (
+            <LampCanvas
+              setLamptoggle={(press) => lampPress(press)}
+              setMouseHover={(hovering) => setLampHovering(hovering)}
+              activeMediaQuery={activeMediaQuery}
+            />
+          ) : null}
         </div>
         {/* interactive lamp object  */}
       </div>

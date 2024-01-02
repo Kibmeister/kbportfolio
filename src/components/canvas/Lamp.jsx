@@ -111,12 +111,13 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
   });
 
 
+
   useEffect(() => {
-    return () => {
-      // Perform any necessary cleanup
-      mixer?.stopAllAction(); // Example cleanup
-    };
-  }, [mixer]);
+  return () => {
+    // Perform any necessary cleanup
+    mixer?.stopAllAction(); // Example cleanup
+  };
+}, [mixer]);
 
   const handlePointerEnter = () => {
     if (!allowHover) return; // Don't execute if hover is not allowed
@@ -154,7 +155,7 @@ const Lamp = ({ setMouseHover, setLamptoggle, activeMediaQuery }) => {
       <primitive
         ref={lampRef}
         onClick={
-          activeMediaQuery === 'mobile'
+          activeMediaQuery === 'mobile' || "sm"
             ? null
             : () => setLampToggle(!lampToggle)
         }
